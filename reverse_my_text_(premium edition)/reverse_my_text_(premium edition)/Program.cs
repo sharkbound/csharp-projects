@@ -12,7 +12,6 @@ namespace reverse_my_text__premium_edition_
     {
         static void Main(string[] args)
         {
-            //change
             Console.WriteLine("test");
             begin:
             var loop = true;
