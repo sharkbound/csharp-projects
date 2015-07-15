@@ -1,0 +1,6 @@
+C:\Users\8\Documents\Visual Studio 2013\Projects\reverse_my_text_(premium edition)\reverse_my_text_(premium edition)\bin\Debug\reverse_my_text_(premium edition).exe.config
+C:\Users\8\Documents\Visual Studio 2013\Projects\reverse_my_text_(premium edition)\reverse_my_text_(premium edition)\bin\Debug\reverse_my_text_(premium edition).exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\reverse_my_text_(premium edition)\reverse_my_text_(premium edition)\bin\Debug\reverse_my_text_(premium edition).pdb
+C:\Users\8\Documents\Visual Studio 2013\Projects\reverse_my_text_(premium edition)\reverse_my_text_(premium edition)\obj\Debug\reverse_my_text_(premium edition).csprojResolveAssemblyReference.cache
+C:\Users\8\Documents\Visual Studio 2013\Projects\reverse_my_text_(premium edition)\reverse_my_text_(premium edition)\obj\Debug\reverse_my_text_(premium edition).exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\reverse_my_text_(premium edition)\reverse_my_text_(premium edition)\obj\Debug\reverse_my_text_(premium edition).pdb

@@ -1,0 +1,6 @@
+c:\users\8\documents\visual studio 2013\Projects\calulator\calulator\bin\Debug\calulator.exe.config
+c:\users\8\documents\visual studio 2013\Projects\calulator\calulator\obj\Debug\calulator.csprojResolveAssemblyReference.cache
+c:\users\8\documents\visual studio 2013\Projects\calulator\calulator\bin\Debug\calulator.exe
+c:\users\8\documents\visual studio 2013\Projects\calulator\calulator\bin\Debug\calulator.pdb
+c:\users\8\documents\visual studio 2013\Projects\calulator\calulator\obj\Debug\calulator.exe
+c:\users\8\documents\visual studio 2013\Projects\calulator\calulator\obj\Debug\calulator.pdb

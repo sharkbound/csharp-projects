@@ -1,0 +1,6 @@
+C:\Users\8\Documents\Visual Studio 2013\Projects\james\james\bin\Debug\james.exe.config
+C:\Users\8\Documents\Visual Studio 2013\Projects\james\james\bin\Debug\james.exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\james\james\bin\Debug\james.pdb
+C:\Users\8\Documents\Visual Studio 2013\Projects\james\james\obj\Debug\james.csprojResolveAssemblyReference.cache
+C:\Users\8\Documents\Visual Studio 2013\Projects\james\james\obj\Debug\james.exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\james\james\obj\Debug\james.pdb

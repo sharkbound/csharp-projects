@@ -1,0 +1,7 @@
+c:\users\8\documents\visual studio 2013\Projects\text_writer\text_writer\bin\Debug\text_writer.exe.config
+c:\users\8\documents\visual studio 2013\Projects\text_writer\text_writer\obj\Debug\text_writer.csprojResolveAssemblyReference.cache
+c:\users\8\documents\visual studio 2013\Projects\text_writer\text_writer\bin\Debug\text_writer.exe
+c:\users\8\documents\visual studio 2013\Projects\text_writer\text_writer\bin\Debug\text_writer.pdb
+c:\users\8\documents\visual studio 2013\Projects\text_writer\text_writer\obj\Debug\text_writer.exe
+c:\users\8\documents\visual studio 2013\Projects\text_writer\text_writer\obj\Debug\text_writer.pdb
+c:\users\8\documents\visual studio 2013\Projects\text_writer\text_writer\bin\Debug\output.txt

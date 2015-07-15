@@ -1,0 +1,7 @@
+c:\users\8\documents\visual studio 2013\Projects\spyDecoder\spyDecoder\bin\Debug\spyDecoder.exe.config
+c:\users\8\documents\visual studio 2013\Projects\spyDecoder\spyDecoder\bin\Debug\decodeThis.txt
+c:\users\8\documents\visual studio 2013\Projects\spyDecoder\spyDecoder\bin\Debug\spyDecoder.exe
+c:\users\8\documents\visual studio 2013\Projects\spyDecoder\spyDecoder\bin\Debug\spyDecoder.pdb
+c:\users\8\documents\visual studio 2013\Projects\spyDecoder\spyDecoder\obj\Debug\spyDecoder.exe
+c:\users\8\documents\visual studio 2013\Projects\spyDecoder\spyDecoder\obj\Debug\spyDecoder.pdb
+c:\users\8\documents\visual studio 2013\Projects\spyDecoder\spyDecoder\obj\Debug\spyDecoder.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+this is the text before its reversed:
+lol
+
+this is the text reversed:
+lol

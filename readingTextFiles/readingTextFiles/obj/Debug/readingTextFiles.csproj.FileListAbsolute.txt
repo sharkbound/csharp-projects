@@ -1,0 +1,7 @@
+c:\users\8\documents\visual studio 2013\Projects\readingTextFiles\readingTextFiles\bin\Debug\readingTextFiles.exe.config
+c:\users\8\documents\visual studio 2013\Projects\readingTextFiles\readingTextFiles\bin\Debug\readingTextFiles.exe
+c:\users\8\documents\visual studio 2013\Projects\readingTextFiles\readingTextFiles\bin\Debug\readingTextFiles.pdb
+c:\users\8\documents\visual studio 2013\Projects\readingTextFiles\readingTextFiles\obj\Debug\readingTextFiles.csprojResolveAssemblyReference.cache
+c:\users\8\documents\visual studio 2013\Projects\readingTextFiles\readingTextFiles\obj\Debug\readingTextFiles.exe
+c:\users\8\documents\visual studio 2013\Projects\readingTextFiles\readingTextFiles\obj\Debug\readingTextFiles.pdb
+c:\users\8\documents\visual studio 2013\Projects\readingTextFiles\readingTextFiles\bin\Debug\data.txt

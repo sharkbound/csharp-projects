@@ -1,0 +1,4 @@
+this is the raw text:
+yes
+raw text after its reversed:
+sey
