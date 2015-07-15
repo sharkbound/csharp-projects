@@ -1,4 +1,4 @@
 this is the raw text:
-loppp
+reversal
 raw text after its reversed:
-pppol
+lasrever

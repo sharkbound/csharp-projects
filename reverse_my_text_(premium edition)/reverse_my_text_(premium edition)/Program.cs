@@ -36,13 +36,20 @@ namespace reverse_my_text__premium_edition_
 
                     Console.TreatControlCAsInput = true;
 
+                    Console.WriteLine("\n");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
                     Console.Write("u entered: ");
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    PrintChar(uservalue);
-                    Console.WriteLine("");
-                    Console.ForegroundColor = ConsoleColor.White;
 
+                    PrintChar(uservalue);
                     Reverse(ReversedUserValue);
+
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("\nit reversed: ");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    PrintChar(ReversedUserValue);
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("\n");
 
                     PrintToFile(uservalue, ReversedUserValue);
 
