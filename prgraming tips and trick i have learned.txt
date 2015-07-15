@@ -1,6 +1,7 @@
 tips:
 1: when u can use static methods instead of writing all the code in the main program.cs file 
-
-
-
-
+2:
+3:
+4:
+5:
+6:
