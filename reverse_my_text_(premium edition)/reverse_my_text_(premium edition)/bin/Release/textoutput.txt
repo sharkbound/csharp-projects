@@ -1,4 +1,4 @@
 this is the raw text:
-testing
+test
 raw text after its reversed:
-gnitset
+tset
