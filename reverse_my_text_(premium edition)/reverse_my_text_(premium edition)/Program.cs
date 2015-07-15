@@ -45,6 +45,7 @@ namespace reverse_my_text__premium_edition_
                     Reverse(ReversedUserValue);
 
                     PrintToFile(uservalue, ReversedUserValue);
+
                     if (opentxt.Key == ConsoleKey.Y)
                     {
                         Process.Start("textoutput.txt");
