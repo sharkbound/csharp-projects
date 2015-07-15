@@ -17,26 +17,38 @@ namespace reverse_my_text__premium_edition_
             var exist = 3;
             while (loop)
             {
+                Console.TreatControlCAsInput = false;
                 Console.Title = "Reverse My Text (premium edition)";
                 loop = false;
                 Console.WriteLine("trying to see if text file already exist....");
                 if (File.Exists("textoutput.txt"))
                 {
                     Console.WriteLine("Textoutput.txt found!");
+                    Console.WriteLine("Enter the text to be processed...");
 
                     string text = Console.ReadLine();
                     char[] uservalue = text.ToCharArray();
                     char[] ReversedUserValue = text.ToCharArray();
 
+                    Console.WriteLine("Open the text file? [y/n]");
+                    ConsoleKeyInfo opentxt = Console.ReadKey();
+                    opentxtfile(opentxt);
+
+                    Console.TreatControlCAsInput = true;
+
                     Console.Write("u entered: ");
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     PrintChar(uservalue);
+                    Console.WriteLine("");
                     Console.ForegroundColor = ConsoleColor.White;
 
-                    Array.Reverse(ReversedUserValue);
+                    Reverse(ReversedUserValue);
 
                     PrintToFile(uservalue, ReversedUserValue);
-                    Process.Start("textoutput.txt");
+                    if (opentxt.Key == ConsoleKey.Y)
+                    {
+                        Process.Start("textoutput.txt");
+                    }
                     exist = 1;
                 }
                 else
@@ -50,7 +62,8 @@ namespace reverse_my_text__premium_edition_
             }
             if (exist == 1)
             {
-            Console.WriteLine("\nwould u like to exit the program? [y/n]");
+            menugoto:
+            menu();
             ConsoleKeyInfo ExitConfirm = Console.ReadKey();
             Console.WriteLine("");
             
@@ -63,6 +76,17 @@ namespace reverse_my_text__premium_edition_
                     case ConsoleKey.D:
                         File.Delete("textoutput.txt");
                         break;
+                    default:
+                        if (ExitConfirm.Modifiers == 0)
+                        {
+                            Console.WriteLine("\"{0}\" is not a valid option, please enter a valid option...", ExitConfirm.Key);
+                            goto menugoto; 
+                        }
+                        else
+                        {
+                            Console.WriteLine("\"{0} + {1}\" is not a valid option, please enter a valid option...", ExitConfirm.Key, ExitConfirm.Modifiers);
+                            goto menugoto; 
+                        }
                 }
             }
 
@@ -77,10 +101,9 @@ namespace reverse_my_text__premium_edition_
            string foo = Console.ReadLine();
            return foo.ToCharArray();
         }
-        static char[] Reverse(char[] CharArray)
+        static void Reverse(char[] CharArray)
         {
             Array.Reverse(CharArray);
-            return CharArray;
         }
         static void PrintToFile(char[] data, char[] reversed)
         {
@@ -99,6 +122,24 @@ namespace reverse_my_text__premium_edition_
                 Console.Write(stuff);
             }
         }
+        static void menu()
+        {
+            Console.WriteLine("Choose a option then press the key that go's with that option...\n");
+            Console.WriteLine("Y\t-\tExit the application");
+            Console.WriteLine("N\t-\tGo back to the start of the app");
+            Console.WriteLine("D\t-\tDelete textoutput.txt");
+            Console.WriteLine("");
+        }
+        static void opentxtfile(ConsoleKeyInfo key)
+        {
+            if (key.Key == ConsoleKey.Y)
+            {
+                Console.WriteLine("The text file will open after receiving input...");
+            }
+            if (key.Key == ConsoleKey.N)
+            {
+                Console.WriteLine("Skipping opening textoutput.txt...");
+            }
+        }
     }
-
 }
