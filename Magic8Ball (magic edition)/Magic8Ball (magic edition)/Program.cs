@@ -11,20 +11,31 @@ namespace Magic8Ball__magic_edition_
     {
         static void Main(string[] args)
         {
+            Dictionary<string, ConsoleColor> c = new Dictionary<string, ConsoleColor>();
+            c.Add("red", ConsoleColor.Red);
+            c.Add("cyan", ConsoleColor.Cyan);
+            c.Add("white", ConsoleColor.White);
+            c.Add("yellow", ConsoleColor.Yellow);
+            c.Add("green",ConsoleColor.Green);
+            c.Add("mag", ConsoleColor.Magenta);
+
+           // List<ConsoleColor> colors = new List<ConsoleColor> 
+           // {ConsoleColor.Red,ConsoleColor.Yellow,ConsoleColor.White,ConsoleColor.Cyan };
+
             ConsoleKeyInfo key;
             int delay = 1000;
             string anwser = "";
             int yes = 0;
             int no = 0;
             int maybe = 0;
-            askagain:
+        askagain:
+            color(c["cyan"]);
             Console.WriteLine("Welcome to my Magic8Ball application!");
-            Console.WriteLine(no);
+            color(c["green"]);
             string q = Question();
         reroll:
-            color(ConsoleColor.Green);
             Console.WriteLine("\nCalulating the awnser to:\t\"{0}\"",q);
-            color(ConsoleColor.White);
+            color(c["white"]);
             Thread.Sleep(delay);
             Random RandomNumber = new Random();
             int RandomNum = RandomNumber.Next(9) + 1;
@@ -63,14 +74,14 @@ namespace Magic8Ball__magic_edition_
                     maybe++;
                     break;
                 case 9:
-                    anwser = "yoooooo just try, try and try your hardest. \nAlso there is a killer with a rubber duck weapon behind u\n";
+                    anwser = "yoooooo just try, try and try your hardest. \nAlso there is a killer with a rubber duck weapon behind u (maybe)\n";
                     maybe++;
                     break;
             }
             color(ConsoleColor.Red);
             Console.WriteLine("The awnser to: \"{0}\"\nIs:\n\t{1}",q,anwser);
             color(ConsoleColor.White);
-            switchmenu:
+        switchmenu:
             menu();
             key = Console.ReadKey();
             Console.WriteLine("\n\n");
@@ -110,11 +121,11 @@ namespace Magic8Ball__magic_edition_
                 case ConsoleKey.Escape:
                     break;
                 default:
+                    Console.Clear();
+                    color(c["red"]);
                     Console.WriteLine("{0} is a invalid option, please choose a valid option", key.Key);
+                    color(c["white"]);
                     goto switchmenu;
-
-
-            
             }
         }
         static string Question()
