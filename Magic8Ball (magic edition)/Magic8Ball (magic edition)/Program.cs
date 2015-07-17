@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Magic8Ball__magic_edition_;
 
 namespace Magic8Ball__magic_edition_
 {
@@ -20,22 +21,25 @@ namespace Magic8Ball__magic_edition_
             c.Add("mag", ConsoleColor.Magenta);
 
            // List<ConsoleColor> colors = new List<ConsoleColor> 
-           // {ConsoleColor.Red,ConsoleColor.Yellow,ConsoleColor.White,ConsoleColor.Cyan };
-
+            // {ConsoleColor.Red,ConsoleColor.Yellow,ConsoleColor.White,ConsoleColor.Cyan };
+            #region variables
             ConsoleKeyInfo key;
             int delay = 1000;
             string anwser = "";
             int yes = 0;
             int no = 0;
             int maybe = 0;
+            #endregion
         askagain:
             color(c["cyan"]);
             Console.WriteLine("Welcome to my Magic8Ball application!");
             color(c["green"]);
             string q = Question();
         reroll:
+            color(c["green"]);
             Console.WriteLine("\nCalulating the awnser to:\t\"{0}\"",q);
             color(c["white"]);
+            #region random anwser
             Thread.Sleep(delay);
             Random RandomNumber = new Random();
             int RandomNum = RandomNumber.Next(9) + 1;
@@ -78,11 +82,13 @@ namespace Magic8Ball__magic_edition_
                     maybe++;
                     break;
             }
+            #endregion
             color(ConsoleColor.Red);
             Console.WriteLine("The awnser to: \"{0}\"\nIs:\n\t{1}",q,anwser);
             color(ConsoleColor.White);
         switchmenu:
             menu();
+            #region menu selection 
             key = Console.ReadKey();
             Console.WriteLine("\n\n");
             switch(key.Key)
@@ -120,6 +126,11 @@ namespace Magic8Ball__magic_edition_
                     goto askagain;
                 case ConsoleKey.Escape:
                     break;
+                case ConsoleKey.D6:
+                    Console.Clear();
+                    iluminati();
+                    Console.ReadKey();
+                    goto switchmenu;
                 default:
                     Console.Clear();
                     color(c["red"]);
@@ -127,6 +138,7 @@ namespace Magic8Ball__magic_edition_
                     color(c["white"]);
                     goto switchmenu;
             }
+            #endregion 
         }
         static string Question()
         {
@@ -140,11 +152,24 @@ namespace Magic8Ball__magic_edition_
         {
             Console.WriteLine("Press the key for the menu item u want to choose...");
             Console.WriteLine("\n1:\task another question\n2:\treroll your current question\n3:\tlist the amount of good/maybe/bad awnsers u got\n4:\tchange the delay");
-            Console.WriteLine("5:\treset yes/maybe/no counters\n\nPress escape to exit the application");
+            Console.WriteLine("5:\treset yes/maybe/no counters\n6:\tILUMINATI COMFIRMED!\n\nPress escape to exit the application");
         }
         static void color(ConsoleColor color)
         {
             Console.ForegroundColor = color;
+        }
+        static void iluminati()
+        {
+            Console.WriteLine("\t\t\t\t\t /\\");
+            Console.WriteLine("\t\t\t\t        /  \\");
+            Console.WriteLine("\t\t\t\t       /    \\");
+            Console.WriteLine("\t\t\t\t      /      \\");
+            Console.WriteLine("\t\t\t\t     / _____  \\");
+            Console.WriteLine("\t\t\t\t    / /  0  \\  \\");
+            Console.WriteLine("\t\t\t\t   /  -------   \\");
+            Console.WriteLine("\t\t\t\t  /              \\");
+            Console.WriteLine("\t\t\t\t /                \\");
+            Console.WriteLine("\t\t\t\t -------------------");
         }
     }
 }
