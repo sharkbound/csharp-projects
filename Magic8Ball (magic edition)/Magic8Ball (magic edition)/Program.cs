@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Magic8Ball__magic_edition_;
+using System.Diagnostics;
 
 namespace Magic8Ball__magic_edition_
 {
@@ -130,6 +131,7 @@ namespace Magic8Ball__magic_edition_
                     Console.Clear();
                     iluminati();
                     Console.ReadKey();
+                    Process.Start("https://www.youtube.com/watch?v=PJLSzsEjpWM&lc=z13cslwj4pu3iv14r04ccb1z4zvisjkpofs");
                     goto switchmenu;
                 default:
                     Console.Clear();
