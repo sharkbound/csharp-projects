@@ -130,8 +130,9 @@ namespace Magic8Ball__magic_edition_
                 case ConsoleKey.D6:
                     Console.Clear();
                     iluminati();
-                    Console.ReadKey();
+                    I_msgs();
                     Process.Start("https://www.youtube.com/watch?v=PJLSzsEjpWM&lc=z13cslwj4pu3iv14r04ccb1z4zvisjkpofs");
+                    color(c["white"]);
                     goto switchmenu;
                 default:
                     Console.Clear();
@@ -152,7 +153,7 @@ namespace Magic8Ball__magic_edition_
         }
         static void menu()
         {
-            Console.WriteLine("Press the key for the menu item u want to choose...");
+            Console.WriteLine("\nPress the key for the menu item u want to choose...");
             Console.WriteLine("\n1:\task another question\n2:\treroll your current question\n3:\tlist the amount of good/maybe/bad awnsers u got\n4:\tchange the delay");
             Console.WriteLine("5:\treset yes/maybe/no counters\n6:\tILUMINATI COMFIRMED!\n\nPress escape to exit the application");
         }
@@ -172,6 +173,42 @@ namespace Magic8Ball__magic_edition_
             Console.WriteLine("\t\t\t\t  /              \\");
             Console.WriteLine("\t\t\t\t /                \\");
             Console.WriteLine("\t\t\t\t -------------------");
+        }
+        static void I_msgs()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Clear();
+            iluminati();
+            Console.WriteLine("\n\nu think u know us?");
+            press();
+            Console.ReadKey();
+            Console.Clear();
+            iluminati();
+            Console.WriteLine("\n\nu only know the lies we set in place about us");
+            press();
+            Console.ReadKey();
+            Console.Clear();
+            iluminati();
+            Console.WriteLine("\n\nwe know everything about u");
+            press();
+            Console.ReadKey();
+            Console.Clear();
+            iluminati();
+            Console.WriteLine("\n\nwe are watching... Dont disapoint us...");
+            press();
+            Console.ReadKey();
+            Console.Clear();
+            iluminati();
+            press();
+            Console.ReadKey();
+            Console.Clear();
+        }
+        static void press()
+        {
+            ConsoleColor prev = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\n\npress any key to continue....");
+            Console.ForegroundColor = prev;
         }
     }
 }
