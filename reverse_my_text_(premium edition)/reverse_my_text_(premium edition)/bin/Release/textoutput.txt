@@ -1,4 +1,4 @@
 this is the raw text:
-reversal
+eb liww siht
 raw text after its reversed:
-lasrever
+this wwil be
