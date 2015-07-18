@@ -22,21 +22,42 @@ namespace Magic8Ball__magic_edition_
             c.Add("green",ConsoleColor.Green);
             c.Add("mag", ConsoleColor.Magenta);
 
-           // List<ConsoleColor> colors = new List<ConsoleColor> 
-            // {ConsoleColor.Red,ConsoleColor.Yellow,ConsoleColor.White,ConsoleColor.Cyan };
             #region variables
+            ConsoleKeyInfo userval;
             ConsoleKeyInfo key;
             int delay = 1000;
             string anwser = "";
+            string q = "";
             int yes = 0;
             int no = 0;
             int maybe = 0;
+            #endregion
+            #region question or menu
+            menuask2:
+            userval = menuask();
+            if (userval.Key == ConsoleKey.D1)
+            {
+                Console.Clear();
+            }
+            else if (userval.Key == ConsoleKey.D2)
+            {
+                Console.Clear();
+                goto switchmenu;
+            }
+            else
+            {
+                Console.Clear();
+                color(c["red"]);
+                Console.WriteLine("{0} is a invalid option, please enter a valid menu option", userval.Key);
+                Console.WriteLine("");
+                goto menuask2;
+            }
             #endregion
         askagain:
             color(c["cyan"]);
             Console.WriteLine("Welcome to my Magic8Ball application!");
             color(c["green"]);
-            string q = Question();
+            q = Question();
         reroll:
             color(c["green"]);
             Console.WriteLine("\nCalulating the awnser to:\t\"{0}\"",q);
@@ -76,7 +97,7 @@ namespace Magic8Ball__magic_edition_
                     maybe++;
                     break;
                 case 8:
-                    anwser = "belieeeeeve, belieeeeve in yourself and u will\n error: \"this is the iluminati we are coming for u!\"(maybe)\n";
+                    anwser = "belieeeeeve, belieeeeve in yourself and u will......shhshshhshshs.....\n error: \"this is the iluminati we are coming for u!\"(maybe)\n";
                     maybe++;
                     break;
                 case 9:
@@ -89,8 +110,8 @@ namespace Magic8Ball__magic_edition_
             Console.WriteLine("The awnser to: \"{0}\"\nIs:\n\t{1}",q,anwser);
             color(ConsoleColor.White);
         switchmenu:
-            menu();
             #region menu selection 
+            menu();
             key = Console.ReadKey();
             Console.WriteLine("\n\n");
             switch(key.Key)
@@ -137,6 +158,7 @@ namespace Magic8Ball__magic_edition_
                     goto switchmenu;
                 case ConsoleKey.D7:
                     rainbow();
+                    Console.Clear();
                     goto switchmenu;
                 default:
                     Console.Clear();
@@ -274,6 +296,38 @@ namespace Magic8Ball__magic_edition_
             color(prev);
             press();
             Console.ReadKey();
+        }
+        static ConsoleKeyInfo menuask()
+        {
+            Dictionary<string, ConsoleColor> c = new Dictionary<string, ConsoleColor>();
+            c.Add("red", ConsoleColor.Red);
+            c.Add("cyan", ConsoleColor.Cyan);
+            c.Add("white", ConsoleColor.White);
+            c.Add("yellow", ConsoleColor.Yellow);
+            c.Add("green", ConsoleColor.Green);
+            c.Add("mag", ConsoleColor.Magenta);
+            c.Add("blue", ConsoleColor.Blue);
+            c.Add("gray", ConsoleColor.Gray);
+            c.Add("black", ConsoleColor.Black);
+            c.Add("darkblue", ConsoleColor.DarkBlue);
+            c.Add("darkcyan", ConsoleColor.DarkCyan);
+            c.Add("darkgray", ConsoleColor.DarkGray);
+            c.Add("darkgreen", ConsoleColor.DarkGreen);
+            c.Add("darkmag", ConsoleColor.DarkMagenta);
+            c.Add("darkred", ConsoleColor.DarkRed);
+            c.Add("darkyellow", ConsoleColor.DarkYellow);
+
+            ConsoleColor prev = Console.ForegroundColor;
+            color(c["yellow"]);
+
+            Console.WriteLine("Do u want to ask a question or go to the menu?");
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+
+            Console.WriteLine("\n1:\t-\task a question\n2:\t-\tgo to the menu");
+            Console.ForegroundColor = prev;
+
+            return Console.ReadKey();
         }
     }
 }
