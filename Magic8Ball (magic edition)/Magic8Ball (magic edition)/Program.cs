@@ -13,6 +13,7 @@ namespace Magic8Ball__magic_edition_
     {
         static void Main(string[] args)
         {
+            Console.WindowHeight = 40;
             Dictionary<string, ConsoleColor> c = new Dictionary<string, ConsoleColor>();
             c.Add("red", ConsoleColor.Red);
             c.Add("cyan", ConsoleColor.Cyan);
@@ -134,6 +135,9 @@ namespace Magic8Ball__magic_edition_
                     Process.Start("https://www.youtube.com/watch?v=PJLSzsEjpWM&lc=z13cslwj4pu3iv14r04ccb1z4zvisjkpofs");
                     color(c["white"]);
                     goto switchmenu;
+                case ConsoleKey.D7:
+                    rainbow();
+                    goto switchmenu;
                 default:
                     Console.Clear();
                     color(c["red"]);
@@ -155,7 +159,7 @@ namespace Magic8Ball__magic_edition_
         {
             Console.WriteLine("\nPress the key for the menu item u want to choose...");
             Console.WriteLine("\n1:\task another question\n2:\treroll your current question\n3:\tlist the amount of good/maybe/bad awnsers u got\n4:\tchange the delay");
-            Console.WriteLine("5:\treset yes/maybe/no counters\n6:\tILUMINATI COMFIRMED!\n\nPress escape to exit the application");
+            Console.WriteLine("5:\treset yes/maybe/no counters\n6:\tILUMINATI COMFIRMED!\n7:\tPretty rainbow ball :3\n\nPress escape to exit the application");
         }
         static void color(ConsoleColor color)
         {
@@ -209,6 +213,67 @@ namespace Magic8Ball__magic_edition_
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("\n\npress any key to continue....");
             Console.ForegroundColor = prev;
+        }
+        static void rainbow()
+        {
+            Console.Clear();
+            Dictionary<string, ConsoleColor> c = new Dictionary<string, ConsoleColor>();
+            c.Add("red", ConsoleColor.Red);
+            c.Add("cyan", ConsoleColor.Cyan);
+            c.Add("white", ConsoleColor.White);
+            c.Add("yellow", ConsoleColor.Yellow);
+            c.Add("green", ConsoleColor.Green);
+            c.Add("mag", ConsoleColor.Magenta);
+            c.Add("blue", ConsoleColor.Blue);
+            c.Add("gray", ConsoleColor.Gray);
+            c.Add("black", ConsoleColor.Black);
+            c.Add("darkblue", ConsoleColor.DarkBlue);
+            c.Add("darkcyan", ConsoleColor.DarkCyan);
+            c.Add("darkgray", ConsoleColor.DarkGray);
+            c.Add("darkgreen", ConsoleColor.DarkGreen);
+            c.Add("darkmag", ConsoleColor.DarkMagenta);
+            c.Add("darkred", ConsoleColor.DarkRed);
+            c.Add("darkyellow", ConsoleColor.DarkYellow);
+            ConsoleColor prev = Console.ForegroundColor;
+            color(c["red"]);
+            Console.WriteLine("\t\t                 00000000000000000 ");
+            color(c["yellow"]);
+            Console.WriteLine("\t\t            000000000000000000000000000");
+            color(c["green"]);
+            Console.WriteLine("\t\t       000000000000             000000000000");
+            color(c["blue"]);
+            Console.WriteLine("\t\t 00000000000000                     0000000000000");
+            color(c["darkmag"]);
+            Console.WriteLine("\t    000000000000000                             00000000000000");
+            color(c["mag"]);
+            Console.WriteLine("\t 0000000000000000                                 000000000000000");
+            Console.WriteLine("       0000000000000000                                     000000000000000");
+            Console.WriteLine("     00000000000000000                                       000000000000000");
+            Console.WriteLine("    00000000000000000                                         000000000000000");
+            Console.WriteLine("   00000000000000000                                           000000000000000");
+            Console.WriteLine("  00000000000000000                                             000000000000000");
+            Console.WriteLine(" 000000000000000000                                             000000000000000");
+            Console.WriteLine(" 000000000000000000                                             000000000000000");
+            Console.WriteLine(" 000000000000000000                                             00000000000000");
+            Console.WriteLine("  00000000000000000                                             0000000000000");
+            Console.WriteLine("   00000000000000000                                           0000000000000");
+            Console.WriteLine("    00000000000000000                                         0000000000000");
+            Console.WriteLine("     00000000000000000                                       0000000000000");
+            Console.WriteLine("      00000000000000000                                     0000000000000");
+            Console.WriteLine("       000000000000000000                                 0000000000000 ");
+            color(c["darkmag"]);
+            Console.WriteLine("          00000000000000000                             000000000000");
+            color(c["blue"]);
+            Console.WriteLine("                  00000000000                         00000000000  ");
+            color(c["green"]);
+            Console.WriteLine("                       000000000000              000000000000");
+            color(c["yellow"]);
+            Console.WriteLine("                            000000000000000000000000000");
+            color(c["red"]);
+            Console.WriteLine("                                 00000000000000000");
+            color(prev);
+            press();
+            Console.ReadKey();
         }
     }
 }
