@@ -14,6 +14,7 @@ namespace Magic8Ball__magic_edition_
         static void Main(string[] args)
         {
             Console.WindowHeight = 40;
+
             Dictionary<string, ConsoleColor> c = new Dictionary<string, ConsoleColor>();
             c.Add("red", ConsoleColor.Red);
             c.Add("cyan", ConsoleColor.Cyan);
@@ -32,6 +33,7 @@ namespace Magic8Ball__magic_edition_
             int no = 0;
             int maybe = 0;
             #endregion
+
             #region question or menu
             menuask2:
             userval = menuask();
@@ -46,18 +48,25 @@ namespace Magic8Ball__magic_edition_
             }
             else
             {
+                ConsoleColor prev = Console.ForegroundColor;
+
                 Console.Clear();
                 color(c["red"]);
                 Console.WriteLine("{0} is a invalid option, please enter a valid menu option", userval.Key);
                 Console.WriteLine("");
+
+                Console.ForegroundColor = prev;
+
                 goto menuask2;
             }
             #endregion
+
         askagain:
             color(c["cyan"]);
             Console.WriteLine("Welcome to my Magic8Ball application!");
             color(c["green"]);
             q = Question();
+
         reroll:
             color(c["green"]);
             Console.WriteLine("\nCalulating the awnser to:\t\"{0}\"",q);
@@ -109,6 +118,7 @@ namespace Magic8Ball__magic_edition_
             color(ConsoleColor.Red);
             Console.WriteLine("The awnser to: \"{0}\"\nIs:\n\t{1}",q,anwser);
             color(ConsoleColor.White);
+
         switchmenu:
             #region menu selection 
             menu();
