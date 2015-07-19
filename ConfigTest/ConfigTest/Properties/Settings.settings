@@ -11,5 +11,14 @@
     <Setting Name="password" Type="System.String" Scope="User">
       <Value Profile="(Default)">d</Value>
     </Setting>
+    <Setting Name="email2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="username2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="password2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

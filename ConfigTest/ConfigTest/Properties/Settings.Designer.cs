@@ -58,5 +58,41 @@ namespace ConfigTest.Properties {
                 this["password"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string email2 {
+            get {
+                return ((string)(this["email2"]));
+            }
+            set {
+                this["email2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string username2 {
+            get {
+                return ((string)(this["username2"]));
+            }
+            set {
+                this["username2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string password2 {
+            get {
+                return ((string)(this["password2"]));
+            }
+            set {
+                this["password2"] = value;
+            }
+        }
     }
 }
