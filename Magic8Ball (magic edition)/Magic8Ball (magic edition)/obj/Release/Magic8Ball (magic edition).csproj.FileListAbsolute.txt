@@ -4,3 +4,5 @@ C:\Users\8\Documents\Visual Studio 2013\Projects\Magic8Ball (magic edition)\Magi
 C:\Users\8\Documents\Visual Studio 2013\Projects\Magic8Ball (magic edition)\Magic8Ball (magic edition)\obj\Release\Magic8Ball (magic edition).exe
 C:\Users\8\Documents\Visual Studio 2013\Projects\Magic8Ball (magic edition)\Magic8Ball (magic edition)\obj\Release\Magic8Ball (magic edition).pdb
 C:\Users\8\Documents\Visual Studio 2013\Projects\Magic8Ball (magic edition)\Magic8Ball (magic edition)\obj\Release\Magic8Ball (magic edition).csprojResolveAssemblyReference.cache
+C:\Users\8\Documents\Visual Studio 2013\Projects\Magic8Ball (magic edition)\Magic8Ball (magic edition)\bin\Release\Magic8Ball (magic edition).exe.CodeAnalysisLog.xml
+C:\Users\8\Documents\Visual Studio 2013\Projects\Magic8Ball (magic edition)\Magic8Ball (magic edition)\bin\Release\Magic8Ball (magic edition).exe.lastcodeanalysissucceeded
