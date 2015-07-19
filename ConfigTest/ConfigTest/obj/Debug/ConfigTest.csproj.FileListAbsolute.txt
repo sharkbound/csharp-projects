@@ -1,0 +1,7 @@
+C:\Users\8\Documents\Visual Studio 2013\Projects\ConfigTest\ConfigTest\bin\Debug\ConfigTest.exe.config
+C:\Users\8\Documents\Visual Studio 2013\Projects\ConfigTest\ConfigTest\bin\Debug\ConfigTest.exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\ConfigTest\ConfigTest\bin\Debug\ConfigTest.pdb
+C:\Users\8\Documents\Visual Studio 2013\Projects\ConfigTest\ConfigTest\obj\Debug\ConfigTest.csprojResolveAssemblyReference.cache
+C:\Users\8\Documents\Visual Studio 2013\Projects\ConfigTest\ConfigTest\obj\Debug\ConfigTest.exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\ConfigTest\ConfigTest\obj\Debug\ConfigTest.pdb
+C:\Users\8\Documents\Visual Studio 2013\Projects\ConfigTest\ConfigTest\bin\Debug\Properties\Settings.Designer.cs
