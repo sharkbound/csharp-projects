@@ -16,6 +16,7 @@ namespace ConfigTest
             Console.WriteLine(Settings.Default.username);
             Console.WriteLine(Settings.Default.password);
             Console.ForegroundColor = ConsoleColor.White;
+            string path;
             string email = "";
             string username = "";
             string password = "";
@@ -28,6 +29,7 @@ namespace ConfigTest
                 case ConsoleKey.D1:
                     break;
                 case ConsoleKey.D2:
+                    #region login
                     clear();
                     Console.WriteLine("enter your username then press enter...");
                     username = Console.ReadLine();
@@ -99,6 +101,7 @@ namespace ConfigTest
                         goto begin;
                     }
                     break;
+                    #endregion
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
                     clear();

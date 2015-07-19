@@ -48,7 +48,6 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
   <ItemGroup>
