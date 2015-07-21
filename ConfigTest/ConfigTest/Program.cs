@@ -17,100 +17,138 @@ namespace ConfigTest
             var loginmenu = new Action(LoggedIn);
             ConsoleKeyInfo key;
         begin:
-            loginmenu();
+            // shows the menu options
+            // shows the text menu for logging in
             key = RegisterOrLogin();
+            // do something according to the value of key.Key
             switch (key.Key)
             {
+                    // if the key 1 is pressed do this
                 case ConsoleKey.D1:
                     #region register
+                    // change the 2nd user's credentials to whats set here
                     Register();
+                    // go back to the first menu
                     goto begin;
                     #endregion
                 case ConsoleKey.D2:
-                    #region login
+                    // this is the login for the first user
+                    #region user 1's login
+                    // choose wether to login as first user or second user 
                     key = FirstLogin();
+                    // do something for when the user presses a key
                     if (key.Key == ConsoleKey.D1)
-                    {
+                    {   // enter the login creduentials
                         Login(ref username, ref password);
+                        //check that it matches the stored username and password
                         if (password == Settings.Default.password && username == Settings.Default.username)
                         {
+                            //clear the screen
                             clear();
+
                         loggedin:
+                            // display a welcome msg for the user with their username
                             LoggedIn();
+                            //check if the user's email is default email change it to whats is entered
                             if (Settings.Default.email == "d")
                             {
                                 ChangeEmail();
                             }
+                            //display the menu after u login
                             key = LoggedInMenu(key);
+                            // check if user presses "1" 
                             if (key.Key == ConsoleKey.D1)
                             {
+                                // confirm the user is the correct user by
+                                //having  the person enter the accounts email
                                 string email2 = EmailVerify();
                                 if (email2 == Settings.Default.email)
                                 {
+                                    // if the entered email is correct change the user's
+                                    //password to whats entered
                                     ChangeUserOnePassword();
-                                    //loginmenu();
+                                    //return to the user's menu
                                     goto loggedin;
                                 }
+                                    // if the entered email is wrong do this
                                 else
                                 {
+                                    //display a message if the entered email is wrong
                                     Console.WriteLine("{0} is incorrect!");
+                                    //return to the users email
                                     goto loggedin;
                                 }
 
                             }
+                                //check if the user presses 2
                             else if (key.Key == ConsoleKey.D2)
                             {
+                                //see if the email they enter is the same as the stored email for
+                                //user one
                                 string email3 = UserOneEmailConfirm();
                                 if (email3 == Settings.Default.email)
                                 {
+                                    //change the username to whats entered
                                     ChangeUsername();
                                     goto loggedin;
                                 }
                                 else
                                 {
+                                    //display a message if the entered email is wrong
                                     Console.WriteLine("the email - {0} - was incorrect", email3);
                                     goto loggedin;
                                 }
                             }
+                            //if user presses a invalid menu key do this
                             else
                             {
+                                //clear the screen then display a msg then return to the user's menu
                                 clear();
                                 Console.WriteLine("{0} is a invalid selection!", key.Key);
                                 goto loggedin;
                             }
                         }
+                        //if the user enters wrong login info display a msg 
                         else
                         {
                             BadLogin(username, password);
                             goto begin;
                         }
                     }
+                     // end of user 1's stuff
                     #endregion
                     #region user2 login
                     else // second users login
                     {
                         clear();
-                        UserTwoLogin(ref username, ref password);
+                        UserTwoLogin(ref username, ref password);  // menu to enter login crudntials
+                        // check to see if the entered user and pass match stored ones
                         if (password == Settings.Default.password2 && username == Settings.Default.username2)
                         {
                             clear();
                         loggedin:
+                            // greet the user when they login
                             UserTwoLoginDialog();
-                            if (Settings.Default.email2 == "d")
+                            if (Settings.Default.email2 == "d") // if user 2's email is default change it
                             {
-                                ChangeUserTwoDefaultEmail();
+                                ChangeUserTwoDefaultEmail(); // change email to entered email
                             }
+                            //menu to change password/username
                             key = UserTwoLoginMenu();
+                            //if user presses 1 do this
                             if (key.Key == ConsoleKey.D1)
                             {
+                                //validate the entered email
                                 string email2 = UserTwoEmailConfirm();
                                 if (email2 == Settings.Default.email2)
                                 {
+                                    //change password to whats entered
                                     ChangeUserTwoPassword();
                                     goto loggedin;
                                 }
                                 else
                                 {
+                                    // if the user enters wrong email display a message
                                     Console.WriteLine("{0} is incorrect!");
                                     goto loggedin;
                                 }
@@ -118,22 +156,24 @@ namespace ConfigTest
                             }
                             else if (key.Key == ConsoleKey.D2)
                             {
-                                //Console.WriteLine("enter your email to confirm you are you");
-                                //string email3 = Console.ReadLine();
+                                //validate the entered email
                                 string email3 = UserTwoEmailConfirm();
                                 if (email3 == Settings.Default.email2)
                                 {
+                                    // change users's 2 username to whats entered
                                     UserTwoChangeUsername();
                                     goto loggedin;
                                 }
                                 else
                                 {
+                                    //display a msg saying they entered wrong email
                                     Console.WriteLine("the email - {0} - was incorrect", email3);
                                     goto loggedin;
                                 }
                             }
                             else
                             {
+                                // if user enters a invalid selection
                                 clear();
                                 Console.WriteLine("{0} is a invalid selection!", key.Key);
                                 goto loggedin;
@@ -141,13 +181,16 @@ namespace ConfigTest
                         }
                         else
                         {
+                            // if user enters wrong username/password
                             UserTwoBadLogin(username, password);
                             goto begin;
                         }
                     }
                     #endregion
+                    // if user presses a key that does not have a menu selection do this
                 default:
                     #region invalid selection
+                    // display a msg saying what they pressed is invalid
                     key = InvalidFirstMenuSelection(key);
                     goto begin;
                     #endregion
