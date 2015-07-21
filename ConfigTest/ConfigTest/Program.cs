@@ -16,7 +16,8 @@ namespace ConfigTest
             string password = "";
             var loginmenu = new Action(LoggedIn);
             ConsoleKeyInfo key;
-            begin:
+        begin:
+            loginmenu();
             key = RegisterOrLogin();
             switch (key.Key)
             {
@@ -330,10 +331,12 @@ namespace ConfigTest
             key = Console.ReadKey();
             return key;
         }
+
         static void clear()
         {
             Console.Clear();
         }
+
         static void list()
         {
             Console.ForegroundColor = ConsoleColor.Red;

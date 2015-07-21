@@ -15,6 +15,7 @@ namespace Magic8Ball__magic_edition_
         {
             Console.WindowHeight = 40;
 
+            #region color dictionary
             Dictionary<string, ConsoleColor> c = new Dictionary<string, ConsoleColor>();
             c.Add("red", ConsoleColor.Red);
             c.Add("cyan", ConsoleColor.Cyan);
@@ -22,6 +23,7 @@ namespace Magic8Ball__magic_edition_
             c.Add("yellow", ConsoleColor.Yellow);
             c.Add("green",ConsoleColor.Green);
             c.Add("mag", ConsoleColor.Magenta);
+            #endregion
 
             #region variables
             ConsoleKeyInfo userval;
@@ -37,36 +39,31 @@ namespace Magic8Ball__magic_edition_
             #region question or menu
             menuask2:
             userval = menuask();
-            if (userval.Key == ConsoleKey.D1)
+            switch (userval.Key)
             {
-                Console.Clear();
-            }
-            else if (userval.Key == ConsoleKey.D2)
-            {
-                Console.Clear();
-                goto switchmenu;
-            }
-            else
-            {
-                ConsoleColor prev = Console.ForegroundColor;
+                case ConsoleKey.D1:
+                    Console.Clear();
+                    break;
+                case ConsoleKey.D2:
+                    Console.Clear();
+                    goto switchmenu;
+                default:
+                    Console.Clear();
+                    WrongFirstMenuSelection(ref c, ref userval);
+                   goto menuask2;
 
-                Console.Clear();
-                color(c["red"]);
-                Console.WriteLine("{0} is a invalid option, please enter a valid menu option", userval.Key);
-                Console.WriteLine("");
-
-                Console.ForegroundColor = prev;
-
-                goto menuask2;
             }
             #endregion
 
+            #region askagain
         askagain:
             color(c["cyan"]);
             Console.WriteLine("Welcome to my Magic8Ball application!");
             color(c["green"]);
             q = Question();
+            #endregion
 
+            #region reroll
         reroll:
             color(c["green"]);
             Console.WriteLine("\nCalulating the awnser to:\t\"{0}\"",q);
@@ -118,12 +115,12 @@ namespace Magic8Ball__magic_edition_
             color(ConsoleColor.Red);
             Console.WriteLine("The awnser to: \"{0}\"\nIs:\n\t{1}",q,anwser);
             color(ConsoleColor.White);
+            #endregion
 
+            #region menu selection
         switchmenu:
-            #region menu selection 
             menu();
-            key = Console.ReadKey();
-            Console.WriteLine("\n\n");
+            key = SwitchMenuReadKey();
             switch(key.Key)
             {
                 case ConsoleKey.D5:
@@ -150,8 +147,8 @@ namespace Magic8Ball__magic_edition_
                     goto switchmenu;
                 case ConsoleKey.D4:
                     Console.Clear();
-                    Console.WriteLine("enter the delay u want...");
-                    delay = int.Parse(Console.ReadLine());
+                    delay = TryIntParse(ref delay);
+                   // delay = int.Parse(Console.ReadLine());
                     Console.Clear();
                     goto switchmenu;
                 case ConsoleKey.D1:
@@ -179,6 +176,16 @@ namespace Magic8Ball__magic_edition_
             }
             #endregion 
         }
+
+        #region methods
+        private static ConsoleKeyInfo SwitchMenuReadKey()
+        {
+            ConsoleKeyInfo key;
+            key = Console.ReadKey();
+            Console.WriteLine("\n\n");
+            return key;
+        }
+
         static string Question()
         {
             Console.WriteLine("Enter your question....");
@@ -187,16 +194,19 @@ namespace Magic8Ball__magic_edition_
            // Console.WriteLine("your question was:\n\"{0}\"", UserValue);
             return UserValue;
         }
+
         static void menu()
         {
             Console.WriteLine("\nPress the key for the menu item u want to choose...");
             Console.WriteLine("\n1:\task another question\n2:\treroll your current question\n3:\tlist the amount of good/maybe/bad awnsers u got\n4:\tchange the delay");
             Console.WriteLine("5:\treset yes/maybe/no counters\n6:\tILUMINATI COMFIRMED!\n7:\tPretty rainbow ball :3\n\nPress escape to exit the application");
         }
+
         static void color(ConsoleColor color)
         {
             Console.ForegroundColor = color;
         }
+
         static void iluminati()
         {
             Console.WriteLine("\t\t\t\t\t /\\");
@@ -210,22 +220,23 @@ namespace Magic8Ball__magic_edition_
             Console.WriteLine("\t\t\t\t /                \\");
             Console.WriteLine("\t\t\t\t -------------------");
         }
+
         static void I_msgs()
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Clear();
             iluminati();
-            Console.WriteLine("\n\nu think u know us?");
+            Console.WriteLine("\n\nyou think you know us?");
             press();
             Console.ReadKey();
             Console.Clear();
             iluminati();
-            Console.WriteLine("\n\nu only know the lies we set in place about us");
+            Console.WriteLine("\n\nyou only know the lies we set in place about us");
             press();
             Console.ReadKey();
             Console.Clear();
             iluminati();
-            Console.WriteLine("\n\nwe know everything about u");
+            Console.WriteLine("\n\nwe know everything about you");
             press();
             Console.ReadKey();
             Console.Clear();
@@ -239,6 +250,7 @@ namespace Magic8Ball__magic_edition_
             Console.ReadKey();
             Console.Clear();
         }
+
         static void press()
         {
             ConsoleColor prev = Console.ForegroundColor;
@@ -246,6 +258,7 @@ namespace Magic8Ball__magic_edition_
             Console.WriteLine("\n\npress any key to continue....");
             Console.ForegroundColor = prev;
         }
+
         static void rainbow()
         {
             Console.Clear();
@@ -307,6 +320,7 @@ namespace Magic8Ball__magic_edition_
             press();
             Console.ReadKey();
         }
+
         static ConsoleKeyInfo menuask()
         {
             Dictionary<string, ConsoleColor> c = new Dictionary<string, ConsoleColor>();
@@ -339,5 +353,41 @@ namespace Magic8Ball__magic_edition_
 
             return Console.ReadKey();
         }
+
+        static void WrongFirstMenuSelection(ref Dictionary<string, ConsoleColor> c,ref ConsoleKeyInfo userval)
+        {
+            ConsoleColor prev = Console.ForegroundColor;
+
+            Console.Clear();
+            color(c["red"]);
+            Console.WriteLine("{0} is a invalid option, please enter a valid menu option", userval.Key);
+            Console.WriteLine("");
+
+            Console.ForegroundColor = prev;
+        }
+
+        static int TryIntParse(ref int delay)
+        {
+            redo:
+            string foo = String.Empty;
+            try
+            {
+                Console.WriteLine("enter the delay u want...");
+                foo = Console.ReadLine();
+                delay = int.Parse(foo);
+                return delay;
+            }
+            catch 
+            {
+                Console.Clear();
+                Console.WriteLine("the value \"{0}\" is not a number, please enter a correct number", foo);
+                press();
+                Console.ReadKey();
+                Console.Clear();
+                goto redo;
+            }
+        }
+
+        #endregion
     }
 }
