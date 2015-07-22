@@ -14,7 +14,7 @@ namespace ConfigTest
             list();
             string username = "";
             string password = "";
-            var loginmenu = new Action(LoggedIn);
+           // var loginmenu = new Action(LoggedIn);
             ConsoleKeyInfo key;
         begin:
             // shows the menu options
