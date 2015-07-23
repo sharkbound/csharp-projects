@@ -1,0 +1,6 @@
+C:\Users\8\Documents\Visual Studio 2013\Projects\CursorGoto\CursorGoto\bin\Debug\CursorGoto.exe.config
+C:\Users\8\Documents\Visual Studio 2013\Projects\CursorGoto\CursorGoto\bin\Debug\CursorGoto.exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\CursorGoto\CursorGoto\bin\Debug\CursorGoto.pdb
+C:\Users\8\Documents\Visual Studio 2013\Projects\CursorGoto\CursorGoto\obj\Debug\CursorGoto.csprojResolveAssemblyReference.cache
+C:\Users\8\Documents\Visual Studio 2013\Projects\CursorGoto\CursorGoto\obj\Debug\CursorGoto.exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\CursorGoto\CursorGoto\obj\Debug\CursorGoto.pdb

@@ -13,7 +13,7 @@ namespace csharp
     class Program
     {
         static void Main(string[] args)
-        {   
+        {
             ConsoleKeyInfo k;
             int shiftnum = 1;
             int timer = 1;
@@ -30,15 +30,15 @@ namespace csharp
             continueloop:
                 Console.WriteLine("do u want to jump the cursor somewhere? [y/n]");
                 k = Console.ReadKey();
-              if (k.Key == ConsoleKey.Y)
-              {
-                Console.WriteLine("enter the place for the cursor to jump to...");
-                Console.WriteLine("enter the first coord...");
-                point.X = int.Parse(Console.ReadLine());
-                Console.WriteLine("enter the second coord...");
-                point.Y = int.Parse(Console.ReadLine());
-                Cursor.Position = point;
-              }
+                if (k.Key == ConsoleKey.Y)
+                {
+                    Console.WriteLine("enter the place for the cursor to jump to...");
+                    Console.WriteLine("enter the first coord...");
+                    point.X = int.Parse(Console.ReadLine());
+                    Console.WriteLine("enter the second coord...");
+                    point.Y = int.Parse(Console.ReadLine());
+                    Cursor.Position = point;
+                }
             set:
                 Console.WriteLine("do u want to set a goto point? [y/n]");
                 k = Console.ReadKey();
@@ -86,7 +86,7 @@ namespace csharp
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("i have arrived at the entered location!");
                                 Console.ForegroundColor = ConsoleColor.White;
-                               // OnMouseClick(mouse);
+                                // OnMouseClick(mouse);
                                 interloop = false;
                             }
                         }
