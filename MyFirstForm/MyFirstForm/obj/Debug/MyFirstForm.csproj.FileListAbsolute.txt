@@ -1,0 +1,9 @@
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\bin\Debug\MyFirstForm.exe.config
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\bin\Debug\MyFirstForm.exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\bin\Debug\MyFirstForm.pdb
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\obj\Debug\MyFirstForm.csprojResolveAssemblyReference.cache
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\obj\Debug\MyFirstForm.Form1.resources
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\obj\Debug\MyFirstForm.Properties.Resources.resources
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\obj\Debug\MyFirstForm.csproj.GenerateResource.Cache
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\obj\Debug\MyFirstForm.exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\obj\Debug\MyFirstForm.pdb
