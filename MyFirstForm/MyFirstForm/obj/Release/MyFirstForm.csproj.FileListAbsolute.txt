@@ -1,0 +1,8 @@
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\bin\Release\MyFirstForm.exe.config
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\bin\Release\MyFirstForm.exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\bin\Release\MyFirstForm.pdb
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\obj\Release\MyFirstForm.Form1.resources
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\obj\Release\MyFirstForm.Properties.Resources.resources
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\obj\Release\MyFirstForm.csproj.GenerateResource.Cache
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\obj\Release\MyFirstForm.exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\obj\Release\MyFirstForm.pdb

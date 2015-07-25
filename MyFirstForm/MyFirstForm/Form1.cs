@@ -22,6 +22,7 @@ namespace MyFirstForm
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show(textBox1.Text, textBox2.Text);
+            textBox4.Text = "created message box!";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -43,34 +44,37 @@ namespace MyFirstForm
         {
             if (string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrEmpty(textBox3.Text))
             {
-                textBox3.Text = "name cannot be empty or whitespace!";
+                textBox4.Text = "name cannot be empty or whitespace!";
             }
             else
             {
                 variables.filename = textBox3.Text + ".txt";
-                if (!File.Exists("textfiles/" + variables.filename))
+                if (!File.Exists("textfiles\\" + variables.filename))
                 {
                     try
                     {
                         if (!Directory.Exists("textfiles"))
                         {
                             Directory.CreateDirectory("textfiles");
+                            textBox4.Text = "created textfiles folder...";
                         }
-                        StreamWriter w = new StreamWriter("textfiles/" + variables.filename);
+                        StreamWriter w = new StreamWriter("textfiles\\" + variables.filename);
+                        textBox4.Text = "created " + variables.filename;
                         w.Close();
                        // File.Create(variables.filename);
                        // File.CreateText(variables.filename);
                     }
                     catch
                     {
-                        textBox3.Text = "error making file!";
+                        textBox4.Text = "error making file!";
                     }
 
 
                 }
                 else
                 {
-                    MessageBox.Show("that file name already exist!", "notification");
+                    textBox4.Text = variables.filename + " already exist!";
+                    //MessageBox.Show("that file name already exist!", "notification");
                 }
             }
         }
@@ -84,11 +88,12 @@ namespace MyFirstForm
         {
             try
             {
-                Process.Start("textfiles/" + variables.filename);
+                Process.Start("textfiles\\" + variables.filename);
+                textBox4.Text = "opening text file...";
             }
             catch
             {
-                textBox3.Text = "a error as occured!";
+                textBox4.Text = "a error as occured!";
             }
         }
 
@@ -101,30 +106,43 @@ namespace MyFirstForm
         {
             try
             {
-                File.AppendAllText("textfiles/" + variables.filename, DateTime.Now + ": " + textBox3.Text + "\n");
+                File.AppendAllText("textfiles\\" + variables.filename, DateTime.Now + ": " + textBox3.Text + "\n");
+                textBox4.Text = "text added!";
             }
             catch
             {
-                textBox3.Text = "an error as occured!";
+                textBox4.Text = "an error as occured!";
             }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             variables.filename = textBox3.Text + ".txt";
+            textBox4.Text = "set " + variables.filename + " as the current txt file!";
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (File.Exists("textfiles/" + textBox3.Text + ".txt"))
+            if (File.Exists("textfiles\\" + textBox3.Text + ".txt"))
             {
-                File.Delete("textfiles/" + textBox3.Text + ".txt");
-                textBox3.Text = "File Deleted!";
+                File.Delete("textfiles\\" + textBox3.Text + ".txt");
+                textBox4.Text = textBox3.Text + " Deleted!";
             }
             else
             {
-                textBox3.Text ="the file textfiles/" + textBox3.Text + " does not exist!";
+                textBox4.Text ="the file textfiles\\" + textBox3.Text + " does not exist!";
             }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Process.Start("textfiles");
+            textBox4.Text = "opened textfiles folder!";
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("feeneekiin! feeneeeekiiiinnn!", "fennekin!");
         }
 
     }
