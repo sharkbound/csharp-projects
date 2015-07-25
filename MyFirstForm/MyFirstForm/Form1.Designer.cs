@@ -86,9 +86,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1, 402);
+            this.button2.Location = new System.Drawing.Point(83, 285);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 47);
+            this.button2.Size = new System.Drawing.Size(70, 47);
             this.button2.TabIndex = 4;
             this.button2.Text = "create text file";
             this.button2.UseVisualStyleBackColor = true;
@@ -99,15 +99,15 @@
             this.textBox3.Location = new System.Drawing.Point(1, 182);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(458, 215);
+            this.textBox3.Size = new System.Drawing.Size(458, 95);
             this.textBox3.TabIndex = 5;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(218, 402);
+            this.button3.Location = new System.Drawing.Point(1, 286);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 47);
+            this.button3.Size = new System.Drawing.Size(77, 45);
             this.button3.TabIndex = 6;
             this.button3.Text = "open text file";
             this.button3.UseVisualStyleBackColor = true;
@@ -115,19 +115,21 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(112, 402);
+            this.button4.BackColor = System.Drawing.Color.DarkOrange;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button4.Location = new System.Drawing.Point(0, 337);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 47);
+            this.button4.Size = new System.Drawing.Size(447, 42);
             this.button4.TabIndex = 8;
             this.button4.Text = "Write text to file";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(327, 403);
+            this.button5.Location = new System.Drawing.Point(159, 285);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(132, 46);
+            this.button5.Size = new System.Drawing.Size(80, 46);
             this.button5.TabIndex = 10;
             this.button5.Text = "set current text file";
             this.button5.UseVisualStyleBackColor = true;
@@ -135,12 +137,13 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1, 447);
+            this.button6.BackColor = System.Drawing.Color.Red;
+            this.button6.Location = new System.Drawing.Point(378, 283);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(458, 70);
+            this.button6.Size = new System.Drawing.Size(69, 46);
             this.button6.TabIndex = 11;
             this.button6.Text = "Delete text file";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
@@ -149,7 +152,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(459, 518);
+            this.ClientSize = new System.Drawing.Size(459, 382);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
