@@ -89,7 +89,7 @@ namespace MyFirstForm
             try
             {
                 Process.Start("textfiles\\" + variables.filename);
-                textBox4.Text = "opening text file...";
+                textBox4.Text = "opening " + "textfiles\\" + variables.filename;
             }
             catch
             {
@@ -144,6 +144,63 @@ namespace MyFirstForm
         {
             MessageBox.Show("feeneekiin! feeneeeekiiiinnn!", "fennekin!");
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            if ((string)comboBox1.SelectedItem == "+")
+            {
+                int awnser = 0;
+                try
+                {
+                    awnser = int.Parse(textBox5.Text) + int.Parse(textBox6.Text);
+                    textBox7.Text = awnser.ToString();
+                }
+                catch
+                {
+                    textBox7.Text = "a error has occured!";
+                }
+            }
+            else if ((string)comboBox1.SelectedItem == "-")
+            {
+                int awnser = 0;
+                try
+                {
+                    awnser = int.Parse(textBox5.Text) - int.Parse(textBox6.Text);
+                    textBox7.Text = awnser.ToString();
+                }
+                catch
+                {
+                    textBox7.Text = "a error has occured!";
+                }
+            }
+            else if ((string)comboBox1.SelectedItem == "*")
+            {
+                int awnser = 0;
+                try
+                {
+                    awnser = int.Parse(textBox5.Text) * int.Parse(textBox6.Text);
+                    textBox7.Text = awnser.ToString();
+                }
+                catch
+                {
+                    textBox7.Text = "a error has occured!";
+                }
+            }
+            else if ((string)comboBox1.SelectedItem == "/")
+            {
+                int awnser = 0;
+                try
+                {
+                    awnser = int.Parse(textBox5.Text) / int.Parse(textBox6.Text);
+                    textBox7.Text = awnser.ToString();
+                }
+                catch
+                {
+                    textBox7.Text = "a error has occured!";
+                }
+            }
+        }
+
 
     }
 }

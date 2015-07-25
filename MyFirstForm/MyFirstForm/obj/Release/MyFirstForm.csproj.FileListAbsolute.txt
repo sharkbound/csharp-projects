@@ -6,3 +6,4 @@ C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\obj\Rel
 C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\obj\Release\MyFirstForm.csproj.GenerateResource.Cache
 C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\obj\Release\MyFirstForm.exe
 C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\obj\Release\MyFirstForm.pdb
+C:\Users\8\Documents\Visual Studio 2013\Projects\MyFirstForm\MyFirstForm\obj\Release\MyFirstForm.csprojResolveAssemblyReference.cache
