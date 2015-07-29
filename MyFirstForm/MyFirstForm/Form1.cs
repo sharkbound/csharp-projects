@@ -17,6 +17,11 @@ namespace MyFirstForm
         public Form1()
         {
             InitializeComponent();
+            if (!Directory.Exists("textfiles"))
+            {
+                Directory.CreateDirectory("textfiles");
+                textBox4.Text = "created textfiles folder...";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -53,11 +58,6 @@ namespace MyFirstForm
                 {
                     try
                     {
-                        if (!Directory.Exists("textfiles"))
-                        {
-                            Directory.CreateDirectory("textfiles");
-                            textBox4.Text = "created textfiles folder...";
-                        }
                         StreamWriter w = new StreamWriter("textfiles\\" + variables.filename);
                         textBox4.Text = "created " + variables.filename;
                         w.Close();
@@ -126,7 +126,8 @@ namespace MyFirstForm
             if (File.Exists("textfiles\\" + textBox3.Text + ".txt"))
             {
                 File.Delete("textfiles\\" + textBox3.Text + ".txt");
-                textBox4.Text = textBox3.Text + " Deleted!";
+                textBox4.Text = variables.dir + textBox3.Text + ".txt" + " Deleted!";
+                //textBox4.Text = variables.filename + textBox3.Text + " Deleted!";
             }
             else
             {
@@ -198,6 +199,35 @@ namespace MyFirstForm
                 {
                     textBox7.Text = "a error has occured!";
                 }
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void textBox4_TextChanged_1(object sender, EventArgs e)
+        {
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if(File.Exists(variables.dir + variables.filename))
+            {
+                try
+                {
+                    File.Delete(variables.dir + variables.filename);
+                    textBox4.Text = variables.dir + variables.filename + " has been deleted!";
+                }
+                catch
+                {
+                    textBox4.Text = "Failed to delete " + variables.dir + variables.filename + "!";
+                }
+            }
+            else
+            {
+                textBox4.Text = "the file '"+ variables.dir + variables.filename + "' does not exist!";
             }
         }
 
