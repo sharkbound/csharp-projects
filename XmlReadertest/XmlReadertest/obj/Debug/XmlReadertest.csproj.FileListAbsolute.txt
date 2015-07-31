@@ -1,0 +1,9 @@
+C:\Users\8\Documents\Visual Studio 2013\Projects\XmlReadertest\XmlReadertest\bin\Debug\XmlReadertest.exe.config
+C:\Users\8\Documents\Visual Studio 2013\Projects\XmlReadertest\XmlReadertest\bin\Debug\XmlReadertest.exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\XmlReadertest\XmlReadertest\bin\Debug\XmlReadertest.pdb
+C:\Users\8\Documents\Visual Studio 2013\Projects\XmlReadertest\XmlReadertest\obj\Debug\XmlReadertest.csprojResolveAssemblyReference.cache
+C:\Users\8\Documents\Visual Studio 2013\Projects\XmlReadertest\XmlReadertest\obj\Debug\XmlReadertest.Form1.resources
+C:\Users\8\Documents\Visual Studio 2013\Projects\XmlReadertest\XmlReadertest\obj\Debug\XmlReadertest.Properties.Resources.resources
+C:\Users\8\Documents\Visual Studio 2013\Projects\XmlReadertest\XmlReadertest\obj\Debug\XmlReadertest.csproj.GenerateResource.Cache
+C:\Users\8\Documents\Visual Studio 2013\Projects\XmlReadertest\XmlReadertest\obj\Debug\XmlReadertest.exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\XmlReadertest\XmlReadertest\obj\Debug\XmlReadertest.pdb

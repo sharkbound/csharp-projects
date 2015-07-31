@@ -17,7 +17,7 @@ namespace csharp
             Console.Title = "CursorGoto";
             ConsoleKeyInfo k;
             int shiftnum = 7;
-            int timer = 1;
+            int timer = 9;
             bool firstloop = false;
             bool interloop = true;
             bool doLoop = true;
