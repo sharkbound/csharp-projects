@@ -56,19 +56,19 @@ namespace XmlReadertest
         private void button1_Click(object sender, EventArgs e)
         {
             var val = textBox1.Text;
+           // var doc = Returndoc();
             var doc = Returndoc();
             textBox2.Text = filedir;
 
-            doc.LoadXml(filedir);
+             doc.LoadXml(filedir);
             //doc.LoadXml(filedir.Substring(filedir.IndexOf(Environment.NewLine)));
 
-            XmlNode values = doc.CreateElement("StoredValues");
-            XmlNode textboxval = doc.CreateElement(val);
-            textboxval.InnerText = textBox2.Text;
-            values.AppendChild(textboxval);
-            doc.DocumentElement.AppendChild(values);
-            doc.Save(dir); 
-            
+            //XmlNode values = doc.CreateElement("StoredValues");
+            //XmlNode textboxval = doc.CreateElement(val);
+            //textboxval.InnerText = textBox2.Text;
+            //values.AppendChild(textboxval);
+            //doc.DocumentElement.AppendChild(values);
+            //doc.Save(dir); 
         }
 
         private XmlTextWriter ReturnXmlTextWriter()
@@ -91,7 +91,7 @@ namespace XmlReadertest
            return XmlWriter.Create("Settings.xml");
         }
 
-        private XmlDocument Returndoc()
+        public XmlDocument Returndoc()
         {
             return new XmlDocument();
         }
@@ -117,6 +117,5 @@ namespace XmlReadertest
         {
             Process.Start(filedir);
         }
-
     }
 }

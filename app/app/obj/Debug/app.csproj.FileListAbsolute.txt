@@ -1,0 +1,6 @@
+C:\Users\8\Documents\Visual Studio 2013\Projects\app\app\bin\Debug\app.exe.config
+C:\Users\8\Documents\Visual Studio 2013\Projects\app\app\obj\Debug\app.csprojResolveAssemblyReference.cache
+C:\Users\8\Documents\Visual Studio 2013\Projects\app\app\bin\Debug\app.exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\app\app\bin\Debug\app.pdb
+C:\Users\8\Documents\Visual Studio 2013\Projects\app\app\obj\Debug\app.exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\app\app\obj\Debug\app.pdb
