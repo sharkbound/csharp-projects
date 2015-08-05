@@ -1,0 +1,9 @@
+C:\Users\8\Documents\Visual Studio 2013\Projects\formGameTest\formGameTest\bin\Debug\formGameTest.exe.config
+C:\Users\8\Documents\Visual Studio 2013\Projects\formGameTest\formGameTest\obj\Debug\formGameTest.csprojResolveAssemblyReference.cache
+C:\Users\8\Documents\Visual Studio 2013\Projects\formGameTest\formGameTest\obj\Debug\formGameTest.Form1.resources
+C:\Users\8\Documents\Visual Studio 2013\Projects\formGameTest\formGameTest\obj\Debug\formGameTest.Properties.Resources.resources
+C:\Users\8\Documents\Visual Studio 2013\Projects\formGameTest\formGameTest\obj\Debug\formGameTest.csproj.GenerateResource.Cache
+C:\Users\8\Documents\Visual Studio 2013\Projects\formGameTest\formGameTest\bin\Debug\formGameTest.exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\formGameTest\formGameTest\bin\Debug\formGameTest.pdb
+C:\Users\8\Documents\Visual Studio 2013\Projects\formGameTest\formGameTest\obj\Debug\formGameTest.exe
+C:\Users\8\Documents\Visual Studio 2013\Projects\formGameTest\formGameTest\obj\Debug\formGameTest.pdb
