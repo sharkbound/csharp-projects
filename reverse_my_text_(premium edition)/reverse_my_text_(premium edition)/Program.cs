@@ -70,10 +70,10 @@ namespace reverse_my_text__premium_edition_
             }
             if (exist == 1)
             {
-            menugoto:
-            menu();
-            ConsoleKeyInfo ExitConfirm = Console.ReadKey();
-            Console.WriteLine("");
+                menugoto:
+                menu();
+                ConsoleKeyInfo ExitConfirm = Console.ReadKey();
+                Console.WriteLine("");
             
                 switch (ExitConfirm.Key)
                 {
