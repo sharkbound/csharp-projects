@@ -56,6 +56,27 @@ namespace godmodeAnnouncer
             else
             {
                 UnturnedPlayer player = (UnturnedPlayer)caller;
+
+                if (command.Length == 1 && caller.HasPermission("godmode.other"))
+                {
+                    UnturnedPlayer Uplayer = UnturnedPlayer.FromName(command[0]);
+                    IRocketPlayer Rplayer = (IRocketPlayer)Uplayer;
+
+                    if (Uplayer.Features.GodMode)
+                    {
+                        Uplayer.Features.GodMode = false;
+                        UnturnedChat.Say(Rplayer, caller.DisplayName + " has taken you out of godmode", UnityEngine.Color.yellow);
+                        Logger.Log(caller.DisplayName + " has taken " + Uplayer.DisplayName + " out of godmode");
+                    }
+                    else
+                    {
+                        Uplayer.Features.GodMode = true;
+                        UnturnedChat.Say(Rplayer, caller.DisplayName + " has put you in godmode", UnityEngine.Color.yellow);
+                        Logger.Log(caller.DisplayName + " has put " + Uplayer.DisplayName + " in godmode");
+                    }
+                    return;
+                }
+
                 if (player.Features.GodMode)
                 {
                     player.Features.GodMode = false;
