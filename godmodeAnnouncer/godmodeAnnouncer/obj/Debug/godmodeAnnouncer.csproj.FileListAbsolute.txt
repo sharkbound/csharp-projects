@@ -1,0 +1,11 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\godmodeAnnouncer\godmodeAnnouncer\obj\Debug\godmodeAnnouncer.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\godmodeAnnouncer\godmodeAnnouncer\bin\Debug\godmodeAnnouncer.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\godmodeAnnouncer\godmodeAnnouncer\bin\Debug\godmodeAnnouncer.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\godmodeAnnouncer\godmodeAnnouncer\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\godmodeAnnouncer\godmodeAnnouncer\bin\Debug\Assembly-CSharp.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\godmodeAnnouncer\godmodeAnnouncer\bin\Debug\Rocket.API.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\godmodeAnnouncer\godmodeAnnouncer\bin\Debug\Rocket.Core.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\godmodeAnnouncer\godmodeAnnouncer\bin\Debug\Rocket.Unturned.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\godmodeAnnouncer\godmodeAnnouncer\bin\Debug\UnityEngine.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\godmodeAnnouncer\godmodeAnnouncer\obj\Debug\godmodeAnnouncer.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\godmodeAnnouncer\godmodeAnnouncer\obj\Debug\godmodeAnnouncer.pdb
