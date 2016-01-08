@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Commandgodmode.cs" />
     <Compile Include="CommandGodmodeCheck.cs" />
+    <Compile Include="CommandVM.cs" />
     <Compile Include="godmode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -38,6 +38,7 @@ namespace godmodeAnnouncer
                 if (player == null )
                 {
                     Logger.Log("failed to find player by the name: " + command[0]);
+                    return;
                 }
 
                 if (player.Features.GodMode)
