@@ -65,12 +65,14 @@ namespace godmodeAnnouncer
                     if (Uplayer.Features.GodMode)
                     {
                         Uplayer.Features.GodMode = false;
+                        UnturnedChat.Say(caller, "you have disabled godmode on: " + Uplayer.DisplayName, UnityEngine.Color.yellow);
                         UnturnedChat.Say(Rplayer, caller.DisplayName + " has taken you out of godmode", UnityEngine.Color.yellow);
                         Logger.Log(caller.DisplayName + " has taken " + Uplayer.DisplayName + " out of godmode");
                     }
                     else
                     {
                         Uplayer.Features.GodMode = true;
+                        UnturnedChat.Say(caller, "you have enabled godmode on: " + Uplayer.DisplayName, UnityEngine.Color.yellow);
                         UnturnedChat.Say(Rplayer, caller.DisplayName + " has put you in godmode", UnityEngine.Color.yellow);
                         Logger.Log(caller.DisplayName + " has put " + Uplayer.DisplayName + " in godmode");
                     }
