@@ -14,7 +14,7 @@ namespace godmodeAnnouncer
     {
         public List<string> Aliases
         {
-            get { return new List<string> {"gm"}; }
+            get { return new List<string>() {"gm"}; }
         }
 
         public AllowedCaller AllowedCaller
@@ -108,7 +108,7 @@ namespace godmodeAnnouncer
 
         public List<string> Permissions
         {
-            get { return new List<string> {"godmode"}; }
+            get { return new List<string>() {"godmode"}; }
         }
 
         public string Syntax
