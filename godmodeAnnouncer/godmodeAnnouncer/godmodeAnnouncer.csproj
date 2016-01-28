@@ -57,6 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandDuty.cs" />
     <Compile Include="Commandgodmode.cs" />
     <Compile Include="CommandGodmodeCheck.cs" />
     <Compile Include="CommandPM.cs" />
