@@ -1,0 +1,11 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\giveVehicleNonAdmin\giveVehicleNonAdmin\bin\Debug\giveVehicleNonAdmin.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\giveVehicleNonAdmin\giveVehicleNonAdmin\bin\Debug\giveVehicleNonAdmin.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\giveVehicleNonAdmin\giveVehicleNonAdmin\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\giveVehicleNonAdmin\giveVehicleNonAdmin\bin\Debug\Assembly-CSharp.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\giveVehicleNonAdmin\giveVehicleNonAdmin\bin\Debug\Rocket.API.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\giveVehicleNonAdmin\giveVehicleNonAdmin\bin\Debug\Rocket.Core.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\giveVehicleNonAdmin\giveVehicleNonAdmin\bin\Debug\Rocket.Unturned.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\giveVehicleNonAdmin\giveVehicleNonAdmin\bin\Debug\UnityEngine.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\giveVehicleNonAdmin\giveVehicleNonAdmin\obj\Debug\giveVehicleNonAdmin.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\giveVehicleNonAdmin\giveVehicleNonAdmin\obj\Debug\giveVehicleNonAdmin.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\giveVehicleNonAdmin\giveVehicleNonAdmin\obj\Debug\giveVehicleNonAdmin.pdb
