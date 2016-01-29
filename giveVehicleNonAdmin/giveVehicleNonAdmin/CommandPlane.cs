@@ -48,7 +48,7 @@ namespace giveVehicleNonAdmin
                 }
                 else
                 {
-                    UnturnedChat.Say(Ucaller, "you have to wait " + (int)remainingCooldown + " to use this command again", UnityEngine.Color.yellow);
+                    UnturnedChat.Say(Ucaller, "you have to wait " + (int)remainingCooldown + " seconds to use this command again", UnityEngine.Color.yellow);
                 }
             }
         }
