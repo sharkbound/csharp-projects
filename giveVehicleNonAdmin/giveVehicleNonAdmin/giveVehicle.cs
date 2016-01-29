@@ -15,6 +15,10 @@ namespace giveVehicleNonAdmin
     {
         public static giveVehicle instance = null;
 
+        public static Dictionary<string, float> PIndividualCooldowns = new Dictionary<string, float>();
+        public static Dictionary<string, int> HIndividualCooldowns = new Dictionary<string, int>();
+
+
         protected override void Load()
         {
             instance = this;
@@ -24,6 +28,24 @@ namespace giveVehicleNonAdmin
         protected override void Unload()
         {
             Logger.Log("giveVehicle has unloaded!");
+        }
+
+        void FixedUpdate()
+        {
+            try
+            {
+                foreach (var entry in PIndividualCooldowns)
+                {
+                    if (PIndividualCooldowns[entry.Key] > 0f)
+                    {
+                        PIndividualCooldowns[entry.Key] -= 0.016f;
+                    }
+                } 
+            }
+            catch
+            {
+
+            }
         }
     }
 }

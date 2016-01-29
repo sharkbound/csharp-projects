@@ -11,8 +11,8 @@ namespace giveVehicleNonAdmin
 
         public void LoadDefaults()
         {
-            HeliSpawnCooldown = 1800;
-            PlaneSpawnCooldown = 1800;
+            HeliSpawnCooldown = 600;
+            PlaneSpawnCooldown = 600;
         }
     }
 }
