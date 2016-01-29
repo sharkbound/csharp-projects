@@ -9,10 +9,9 @@ using Rocket.Unturned.Player;
 using Rocket.Unturned.Chat;
 using SDG.Unturned;
 
-
 namespace giveVehicleNonAdmin
 {
-    class CommandPlane : IRocketCommand
+    class CommandHeli : IRocketCommand
     {
         public List<string> Aliases
         {
@@ -28,7 +27,7 @@ namespace giveVehicleNonAdmin
         {
             UnturnedPlayer Ucaller = (UnturnedPlayer)caller;
             float remainingCooldown = 0f;
-            ushort id = (ushort)92;
+            ushort id = (ushort)93;
             float maxCooldown = (float)giveVehicle.instance.Configuration.Instance.SpawnCooldown;
 
             if (!(giveVehicle.IndividualCooldowns.ContainsKey(caller.DisplayName)))
@@ -42,7 +41,7 @@ namespace giveVehicleNonAdmin
                 {
                     if (VehicleTool.giveVehicle(Ucaller.Player, id))
                     {
-                        UnturnedChat.Say(Ucaller, "giving you a SandPipper", UnityEngine.Color.yellow);
+                        UnturnedChat.Say(Ucaller, "giving you a Helicopter", UnityEngine.Color.yellow);
                         giveVehicle.IndividualCooldowns[caller.DisplayName] = (float)maxCooldown;
                     }
                 }
@@ -55,17 +54,17 @@ namespace giveVehicleNonAdmin
 
         public string Help
         {
-            get { return "gives the player a vehicle"; }
+            get { return "gives the caller a helicopter"; }
         }
 
         public string Name
         {
-            get { return "plane"; }
+            get { return "heli"; }
         }
 
         public List<string> Permissions
         {
-            get { return new List<string>() {"plane"}; }
+            get { return new List<string>() { "heli" }; }
         }
 
         public string Syntax

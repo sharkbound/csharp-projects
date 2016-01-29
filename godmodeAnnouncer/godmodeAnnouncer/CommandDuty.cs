@@ -28,10 +28,12 @@ namespace godmodeAnnouncer
 
             if (caller.IsAdmin)
             {
+                Logger.Log(caller.DisplayName + " has gone off duty");
                 unturnedCaller.Admin(false);
             }
             else
             {
+                Logger.Log(caller.DisplayName + " has gone on duty");
                 unturnedCaller.Admin(true);
             }
         }

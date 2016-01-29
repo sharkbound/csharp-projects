@@ -8,6 +8,9 @@ using Rocket.Core.Logging;
 using Rocket.Unturned.Player;
 using Rocket.Unturned.Chat;
 using Rocket.Core.Plugins;
+using SDG.Unturned;
+using Rocket.Core;
+using Rocket.Unturned;
 
 namespace giveVehicleNonAdmin
 {
@@ -15,14 +18,14 @@ namespace giveVehicleNonAdmin
     {
         public static giveVehicle instance = null;
 
-        public static Dictionary<string, float> PIndividualCooldowns = new Dictionary<string, float>();
-        public static Dictionary<string, int> HIndividualCooldowns = new Dictionary<string, int>();
-
+        public static Dictionary<string, float> IndividualCooldowns = new Dictionary<string, float>();
 
         protected override void Load()
         {
             instance = this;
             Logger.Log("giveVehicle has loaded!");
+            Logger.LogError("Command cooldown has been set to: " + instance.Configuration.Instance.SpawnCooldown);
+            U.Events.OnPlayerDisconnected += Events_OnPlayerDisconnected;
         }
 
         protected override void Unload()
@@ -34,13 +37,25 @@ namespace giveVehicleNonAdmin
         {
             try
             {
-                foreach (var entry in PIndividualCooldowns)
+                foreach (var entry in IndividualCooldowns)
                 {
-                    if (PIndividualCooldowns[entry.Key] > 0f)
+                    if (IndividualCooldowns[entry.Key] >= 0f)
                     {
-                        PIndividualCooldowns[entry.Key] -= 0.016f;
+                        IndividualCooldowns[entry.Key] -= 0.016f;
                     }
                 } 
+            }
+            catch
+            {
+
+            }
+        }
+
+        public void Events_OnPlayerDisconnected(UnturnedPlayer player)
+        {
+            try
+            {
+                IndividualCooldowns.Remove(player.DisplayName);
             }
             catch
             {

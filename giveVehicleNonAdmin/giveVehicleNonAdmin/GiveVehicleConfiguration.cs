@@ -6,13 +6,11 @@ namespace giveVehicleNonAdmin
 {
     public class GiveVehicleConfiguration : IRocketPluginConfiguration
     {
-        public int HeliSpawnCooldown;
-        public int PlaneSpawnCooldown;
+        public int SpawnCooldown;
 
         public void LoadDefaults()
         {
-            HeliSpawnCooldown = 600;
-            PlaneSpawnCooldown = 600;
+            SpawnCooldown = 600;
         }
     }
 }
