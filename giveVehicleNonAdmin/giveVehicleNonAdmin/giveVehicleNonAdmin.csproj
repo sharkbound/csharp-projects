@@ -57,11 +57,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandBoat.cs" />
     <Compile Include="CommandHeli.cs" />
     <Compile Include="CommandPlane.cs" />
     <Compile Include="giveVehicle.cs" />
     <Compile Include="GiveVehicleConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CommandRefreshCooldown.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

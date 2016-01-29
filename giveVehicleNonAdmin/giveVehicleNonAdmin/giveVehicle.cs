@@ -25,6 +25,9 @@ namespace giveVehicleNonAdmin
             instance = this;
             Logger.Log("giveVehicle has loaded!");
             Logger.LogError("Command cooldown has been set to: " + instance.Configuration.Instance.SpawnCooldown);
+            Logger.LogError("helicopter id has been set to: " + instance.Configuration.Instance.HelicopterId);
+            Logger.LogError("plane id has been set to: " + instance.Configuration.Instance.planeId);
+            Logger.LogError("boat id has been set to: " + instance.Configuration.Instance.BoatId);
             U.Events.OnPlayerDisconnected += Events_OnPlayerDisconnected;
         }
 

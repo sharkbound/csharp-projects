@@ -28,7 +28,7 @@ namespace giveVehicleNonAdmin
         {
             UnturnedPlayer Ucaller = (UnturnedPlayer)caller;
             float remainingCooldown = 0f;
-            ushort id = (ushort)92;
+            ushort id = (ushort)giveVehicle.instance.Configuration.Instance.planeId;
             float maxCooldown = (float)giveVehicle.instance.Configuration.Instance.SpawnCooldown;
 
             if (!(giveVehicle.IndividualCooldowns.ContainsKey(caller.DisplayName)))
