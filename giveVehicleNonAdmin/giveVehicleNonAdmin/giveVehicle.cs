@@ -43,6 +43,7 @@ namespace giveVehicleNonAdmin
             try
             {
                 FirstCommandExecution.Remove(player.DisplayName);
+                IndividualCooldowns.Remove(player.DisplayName);
             }
             catch
             {
