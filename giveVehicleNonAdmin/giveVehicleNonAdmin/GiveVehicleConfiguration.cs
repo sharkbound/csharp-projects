@@ -13,7 +13,7 @@ namespace giveVehicleNonAdmin
 
         public void LoadDefaults()
         {
-            SpawnCooldown = 600;
+            SpawnCooldown = 120;
             planeId = 92;
             HelicopterId = 93;
             BoatId = 98;

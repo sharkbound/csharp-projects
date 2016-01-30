@@ -18,7 +18,8 @@ namespace giveVehicleNonAdmin
     {
         public static giveVehicle instance = null;
 
-        public static Dictionary<string, float> IndividualCooldowns = new Dictionary<string, float>();
+        public static Dictionary<string, DateTime> IndividualCooldowns = new Dictionary<string, DateTime>();
+        public static Dictionary<string, bool> FirstCommandExecution = new Dictionary<string, bool>();
 
         protected override void Load()
         {
@@ -29,6 +30,7 @@ namespace giveVehicleNonAdmin
             Logger.LogError("plane id has been set to: " + instance.Configuration.Instance.planeId);
             Logger.LogError("boat id has been set to: " + instance.Configuration.Instance.BoatId);
             U.Events.OnPlayerDisconnected += Events_OnPlayerDisconnected;
+            U.Events.OnPlayerConnected += Events_OnPlayerConnected;
         }
 
         protected override void Unload()
@@ -36,17 +38,11 @@ namespace giveVehicleNonAdmin
             Logger.Log("giveVehicle has unloaded!");
         }
 
-        void FixedUpdate()
+        public void Events_OnPlayerDisconnected(UnturnedPlayer player)
         {
             try
             {
-                foreach (var entry in IndividualCooldowns)
-                {
-                    if (IndividualCooldowns[entry.Key] >= 0f)
-                    {
-                        IndividualCooldowns[entry.Key] -= 0.016f;
-                    }
-                } 
+                FirstCommandExecution.Remove(player.DisplayName);
             }
             catch
             {
@@ -54,11 +50,12 @@ namespace giveVehicleNonAdmin
             }
         }
 
-        public void Events_OnPlayerDisconnected(UnturnedPlayer player)
+        public void Events_OnPlayerConnected(UnturnedPlayer player)
         {
             try
             {
-                IndividualCooldowns.Remove(player.DisplayName);
+                IndividualCooldowns.Add(player.DisplayName, DateTime.Now);
+                FirstCommandExecution.Add(player.DisplayName, true);
             }
             catch
             {

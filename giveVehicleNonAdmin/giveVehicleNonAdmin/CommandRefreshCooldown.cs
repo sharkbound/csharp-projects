@@ -38,10 +38,10 @@ namespace giveVehicleNonAdmin
                 UnturnedChat.Say(caller, "invalid parameter");
             }
 
-            if (giveVehicle.IndividualCooldowns.ContainsKey(Uplayer.DisplayName))
+            if (giveVehicle.FirstCommandExecution.ContainsKey(caller.DisplayName))
             {
                 UnturnedChat.Say(Uplayer, "your vehicle spawn cooldown has been reset", UnityEngine.Color.yellow);
-                giveVehicle.IndividualCooldowns[Uplayer.DisplayName] = 0f;
+                giveVehicle.FirstCommandExecution[Uplayer.DisplayName] = true;
             }
         }
 

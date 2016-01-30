@@ -27,28 +27,33 @@ namespace giveVehicleNonAdmin
         public void Execute(IRocketPlayer caller, string[] command)
         {
             UnturnedPlayer Ucaller = (UnturnedPlayer)caller;
-            float remainingCooldown = 0f;
+            DateTime remainingCooldownDatetime;
             ushort id = (ushort)giveVehicle.instance.Configuration.Instance.planeId;
-            float maxCooldown = (float)giveVehicle.instance.Configuration.Instance.SpawnCooldown;
+            double maxCooldown = (double)giveVehicle.instance.Configuration.Instance.SpawnCooldown;
 
             if (!(giveVehicle.IndividualCooldowns.ContainsKey(caller.DisplayName)))
             {
-                giveVehicle.IndividualCooldowns.Add(caller.DisplayName, 0f);
+                giveVehicle.IndividualCooldowns.Add(caller.DisplayName, DateTime.Now);
             }
 
-            if (giveVehicle.IndividualCooldowns.TryGetValue(caller.DisplayName, out remainingCooldown))
+            if (giveVehicle.IndividualCooldowns.TryGetValue(caller.DisplayName, out remainingCooldownDatetime))
             {
-                if (remainingCooldown <= 0f || caller.HasPermission("VehicleSpawn.NoCooldown"))
+                if ((DateTime.Now - remainingCooldownDatetime).TotalSeconds >= maxCooldown || giveVehicle.FirstCommandExecution[caller.DisplayName] == true )
                 {
                     if (VehicleTool.giveVehicle(Ucaller.Player, id))
                     {
                         UnturnedChat.Say(Ucaller, "giving you a SandPipper", UnityEngine.Color.yellow);
-                        giveVehicle.IndividualCooldowns[caller.DisplayName] = (float)maxCooldown;
+                        giveVehicle.IndividualCooldowns[caller.DisplayName] = DateTime.Now;
+                        if (giveVehicle.FirstCommandExecution[caller.DisplayName])
+                        {
+                            giveVehicle.FirstCommandExecution[caller.DisplayName] = false;
+                        }
                     }
                 }
                 else
                 {
-                    UnturnedChat.Say(Ucaller, "you have to wait " + (int)remainingCooldown + " seconds to use this command again", UnityEngine.Color.yellow);
+                    double cooldown = maxCooldown - (DateTime.Now - remainingCooldownDatetime).TotalSeconds;
+                    UnturnedChat.Say(Ucaller, "you have to wait " + (int)cooldown + " seconds to use this command again", UnityEngine.Color.yellow);
                 }
             }
         }
