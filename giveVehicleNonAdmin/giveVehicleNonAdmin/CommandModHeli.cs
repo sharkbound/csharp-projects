@@ -9,10 +9,9 @@ using Rocket.Unturned.Player;
 using Rocket.Unturned.Chat;
 using SDG.Unturned;
 
-
 namespace giveVehicleNonAdmin
 {
-    class CommandPlane : IRocketCommand
+    class CommandModHeli : IRocketCommand
     {
         public List<string> Aliases
         {
@@ -28,7 +27,7 @@ namespace giveVehicleNonAdmin
         {
             UnturnedPlayer Ucaller = (UnturnedPlayer)caller;
             DateTime remainingCooldownDatetime;
-            ushort id = (ushort)giveVehicle.instance.Configuration.Instance.planeId;
+            ushort id = (ushort)giveVehicle.instance.Configuration.Instance.ModHeliId;
             double maxCooldown = (double)giveVehicle.instance.Configuration.Instance.SpawnCooldown;
 
             if (!(giveVehicle.IndividualCooldowns.ContainsKey(caller.DisplayName)))
@@ -38,11 +37,11 @@ namespace giveVehicleNonAdmin
 
             if (giveVehicle.IndividualCooldowns.TryGetValue(caller.DisplayName, out remainingCooldownDatetime))
             {
-                if ((DateTime.Now - remainingCooldownDatetime).TotalSeconds >= maxCooldown || giveVehicle.FirstCommandExecution[caller.DisplayName] == true )
+                if ((DateTime.Now - remainingCooldownDatetime).TotalSeconds >= maxCooldown || giveVehicle.FirstCommandExecution[caller.DisplayName] == true)
                 {
                     if (VehicleTool.giveVehicle(Ucaller.Player, id))
                     {
-                        UnturnedChat.Say(Ucaller, giveVehicle.instance.Translations.Instance.Translate("Command_plane_give_private"), UnityEngine.Color.yellow);
+                        UnturnedChat.Say(Ucaller, giveVehicle.instance.Translations.Instance.Translate("Command_modheli_give_private"), UnityEngine.Color.yellow);
                         giveVehicle.IndividualCooldowns[caller.DisplayName] = DateTime.Now;
                         if (giveVehicle.FirstCommandExecution[caller.DisplayName])
                         {
@@ -60,17 +59,17 @@ namespace giveVehicleNonAdmin
 
         public string Help
         {
-            get { return "gives the player a vehicle"; }
+            get { return "gives the caller a helicopter"; }
         }
 
         public string Name
         {
-            get { return "plane"; }
+            get { return "modheli"; }
         }
 
         public List<string> Permissions
         {
-            get { return new List<string>() {"plane"}; }
+            get { return new List<string>() { "modheli" }; }
         }
 
         public string Syntax

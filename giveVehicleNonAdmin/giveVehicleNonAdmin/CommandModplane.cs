@@ -12,7 +12,7 @@ using SDG.Unturned;
 
 namespace giveVehicleNonAdmin
 {
-    class CommandPlane : IRocketCommand
+    class CommandModplane :IRocketCommand
     {
         public List<string> Aliases
         {
@@ -28,7 +28,7 @@ namespace giveVehicleNonAdmin
         {
             UnturnedPlayer Ucaller = (UnturnedPlayer)caller;
             DateTime remainingCooldownDatetime;
-            ushort id = (ushort)giveVehicle.instance.Configuration.Instance.planeId;
+            ushort id = (ushort)giveVehicle.instance.Configuration.Instance.ModPlaneId;
             double maxCooldown = (double)giveVehicle.instance.Configuration.Instance.SpawnCooldown;
 
             if (!(giveVehicle.IndividualCooldowns.ContainsKey(caller.DisplayName)))
@@ -38,11 +38,11 @@ namespace giveVehicleNonAdmin
 
             if (giveVehicle.IndividualCooldowns.TryGetValue(caller.DisplayName, out remainingCooldownDatetime))
             {
-                if ((DateTime.Now - remainingCooldownDatetime).TotalSeconds >= maxCooldown || giveVehicle.FirstCommandExecution[caller.DisplayName] == true )
+                if ((DateTime.Now - remainingCooldownDatetime).TotalSeconds >= maxCooldown || giveVehicle.FirstCommandExecution[caller.DisplayName] == true)
                 {
                     if (VehicleTool.giveVehicle(Ucaller.Player, id))
                     {
-                        UnturnedChat.Say(Ucaller, giveVehicle.instance.Translations.Instance.Translate("Command_plane_give_private"), UnityEngine.Color.yellow);
+                        UnturnedChat.Say(Ucaller, giveVehicle.instance.Translations.Instance.Translate("Command_modplane_give_private"), UnityEngine.Color.yellow);
                         giveVehicle.IndividualCooldowns[caller.DisplayName] = DateTime.Now;
                         if (giveVehicle.FirstCommandExecution[caller.DisplayName])
                         {
@@ -65,12 +65,12 @@ namespace giveVehicleNonAdmin
 
         public string Name
         {
-            get { return "plane"; }
+            get { return "modplane"; }
         }
 
         public List<string> Permissions
         {
-            get { return new List<string>() {"plane"}; }
+            get { return new List<string>() { "modplane" }; }
         }
 
         public string Syntax

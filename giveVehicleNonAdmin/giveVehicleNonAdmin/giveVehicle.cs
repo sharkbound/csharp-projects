@@ -11,6 +11,7 @@ using Rocket.Core.Plugins;
 using SDG.Unturned;
 using Rocket.Core;
 using Rocket.Unturned;
+using Rocket.API.Collections;
 
 namespace giveVehicleNonAdmin
 {
@@ -36,6 +37,21 @@ namespace giveVehicleNonAdmin
         protected override void Unload()
         {
             Logger.Log("giveVehicle has unloaded!");
+        }
+
+        public override TranslationList DefaultTranslations
+        {
+            get
+            {
+               return new TranslationList()
+               {
+                   {"Command_plane_give_private", "giving you a plane"},
+                   {"Command_heli_give_private", "giving you a helicopter"},
+                   {"Command_boat_give_private", "giving you a boat"},
+                   {"Command_modheli_give_private", "giving you a modded helicopter"},
+                   {"Command_modplane_give_private", "giving you a modded plane"}
+               };
+            }
         }
 
         public void Events_OnPlayerDisconnected(UnturnedPlayer player)

@@ -41,7 +41,7 @@ namespace giveVehicleNonAdmin
                 {
                     if (VehicleTool.giveVehicle(Ucaller.Player, id))
                     {
-                        UnturnedChat.Say(Ucaller, "giving you a Helicopter", UnityEngine.Color.yellow);
+                        UnturnedChat.Say(Ucaller, giveVehicle.instance.Translations.Instance.Translate("Command_heli_give_private"), UnityEngine.Color.yellow);
                         giveVehicle.IndividualCooldowns[caller.DisplayName] = DateTime.Now;
                         if (giveVehicle.FirstCommandExecution[caller.DisplayName])
                         {

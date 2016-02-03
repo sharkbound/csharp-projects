@@ -10,6 +10,8 @@ namespace giveVehicleNonAdmin
         public int planeId;
         public int HelicopterId;
         public int BoatId;
+        public int ModPlaneId;
+        public int ModHeliId;
 
         public void LoadDefaults()
         {
@@ -17,6 +19,8 @@ namespace giveVehicleNonAdmin
             planeId = 92;
             HelicopterId = 93;
             BoatId = 98;
+            ModHeliId = 8808;
+            ModPlaneId = 8804;
         }
     }
 }
