@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandBoat.cs" />
+    <Compile Include="CommandFill.cs" />
     <Compile Include="CommandHeli.cs" />
     <Compile Include="CommandModHeli.cs" />
     <Compile Include="CommandModplane.cs" />

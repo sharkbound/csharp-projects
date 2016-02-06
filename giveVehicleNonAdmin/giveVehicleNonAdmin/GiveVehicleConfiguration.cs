@@ -12,6 +12,8 @@ namespace giveVehicleNonAdmin
         public int BoatId;
         public int ModPlaneId;
         public int ModHeliId;
+        public int defaultFuel;
+        public int defaultRadius;
 
         public void LoadDefaults()
         {
@@ -21,6 +23,8 @@ namespace giveVehicleNonAdmin
             BoatId = 98;
             ModHeliId = 8808;
             ModPlaneId = 8804;
+            defaultFuel = 9999;
+            defaultRadius = 60;
         }
     }
 }
