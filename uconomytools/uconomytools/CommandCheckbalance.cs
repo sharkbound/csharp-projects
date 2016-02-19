@@ -56,8 +56,8 @@ namespace uconomytools
 
             if (foundPlayer)
             {
-                UnturnedChat.Say(caller, otherplayer.DisplayName + "has the balance of " + bal.ToString());
-                Logger.Log(otherplayer.DisplayName + "has the balance of " + bal.ToString()); 
+                UnturnedChat.Say(caller, otherplayer.DisplayName + " has the balance of " + bal.ToString());
+                Logger.Log(otherplayer.DisplayName + " has the balance of " + bal.ToString()); 
             }
             else
             {
