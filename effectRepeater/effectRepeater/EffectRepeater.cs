@@ -25,31 +25,53 @@ namespace effectRepeater
 
         protected override void Unload()
         {
-            Logger.Log("EffectReapeater has Unloaded!");
+            Logger.Log("EffectRepeater has Unloaded!");
         }
 
-        public void AddEffectPlayer(IRocketPlayer player, int timesToPlayEffect, int delayBetweenEffects, ushort id, DateTime initialRun)
+        public void AddEffectPlayer(IRocketPlayer player, int timesToPlayEffect, double delayBetweenEffects, ushort id, DateTime initialRun, Thread th)
         {
             bool firstEffectPlay = true;
             UnturnedPlayer Uplayer = (UnturnedPlayer)player;
             int timesPassed = 0;
-
-            new Thread(() =>
-            {
-                Thread.CurrentThread.IsBackground = true;
+            loop:
 
                 if (timesPassed > timesToPlayEffect)
                 {
-
+                    Logger.Log("Aborting thread!");
+                    th.Abort();
                 }
-
-                if (firstEffectPlay || timesPassed <= timesToPlayEffect && (int)((DateTime.Now - initialRun).Seconds) >= delayBetweenEffects)
+                else if (firstEffectPlay || timesPassed <= timesToPlayEffect && (double)((DateTime.Now - initialRun).TotalSeconds) >= delayBetweenEffects)
                 {
+                    initialRun = DateTime.Now;
+                    Logger.Log("playing effect: " + id.ToString());
                     Uplayer.TriggerEffect(id);
                     timesPassed++;
+                    firstEffectPlay = false;
+                }
+                else
+                {
+                    double remainingTime = delayBetweenEffects - (DateTime.Now - initialRun).TotalSeconds;
+                    Logger.Log("remaining time:  " + remainingTime.ToString());
                 }
 
-            });
+            int sleepTime = 10;
+            Logger.Log("starting sleep for " + sleepTime.ToString());
+            Thread.Sleep(sleepTime);
+            goto loop;
+                
+        }
+
+        public void PlayEffect(UnturnedPlayer player, ushort id)
+        {
+            player.TriggerEffect(id);
+            Logger.Log("playing effect: " + id.ToString());
+        }
+
+        public void StartThread(IRocketPlayer player, int timesToPlayEffect, double delayBetweenEffects, ushort id)
+        {
+            Thread t = null;
+            t = new Thread(() => AddEffectPlayer(player, timesToPlayEffect, delayBetweenEffects, id, DateTime.Now, t));
+            t.Start();
         }
     }
 }

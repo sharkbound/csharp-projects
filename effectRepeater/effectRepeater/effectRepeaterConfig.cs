@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Rocket.API;
 
 
+
 namespace effectRepeater
 {
     public class effectRepeaterConfig : IRocketPluginConfiguration

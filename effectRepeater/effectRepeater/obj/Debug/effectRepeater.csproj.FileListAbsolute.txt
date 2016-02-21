@@ -1,0 +1,11 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\effectRepeater\effectRepeater\bin\Debug\effectRepeater.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\effectRepeater\effectRepeater\bin\Debug\effectRepeater.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\effectRepeater\effectRepeater\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\effectRepeater\effectRepeater\bin\Debug\Assembly-CSharp.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\effectRepeater\effectRepeater\bin\Debug\Rocket.API.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\effectRepeater\effectRepeater\bin\Debug\Rocket.Core.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\effectRepeater\effectRepeater\bin\Debug\Rocket.Unturned.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\effectRepeater\effectRepeater\bin\Debug\UnityEngine.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\effectRepeater\effectRepeater\obj\Debug\effectRepeater.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\effectRepeater\effectRepeater\obj\Debug\effectRepeater.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\effectRepeater\effectRepeater\obj\Debug\effectRepeater.pdb
