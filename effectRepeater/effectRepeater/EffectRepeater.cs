@@ -33,31 +33,31 @@ namespace effectRepeater
             bool firstEffectPlay = true;
             UnturnedPlayer Uplayer = (UnturnedPlayer)player;
             int timesPassed = 0;
-            loop:
-
+            while (true)
+            {
                 if (timesPassed > timesToPlayEffect)
                 {
-                    Logger.Log("Aborting thread!");
+                    // Logger.Log("Aborting thread!");
                     th.Abort();
                 }
                 else if (firstEffectPlay || timesPassed <= timesToPlayEffect && (double)((DateTime.Now - initialRun).TotalSeconds) >= delayBetweenEffects)
                 {
                     initialRun = DateTime.Now;
-                    Logger.Log("playing effect: " + id.ToString());
+                    // Logger.Log("playing effect: " + id.ToString());
                     Uplayer.TriggerEffect(id);
                     timesPassed++;
                     firstEffectPlay = false;
                 }
                 else
                 {
-                    double remainingTime = delayBetweenEffects - (DateTime.Now - initialRun).TotalSeconds;
-                    Logger.Log("remaining time:  " + remainingTime.ToString());
+                    // double remainingTime = delayBetweenEffects - (DateTime.Now - initialRun).TotalSeconds;
+                    // Logger.Log("remaining time:  " + remainingTime.ToString());
                 }
 
-            int sleepTime = 10;
-            Logger.Log("starting sleep for " + sleepTime.ToString());
-            Thread.Sleep(sleepTime);
-            goto loop;
+                int sleepTime = 10;
+                // Logger.Log("starting sleep for " + sleepTime.ToString());
+                Thread.Sleep(sleepTime);
+            }
                 
         }
 
