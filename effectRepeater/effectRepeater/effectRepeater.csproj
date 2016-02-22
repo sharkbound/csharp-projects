@@ -57,6 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandKillEffect.cs" />
     <Compile Include="CommandRepEff.cs" />
     <Compile Include="EffectRepeater.cs" />
     <Compile Include="effectRepeaterConfig.cs" />

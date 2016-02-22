@@ -9,6 +9,7 @@ using Rocket.Unturned.Player;
 using Rocket.Unturned;
 using Rocket.API;
 using SDG.Unturned;
+using Rocket.Unturned.Chat;
 
 namespace effectRepeater
 {
@@ -26,6 +27,20 @@ namespace effectRepeater
 
         public void Execute(IRocketPlayer caller, string[] command)
         {
+            IRocketPlayer p = (IRocketPlayer)UnturnedPlayer.FromName(command[3]);
+            if (p == null)
+            {
+                UnturnedChat.Say(caller, "player not found!");
+                return;
+            }
+
+            if (EffectRepeater.Instance.activeThreads.ContainsKey(p.Id))
+            {
+                UnturnedChat.Say(caller, p.DisplayName + " already has a effect on them!");
+                UnturnedChat.Say(caller, "use /killeffect " + "\"" + p.DisplayName + "\" to stop their effect" );
+                return;
+            }
+
             int times;
             double delay;
             ushort id;
@@ -33,9 +48,9 @@ namespace effectRepeater
             int.TryParse(command[0], out times);
             double.TryParse(command[1], out delay);
             ushort.TryParse(command[2], out id);
-            IRocketPlayer p = (IRocketPlayer)UnturnedPlayer.FromName(command[3]);
 
             EffectRepeater.Instance.StartThread(p, times, delay, id);
+            UnturnedChat.Say(caller, "added effect " + id.ToString() + " to " + p.DisplayName + " with interval of " + delay.ToString() + " for " + times.ToString() + " times!");
         }
 
         public string Help

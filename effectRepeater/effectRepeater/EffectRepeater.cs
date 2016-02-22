@@ -16,11 +16,14 @@ namespace effectRepeater
     public class EffectRepeater : RocketPlugin<effectRepeaterConfig>
     {
         public static EffectRepeater Instance;
+        public Dictionary<string, Thread> activeThreads;
 
         protected override void Load()
         {
+            activeThreads = new Dictionary<string, Thread>();
             Instance = this;
             Logger.Log("EffectRepeater has loaded!");
+            U.Events.OnPlayerDisconnected += Events_OnPlayerDisconnected;
         }
 
         protected override void Unload()
@@ -38,6 +41,10 @@ namespace effectRepeater
                 if (timesPassed > timesToPlayEffect)
                 {
                     // Logger.Log("Aborting thread!");
+                    if (activeThreads.ContainsKey(player.Id))
+                    {
+                        activeThreads.Remove(player.Id);
+                    }
                     th.Abort();
                 }
                 else if (firstEffectPlay || timesPassed <= timesToPlayEffect && (double)((DateTime.Now - initialRun).TotalSeconds) >= delayBetweenEffects)
@@ -72,6 +79,25 @@ namespace effectRepeater
             Thread t = null;
             t = new Thread(() => AddEffectPlayer(player, timesToPlayEffect, delayBetweenEffects, id, DateTime.Now, t));
             t.Start();
+            activeThreads.Add(player.Id, t);
+        }
+
+        public void StopThread(IRocketPlayer player)
+        {
+            if (activeThreads.ContainsKey(player.Id))
+            {
+                activeThreads[player.Id].Abort();
+                activeThreads.Remove(player.Id);
+            }
+        }
+
+        public void Events_OnPlayerDisconnected(UnturnedPlayer player)
+        {
+            if (activeThreads.ContainsKey(player.Id))
+            {
+                activeThreads[player.Id].Abort();
+                activeThreads.Remove(player.Id);
+            }
         }
     }
 }
