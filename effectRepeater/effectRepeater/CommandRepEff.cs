@@ -41,16 +41,19 @@ namespace effectRepeater
                 return;
             }
 
-            int times;
-            double delay;
-            ushort id;
+            //int times;
+            //double delay;
+            //ushort id;
 
-            int.TryParse(command[0], out times);
-            double.TryParse(command[1], out delay);
-            ushort.TryParse(command[2], out id);
+            effectData eD = new effectData();
 
-            EffectRepeater.Instance.StartThread(p, times, delay, id);
-            UnturnedChat.Say(caller, "added effect " + id.ToString() + " to " + p.DisplayName + " with interval of " + delay.ToString() + " for " + times.ToString() + " times!");
+            int.TryParse(command[0], out eD.TimeToPlay);
+            double.TryParse(command[1], out eD.Delay);
+            ushort.TryParse(command[2], out eD.Id);
+            eD.IRocketPlayer = p;
+
+            EffectRepeater.Instance.StartThread(eD);
+            UnturnedChat.Say(caller, "added effect " + eD.Id.ToString() + " to " + p.DisplayName + " with interval of " + eD.Delay.ToString() + " for " + eD.TimeToPlay.ToString() + " times!");
         }
 
         public string Help

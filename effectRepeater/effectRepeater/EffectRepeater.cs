@@ -74,12 +74,12 @@ namespace effectRepeater
             Logger.Log("playing effect: " + id.ToString());
         }
 
-        public void StartThread(IRocketPlayer player, int timesToPlayEffect, double delayBetweenEffects, ushort id)
+        public void StartThread(effectData eD)
         {
             Thread t = null;
-            t = new Thread(() => AddEffectPlayer(player, timesToPlayEffect, delayBetweenEffects, id, DateTime.Now, t));
+            t = new Thread(() => AddEffectPlayer(eD.IRocketPlayer, eD.TimeToPlay, eD.Delay, eD.Id, DateTime.Now, t));
             t.Start();
-            activeThreads.Add(player.Id, t);
+            activeThreads.Add(eD.IRocketPlayer.Id, t);
         }
 
         public void StopThread(IRocketPlayer player)
