@@ -1,0 +1,11 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\ResetPlayerPosOnDeath\ResetPlayerPosOnDeath\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\ResetPlayerPosOnDeath\ResetPlayerPosOnDeath\bin\Debug\Assembly-CSharp.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\ResetPlayerPosOnDeath\ResetPlayerPosOnDeath\bin\Debug\Rocket.API.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\ResetPlayerPosOnDeath\ResetPlayerPosOnDeath\bin\Debug\Rocket.Core.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\ResetPlayerPosOnDeath\ResetPlayerPosOnDeath\bin\Debug\Rocket.Unturned.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\ResetPlayerPosOnDeath\ResetPlayerPosOnDeath\bin\Debug\UnityEngine.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\ResetPlayerPosOnDeath\ResetPlayerPosOnDeath\obj\Debug\ResetPlayerPosOnDeath.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\ResetPlayerPosOnDeath\ResetPlayerPosOnDeath\bin\Debug\ResetPlayerPosOnDisconnect.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\ResetPlayerPosOnDeath\ResetPlayerPosOnDeath\bin\Debug\ResetPlayerPosOnDisconnect.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\ResetPlayerPosOnDeath\ResetPlayerPosOnDeath\obj\Debug\ResetPlayerPosOnDisconnect.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\ResetPlayerPosOnDeath\ResetPlayerPosOnDeath\obj\Debug\ResetPlayerPosOnDisconnect.pdb
