@@ -1,0 +1,11 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\TpsAutomaticCommands\TpsAutomaticCommands\bin\Debug\TpsAutomaticCommands.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\TpsAutomaticCommands\TpsAutomaticCommands\bin\Debug\TpsAutomaticCommands.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\TpsAutomaticCommands\TpsAutomaticCommands\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\TpsAutomaticCommands\TpsAutomaticCommands\bin\Debug\Assembly-CSharp.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\TpsAutomaticCommands\TpsAutomaticCommands\bin\Debug\Rocket.API.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\TpsAutomaticCommands\TpsAutomaticCommands\bin\Debug\Rocket.Core.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\TpsAutomaticCommands\TpsAutomaticCommands\bin\Debug\Rocket.Unturned.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\TpsAutomaticCommands\TpsAutomaticCommands\bin\Debug\UnityEngine.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\TpsAutomaticCommands\TpsAutomaticCommands\obj\Debug\TpsAutomaticCommands.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\TpsAutomaticCommands\TpsAutomaticCommands\obj\Debug\TpsAutomaticCommands.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\TpsAutomaticCommands\TpsAutomaticCommands\obj\Debug\TpsAutomaticCommands.csprojResolveAssemblyReference.cache
