@@ -1,5 +1,5 @@
 this is the text before its reversed:
-lol
+a
 
 this is the text reversed:
-lol
+a

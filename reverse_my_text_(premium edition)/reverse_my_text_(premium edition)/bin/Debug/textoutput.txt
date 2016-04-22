@@ -1,4 +1,4 @@
 this is the raw text:
-yes
+a
 raw text after its reversed:
-sey
+a

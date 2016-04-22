@@ -25,7 +25,7 @@ namespace uconomytools
         public void Execute(IRocketPlayer caller, string[] command)
         {
             bool foundPlayer = false;
-            bool successfulExecution = false;
+            bool isUlong = false;
 
             int value = 0;
 
@@ -45,7 +45,7 @@ namespace uconomytools
             }
             else if (ulong.TryParse(command[0], out id))
             {
-
+                isUlong = true;
             }
             else
             {
@@ -58,7 +58,7 @@ namespace uconomytools
                 UcTools.instance.Database.SetBalance(otherplayer.Id, value);
                 bal = UcTools.instance.Database.GetBalance(otherplayer.Id);
             }
-            else if (ulong.TryParse(command[0], out id))
+            else if (isUlong)
             {
                 UcTools.instance.Database.SetBalance(command[0], value);
                 bal = UcTools.instance.Database.GetBalance(id.ToString());

@@ -1,0 +1,9 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\XmlTestFormApp\XmlTestFormApp\bin\Debug\XmlTestFormApp.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\XmlTestFormApp\XmlTestFormApp\bin\Debug\XmlTestFormApp.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\XmlTestFormApp\XmlTestFormApp\bin\Debug\XmlTestFormApp.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\XmlTestFormApp\XmlTestFormApp\obj\Debug\XmlTestFormApp.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\XmlTestFormApp\XmlTestFormApp\obj\Debug\XmlTestFormApp.Form1.resources
+C:\Users\owner\Desktop\GitHub\csharp-projects\XmlTestFormApp\XmlTestFormApp\obj\Debug\XmlTestFormApp.Properties.Resources.resources
+C:\Users\owner\Desktop\GitHub\csharp-projects\XmlTestFormApp\XmlTestFormApp\obj\Debug\XmlTestFormApp.csproj.GenerateResource.Cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\XmlTestFormApp\XmlTestFormApp\obj\Debug\XmlTestFormApp.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\XmlTestFormApp\XmlTestFormApp\obj\Debug\XmlTestFormApp.pdb
