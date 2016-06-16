@@ -1,0 +1,11 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\EasyAmmoRocketMod\EasyAmmoRocketMod\obj\Debug\EasyAmmoRocketMod.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\EasyAmmoRocketMod\EasyAmmoRocketMod\bin\Debug\EasyAmmoRocketMod.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\EasyAmmoRocketMod\EasyAmmoRocketMod\bin\Debug\EasyAmmoRocketMod.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\EasyAmmoRocketMod\EasyAmmoRocketMod\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\EasyAmmoRocketMod\EasyAmmoRocketMod\bin\Debug\Assembly-CSharp.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\EasyAmmoRocketMod\EasyAmmoRocketMod\bin\Debug\Rocket.API.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\EasyAmmoRocketMod\EasyAmmoRocketMod\bin\Debug\Rocket.Core.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\EasyAmmoRocketMod\EasyAmmoRocketMod\bin\Debug\Rocket.Unturned.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\EasyAmmoRocketMod\EasyAmmoRocketMod\bin\Debug\UnityEngine.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\EasyAmmoRocketMod\EasyAmmoRocketMod\obj\Debug\EasyAmmoRocketMod.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\EasyAmmoRocketMod\EasyAmmoRocketMod\obj\Debug\EasyAmmoRocketMod.pdb
