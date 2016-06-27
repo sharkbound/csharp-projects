@@ -1,0 +1,11 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\spawnprotection\spawnprotection\obj\Debug\spawnprotection.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\spawnprotection\spawnprotection\bin\Debug\spawnprotection.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\spawnprotection\spawnprotection\bin\Debug\spawnprotection.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\spawnprotection\spawnprotection\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\spawnprotection\spawnprotection\bin\Debug\Assembly-CSharp.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\spawnprotection\spawnprotection\bin\Debug\Rocket.API.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\spawnprotection\spawnprotection\bin\Debug\Rocket.Core.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\spawnprotection\spawnprotection\bin\Debug\Rocket.Unturned.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\spawnprotection\spawnprotection\bin\Debug\UnityEngine.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\spawnprotection\spawnprotection\obj\Debug\spawnprotection.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\spawnprotection\spawnprotection\obj\Debug\spawnprotection.pdb
