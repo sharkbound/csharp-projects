@@ -81,7 +81,6 @@ namespace godmodeAnnouncer
                             }
                             else
                             {
-                                Logger.Log("else");
                                 foreach (var passenger in v.passengers)
                                 {
                                     if (passenger.player == null) { }
