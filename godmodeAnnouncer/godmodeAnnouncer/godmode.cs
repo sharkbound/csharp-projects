@@ -11,10 +11,13 @@ using Rocket.Core.Plugins;
 
 namespace godmodeAnnouncer
 {
-    class godmode : RocketPlugin
+    class godmode : RocketPlugin<GodModeAnnounceConfig>
     {
+        public static godmode Instance;
+
         protected override void Load()
         {
+            Instance = this;
             Logger.Log("GodmodeAnnouncer has loaded!");
         }
 

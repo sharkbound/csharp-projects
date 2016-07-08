@@ -1,0 +1,11 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\DynamicSlots\DynamicSlots\bin\Debug\DynamicSlots.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DynamicSlots\DynamicSlots\bin\Debug\DynamicSlots.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\DynamicSlots\DynamicSlots\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DynamicSlots\DynamicSlots\bin\Debug\Assembly-CSharp.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DynamicSlots\DynamicSlots\bin\Debug\Rocket.API.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DynamicSlots\DynamicSlots\bin\Debug\Rocket.Core.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DynamicSlots\DynamicSlots\bin\Debug\Rocket.Unturned.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DynamicSlots\DynamicSlots\bin\Debug\UnityEngine.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DynamicSlots\DynamicSlots\obj\Debug\DynamicSlots.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\DynamicSlots\DynamicSlots\obj\Debug\DynamicSlots.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DynamicSlots\DynamicSlots\obj\Debug\DynamicSlots.pdb
