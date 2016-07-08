@@ -47,7 +47,7 @@ namespace godmodeAnnouncer
             }
 
             new Thread( () => {
-                        var toRemove = new List<uint>();
+                        var toRemove = new List<InteractableVehicle>();
                             
                       /*  VehicleManager.Vehicles
                             //.Where( v => v.passengers.All( p => p?.player == null ) )
@@ -76,7 +76,7 @@ namespace godmodeAnnouncer
 
                                 if (!playerFound && foundDistance <= distance)
                                 {
-                                    toRemove.Add(v.instanceID);
+                                    toRemove.Add(v);
                                 }
                             }
                             else
@@ -90,28 +90,34 @@ namespace godmodeAnnouncer
 
                                 if (!playerFound)
                                 {
-                                    toRemove.Add(v.instanceID);
+                                    toRemove.Add(v);
                                 }
                             }
 
                             playerFound = false;
                         }
 
-                        foreach(var id in toRemove)
+                        foreach(var v in toRemove)
                         {
-                            VehicleManager.Instance.SteamChannel.send( "tellVehicleDestroy",
-                                ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER, id );
-                            Thread.Sleep(godmode.Instance.Configuration.Instance.DelayBetweenClears);
+                            if (!checkForPassengers(v))
+                            {
+                                VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
+                                                        ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER, v.instanceID);
+                                Thread.Sleep(godmode.Instance.Configuration.Instance.DelayBetweenClears); 
+                            }
                         };
 
                         if (caller is ConsolePlayer)
                         {
-                            //UnturnedChat.Say(caller, "Removed " + toRemove.Count + " vehicles!", UnityEngine.Color.green);
+                            Log("Removed " + toRemove.Count + " vehicles!");
+;
                             Logger.Log("Removed " + toRemove.Count + " vehicles!");
                         }
                         else
                         {
                             UnturnedChat.Say(caller, "Removed " + toRemove.Count + " vehicles!");
+
+                            Log("Removed " + toRemove.Count + " vehicles!");
                             Logger.Log("Removed " + toRemove.Count + " vehicles!");
                         }
                     } ).Start();
@@ -135,6 +141,27 @@ namespace godmodeAnnouncer
         public string Syntax
         {
             get { return "(radius)"; }
+        }
+
+        bool checkForPassengers(InteractableVehicle v)
+        {
+            foreach (var passenger in v.passengers)
+            {
+                if (passenger.player == null) {}
+                else
+                    return true;
+                
+            }
+
+            return false;
+        }
+
+        void Log(string message)
+        {
+            var lastColor = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(message + "\n");
+            Console.ForegroundColor = lastColor;
         }
     }
 }
