@@ -13,6 +13,7 @@ namespace godmodeAnnouncer
 {
     class godmode : RocketPlugin<GodModeAnnounceConfig>
     {
+        public static bool ClearRunning = false;
         public static godmode Instance;
 
         protected override void Load()
