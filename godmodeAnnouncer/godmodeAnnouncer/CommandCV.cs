@@ -38,10 +38,10 @@ namespace godmodeAnnouncer
             int distance = -1;
             bool EnteredNumber = false;
 
-            if (checkIfClearIsRunning(caller))
+          /*  if (checkIfClearIsRunning(caller))
             {
                 return;
-            }
+            } */
 
             if (command.Length == 1)
             {
@@ -111,7 +111,7 @@ namespace godmodeAnnouncer
                 sendMessage(caller, "Starting a vehicle clear! Estimated time: " + (toRemove.Count *
                     godmode.Instance.Configuration.Instance.DelayBetweenClears) / 1000 + " seconds.");
 
-                godmode.ClearRunning = true;
+                //godmode.ClearRunning = true;
                 foreach (var v in toRemove)
                 {
                     if (!checkForPassengers(v))
@@ -127,7 +127,7 @@ namespace godmodeAnnouncer
 
                 Log("Removed " + toRemove.Count + " vehicles in " + (DateTime.Now - godmode.LastClear).Seconds + " seconds!");
                 Logger.Log("Removed " + toRemove.Count + " vehicles in " + (DateTime.Now - godmode.LastClear).Seconds + " seconds!");
-                godmode.ClearRunning = false; 
+                //godmode.ClearRunning = false; 
             }).Start();
         }
 
