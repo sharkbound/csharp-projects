@@ -13,6 +13,8 @@ namespace godmodeAnnouncer
 {
     class godmode : RocketPlugin<GodModeAnnounceConfig>
     {
+        public static int LastVehicleCount;
+        public static DateTime LastClear;
         public static bool ClearRunning = false;
         public static godmode Instance;
 

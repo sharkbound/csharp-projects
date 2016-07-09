@@ -103,7 +103,8 @@ namespace godmodeAnnouncer
                     playerFound = false;
                 }
 
-                DateTime start = DateTime.Now;
+                godmode.LastVehicleCount = toRemove.Count;
+                godmode.LastClear = DateTime.Now;
 
                 LogInfo("Starting a vehicle clear! Estimated time: " + (toRemove.Count *
                     godmode.Instance.Configuration.Instance.DelayBetweenClears) / 1000 + " seconds.");
@@ -121,11 +122,11 @@ namespace godmodeAnnouncer
                     }
                 };
 
-                sendMessage(caller, "Removed " + toRemove.Count + " vehicles in " + (DateTime.Now - start).Seconds +
+                sendMessage(caller, "Removed " + toRemove.Count + " vehicles in " + (DateTime.Now - godmode.LastClear).Seconds +
                    " seconds!");
 
-                Log("Removed " + toRemove.Count + " vehicles in " + (DateTime.Now - start).Seconds + " seconds!");
-                Logger.Log("Removed " + toRemove.Count + " vehicles in " + (DateTime.Now - start).Seconds + " seconds!");
+                Log("Removed " + toRemove.Count + " vehicles in " + (DateTime.Now - godmode.LastClear).Seconds + " seconds!");
+                Logger.Log("Removed " + toRemove.Count + " vehicles in " + (DateTime.Now - godmode.LastClear).Seconds + " seconds!");
                 godmode.ClearRunning = false; 
             }).Start();
         }
@@ -189,6 +190,14 @@ namespace godmodeAnnouncer
 
         bool checkIfClearIsRunning(IRocketPlayer caller)
         {
+            if ((DateTime.Now - godmode.LastClear).Seconds > (godmode.LastVehicleCount *
+                godmode.Instance.Configuration.Instance.DelayBetweenClears) / 1000)
+            {
+                godmode.ClearRunning = false;
+                return false;
+            }
+               
+
             if (godmode.ClearRunning)
             {
                 if (!(caller is ConsolePlayer))
