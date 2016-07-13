@@ -57,11 +57,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandAdminTp.cs" />
     <Compile Include="CommandCV.cs" />
     <Compile Include="CommandDuty.cs" />
     <Compile Include="Commandgodmode.cs" />
     <Compile Include="CommandGodmodeCheck.cs" />
     <Compile Include="CommandPM.cs" />
+    <Compile Include="CommandVC.cs" />
     <Compile Include="CommandVM.cs" />
     <Compile Include="godmode.cs" />
     <Compile Include="GodModeAnnounceConfig.cs" />
