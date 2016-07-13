@@ -30,6 +30,7 @@ namespace godmodeAnnouncer
         {
             bool playerFound = false;
             float foundDistance = 0;
+
             UnturnedPlayer Uplayer = null;
             if (!(caller is ConsolePlayer))
             {
@@ -37,6 +38,7 @@ namespace godmodeAnnouncer
             }
             int distance = -1;
             bool EnteredNumber = false;
+            bool ignoreVehiclesWithBarricades = false;
 
           /*  if (checkIfClearIsRunning(caller))
             {
@@ -49,6 +51,15 @@ namespace godmodeAnnouncer
                 {
                     EnteredNumber = true;
                 }
+                else if (bool.TryParse(command[0], out ignoreVehiclesWithBarricades)) { }
+            }
+            else if (command.Length == 2)
+            {
+                if (int.TryParse(command[0], out distance))
+                {
+                    EnteredNumber = true;
+                }
+                if (bool.TryParse(command[1], out ignoreVehiclesWithBarricades)) { }
             }
 
             new Thread(() =>
@@ -82,7 +93,10 @@ namespace godmodeAnnouncer
 
                         if (!playerFound && foundDistance <= distance)
                         {
-                            toRemove.Add(v);
+                            if (!checkForBarricades(v, ignoreVehiclesWithBarricades))
+                            {
+                                toRemove.Add(v);
+                            }
                         }
                     }
                     else
@@ -96,7 +110,10 @@ namespace godmodeAnnouncer
 
                         if (!playerFound)
                         {
-                            toRemove.Add(v);
+                            if (!checkForBarricades(v, ignoreVehiclesWithBarricades))
+                            {
+                                toRemove.Add(v); 
+                            }
                         }
                     }
 
@@ -114,6 +131,11 @@ namespace godmodeAnnouncer
                 //godmode.ClearRunning = true;
                 foreach (var v in toRemove)
                 {
+                    if (checkForBarricades(v, ignoreVehiclesWithBarricades))
+                    {
+                        continue;
+                    }
+
                     if (!checkForPassengers(v))
                     {
                         VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
@@ -159,6 +181,30 @@ namespace godmodeAnnouncer
                 else
                     return true;
 
+            }
+
+            return false;
+        }
+
+        bool checkForBarricades(InteractableVehicle v, bool ignoreVehiclesWithBarricades)
+        {
+            byte x;
+            byte y;
+            ushort plant;
+            BarricadeRegion region;
+            if (godmode.Instance.Configuration.Instance.IgnoreVehiclesWithBarricades)
+            {
+                if (ignoreVehiclesWithBarricades)
+                {
+                    if (BarricadeManager.tryGetPlant(v.transform, out x, out y, out plant, out region))
+                    {
+                        if (region.drops.Count > 0)
+                        {
+                            return true;
+                        }
+                    }
+                    else { }
+                }
             }
 
             return false;

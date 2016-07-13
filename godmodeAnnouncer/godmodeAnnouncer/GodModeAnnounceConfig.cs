@@ -11,10 +11,12 @@ namespace godmodeAnnouncer
     public class GodModeAnnounceConfig : IRocketPluginConfiguration
     {
         public int DelayBetweenClears;
+        public bool IgnoreVehiclesWithBarricades;
 
         public void LoadDefaults()
         {
-            DelayBetweenClears = 200;
+            DelayBetweenClears = 450;
+            IgnoreVehiclesWithBarricades = true;
         }
     }
 }
