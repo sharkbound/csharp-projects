@@ -78,6 +78,11 @@ namespace godmodeAnnouncer
                             */
                 foreach (var v in VehicleManager.vehicles)
                 {
+                    if (v == null)
+                    {
+                        continue;
+                    }
+
                     if (EnteredNumber && !(caller is ConsolePlayer))
                     {
                         foundDistance = Vector3.Distance(v.transform.position, Uplayer.Position);
@@ -131,7 +136,7 @@ namespace godmodeAnnouncer
                 //godmode.ClearRunning = true;
                 foreach (var v in toRemove)
                 {
-                    if (checkForBarricades(v, ignoreVehiclesWithBarricades))
+                    if (checkForBarricades(v, ignoreVehiclesWithBarricades) || v == null)
                     {
                         continue;
                     }
