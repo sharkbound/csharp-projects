@@ -133,9 +133,29 @@ namespace godmodeAnnouncer
                 sendMessage(caller, "Starting a vehicle clear! Estimated time: " + (toRemove.Count *
                     godmode.Instance.Configuration.Instance.DelayBetweenClears) / 1000 + " seconds.");
 
-                //godmode.ClearRunning = true;
+                int timestriggered = 1;
+                int count = toRemove.Count;
                 foreach (var v in toRemove)
                 {
+                    if (count == toRemove.Count - godmode.Instance.Configuration.Instance.ClearNoticationInterval * timestriggered)
+                    {
+                        timestriggered++;
+                        //count -= godmode.Instance.Configuration.Instance.ClearNoticationInterval;
+                        //LogInfo("Counts current value - " + count);
+                        //LogInfo("TimesTriggered current value - " + timestriggered);
+
+                        Logger.LogWarning("Running Clear: " +
+                            (godmode.Instance.Configuration.Instance.DelayBetweenClears * count) / 1000 +
+                             " seconds left, Vehicles left  " + count);
+
+                        if (!(caller is ConsolePlayer))
+                        {
+                            UnturnedChat.Say(caller, "Running Clear: " +
+                            (godmode.Instance.Configuration.Instance.DelayBetweenClears * count) / 1000 +
+                             " seconds left, Vehicles left " + count, UnityEngine.Color.yellow);
+                        }
+                    }
+
                     if (checkForBarricades(v, ignoreVehiclesWithBarricades) || v == null)
                     {
                         continue;
@@ -147,6 +167,8 @@ namespace godmodeAnnouncer
                                                 ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER, v.instanceID);
                         Thread.Sleep(godmode.Instance.Configuration.Instance.DelayBetweenClears);
                     }
+
+                    count--;
                 };
 
                 sendMessage(caller, "Removed " + toRemove.Count + " vehicles in " + (DateTime.Now - godmode.LastClear).Seconds +
