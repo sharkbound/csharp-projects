@@ -135,43 +135,8 @@ namespace godmodeAnnouncer
 
                 int timestriggered = 1;
                 int count = toRemove.Count;
-                foreach (var v in toRemove)
-                {
-                    if (count == toRemove.Count - godmode.Instance.Configuration.Instance.ClearNoticationInterval * timestriggered)
-                    {
-                        timestriggered++;
-                        //count -= godmode.Instance.Configuration.Instance.ClearNoticationInterval;
-                        //LogInfo("Counts current value - " + count);
-                        //LogInfo("TimesTriggered current value - " + timestriggered);
 
-                        Logger.LogWarning("Running Clear: " +
-                            (godmode.Instance.Configuration.Instance.DelayBetweenClears * count) / 1000 +
-                             " seconds left, Vehicles left  " + count);
-
-                        if (!(caller is ConsolePlayer))
-                        {
-                            UnturnedChat.Say(caller, "Running Clear: " +
-                            (godmode.Instance.Configuration.Instance.DelayBetweenClears * count) / 1000 +
-                             " seconds left, Vehicles left " + count, UnityEngine.Color.yellow);
-                        }
-                    }
-
-                    if (checkForBarricades(v, ignoreVehiclesWithBarricades) || v == null)
-                    {
-                        continue;
-                    }
-
-                    if (!checkForPassengers(v))
-                    {
-                         VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
-                                                ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_INSTANT, v.instanceID);
-                       // VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
-                       //                        ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER, v.instanceID);
-                        Thread.Sleep(godmode.Instance.Configuration.Instance.DelayBetweenClears);
-                    }
-
-                    count--;
-                };
+                removeVehiclesTest(toRemove, ref count, ref timestriggered, caller, ignoreVehiclesWithBarricades);
 
                 sendMessage(caller, "Removed " + toRemove.Count + " vehicles in " + (DateTime.Now - godmode.LastClear).Seconds +
                    " seconds!");
@@ -286,6 +251,88 @@ namespace godmodeAnnouncer
                 return true;
             }
             return false;
+        }
+
+        void removeVehiclesTest(List<InteractableVehicle> toRemove, ref int count, ref int timestriggered, IRocketPlayer caller, bool ignoreVehiclesWithBarricades)
+        {
+            for (int ii = toRemove.Count - 1; ii >= 0; ii--)
+            {
+                if (count == toRemove.Count - godmode.Instance.Configuration.Instance.ClearNoticationInterval * timestriggered)
+                {
+                    timestriggered++;
+                    //count -= godmode.Instance.Configuration.Instance.ClearNoticationInterval;
+                    //LogInfo("Counts current value - " + count);
+                    //LogInfo("TimesTriggered current value - " + timestriggered);
+
+                    Logger.LogWarning("Running Clear: " +
+                        (godmode.Instance.Configuration.Instance.DelayBetweenClears * count) / 1000 +
+                         " seconds left, Vehicles left  " + count);
+
+                    if (!(caller is ConsolePlayer))
+                    {
+                        UnturnedChat.Say(caller, "Running Clear: " +
+                        (godmode.Instance.Configuration.Instance.DelayBetweenClears * count) / 1000 +
+                         " seconds left, Vehicles left " + count, UnityEngine.Color.yellow);
+                    }
+                }
+
+                if (checkForBarricades(toRemove[ii], ignoreVehiclesWithBarricades) || toRemove[ii] == null)
+                {
+                    continue;
+                }
+
+                if (!checkForPassengers(toRemove[ii]))
+                {
+                    VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
+                                           ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_INSTANT, toRemove[ii].instanceID);
+                    // VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
+                    //                        ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER, v.instanceID);
+                    Thread.Sleep(godmode.Instance.Configuration.Instance.DelayBetweenClears);
+                }
+
+                count--;
+            };
+        }
+
+        void removeVehicles(List<InteractableVehicle> toRemove, ref int count, ref int timestriggered, IRocketPlayer caller, bool ignoreVehiclesWithBarricades)
+        {
+            foreach (var v in toRemove)
+            {
+                if (count == toRemove.Count - godmode.Instance.Configuration.Instance.ClearNoticationInterval * timestriggered)
+                {
+                    timestriggered++;
+                    //count -= godmode.Instance.Configuration.Instance.ClearNoticationInterval;
+                    //LogInfo("Counts current value - " + count);
+                    //LogInfo("TimesTriggered current value - " + timestriggered);
+
+                    Logger.LogWarning("Running Clear: " +
+                        (godmode.Instance.Configuration.Instance.DelayBetweenClears * count) / 1000 +
+                         " seconds left, Vehicles left  " + count);
+
+                    if (!(caller is ConsolePlayer))
+                    {
+                        UnturnedChat.Say(caller, "Running Clear: " +
+                        (godmode.Instance.Configuration.Instance.DelayBetweenClears * count) / 1000 +
+                         " seconds left, Vehicles left " + count, UnityEngine.Color.yellow);
+                    }
+                }
+
+                if (checkForBarricades(v, ignoreVehiclesWithBarricades) || v == null)
+                {
+                    continue;
+                }
+
+                if (!checkForPassengers(v))
+                {
+                    VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
+                                           ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_INSTANT, v.instanceID);
+                    // VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
+                    //                        ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER, v.instanceID);
+                    Thread.Sleep(godmode.Instance.Configuration.Instance.DelayBetweenClears);
+                }
+
+                count--;
+            };
         }
     }
 }
