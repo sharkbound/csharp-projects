@@ -283,10 +283,8 @@ namespace godmodeAnnouncer
 
                 if (!checkForPassengers(toRemove[ii]))
                 {
-                    VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
-                                           ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_INSTANT, toRemove[ii].instanceID);
-                    // VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
-                    //                        ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER, v.instanceID);
+                     VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
+                                            ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER, toRemove[ii].instanceID);
                     Thread.Sleep(godmode.Instance.Configuration.Instance.DelayBetweenClears);
                 }
 
