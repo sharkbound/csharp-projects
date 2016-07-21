@@ -163,8 +163,10 @@ namespace godmodeAnnouncer
 
                     if (!checkForPassengers(v))
                     {
-                        VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
-                                                ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER, v.instanceID);
+                         VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
+                                                ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_INSTANT, v.instanceID);
+                       // VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
+                       //                        ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER, v.instanceID);
                         Thread.Sleep(godmode.Instance.Configuration.Instance.DelayBetweenClears);
                     }
 
