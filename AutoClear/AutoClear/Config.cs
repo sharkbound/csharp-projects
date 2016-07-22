@@ -17,7 +17,7 @@ namespace AutoClear
         public void LoadDefaults()
         {
             IgnoreVehiclesWithBarricades = true;
-            LogClears = false;
+            LogClears = true;
             TimeUntilDespawn = 15;
             Radius = 370;
         }
