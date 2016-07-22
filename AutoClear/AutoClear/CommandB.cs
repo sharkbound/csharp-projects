@@ -53,7 +53,7 @@ namespace Rocket.Unturned.Commands
                 UnturnedChat.Say(caller, U.Translate("command_generic_invalid_parameter"));
                 throw new WrongUsageOfCommandException(caller, this);
             }
-            UnturnedChat.Say(caller, "lel");
+
             ushort? id = command.GetUInt16Parameter(0);
 
             if (!id.HasValue)

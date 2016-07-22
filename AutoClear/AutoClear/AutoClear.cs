@@ -62,7 +62,7 @@ namespace AutoClear
                     updateDateTime.Add(entry.Key);
                 }
 
-                Logger.Log((DateTime.Now - entry.Value).Seconds.ToString());
+                //Logger.Log((DateTime.Now - entry.Value).Seconds.ToString());
                 if ((DateTime.Now - entry.Value).Seconds >= Instance.Configuration.Instance.TimeUntilDespawn)
                 {
                     if (!checkForBarricades(entry.Key, Instance.Configuration.Instance.IgnoreVehiclesWithBarricades) && !checkForPassengers(entry.Key))
