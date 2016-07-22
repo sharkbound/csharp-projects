@@ -12,12 +12,14 @@ namespace AutoClear
         public int TimeUntilDespawn;
         public bool IgnoreVehiclesWithBarricades;
         public bool LogClears;
+        public int Radius;
 
         public void LoadDefaults()
         {
             IgnoreVehiclesWithBarricades = true;
             LogClears = false;
             TimeUntilDespawn = 15;
+            Radius = 370;
         }
     }
 }

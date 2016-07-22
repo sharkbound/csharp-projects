@@ -87,7 +87,8 @@ namespace Rocket.Unturned.Commands
 
             if (VehicleTool.giveVehicle(player.Player, id.Value))
             {
-                VehicleManager.getVehiclesInRadius(((UnturnedPlayer)caller).Position, 300, foundVehicles);
+                VehicleManager.getVehiclesInRadius(((UnturnedPlayer)caller).Position, 
+                    AutoClear.AutoClear.Instance.Configuration.Instance.Radius, foundVehicles);
                 for (int j = foundVehicles.Count - 1; j >= 0; j--)
                 {
                     if (!AutoClear.AutoClear.VehicleData.ContainsKey(foundVehicles[j]))
