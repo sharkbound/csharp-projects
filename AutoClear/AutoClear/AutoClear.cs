@@ -69,7 +69,7 @@ namespace AutoClear
                     {
                         if (AutoClear.Instance.Configuration.Instance.LogClears)
                         {
-                            Logger.Log("AutoClearing vehicle....");
+                            Logger.LogWarning("AutoClearing vehicle: " + entry.Key.asset.vehicleName);
                         }
 
                         toRemove.Add(entry.Key);
@@ -83,11 +83,12 @@ namespace AutoClear
             {
                 VehicleData.Remove(v);
             }
+            toRemove = new List<InteractableVehicle>();
 
-            for (int ii = toRemove.Count - 1; ii >= 0; ii--)
+          /*  for (int ii = toRemove.Count - 1; ii >= 0; ii--)
             {
                 toRemove.Remove(toRemove[ii]);
-            }
+            } */
 
             for (int jj = updateDateTime.Count - 1; jj >= 0; jj--)
             {
