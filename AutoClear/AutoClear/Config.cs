@@ -19,7 +19,7 @@ namespace AutoClear
             IgnoreVehiclesWithBarricades = true;
             LogClears = true;
             TimeUntilDespawn = 15;
-            Radius = 370;
+            Radius = 450;
         }
     }
 }

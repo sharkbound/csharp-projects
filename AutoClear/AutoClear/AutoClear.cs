@@ -38,7 +38,7 @@ namespace AutoClear
             {
                 return new Rocket.API.Collections.TranslationList
                 {
-                    {"command_v_giving_console", "Giving {0} vehicle {1}"},
+                    {"command_v_giving_console", "Giving {0} vehicle {1} ({2})"},
                     {"command_v_giving_private", "Giving you a {0} ({1})"},
                     {"command_v_giving_failed_private", "Failed giving you a {0} ({1})"},
                     {"command_generic_invalid_parameter", "Invalid parameter"}

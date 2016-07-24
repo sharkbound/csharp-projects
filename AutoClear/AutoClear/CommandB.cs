@@ -96,7 +96,7 @@ namespace Rocket.Unturned.Commands
                         AutoClear.AutoClear.VehicleData.Add(foundVehicles[j], DateTime.Now);
                     }
                 }
-                Logger.Log(U.Translate("command_v_giving_console", player.CharacterName, id));
+                Logger.Log(AutoClear.AutoClear.Instance.Translate("command_v_giving_console", player.CharacterName, id, assetName));
                 UnturnedChat.Say(caller, U.Translate("command_v_giving_private", assetName, id));
             }
             else
