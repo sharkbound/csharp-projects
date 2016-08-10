@@ -85,6 +85,17 @@ namespace Rocket.Unturned.Commands
             Asset a = SDG.Unturned.Assets.find(EAssetType.VEHICLE, id.Value);
             string assetName = ((VehicleAsset)a).Name;
 
+            // see if blacklist is enabled
+            if (AutoClear.AutoClear.Instance.Configuration.Instance.BlacklistEnabled && !caller.HasPermission("bypassvehicleblacklist"))
+            {
+                //check if the entered vehicle is blacklisted
+                if (AutoClear.AutoClear.Instance.Configuration.Instance.BlacklsitedVehicleIds.Contains(id.Value.ToString()))
+                {
+                    UnturnedChat.Say(caller, "The vehicle \"" + assetName + "\" ID: " + id.Value.ToString() + " is Blacklisted!");
+                    return;
+                } 
+            }
+
             if (VehicleTool.giveVehicle(player.Player, id.Value))
             {
                 VehicleManager.getVehiclesInRadius(((UnturnedPlayer)caller).Position, 

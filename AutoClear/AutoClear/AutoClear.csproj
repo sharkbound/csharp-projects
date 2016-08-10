@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="AutoClear.cs" />
     <Compile Include="CommandB.cs" />
+    <Compile Include="CommandBlacklistv.cs" />
     <Compile Include="CommandListV.cs" />
     <Compile Include="CommandLogCommands.cs" />
     <Compile Include="Config.cs" />
