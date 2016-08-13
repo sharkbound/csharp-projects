@@ -14,6 +14,7 @@ namespace AutoClear
         public bool IgnoreVehiclesWithBarricades;
         public bool LogClears;
         public bool BlacklistEnabled;
+        public bool ClearVehicleDestoryListOnReload;
         public int Radius;
 
         [XmlArrayItem(ElementName = "SteamId")]
@@ -28,10 +29,11 @@ namespace AutoClear
             IgnoreVehiclesWithBarricades = true;
             LogClears = true;
             BlacklistEnabled = true;
-            TimeUntilDespawn = 15;
+            ClearVehicleDestoryListOnReload = false;
+            TimeUntilDespawn = 8;
             Radius = 450;
             SteamIdsToNotLogChat = new List<string> { "76561198117848353" };
-            SpamWarningPoints = new List<int> { 5, 10, 15, 20, 25, 30 };
+            SpamWarningPoints = new List<int> { 10, 15, 20, 25, 30, 35, 40, 45, 50 };
             BlacklsitedVehicleIds = new List<string> { "default item" };
         }
     }

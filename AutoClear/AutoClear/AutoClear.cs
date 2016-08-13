@@ -27,17 +27,21 @@ namespace AutoClear
         List<InteractableVehicle> updateDateTime = new List<InteractableVehicle>();
         Dictionary<CSteamID, string> lastMessages = new Dictionary<CSteamID, string>();
         Dictionary<CSteamID, int> sameMessageCount = new Dictionary<CSteamID, int>();
+        //List<InteractableVehicle> nullVehicles = new List<InteractableVehicle>();
 
         protected override void Load()
         {
-            UnturnedPlayerEvents.OnPlayerChatted += UnturnedPlayerEvents_OnPlayerChatted;
             Instance = this;
-            toRemove = new List<InteractableVehicle>();
-            VehicleData = new Dictionary<InteractableVehicle, DateTime>();
-            lastMessages = new Dictionary<CSteamID, string>();
+            UnturnedPlayerEvents.OnPlayerChatted += UnturnedPlayerEvents_OnPlayerChatted;
+            if (Instance.Configuration.Instance.ClearVehicleDestoryListOnReload)
+            {
+                toRemove = new List<InteractableVehicle>();
+                VehicleData = new Dictionary<InteractableVehicle, DateTime>();
+                updateDateTime = new List<InteractableVehicle>();
+            }
+          /*  lastMessages = new Dictionary<CSteamID, string>();
             sameMessageCount = new Dictionary<CSteamID, int>();
-            updateDateTime = new List<InteractableVehicle>();
-            chatLogPlayers = new List<CSteamID>();
+            chatLogPlayers = new List<CSteamID>();  */
             Logger.Log("AutoClear has loaded!");
         }
 
@@ -75,14 +79,10 @@ namespace AutoClear
                 }
 
                 //Logger.LogError("Spam found. Count: " + sameMessageCount[player.CSteamID]);
-                
-                foreach (int number in Instance.Configuration.Instance.SpamWarningPoints)
-                {
-                    if (sameMessageCount[player.CSteamID] == number)
-                    {
-                        matchesSpamPoint = true;
-                    }
 
+                if (Instance.Configuration.Instance.SpamWarningPoints.Contains(sameMessageCount[player.CSteamID]))
+                {
+                    matchesSpamPoint = true;
                 }
 
                 if (matchesSpamPoint)
