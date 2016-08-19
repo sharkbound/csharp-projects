@@ -33,6 +33,7 @@ namespace AutoClear
         {
             Instance = this;
             UnturnedPlayerEvents.OnPlayerChatted += UnturnedPlayerEvents_OnPlayerChatted;
+            UnturnedPlayerEvents.OnPlayerDeath += UnturnedPlayerEvents_OnPlayerDeath;
             if (Instance.Configuration.Instance.ClearVehicleDestoryListOnReload)
             {
                 toRemove = new List<InteractableVehicle>();
@@ -47,8 +48,23 @@ namespace AutoClear
 
         protected override void Unload()
         {
+            UnturnedPlayerEvents.OnPlayerDeath -= UnturnedPlayerEvents_OnPlayerDeath;
             UnturnedPlayerEvents.OnPlayerChatted -= UnturnedPlayerEvents_OnPlayerChatted;
             Logger.Log("AutoClear has Unloaded!");
+        }
+
+        void UnturnedPlayerEvents_OnPlayerDeath(UnturnedPlayer player, EDeathCause cause, ELimb limb, CSteamID murderer)
+        {
+            if (murderer == null || player == null) return;
+
+            UnturnedPlayer P = UnturnedPlayer.FromCSteamID(murderer);
+            if (P == null) return;
+
+            if (P.Features.GodMode)
+            {
+                UnturnedChat.Say("'" + P.DisplayName + "' killed '" + player.DisplayName + "' while in Godmode!", UnityEngine.Color.red);
+                Logger.LogWarning("'" + P.DisplayName + "' killed '" + player.DisplayName + "' while in Godmode!");
+            }
         }
 
         public override Rocket.API.Collections.TranslationList DefaultTranslations
