@@ -23,6 +23,8 @@ namespace AutoClear
         public List<int> SpamWarningPoints;
         [XmlArrayItem(ElementName = "Id")]
         public List<string> BlacklsitedVehicleIds;
+        [XmlArrayItem(ElementName = "Kill")]
+        public List<string> ReportedKills;
 
         public void LoadDefaults()
         {
@@ -35,6 +37,7 @@ namespace AutoClear
             SteamIdsToNotLogChat = new List<string> { "76561198117848353" };
             SpamWarningPoints = new List<int> { 10, 15, 20, 25, 30, 35, 40, 45, 50 };
             BlacklsitedVehicleIds = new List<string> { "default item" };
+            ReportedKills = new List<string>();
         }
     }
 }

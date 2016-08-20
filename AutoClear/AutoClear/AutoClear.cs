@@ -57,15 +57,21 @@ namespace AutoClear
         {
             if (murderer == null || player == null) return;
 
-            UnturnedPlayer P = UnturnedPlayer.FromCSteamID(murderer);
-            if (P == null) return;
+            UnturnedPlayer killer = UnturnedPlayer.FromCSteamID(murderer);
+            if (killer == null) return;
 
             try
             {
-                if (P.Features.GodMode && (P.HasPermission("god") || P.HasPermission("godmode")))
+                if (killer.Features.GodMode && (killer.HasPermission("god") || killer.HasPermission("godmode")))
                 {
-                    UnturnedChat.Say("'" + P.DisplayName + "' killed '" + player.DisplayName + "' while in Godmode!", UnityEngine.Color.red);
-                    Logger.LogWarning("'" + P.DisplayName + "' killed '" + player.DisplayName + "' while in Godmode!");
+                    string message = "[Godmode: " + killer.Features.GodMode.ToString()
+                        + ", Vanish: " + killer.Features.VanishMode.ToString() + ", Date/Time: " + DateTime.Now.ToString() + "] " +
+                    "'" + killer.DisplayName + "' killed '" + player.DisplayName + "'";
+                    UnturnedChat.Say(message, UnityEngine.Color.red);
+                    Logger.LogWarning(message);
+
+                    Instance.Configuration.Instance.ReportedKills.Add(message);
+                    Instance.Configuration.Save();
                 }
             }
             catch
