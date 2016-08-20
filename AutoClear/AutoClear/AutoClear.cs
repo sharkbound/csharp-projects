@@ -53,7 +53,7 @@ namespace AutoClear
             Logger.Log("AutoClear has Unloaded!");
         }
 
-        void UnturnedPlayerEvents_OnPlayerDeath(UnturnedPlayer player, EDeathCause cause, ELimb limb, CSteamID murderer)
+        public void UnturnedPlayerEvents_OnPlayerDeath(UnturnedPlayer player, EDeathCause cause, ELimb limb, CSteamID murderer)
         {
             if (murderer == null || player == null) return;
 
@@ -62,12 +62,17 @@ namespace AutoClear
 
             try
             {
-                if (killer.Features.GodMode && (killer.HasPermission("god") || killer.HasPermission("godmode")))
+                if ((killer.Features.GodMode || killer.Features.VanishMode) && (killer.HasPermission("god") || killer.HasPermission("godmode")))
                 {
                     string message = "[Godmode: " + killer.Features.GodMode.ToString()
-                        + ", Vanish: " + killer.Features.VanishMode.ToString() + ", Date/Time: " + DateTime.Now.ToString() + "] " +
+                        + "] [Vanish: " + killer.Features.VanishMode.ToString() + "] [Date/Time: " + DateTime.Now.ToString() + "] " +
                     "'" + killer.DisplayName + "' killed '" + player.DisplayName + "'";
-                    UnturnedChat.Say(message, UnityEngine.Color.red);
+
+                    string noDateTimeMessage = "[Godmode: " + killer.Features.GodMode.ToString()
+                        + "] [Vanish: " + killer.Features.VanishMode.ToString() + "] " +
+                        "'" + killer.DisplayName + "' killed '" + player.DisplayName + "'";
+
+                    UnturnedChat.Say(noDateTimeMessage, UnityEngine.Color.red);
                     Logger.LogWarning(message);
 
                     Instance.Configuration.Instance.ReportedKills.Add(message);
