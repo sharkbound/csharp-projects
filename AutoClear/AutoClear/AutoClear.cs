@@ -60,10 +60,16 @@ namespace AutoClear
             UnturnedPlayer P = UnturnedPlayer.FromCSteamID(murderer);
             if (P == null) return;
 
-            if (P.Features.GodMode)
+            try
             {
-                UnturnedChat.Say("'" + P.DisplayName + "' killed '" + player.DisplayName + "' while in Godmode!", UnityEngine.Color.red);
-                Logger.LogWarning("'" + P.DisplayName + "' killed '" + player.DisplayName + "' while in Godmode!");
+                if (P.Features.GodMode && (P.HasPermission("god") || P.HasPermission("godmode")))
+                {
+                    UnturnedChat.Say("'" + P.DisplayName + "' killed '" + player.DisplayName + "' while in Godmode!", UnityEngine.Color.red);
+                    Logger.LogWarning("'" + P.DisplayName + "' killed '" + player.DisplayName + "' while in Godmode!");
+                }
+            }
+            catch
+            {
             }
         }
 

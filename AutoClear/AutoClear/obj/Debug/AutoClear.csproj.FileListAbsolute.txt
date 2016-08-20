@@ -8,3 +8,4 @@ C:\Users\owner\Desktop\GitHub\csharp-projects\AutoClear\AutoClear\bin\Debug\Rock
 C:\Users\owner\Desktop\GitHub\csharp-projects\AutoClear\AutoClear\bin\Debug\UnityEngine.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\AutoClear\AutoClear\obj\Debug\AutoClear.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\AutoClear\AutoClear\obj\Debug\AutoClear.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\AutoClear\AutoClear\obj\Debug\AutoClear.csprojResolveAssemblyReference.cache
