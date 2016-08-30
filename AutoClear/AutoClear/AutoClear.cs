@@ -62,6 +62,7 @@ namespace AutoClear
 
             try
             {
+                if (cause == EDeathCause.SENTRY) return;
                 if ((killer.Features.GodMode || killer.Features.VanishMode) && (killer.HasPermission("god") || killer.HasPermission("godmode")))
                 {
                     string message = "[Godmode: " + killer.Features.GodMode.ToString()
