@@ -169,32 +169,35 @@ namespace AutoClear
         {
             foreach (var entry in VehicleData)
             {
-               /* InteractableVehicle veh = null;
-                if (VehicleManager.Vehicles.Contains(entry.Key))
+                bool isNull = false;
+                if (entry.Key == null)
                 {
-                   //veh = VehicleManager.Vehicles.Find(vehicle => vehicle.instanceID == entry.Key.instanceID);
-                   //veh = entry.Key;
-                } */
-
-                if (checkForBarricades(entry.Key, Instance.Configuration.Instance.IgnoreVehiclesWithBarricades) || checkForPassengers(entry.Key))
-                {
-                    updateDateTime.Add(entry.Key);
+                    isNull = true;
+                    toRemove.Add(entry.Key);
                 }
-
-                //Logger.Log((DateTime.Now - entry.Value).Seconds.ToString());
-                if ((DateTime.Now - entry.Value).Seconds >= Instance.Configuration.Instance.TimeUntilDespawn)
+                
+                if (!isNull)
                 {
-                    if (!checkForBarricades(entry.Key, Instance.Configuration.Instance.IgnoreVehiclesWithBarricades) && !checkForPassengers(entry.Key))
+                    if (checkForBarricades(entry.Key, Instance.Configuration.Instance.IgnoreVehiclesWithBarricades) || checkForPassengers(entry.Key))
                     {
-                        if (AutoClear.Instance.Configuration.Instance.LogClears)
-                        {
-                            Logger.LogWarning("AutoClearing vehicle: " + entry.Key.asset.vehicleName);
-                        }
-
-                        toRemove.Add(entry.Key);
-                        VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
-                                                   ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_INSTANT, entry.Key.instanceID); 
+                        updateDateTime.Add(entry.Key);
                     }
+
+                    //Logger.Log((DateTime.Now - entry.Value).Seconds.ToString());
+                    if ((DateTime.Now - entry.Value).Seconds >= Instance.Configuration.Instance.TimeUntilDespawn)
+                    {
+                        if (!checkForBarricades(entry.Key, Instance.Configuration.Instance.IgnoreVehiclesWithBarricades) && !checkForPassengers(entry.Key))
+                        {
+                            if (AutoClear.Instance.Configuration.Instance.LogClears)
+                            {
+                                Logger.LogWarning("AutoClearing vehicle: " + entry.Key.asset.vehicleName);
+                            }
+
+                            toRemove.Add(entry.Key);
+                            VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
+                                                       ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_INSTANT, entry.Key.instanceID);
+                        }
+                    } 
                 }
             }
 
