@@ -1,4 +1,0 @@
-this is the raw text:
-kcab em
-raw text after its reversed:
-me back

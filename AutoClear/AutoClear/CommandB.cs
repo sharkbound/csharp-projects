@@ -31,7 +31,7 @@ namespace Rocket.Unturned.Commands
 
         public string Syntax
         {
-            get { return "<id>"; }
+            get { return "<id> or <\"vehicle name\">"; }
         }
 
         public List<string> Aliases
@@ -46,6 +46,12 @@ namespace Rocket.Unturned.Commands
 
         public void Execute(IRocketPlayer caller, string[] command)
         {
+            if (command.Length == 0)
+            {
+                UnturnedChat.Say(caller, "incorrect usage! Correct usage: " + Syntax);
+                return;
+            }
+
             List<InteractableVehicle> foundVehicles = new List<InteractableVehicle>();
             UnturnedPlayer player = (UnturnedPlayer)caller;
             if (command.Length != 1)
