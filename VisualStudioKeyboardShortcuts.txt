@@ -1,0 +1,8 @@
+Format code: Select code then - Ctrl + k, Ctrl + f
+Move between open tabs: ctrl + f6 
+Move between open tabs backwards: ctrl + shift + f6
+Search data: ctrl + ,
+Search solution explorer: ctrl + ;   Select stuff with arrowKeys then enter
+Cycle Through open tabs forward: ctrl + tab
+Cycle Through open tabs backward: ctrl + shift + tab
+Quick collapse a method, class, ect: put cursor where you want collapsed and press ctrl + m(twice)
