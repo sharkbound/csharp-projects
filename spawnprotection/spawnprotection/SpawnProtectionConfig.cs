@@ -9,11 +9,15 @@ namespace spawnprotection
 {
     public class SpawnProtectionConfig : IRocketPluginConfiguration
     {
-        public int SpawnProtectionDuration;
+        public int SleepTime;
+        public int ProtectionTime;
+        public int ProtectionDelay;
 
         public void LoadDefaults()
         {
-            SpawnProtectionDuration = 20;
+            SleepTime = 100;
+            ProtectionTime = 30;
+            ProtectionDelay = 200;
         }
     }
 }

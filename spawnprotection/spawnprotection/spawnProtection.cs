@@ -12,6 +12,8 @@ using Rocket.Core.Logging;
 using Rocket.Unturned.Player;
 using Rocket.Unturned.Events;
 using Rocket.Unturned.Chat;
+using SDG.Unturned;
+using Steamworks;
 
 
 namespace spawnprotection
@@ -19,7 +21,7 @@ namespace spawnprotection
     public class spawnProtection : RocketPlugin<SpawnProtectionConfig>
     {
         public static spawnProtection Instance;
-        public static Dictionary<UnturnedPlayer, Thread> ProtectedPlayers = new Dictionary<UnturnedPlayer, Thread>();
+        public static Dictionary<CSteamID, Thread> ProtectedPlayers = new Dictionary<CSteamID, Thread>();
 
         protected override void Load()
         {
@@ -29,13 +31,15 @@ namespace spawnprotection
             U.Events.OnPlayerDisconnected += Events_OnPlayerDisconnected;
 
             Logger.Log("SpawnProtection loaded!");
-            Logger.Log("Spawn protection duration : " + Instance.Configuration.Instance.SpawnProtectionDuration.ToString());
+            Logger.Log("Spawn protection duration : " + Instance.Configuration.Instance.ProtectionTime.ToString());
+            Logger.Log("Spawn protection delay : " + Instance.Configuration.Instance.ProtectionDelay.ToString());
+            Logger.Log("Spawn sleep time : " + Instance.Configuration.Instance.SleepTime.ToString());
         }
 
 
         protected override void Unload()
         {
-            List<UnturnedPlayer> playersToRemove = new List<UnturnedPlayer>();
+            List<CSteamID> playersToRemove = new List<CSteamID>();
 
             Logger.Log("SpawnProtection Unloaded!");
 
@@ -47,13 +51,20 @@ namespace spawnprotection
                 t.Value.Abort();
             }
 
+            UnturnedPlayer p = null;
             foreach (var player in ProtectedPlayers)
             {
-                if (player.Key.Features.GodMode)
+                p = UnturnedPlayer.FromCSteamID(player.Key);
+                if (p == null)
                 {
-                    UnturnedChat.Say(player.Key, "You are no longer have spawn protection!");
+                    continue;
+                }
 
-                    player.Key.Features.GodMode = false;
+                if (p.Features.GodMode)
+                {
+                    UnturnedChat.Say(player.Key, "You no longer have spawn protection!");
+
+                    p.Features.GodMode = false;
 
                     playersToRemove.Add(player.Key);
                 }
@@ -61,34 +72,22 @@ namespace spawnprotection
 
             int count = 0;
 
-            foreach (UnturnedPlayer Uplayer in playersToRemove)
+            foreach (var ID in playersToRemove)
             {
                 count++;
 
-                Logger.Log("removing : " + Uplayer.DisplayName);
-                ProtectedPlayers.Remove(Uplayer);
+                ProtectedPlayers.Remove(ID);
             }
 
-            playersToRemove.RemoveRange(0, count);
+            playersToRemove = new List<CSteamID>();
         }
 
         void Events_OnPlayerDisconnected(UnturnedPlayer player)
         {
-            Logger.Log("yessir");
-            if (ProtectedPlayers.ContainsKey(player))
+            if (ProtectedPlayers.ContainsKey(player.CSteamID))
             {
-                Logger.Log("1");
-                foreach (var key in ProtectedPlayers)
-                {
-                    Logger.Log("2");
-                    if (key.Key == player)
-                    {
-                        Logger.LogError("disconnecting player has a key.");
-                        key.Key.Features.GodMode = false;
-                        key.Value.Abort();
-                        ProtectedPlayers.Remove(player);
-                    }
-                }
+                ProtectedPlayers[player.CSteamID].Abort();
+                ProtectedPlayers.Remove(player.CSteamID);
             }
         }
 
@@ -103,15 +102,40 @@ namespace spawnprotection
             Thread t = null;
             t = new Thread(() =>
                 {
-                    UnturnedChat.Say(player, "You have spawn protection for " + Instance.Configuration.Instance.SpawnProtectionDuration.ToString() + " seconds!");
+                    bool equiptedItem = false;
+                    double compeletedSleepTime = 0;
+
+                    UnturnedChat.Say(player, "You have spawn protection for " + Instance.Configuration.Instance.ProtectionTime.ToString() + " seconds!");
                     player.Features.GodMode = true;
 
-                    Thread.Sleep(Instance.Configuration.Instance.SpawnProtectionDuration * 1000);
+                    Thread.Sleep(Configuration.Instance.ProtectionDelay);
 
-                    UnturnedChat.Say(player, "Your spawn protection has expired!");
+                    int protectionTimeMiliseconds = Configuration.Instance.ProtectionTime * 1000;
+                    while (compeletedSleepTime < protectionTimeMiliseconds)
+                    {
+                        if (player.Player.equipment.asset != null)
+                        {
+                            equiptedItem = true;
+                            break;
+                        }
+
+                        Thread.Sleep(Configuration.Instance.SleepTime);
+                        compeletedSleepTime += Configuration.Instance.SleepTime;
+                        //Logger.LogError("current sleep time: " + compeletedSleepTime + ", Total protection time milliseconds: " + protectionTimeMiliseconds);
+                    }
+
+                    if (equiptedItem)
+                    {
+                        UnturnedChat.Say(player, "Your spawn protection expired because you equipted a item!"); 
+                    }
+                    else
+                    {
+                        UnturnedChat.Say(player, "Your spawn protection has expired!"); 
+                    }
+
                     player.Features.GodMode = false;
 
-                    ProtectedPlayers.Remove(player);
+                    ProtectedPlayers.Remove(player.CSteamID);
                     t.Abort();
 
                 })
@@ -120,8 +144,7 @@ namespace spawnprotection
                 };
             t.Start();
 
-
-            ProtectedPlayers.Add(player, t);
+            ProtectedPlayers.Add(player.CSteamID, t);
         }
 
         
