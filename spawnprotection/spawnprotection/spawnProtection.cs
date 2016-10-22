@@ -99,6 +99,14 @@ namespace spawnprotection
 
         void addSpawnProtectionPlayer(UnturnedPlayer player)
         {
+
+            if (ProtectedPlayers.ContainsKey(player.CSteamID))
+            {
+                ProtectedPlayers[player.CSteamID].Abort();
+                ProtectedPlayers.Remove(player.CSteamID);
+                player.Features.GodMode = false;
+            }
+
             Thread t = null;
             t = new Thread(() =>
                 {
@@ -135,7 +143,11 @@ namespace spawnprotection
 
                     player.Features.GodMode = false;
 
-                    ProtectedPlayers.Remove(player.CSteamID);
+                    if (ProtectedPlayers.ContainsKey(player.CSteamID))
+                    {
+                        ProtectedPlayers.Remove(player.CSteamID); 
+                    }
+
                     t.Abort();
 
                 })
