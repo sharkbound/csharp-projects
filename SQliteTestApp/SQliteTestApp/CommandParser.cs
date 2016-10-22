@@ -23,9 +23,11 @@ namespace SQliteTestApp
                         int loopAmt = 0;
                         if (int.TryParse(parameters[1], out loopAmt))
                         {
+                            DateTime now = DateTime.Now;
+                            var sqliteconnection = sqHelper.GetConnectionOpen();
                             for (int ii = 0; ii < loopAmt; ii++)
                             {
-                                Console.WriteLine(sqHelper.AddScore(GetRandomName(), GetRandomScore(9000)));
+                                Console.WriteLine(sqHelper.AddScore(GetRandomName(), GetRandomScore(9000), sqliteconnection));
                             }
                         }
                         else
@@ -35,6 +37,7 @@ namespace SQliteTestApp
 
                         return true;
                     }
+
                     Console.WriteLine(sqHelper.AddScore(GetRandomName(), GetRandomScore(9000)));
                     return true;
                 case "removeusers":

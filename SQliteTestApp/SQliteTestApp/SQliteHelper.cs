@@ -55,11 +55,25 @@ namespace SQliteTestApp
             return new SQLiteCommand(commandText, GetConnectionOpen());
         }
 
+        public SQLiteCommand ConstructCommand(string commandText, SQLiteConnection connection)
+        {
+            return new SQLiteCommand(commandText, connection);
+        }
+
         public string AddScore(string user, int score)
         {
             string entryData = string.Format("('{0}', {1})", user, score);
             string friendlyData = string.Format("Added user: '{0}' with the score: '{1}' ", user, score);
             SQLiteCommand command = ConstructCommand("insert into scores (name, score) values " + entryData);
+            command.ExecuteNonQuery();
+            return friendlyData;
+        }
+
+        public string AddScore(string user, int score, SQLiteConnection connection)
+        {
+            string entryData = string.Format("('{0}', {1})", user, score);
+            string friendlyData = string.Format("Added user: '{0}' with the score: '{1}' ", user, score);
+            SQLiteCommand command = ConstructCommand("insert into scores (name, score) values " + entryData, connection);
             command.ExecuteNonQuery();
             return friendlyData;
         }
