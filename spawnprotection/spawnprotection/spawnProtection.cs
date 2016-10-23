@@ -112,6 +112,8 @@ namespace spawnprotection
                 {
                     bool equiptedItem = false;
                     double compeletedSleepTime = 0;
+                    ushort lastVehHealth = 0;
+                    int passengerCount = 0;
 
                     UnturnedChat.Say(player, "You have spawn protection for " + Instance.Configuration.Instance.ProtectionTime.ToString() + " seconds!");
                     player.Features.GodMode = true;
@@ -125,6 +127,22 @@ namespace spawnprotection
                         {
                             equiptedItem = true;
                             break;
+                        }
+
+                        if (player.CurrentVehicle != null)
+                        {
+                            foreach (var passenger in player.CurrentVehicle.passengers)
+                            {
+                                if (passenger.player != null) passengerCount++;
+                            }
+
+                            if (player.CurrentVehicle.health < lastVehHealth && passengerCount == 1)
+                            {
+                                player.CurrentVehicle.askRepair(9999);
+                            }
+
+                            lastVehHealth = player.CurrentVehicle.health;
+                            passengerCount = 0;
                         }
 
                         Thread.Sleep(Configuration.Instance.SleepTime);
