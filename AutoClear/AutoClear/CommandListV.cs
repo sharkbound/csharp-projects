@@ -25,13 +25,13 @@ namespace AutoClear
         {
             string message = "";
 
-            if (VehicleManager.Vehicles.Count == 1)
+            if (VehicleManager.vehicles.Count == 1)
             {
-                message = "There is currently " + VehicleManager.Vehicles.Count.ToString() + " vehicle.";
+                message = "There is currently " + VehicleManager.vehicles.Count.ToString() + " vehicle.";
             }
             else
             {
-                message = "There is currently " + VehicleManager.Vehicles.Count.ToString() + " vehicles.";
+                message = "There is currently " + VehicleManager.vehicles.Count.ToString() + " vehicles.";
             }
 
             if (!(caller is ConsolePlayer))

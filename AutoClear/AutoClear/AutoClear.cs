@@ -121,7 +121,7 @@ namespace AutoClear
 
                 if (matchesSpamPoint)
                 {
-                    foreach (SteamPlayer p in Provider.Players)
+                    foreach (SteamPlayer p in Provider.clients)
                     {
                         rPlayer = (IRocketPlayer)UnturnedPlayer.FromSteamPlayer(p);
                         if (rPlayer.HasPermission("spamwarning"))
@@ -194,7 +194,7 @@ namespace AutoClear
                             }
 
                             toRemove.Add(entry.Key);
-                            VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
+                            VehicleManager.instance.channel.send("tellVehicleDestroy",
                                                        ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_INSTANT, entry.Key.instanceID);
                         }
                     } 

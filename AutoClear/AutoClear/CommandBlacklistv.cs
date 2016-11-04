@@ -44,15 +44,15 @@ namespace AutoClear
                     return;
                 }
 
-                if (!AutoClear.Instance.Configuration.Instance.BlacklsitedVehicleIds.Contains(asset.Id.ToString()))
+                if (!AutoClear.Instance.Configuration.Instance.BlacklsitedVehicleIds.Contains(asset.id.ToString()))
                 {
-                    AutoClear.Instance.Configuration.Instance.BlacklsitedVehicleIds.Add(asset.Id.ToString());
+                    AutoClear.Instance.Configuration.Instance.BlacklsitedVehicleIds.Add(asset.id.ToString());
                     AutoClear.Instance.Configuration.Save();
-                    sendMsg("Added \"" + asset.name + "\" ID: " + asset.Id.ToString() + " to the vehicle blacklist!", caller);
+                    sendMsg("Added \"" + asset.name + "\" ID: " + asset.id.ToString() + " to the vehicle blacklist!", caller);
                 }
                 else
                 {
-                    sendMsg("The vehicle \"" + asset.name + "\" ID: " + asset.Id.ToString() + " is already in the blacklist!", caller);
+                    sendMsg("The vehicle \"" + asset.name + "\" ID: " + asset.id.ToString() + " is already in the blacklist!", caller);
                 }
             }
             else if (command[0].ToLower() == "rem")
@@ -64,15 +64,15 @@ namespace AutoClear
                     return;
                 }
 
-                if (AutoClear.Instance.Configuration.Instance.BlacklsitedVehicleIds.Contains(asset.Id.ToString()))
+                if (AutoClear.Instance.Configuration.Instance.BlacklsitedVehicleIds.Contains(asset.id.ToString()))
                 {
-                    AutoClear.Instance.Configuration.Instance.BlacklsitedVehicleIds.Remove(asset.Id.ToString());
+                    AutoClear.Instance.Configuration.Instance.BlacklsitedVehicleIds.Remove(asset.id.ToString());
                     AutoClear.Instance.Configuration.Save();
-                    sendMsg("Removed \"" + asset.name + "\" ID: " + asset.Id.ToString() + " from blacklisted vehicles!", caller);
+                    sendMsg("Removed \"" + asset.name + "\" ID: " + asset.id.ToString() + " from blacklisted vehicles!", caller);
                 }
                 else
                 {
-                    sendMsg("The vehicle \"" + asset.name + "\" ID: " + asset.Id.ToString() + " is not in the blacklist!", caller);
+                    sendMsg("The vehicle \"" + asset.name + "\" ID: " + asset.id.ToString() + " is not in the blacklist!", caller);
                 }
             }
         }
@@ -102,9 +102,9 @@ namespace AutoClear
                 Asset[] assets = SDG.Unturned.Assets.find(EAssetType.VEHICLE);
                 foreach (VehicleAsset ia in assets)
                 {
-                    if (ia != null && ia.Name != null && ia.Name.ToLower().Contains(itemString.ToLower()))
+                    if (ia != null && ia.vehicleName != null && ia.vehicleName.ToLower().Contains(itemString.ToLower()))
                     {
-                        id = ia.Id;
+                        id = ia.id;
                         break;
                     }
                 }
