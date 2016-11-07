@@ -142,7 +142,7 @@ namespace godmodeAnnouncer
                    " seconds!");
 
                 Log("Removed " + toRemove.Count + " vehicles in " + (DateTime.Now - godmode.LastClear).Seconds + " seconds!");
-                Logger.Log("Removed " + toRemove.Count + " vehicles in " + (DateTime.Now - godmode.LastClear).Seconds + " seconds!");
+                Rocket.Core.Logging.Logger.Log("Removed " + toRemove.Count + " vehicles in " + (DateTime.Now - godmode.LastClear).Seconds + " seconds!");
                 //godmode.ClearRunning = false; 
             }).Start();
         }
@@ -246,7 +246,7 @@ namespace godmodeAnnouncer
                 }
 
                 LogInfo("A vehicle clear is already running!");
-                Logger.Log("A vehicle clear is already running!");
+                Rocket.Core.Logging.Logger.Log("A vehicle clear is already running!");
 
                 return true;
             }
@@ -264,7 +264,7 @@ namespace godmodeAnnouncer
                     //LogInfo("Counts current value - " + count);
                     //LogInfo("TimesTriggered current value - " + timestriggered);
 
-                    Logger.LogWarning("Running Clear: " +
+                    Rocket.Core.Logging.Logger.LogWarning("Running Clear: " +
                         (godmode.Instance.Configuration.Instance.DelayBetweenClears * count) / 1000 +
                          " seconds left, Vehicles left  " + count);
 
@@ -283,7 +283,7 @@ namespace godmodeAnnouncer
 
                 if (!checkForPassengers(toRemove[ii]))
                 {
-                     VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
+                     VehicleManager.instance.channel.send("tellVehicleDestroy",
                                             ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER, toRemove[ii].instanceID);
                     Thread.Sleep(godmode.Instance.Configuration.Instance.DelayBetweenClears);
                 }
@@ -303,7 +303,7 @@ namespace godmodeAnnouncer
                     //LogInfo("Counts current value - " + count);
                     //LogInfo("TimesTriggered current value - " + timestriggered);
 
-                    Logger.LogWarning("Running Clear: " +
+                    Rocket.Core.Logging.Logger.LogWarning("Running Clear: " +
                         (godmode.Instance.Configuration.Instance.DelayBetweenClears * count) / 1000 +
                          " seconds left, Vehicles left  " + count);
 
@@ -322,7 +322,7 @@ namespace godmodeAnnouncer
 
                 if (!checkForPassengers(v))
                 {
-                    VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
+                    VehicleManager.instance.channel.send("tellVehicleDestroy",
                                            ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_INSTANT, v.instanceID);
                     // VehicleManager.Instance.SteamChannel.send("tellVehicleDestroy",
                     //                        ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER, v.instanceID);
