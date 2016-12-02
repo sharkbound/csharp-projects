@@ -19,3 +19,9 @@ C:\Users\owner\Desktop\UnturnedModFixer\UnturnedModFixer\obj\Debug\UnturnedModFi
 C:\Users\owner\Desktop\GitHub\csharp-projects\ImprovedUnturnedModFixer\UnturnedModFixer\bin\Debug\UnturnedModFixer.exe.config
 C:\Users\owner\Desktop\GitHub\csharp-projects\ImprovedUnturnedModFixer\UnturnedModFixer\obj\Debug\UnturnedModFixer.exe
 C:\Users\owner\Desktop\GitHub\csharp-projects\ImprovedUnturnedModFixer\UnturnedModFixer\obj\Debug\UnturnedModFixer.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\ImprovedUnturnedModFixer\UnturnedModFixer\bin\Debug\UnturnedModFixer.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\ImprovedUnturnedModFixer\UnturnedModFixer\bin\Debug\UnturnedModFixer.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\ImprovedUnturnedModFixer\UnturnedModFixer\obj\Debug\UnturnedModFixer.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\ImprovedUnturnedModFixer\UnturnedModFixer\obj\Debug\UnturnedModFixer.Form1.resources
+C:\Users\owner\Desktop\GitHub\csharp-projects\ImprovedUnturnedModFixer\UnturnedModFixer\obj\Debug\UnturnedModFixer.Properties.Resources.resources
+C:\Users\owner\Desktop\GitHub\csharp-projects\ImprovedUnturnedModFixer\UnturnedModFixer\obj\Debug\UnturnedModFixer.csproj.GenerateResource.Cache

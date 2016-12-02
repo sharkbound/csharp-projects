@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            //this.AppLogBox = new System.Windows.Forms.ListBox();
-            this.AppLogBox = new FlickerFreeListBox();
-
+            this.AppLogBox = new UnturnedModFixer.FlickerFreeListBox();
             this.SuspendLayout();
             // 
             // button1
@@ -52,11 +50,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AppLogBox.BackColor = System.Drawing.Color.Black;
+            this.AppLogBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.AppLogBox.ForeColor = System.Drawing.Color.Green;
             this.AppLogBox.FormattingEnabled = true;
             this.AppLogBox.Location = new System.Drawing.Point(13, 83);
             this.AppLogBox.Name = "AppLogBox";
-            this.AppLogBox.Size = new System.Drawing.Size(283, 355);
+            this.AppLogBox.Size = new System.Drawing.Size(283, 394);
             this.AppLogBox.TabIndex = 1;
             // 
             // Form1

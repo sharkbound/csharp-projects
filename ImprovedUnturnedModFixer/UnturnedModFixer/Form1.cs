@@ -51,15 +51,13 @@ namespace UnturnedModFixer
 
                 foreach (var file in files)
                 {
-                    AppLogBox.BeginUpdate();
-
                     if (!File.Exists(file)) continue;
 
                     var reader = File.OpenText(file);
                     results = reader.ReadToEnd();
                     reader.Close();
 
-                    if (isItem(results) && results.Contains(bypass))
+                    if (isItem(results) && !results.Contains(bypass))
                     {
                         try
                         {
@@ -78,8 +76,6 @@ namespace UnturnedModFixer
                         ProgMsg = string.Format("\nChecking file {0} of {1}\n", count, files.Length);
                         validFiles.Add(file, results);
                     }
-
-                    AppLogBox.EndUpdate();
                 }
 
                 Log("");
@@ -100,7 +96,6 @@ namespace UnturnedModFixer
 
                         foreach (var file in validFiles)
                         {
-                            AppLogBox.BeginUpdate();
                             //var reader = File.OpenText(file.Key);
                             //results = reader.ReadToEnd();
                             //reader.Close();
@@ -133,12 +128,14 @@ namespace UnturnedModFixer
 
                             //ProgMsg = string.Format("{0} / {1}", count, (int)files.Length*0.55);
                             ProgMsg = string.Format("\nWriting to file {0} of {1}", count, validFiles.Count);
-
-                            AppLogBox.EndUpdate();
                         }
                         Log("");
                         Log("\nFixed " + count.ToString() + " Items!");
                     });
+            }
+            else
+            {
+                Log("No files founds that are not already fixed!");
             }
         }
 
