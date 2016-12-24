@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using static dotnet_6_test.StaticTest.StaticTest;
 
 namespace dotnet_6_test
 {
@@ -12,32 +11,46 @@ namespace dotnet_6_test
     {
         static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Green;           
-            
+            Console.ForegroundColor = ConsoleColor.Green;
+
             Task Task1 = Task.Run(() =>
-            {    
+            {
                 CheckOrMakeDir(ConsoleColor.Red, ConsoleKey.A, "[Task1]\t", "\t[Task1]\n");
             });
             Task Task2 = Task.Run(() =>
             {
-               CheckOrMakeDir(ConsoleColor.Yellow, ConsoleKey.S, "[Task2]\t", "\t[Task2]\n");
+                CheckOrMakeDir(ConsoleColor.Yellow, ConsoleKey.S, "[Task2]\t", "\t[Task2]\n");
+                var r = new Random();
+                object obj = $"obj message!";
+                LogObj(obj);
             });
 
             Task.WaitAll(Task1, Task2);
 
             Console.ForegroundColor = ConsoleColor.Green;
 
-            Console.WriteLine("Finished All Tasks!");
+            Console.WriteLine($"Finished All Tasks! {RetStr()}");
 
-            //List<string> f = new List<string> { "a", "b", "c", "d" };
+            PrintAndOrderRandomNumbers();
+
+            Console.ReadKey(true);
+        }
+
+        static string RetStr() => "RetStr()";
+
+        static bool? NullCheck(string str)
+        {
+            return str?.Contains("null");
+        }
+
+        private static void PrintAndOrderRandomNumbers()
+        {
             var f = new List<float> { 1, 7, 6, 4, 10, 100, 60, 50, 30.1f, 40.60f };
             var result = f.OrderBy(t => t).ToList();
             foreach (var str in result)
             {
                 Console.WriteLine($"Value: {str}");
             }
-
-            Console.ReadKey(true);
         }
 
         static void CheckOrMakeDir(ConsoleColor ColorToUse, ConsoleKey CancelKey, string prefix = "", string suffix = "")
