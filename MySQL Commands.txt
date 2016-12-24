@@ -1,0 +1,6 @@
+CREATE TABLE testtable(`steamId` varchar(32) NOT NULL,`muted` ENUM('false','true') NOT NULL DEFAULT 'false',PRIMARY KEY (`steamId`));
+Command to insert values: insert into testtable (steamId, muted) values ('1', true)
+Command to create table: CREATE TABLE `t2` (`steamId` varchar(32) NOT NULL,`Status` ENUM('Muted','NotMuted') NOT NULL DEFAULT 'NotMuted',PRIMARY KEY (`steamId`)) ";
+updating colums: update t2 set `Status` = 'NotMuted' where `Status` = 'Muted';
+Delete a table: drop table tablename;
+Delete a database: drop database databaseName;

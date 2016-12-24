@@ -26,8 +26,15 @@ namespace SQliteTestApp
             while (inCommandLoop)
             {
                 UserInput = Console.ReadLine();
-                var parameters = Regex.Split(UserInput, @"\s");
-                if (cmdParser.Parse(parameters[0], parameters))
+                var parameters = Regex.Split(UserInput, @"\s").ToList();
+                var cmdName = parameters[0];
+
+                if (parameters.Count > 1)
+                    parameters.RemoveRange(0, 1);
+                else
+                    parameters = new List<string>();
+
+                if (cmdParser.Parse(cmdName, parameters))
                 {
 
                 }

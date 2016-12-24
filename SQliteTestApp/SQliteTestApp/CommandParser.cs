@@ -8,7 +8,7 @@ namespace SQliteTestApp
 {
     public class CommandParser
     {
-        public bool Parse(string command, string[] parameters = null)
+        public bool Parse(string command, List<string> parameters = null)
         {
             SQliteHelper sqHelper = new SQliteHelper();
             switch (command)
@@ -18,10 +18,10 @@ namespace SQliteTestApp
                     foreach (var str in results) Console.WriteLine(str);
                     return true;
                 case "adduser":
-                    if (parameters.Length == 2)
+                    if (parameters.Count == 1)
                     {
                         int loopAmt = 0;
-                        if (int.TryParse(parameters[1], out loopAmt))
+                        if (int.TryParse(parameters[0], out loopAmt))
                         {
                             DateTime now = DateTime.Now;
                             var sqliteconnection = sqHelper.GetConnectionOpen();
@@ -32,7 +32,7 @@ namespace SQliteTestApp
                         }
                         else
                         {
-                            Console.WriteLine("Could not parse " + parameters[1] + " into a int!");
+                            Console.WriteLine("Could not parse " + parameters[0] + " into a int!");
                         }
 
                         return true;
@@ -42,10 +42,28 @@ namespace SQliteTestApp
                     return true;
                 case "removeusers":
                     sqHelper.ConstructCommand("delete from scores where score = score").ExecuteNonQuery();
+                    Console.WriteLine("Removed all users!");
+                    return true;
+                case "help":
+                    LogHelp();
+                    return true;
+                case "?":
+                    LogHelp();
                     return true;
                 default:
                     return false;
             }
+        }
+
+        void LogHelp()
+        {
+            ConsoleColor prev = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("\n");
+            Console.WriteLine("\tadduser (amount): add the specified number of users");
+            Console.WriteLine("\tlist: list all users");
+            Console.WriteLine("\tremoveusers: remove all users\n");
+            Console.ForegroundColor = prev;
         }
 
         public string GetRandomName()

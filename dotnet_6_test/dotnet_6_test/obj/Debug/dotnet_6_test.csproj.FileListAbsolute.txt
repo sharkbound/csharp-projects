@@ -1,0 +1,6 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet_6_test\dotnet_6_test\bin\Debug\dotnet_6_test.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet_6_test\dotnet_6_test\bin\Debug\dotnet_6_test.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet_6_test\dotnet_6_test\bin\Debug\dotnet_6_test.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet_6_test\dotnet_6_test\obj\Debug\dotnet_6_test.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet_6_test\dotnet_6_test\obj\Debug\dotnet_6_test.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet_6_test\dotnet_6_test\obj\Debug\dotnet_6_test.pdb
