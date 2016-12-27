@@ -7,6 +7,7 @@ Visual Studio shortcuts:
   Cycle Through open tabs forward: ctrl + tab
   Cycle Through open tabs backward: ctrl + shift + tab
   Quick collapse a method, class, ect: put cursor where you want collapsed and press ctrl + m(twice)
+  Build project without running: ctrl+shift+b
 
   Visual Studio Code shortcuts:
    format code: shift + alt + f 
