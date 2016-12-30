@@ -8,6 +8,16 @@ Visual Studio shortcuts:
   Cycle Through open tabs backward: ctrl + shift + tab
   Quick collapse a method, class, ect: put cursor where you want collapsed and press ctrl + m(twice)
   Build project without running: ctrl+shift+b
+  Comment out selected lines: ctrl k + ctrl c
+  UnComment out selected lines: ctrl k + ctrl u
+  Rename selected variable/method/ect: ctrl r + ctrl r
+  Changes selected text to lowercase: ctrl + u
+  Surround with: ctrl k + ctrl s
+  Quick actions for current text under cursor: ctrl + .
+  Run with debugger: f5
+  Run without debugger: ctrl + f5
+  
+  Website with all shortcut listings: http://www.dofactory.com/reference/visual-studio-shortcuts
 
   Visual Studio Code shortcuts:
    format code: shift + alt + f 

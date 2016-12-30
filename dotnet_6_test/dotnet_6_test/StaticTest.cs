@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace dotnet_6_test.StaticTest
+namespace dotnet_6_test
 {
     public class StaticTest
     {
