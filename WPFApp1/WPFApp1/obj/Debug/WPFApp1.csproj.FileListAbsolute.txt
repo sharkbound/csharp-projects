@@ -1,0 +1,14 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\WPFApp1\WPFApp1\bin\Debug\WPFApp1.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\WPFApp1\WPFApp1\obj\Debug\WPFApp1.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\WPFApp1\WPFApp1\obj\Debug\MainWindow.g.cs
+C:\Users\owner\Desktop\GitHub\csharp-projects\WPFApp1\WPFApp1\obj\Debug\App.g.cs
+C:\Users\owner\Desktop\GitHub\csharp-projects\WPFApp1\WPFApp1\obj\Debug\WPFApp1_MarkupCompile.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\WPFApp1\WPFApp1\obj\Debug\WPFApp1_MarkupCompile.lref
+C:\Users\owner\Desktop\GitHub\csharp-projects\WPFApp1\WPFApp1\bin\Debug\WPFApp1.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\WPFApp1\WPFApp1\bin\Debug\WPFApp1.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\WPFApp1\WPFApp1\obj\Debug\MainWindow.baml
+C:\Users\owner\Desktop\GitHub\csharp-projects\WPFApp1\WPFApp1\obj\Debug\WPFApp1.g.resources
+C:\Users\owner\Desktop\GitHub\csharp-projects\WPFApp1\WPFApp1\obj\Debug\WPFApp1.Properties.Resources.resources
+C:\Users\owner\Desktop\GitHub\csharp-projects\WPFApp1\WPFApp1\obj\Debug\WPFApp1.csproj.GenerateResource.Cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\WPFApp1\WPFApp1\obj\Debug\WPFApp1.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\WPFApp1\WPFApp1\obj\Debug\WPFApp1.pdb

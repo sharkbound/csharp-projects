@@ -1,5 +1,6 @@
 Visual Studio shortcuts:
   Format code: Select code then - Ctrl + k, Ctrl + f
+  Format whole file: ctrl + k, ctrl + d
   Move between open tabs: ctrl + f6
   Move between open tabs backwards: ctrl + shift + f6
   Search data: ctrl + ,
@@ -16,6 +17,8 @@ Visual Studio shortcuts:
   Quick actions for current text under cursor: ctrl + .
   Run with debugger: f5
   Run without debugger: ctrl + f5
+  Stop debugging: Shift + f5
+  Close current file: ctrl + f4
   
   Website with all shortcut listings: http://www.dofactory.com/reference/visual-studio-shortcuts
 
