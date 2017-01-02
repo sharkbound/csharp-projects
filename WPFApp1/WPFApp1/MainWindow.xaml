@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="295" Width="760.111" Initialized="Window_Initialized" KeyUp="Window_KeyUp" ResizeMode="CanMinimize">
+        Title="MainWindow" Height="295" Width="760.111" Initialized="Window_Initialized" KeyUp="Window_KeyUp" ResizeMode="CanResizeWithGrip">
     <Grid Margin="0,0,4,0">
         <Border x:Name="DirectoryInputBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="23" Margin="31,20,0,0" VerticalAlignment="Top" Width="168"/>
         <Border x:Name="DirectoryControlsBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="165" Margin="15,10,0,0" VerticalAlignment="Top" Width="200"/>
@@ -25,7 +25,7 @@
         <Button x:Name="DeleteDir_btn" Content="Delete Directory" HorizontalAlignment="Left" Margin="31,95,0,0" VerticalAlignment="Top" Width="168" RenderTransformOrigin="0.542,-0.182" Height="33" Click="DeleteDir_btn_Click"/>
 
         <TextBox x:Name="CreateDirTextBox" HorizontalAlignment="Left" Height="23" Margin="31,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" RenderTransformOrigin="-0.583,-0.348"/>
-        <Button x:Name="CreateDir_btn" Content="Create Directory" HorizontalAlignment="Left" Margin="31,55,0,0" VerticalAlignment="Top" Width="168" RenderTransformOrigin="0.542,-0.182" Height="33" Click="CreateDir_btn_Click"/>
+        <Button x:Name="CreateDir_btn" Content="Create Directory" Margin="31,55,0,0" Width="168" RenderTransformOrigin="0.542,-0.182" Height="33" Click="CreateDir_btn_Click" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <CheckBox x:Name="OpenDirBox" Content="Open Directory on Creation" HorizontalAlignment="Left" Margin="36,148,0,0" VerticalAlignment="Top" Unchecked="OpenDirBox_Unchecked" IsChecked="True"/>
         <Button x:Name="DeleteSelDir_btn" Content="Delete selected Directory&#xD;&#xA;" HorizontalAlignment="Left" Margin="603,10,0,0" VerticalAlignment="Top" Width="145" RenderTransformOrigin="0.5,0.5" Height="31" Click="DeleteSelDir_btn_Click">
             <Button.RenderTransform>

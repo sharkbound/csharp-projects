@@ -50,17 +50,9 @@ namespace WPFApp1.src
             }
         }
 
-        public bool Exist(string path, bool log = false)
+        public bool Exist(string path)
         {
-            var exist = Directory.Exists(path);
-            if (log)
-            {
-                if (exist)
-                {
-                    var main = new MainWindow();
-                }
-            }
-            return exist;
+            return Directory.Exists(path);
         }
 
         public static void DeleteFileIfExist(string path)
@@ -82,6 +74,24 @@ namespace WPFApp1.src
             {
                 Directory.CreateDirectory(XmlHelper.FileFolder);
             }
+        }
+
+        public static string[] GetFiles(string directory, string pattern = "*", SearchOption mode = SearchOption.TopDirectoryOnly)
+        {
+            if (Directory.Exists(directory))
+            {
+               return Directory.GetFiles(directory, pattern, mode);
+            }
+            return new string[] { "Directory does not exist!" };
+        }
+
+        public static string[] GetDirectories(string directory, string pattern = "*", SearchOption mode = SearchOption.TopDirectoryOnly)
+        {
+            if (Directory.Exists(directory))
+            {
+                return Directory.GetDirectories(directory, pattern, mode);
+            }
+            return new string[] { "Directory does not exist!" };
         }
     }
 }

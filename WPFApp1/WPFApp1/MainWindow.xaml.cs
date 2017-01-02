@@ -68,6 +68,13 @@ namespace WPFApp1
             Dir.checkIfDataFileAndDirExist();
             var xml = new XmlHelper();
             xml.CreateXmlFile();
+
+            for (int ii = 0; ii < 10; ii++)
+            {
+                DirList.Items.Add($"test item {ii}");
+            }
+
+            DirList.Items.Add("test");
         }
 
         public Logger GetLogger()
@@ -77,12 +84,63 @@ namespace WPFApp1
 
         private void DeleteAllDirs_btn_Click(object sender, RoutedEventArgs e)
         {
+            var m = GetMain();
+            ClearDirList();
 
+            foreach (var dir in m.DirList.Items)
+            {
+                //ToDo: add this
+                //if (Directory.Exists())
+            }
         }
 
         private void DeleteSelDir_btn_Click(object sender, RoutedEventArgs e)
         {
+            var selectedValue = (string)DirList.SelectedValue;
+            if (selectedValue == null) return;
+            
+            if (!Directory.Exists(selectedValue))
+            {
+                Log("Directory does not exist!");
+                return;
+            }
 
+            var files = Dir.GetFiles(selectedValue);
+            //if (files.Length == 0)
+            //{
+            //    try
+            //    {
+            //        Directory.Delete(selectedValue);
+            //        Log($"Deleted directory {selectedValue}!");
+            //    }
+            //    catch
+            //    {
+            //        Log($"Some error occured trying to remove directory: {selectedValue}");
+            //    }
+            //    return;
+            //}
+
+            foreach (var file in files)
+            {
+                try
+                {
+                    File.Delete(file);
+                }
+                catch { }
+            }
+
+            try
+            {
+                Directory.Delete(selectedValue);
+                Log($"Deleted directory {selectedValue}!");
+            }
+            catch
+            {
+                Log($"Some error occured trying to remove directory: {selectedValue}");
+            }
+
+            ClearDirList();
+            PopulateDirList();
         }
 
         private void Window_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
