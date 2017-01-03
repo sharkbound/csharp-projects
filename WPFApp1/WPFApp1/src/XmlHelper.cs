@@ -2,15 +2,18 @@
 using System.IO;
 using System.Windows;
 using System.Xml;
-using static WPFApp1.src.Misc;
+using App.MiscFuncs;
+using App.logging;
 
-namespace WPFApp1.src
+namespace App.Xml
 {
     public class XmlHelper
     {
         public static readonly string FilePath = @"Data\Data.xml";
         public static readonly string FileName = "Data.xml";
         public static readonly string FileFolder = "Data";
+
+        Logger logger = new Logger();
 
         public XmlHelper()
         {
@@ -78,8 +81,7 @@ namespace WPFApp1.src
             w.WriteEndDocument();
             w.Close();
 
-            if (log)
-                Log("Created xml config file!");
+            logger.Log("Created xml config file!");
         }
 
         private void addValue(string node, string value, XmlWriter writer)

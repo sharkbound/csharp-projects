@@ -1,61 +1,45 @@
-﻿using System.IO;
-using System.Windows.Controls;
-using WPFApp1;
-using static WPFApp1.src.Misc;
+﻿using App.logging;
+using System.IO;
+using App.MiscFuncs;
+using App.Xml;
+using System.Windows;
 
-namespace WPFApp1.src
+
+namespace App.DirHelper
 {
     public class Dir
     {
-        MainWindow main;
-        Logger logger;
+        //MainWindow main = ((MainWindow)Application.Current.MainWindow);
+        Logger logger = new Logger();
 
-        public Dir()
+        public bool CreateDirectory(string path)
         {
-            main = GetMain();
-            logger = main.GetLogger();
-        }
-
-        public bool CreateDirectory(string path, bool log = false)
-        {
-            if (!Directory.Exists(path))
+            if (Directory.Exists(path))
             {
-                Directory.CreateDirectory(path);
-                if (log)
-                    logger.Log($"Created directory: {path}");
-                return true;
-            }
-            else
-            {
-                if (log)
-                    logger.Log($"Directory {path} already exist!");
+                logger.Log($"The directory \"{path}\" already exist!");
                 return false;
             }
+
+            Directory.CreateDirectory(path);
+            logger.Log($"Created directory {path}!");
+            return true;
         }
 
         public bool DeleteDirectory(string path, bool log = false)
         {
-            if (Directory.Exists(path))
+            if (!Directory.Exists(path))
             {
-                Directory.Delete(path);
-                if (log)
-                    logger.Log($"Deleted directory: {path}");
-                return true;
-            }
-            else
-            {
-                if (log)
-                    logger.Log($"Directory {path} does not exist!");
+                logger.Log($"The directory \"{path}\" does not exist!");
                 return false;
             }
+
+            Directory.CreateDirectory(path);
+            logger.Log($"Deleted directory {path}!");
+            return true;
+            
         }
 
-        public bool Exist(string path)
-        {
-            return Directory.Exists(path);
-        }
-
-        public static void DeleteFileIfExist(string path)
+        public void DeleteFileIfExist(string path)
         {
             if (File.Exists(path))
             {
@@ -68,7 +52,7 @@ namespace WPFApp1.src
             return File.GetAttributes(path).HasFlag(FileAttributes.Directory);
         }
 
-        public static void checkIfDataFileAndDirExist()
+        public void checkIfDataFileAndDirExist()
         {
             if (!Directory.Exists(XmlHelper.FileFolder))
             {
@@ -76,7 +60,7 @@ namespace WPFApp1.src
             }
         }
 
-        public static string[] GetFiles(string directory, string pattern = "*", SearchOption mode = SearchOption.TopDirectoryOnly)
+        public string[] GetFiles(string directory, string pattern = "*", SearchOption mode = SearchOption.TopDirectoryOnly)
         {
             if (Directory.Exists(directory))
             {
@@ -85,7 +69,7 @@ namespace WPFApp1.src
             return new string[] { "Directory does not exist!" };
         }
 
-        public static string[] GetDirectories(string directory, string pattern = "*", SearchOption mode = SearchOption.TopDirectoryOnly)
+        public string[] GetDirectories(string directory, string pattern = "*", SearchOption mode = SearchOption.TopDirectoryOnly)
         {
             if (Directory.Exists(directory))
             {

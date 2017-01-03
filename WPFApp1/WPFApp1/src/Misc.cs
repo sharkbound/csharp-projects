@@ -1,61 +1,60 @@
 ﻿using System.Windows;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WPFApp1;
 using System.Windows.Controls;
+using App.logging;
+using App.DirHelper;
 using System.IO;
+using App.ExtensionMethods;
 
-namespace WPFApp1.src
+namespace App.MiscFuncs
 {
     public class Misc
     {
-        public static MainWindow GetMain()
+        Dir dir = new Dir();
+        Logger logger = new Logger();
+        MainWindow main = ((MainWindow)Application.Current.MainWindow);
+
+        public void Log(string msg, bool clear = false, int delay = 2000)
         {
-            return (MainWindow)Application.Current.MainWindow;
+            logger.Log(msg, clear, delay);
         }
 
-        public static Logger GetLogger()
-        {
-            return GetMain().GetLogger();
-        }
-
-        public static void Log(string msg, bool clear = false, int delay = 2000)
-        {
-            GetLogger().Log(msg, clear, delay);
-        }
-
-        public static MessageBoxResult YesNoPrompt(string innerText, string title = "", MessageBoxImage boxImg = MessageBoxImage.Information, MessageBoxResult defaultResult = MessageBoxResult.No)
+        public MessageBoxResult YesNoPrompt(string innerText, string title = "", MessageBoxImage boxImg = MessageBoxImage.Information, MessageBoxResult defaultResult = MessageBoxResult.No)
         {
             //MessageBox.Show()
             return MessageBox.Show(innerText, title, MessageBoxButton.YesNo, boxImg, defaultResult);
         }
 
-        public static void ClearDirList(bool restoreDefaults = true)
+        public void ClearDirList(bool restoreDefaults = true)
         {
-            var m = GetMain();
-            if (m.DirList.Items.Count < 2) return;
+            if (main.DirList.Items.Count < 2) return;
 
-            m.DirList.Items.Clear();
+            main.DirList.Items.Clear();
             if (restoreDefaults) AddedDefaultDirListItems();
         }
 
-        public static void PopulateDirList()
+        public void PopulateDirList()
         {
-            var m = GetMain();
-            var dirs = Dir.GetDirectories(Directory.GetCurrentDirectory());
+            var dirs = dir.GetDirectories(Directory.GetCurrentDirectory()).CutPath();
             foreach (var dir in dirs)
             {
-                m.DirList.Items.Add(dir);
+                main.DirList.Items.Add(dir);
             }
         }
 
-        public static void AddedDefaultDirListItems()
+        public void AddedDefaultDirListItems()
         {
-            var m = GetMain();
-            m.DirList.Items.Add("Created Directories:");
-            m.DirList.Items.Add(new Separator());
+            main.DirList.Items.Add("Found Directories:");
+            main.DirList.Items.Add(new Separator());
         }
+
+        //public static MainWindow GetMain()
+        //{
+        //    return (MainWindow)Application.Current.MainWindow;
+        //}
+
+        //public static Logger GetLogger()
+        //{
+        //    return GetMain().GetLogger();
+        //}
     }
 }

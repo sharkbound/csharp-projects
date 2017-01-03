@@ -1,18 +1,24 @@
 ﻿using System.Windows;
-using WPFApp1.src;
+using App.logging;
 using System.Diagnostics;
 using System.IO;
 using System;
-using static WPFApp1.src.Misc;
+using App.DirHelper;
+using App.MiscFuncs;
+using App.Xml;
 //using static WPFApp1.src.Logger;
 
-namespace WPFApp1
+namespace App
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        Dir dir;
+        Logger logger;
+        Misc misc;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -20,32 +26,34 @@ namespace WPFApp1
 
         private void CreateDir_btn_Click(object sender, RoutedEventArgs e)
         {
-            Dir dir = new Dir();
-            Logger logger = GetLogger();
             string enteredPath = GetEnteredPath();
 
             if (pathIsEmpty())
                 return;
 
-            if (dir.CreateDirectory(enteredPath, log: true))
+            if (dir.CreateDirectory(enteredPath))
             {
                 if ((bool)OpenDirBox.IsChecked && dir.IsDirectory(enteredPath))
                 {
                     Process.Start(enteredPath);
                 }
             }
+
+            misc.ClearDirList();
+            misc.PopulateDirList();
         }
 
         private void DeleteDir_btn_Click(object sender, RoutedEventArgs e)
         {
-            Dir dir = new Dir();
-            Logger logger = GetLogger();
             string enteredPath = GetEnteredPath();
 
             if (pathIsEmpty())
                 return;
 
             dir.DeleteDirectory(enteredPath, log: true);
+
+            misc.ClearDirList();
+            misc.PopulateDirList();
         }
 
         string GetEnteredPath()
@@ -55,39 +63,32 @@ namespace WPFApp1
 
         bool pathIsEmpty()
         {
-            bool empty = string.IsNullOrWhiteSpace(GetEnteredPath());
-            if (empty)
+            if (string.IsNullOrWhiteSpace(GetEnteredPath()))
             {
-                GetLogger().Log("The directory path cannot be blank or null!");
+                logger.Log("The directory path cannot be blank or null!");
+                return true;
             }
-            return empty;
+            return false;
         }
 
         private void Window_Initialized(object sender, System.EventArgs e)
         {
-            Dir.checkIfDataFileAndDirExist();
+            
+            logger = new Logger();
+            dir = new Dir();
+            misc = new Misc();
+
+            dir.checkIfDataFileAndDirExist();
             var xml = new XmlHelper();
             xml.CreateXmlFile();
 
-            for (int ii = 0; ii < 10; ii++)
-            {
-                DirList.Items.Add($"test item {ii}");
-            }
-
-            DirList.Items.Add("test");
-        }
-
-        public Logger GetLogger()
-        {
-            return new Logger(ref OutputTextBlock, Dispatcher);
+            misc.PopulateDirList();
         }
 
         private void DeleteAllDirs_btn_Click(object sender, RoutedEventArgs e)
         {
-            var m = GetMain();
-            ClearDirList();
 
-            foreach (var dir in m.DirList.Items)
+            foreach (var dir in DirList.Items)
             {
                 //ToDo: add this
                 //if (Directory.Exists())
@@ -98,27 +99,14 @@ namespace WPFApp1
         {
             var selectedValue = (string)DirList.SelectedValue;
             if (selectedValue == null) return;
-            
+
             if (!Directory.Exists(selectedValue))
             {
-                Log("Directory does not exist!");
+                logger.Log("Directory does not exist!");
                 return;
             }
 
-            var files = Dir.GetFiles(selectedValue);
-            //if (files.Length == 0)
-            //{
-            //    try
-            //    {
-            //        Directory.Delete(selectedValue);
-            //        Log($"Deleted directory {selectedValue}!");
-            //    }
-            //    catch
-            //    {
-            //        Log($"Some error occured trying to remove directory: {selectedValue}");
-            //    }
-            //    return;
-            //}
+            var files = dir.GetFiles(selectedValue);
 
             foreach (var file in files)
             {
@@ -132,15 +120,15 @@ namespace WPFApp1
             try
             {
                 Directory.Delete(selectedValue);
-                Log($"Deleted directory {selectedValue}!");
+                logger.Log($"Deleted directory {selectedValue}!");
             }
             catch
             {
-                Log($"Some error occured trying to remove directory: {selectedValue}");
+                logger.Log($"Some error occured trying to remove directory: {selectedValue}");
             }
 
-            ClearDirList();
-            PopulateDirList();
+            misc.ClearDirList();
+            misc.PopulateDirList();
         }
 
         private void Window_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
@@ -185,8 +173,8 @@ namespace WPFApp1
         {
             if (Directory.Exists(XmlHelper.FileFolder))
             {
-                var files = Directory.GetFiles(XmlHelper.FileFolder, "*.*", SearchOption.TopDirectoryOnly);
-                var folders = Directory.GetDirectories(XmlHelper.FileFolder, "*", SearchOption.TopDirectoryOnly);
+                var files = dir.GetFiles(XmlHelper.FileFolder, "*.*", SearchOption.TopDirectoryOnly);
+                var folders = dir.GetDirectories(XmlHelper.FileFolder, "*", SearchOption.TopDirectoryOnly);
                 var data_dir = $"{Directory.GetCurrentDirectory() + @"\" + XmlHelper.FileFolder}";
 
                 if (files.Length > 1 || folders.Length > 0)
@@ -197,18 +185,18 @@ namespace WPFApp1
                     if (foundFilesList.Length == 0) foundFilesList = "None";
                     if (foundFoldersList.Length == 0) foundFoldersList = "None";
 
-                    var choice = YesNoPrompt($"Found {files.Length} files, {folders.Length} folders in {data_dir}:\n\nFiles Found:\n\t{foundFilesList}\n\nFolders found:\n\t{foundFoldersList}\n\n Do you still want to delete the directory?",
+                    var choice = misc.YesNoPrompt($"Found {files.Length} files, {folders.Length} folders in {data_dir}:\n\nFiles Found:\n\t{foundFilesList}\n\nFolders found:\n\t{foundFoldersList}\n\n Do you still want to delete the directory?",
                         "Data folder delete confirmation");
 
                     if (choice == MessageBoxResult.No)
                     {
-                        Log("Data folder removal canceled!");
+                        logger.Log("Data folder removal canceled!");
                         return;
                     }
 
                     foreach (var file in files)
                     {
-                        Dir.DeleteFileIfExist(file);
+                        dir.DeleteFileIfExist(file);
                     }
 
                     foreach (var folder in folders)
@@ -217,9 +205,9 @@ namespace WPFApp1
                     }
                 }
 
-                Dir.DeleteFileIfExist(XmlHelper.FilePath);
+                dir.DeleteFileIfExist(XmlHelper.FilePath);
                 Directory.Delete(XmlHelper.FileFolder);
-                Log("Deleted Data Directory!");
+                logger.Log("Deleted Data Directory!");
             }
         }
 
@@ -228,18 +216,23 @@ namespace WPFApp1
             if (!Directory.Exists(XmlHelper.FileFolder))
             {
                 Directory.CreateDirectory(XmlHelper.FileFolder);
-                Log("Created the Data directory!");
+                logger.Log("Created the Data directory!");
             }
             else
             {
-                Log("Data directory already exist!");
+                logger.Log("Data directory already exist!");
             }
         }
 
         private void OpenCurrDir_btn_Click(object sender, RoutedEventArgs e)
         {
             Process.Start(Directory.GetCurrentDirectory());
-            Log("Opened Current Directory!");
+            logger.Log("Opened Current Directory!");
+        }
+
+        public MainWindow GetMain()
+        {
+            return this;
         }
     }
 }
