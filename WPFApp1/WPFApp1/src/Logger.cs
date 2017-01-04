@@ -19,33 +19,38 @@ namespace App.logging
 
         public void ClearLog()
         {
-            //check();
-            log.Text = string.Empty;
+            disp.Invoke(() =>
+            {
+                log.Text = string.Empty;
+            });
         }
 
         public void ClearLog(int delay)
         {
-            //check();
-            Task clearTask = new Task(() =>
+            Task.Run(() =>
             {
                 Task.WaitAll(Task.Delay(delay));
                 disp.Invoke(() => ClearLog());
             });
-            clearTask.Start();
         }
-        
+
         public void Log(string msg, bool clear = false, int delay = 2000)
         {
-            //check();
-            log.Text = msg;
-            if (clear)
-                ClearLog(delay);
+            disp.Invoke(() =>
+            {
+                log.Text = msg;
+                if (clear)
+                    ClearLog(delay);
+            });
         }
 
         public string GetLogText()
         {
-            //check();
-            return log.Text;
+            disp.Invoke(() =>
+            {
+                return log.Text;
+            });
+            return "";
         }
 
         void check()

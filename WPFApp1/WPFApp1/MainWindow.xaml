@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:App"
         mc:Ignorable="d"
-        Title="MainWindow" Height="295" Width="760.111" Initialized="Window_Initialized" KeyUp="Window_KeyUp" ResizeMode="CanResizeWithGrip">
+        Title="MainWindow" Height="295" Width="784.555" Initialized="Window_Initialized" KeyUp="Window_KeyUp" ResizeMode="CanMinimize">
     <Grid Margin="0,0,4,0">
         <Border x:Name="DirectoryInputBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="23" Margin="31,20,0,0" VerticalAlignment="Top" Width="168"/>
         <Border x:Name="DirectoryControlsBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="165" Margin="15,10,0,0" VerticalAlignment="Top" Width="200"/>
@@ -26,8 +26,8 @@
 
         <TextBox x:Name="CreateDirTextBox" HorizontalAlignment="Left" Height="23" Margin="31,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" RenderTransformOrigin="-0.583,-0.348"/>
         <Button x:Name="CreateDir_btn" Content="Create Directory" Margin="31,55,0,0" Width="168" RenderTransformOrigin="0.542,-0.182" Height="33" Click="CreateDir_btn_Click" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-        <CheckBox x:Name="OpenDirBox" Content="Open Directory on Creation" HorizontalAlignment="Left" Margin="36,148,0,0" VerticalAlignment="Top" Unchecked="OpenDirBox_Unchecked" IsChecked="True"/>
-        <Button x:Name="DeleteSelDir_btn" Content="Delete selected Directory&#xD;&#xA;" HorizontalAlignment="Left" Margin="603,10,0,0" VerticalAlignment="Top" Width="145" RenderTransformOrigin="0.5,0.5" Height="31" Click="DeleteSelDir_btn_Click">
+        <CheckBox x:Name="OpenDirBox" Content="Open Directory on Creation" HorizontalAlignment="Left" Margin="36,148,0,0" VerticalAlignment="Top" Unchecked="OpenDirBox_Unchecked"/>
+        <Button x:Name="DeleteSelDir_btn" Content="Delete selected Directory&#xD;&#xA;" Margin="603,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="31" Click="DeleteSelDir_btn_Click" HorizontalAlignment="Left" Width="159">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -37,7 +37,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="DeleteAllDirs_btn" Content="Delete All Directories&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="605,46,0,0" VerticalAlignment="Top" Width="145" RenderTransformOrigin="0.5,0.5" Height="26" Click="DeleteAllDirs_btn_Click">
+        <Button x:Name="DeleteAllDirs_btn" Content="Delete All Directories&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="605,46,0,0" VerticalAlignment="Top" Width="158" RenderTransformOrigin="0.5,0.5" Height="26" Click="DeleteAllDirs_btn_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -51,7 +51,8 @@
         <Button x:Name="DeleteDataDir_btn" Content="Delete Data Directory" HorizontalAlignment="Left" Margin="234,96,0,0" VerticalAlignment="Top" Width="175" Click="DeleteDataDir_btn_Click" Height="29"/>
         <Button x:Name="ResetXml_btn" Content="Reset XML Config&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="234,57,0,0" VerticalAlignment="Top" Width="175" Height="29" Click="button_Click"/>
         <Button x:Name="CreateDataDir_btn" Content="Create Data Directory" HorizontalAlignment="Left" Margin="234,135,0,0" VerticalAlignment="Top" Width="175" Click="CreateDataDir_btn_Click" Height="29"/>
-        <Button x:Name="OpenCurrDir_btn" Content="Open Current Directory" HorizontalAlignment="Left" Margin="607,222,0,0" VerticalAlignment="Top" Width="133" Click="OpenCurrDir_btn_Click"/>
+        <Button x:Name="OpenCurrDir_btn" Content="Open Current Directory" HorizontalAlignment="Left" Margin="607,222,0,0" VerticalAlignment="Top" Width="156" Click="OpenCurrDir_btn_Click"/>
+        <Button x:Name="UpdateDirs_btn" Content="Update Directory List" HorizontalAlignment="Left" Margin="607,195,0,0" VerticalAlignment="Top" Width="156" Click="UpdateDirs_btn_Click"/>
 
     </Grid>
 </Window>

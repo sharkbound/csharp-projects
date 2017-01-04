@@ -4,6 +4,9 @@ using App.logging;
 using App.DirHelper;
 using System.IO;
 using App.ExtensionMethods;
+using System;
+using System.Diagnostics;
+using System.Reflection;
 
 namespace App.MiscFuncs
 {
@@ -12,6 +15,11 @@ namespace App.MiscFuncs
         Dir dir = new Dir();
         Logger logger = new Logger();
         MainWindow main = ((MainWindow)Application.Current.MainWindow);
+        public static readonly string ExecDir = Assembly.GetExecutingAssembly().Location;
+
+        public Misc()
+        {
+        }
 
         public void Log(string msg, bool clear = false, int delay = 2000)
         {
@@ -34,10 +42,16 @@ namespace App.MiscFuncs
 
         public void PopulateDirList()
         {
-            var dirs = dir.GetDirectories(Directory.GetCurrentDirectory()).CutPath();
-            foreach (var dir in dirs)
+            //var dirs = dir.GetDirectories(Directory.GetCurrentDirectory()).CutPath();
+            foreach (var dir in Directory.GetDirectories(Directory.GetCurrentDirectory()).CutPath())
             {
+                if (dir == "Data" || dir == "WPFApp1") continue;
+
                 main.DirList.Items.Add(dir);
+                foreach (var file in Directory.GetFiles(dir))
+                {
+                    main.DirList.Items.Add($"-> {file.CutPath()}");
+                }
             }
         }
 
@@ -46,6 +60,24 @@ namespace App.MiscFuncs
             main.DirList.Items.Add("Found Directories:");
             main.DirList.Items.Add(new Separator());
         }
+
+        //public void CheckAppDirOrMove()
+        //{
+        //    var fName = AppDomain.CurrentDomain.FriendlyName;
+        //    var destDir = $"WPFApp1\\{fName}";
+
+        //    if (Directory.GetParent(Directory.GetCurrentDirectory()).Name != "WPFApp1")
+        //    {
+        //        if (!Directory.Exists("WPFApp1")) Directory.CreateDirectory("WPFApp1");
+        //        if (File.Exists(destDir)) File.Delete(destDir);
+
+        //        File.Move(AppDomain.CurrentDomain.FriendlyName, destDir);
+        //        Process.Start(destDir);
+        //        Application.Current.Shutdown();
+        //    }
+
+        //    Directory.SetCurrentDirectory(ExecDir);
+        //}
 
         //public static MainWindow GetMain()
         //{

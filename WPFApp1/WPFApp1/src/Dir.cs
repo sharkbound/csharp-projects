@@ -33,9 +33,17 @@ namespace App.DirHelper
                 return false;
             }
 
-            Directory.CreateDirectory(path);
-            logger.Log($"Deleted directory {path}!");
-            return true;
+            try
+            {
+                Directory.Delete(path);
+                logger.Log($"Deleted directory {path}!");
+                return true;
+            }
+            catch (IOException)
+            {
+                logger.Log($"The Directory {path} is not empty, canceling deleting it!");
+                return false;
+            }
             
         }
 

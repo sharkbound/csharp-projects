@@ -6,6 +6,9 @@ using System;
 using App.DirHelper;
 using App.MiscFuncs;
 using App.Xml;
+using App.ExtensionMethods;
+using System.Threading.Tasks;
+using System.Threading;
 //using static WPFApp1.src.Logger;
 
 namespace App
@@ -38,9 +41,6 @@ namespace App
                     Process.Start(enteredPath);
                 }
             }
-
-            misc.ClearDirList();
-            misc.PopulateDirList();
         }
 
         private void DeleteDir_btn_Click(object sender, RoutedEventArgs e)
@@ -51,9 +51,6 @@ namespace App
                 return;
 
             dir.DeleteDirectory(enteredPath, log: true);
-
-            misc.ClearDirList();
-            misc.PopulateDirList();
         }
 
         string GetEnteredPath()
@@ -71,28 +68,56 @@ namespace App
             return false;
         }
 
-        private void Window_Initialized(object sender, System.EventArgs e)
+        private void Window_Initialized(object sender, EventArgs e)
         {
-            
             logger = new Logger();
             dir = new Dir();
             misc = new Misc();
 
             dir.checkIfDataFileAndDirExist();
+
             var xml = new XmlHelper();
             xml.CreateXmlFile();
-
             misc.PopulateDirList();
+            
+            FileSystemWatcher watcher = new FileSystemWatcher(Directory.GetParent(Environment.CurrentDirectory).FullName);
+            watcher.Changed += new FileSystemEventHandler(Watcher_Changed);
+            watcher.IncludeSubdirectories = true;
+            watcher.EnableRaisingEvents = true;
+        }
+
+        private void Watcher_Changed(object sender, FileSystemEventArgs e)
+        {
+            Dispatcher.Invoke(() =>
+            {
+                misc.ClearDirList();
+                misc.PopulateDirList();
+            });
         }
 
         private void DeleteAllDirs_btn_Click(object sender, RoutedEventArgs e)
         {
-
+            int dirLen = 0;
+            int fileLen = 0;
+            string strdir;
             foreach (var dir in DirList.Items)
             {
-                //ToDo: add this
-                //if (Directory.Exists())
+                strdir = "";
+                try { strdir = (string)dir; } catch { strdir = null; }
+
+                if (!Directory.Exists((strdir)) || strdir == null) continue;
+
+                foreach (var file in Directory.GetFiles(strdir))
+                {
+                    File.Delete(file);
+                    fileLen++;
+                }
+
+                Directory.Delete(strdir);
+                dirLen++;
             }
+
+            logger.Log($"Removed {dirLen} Directories, and {fileLen} Files!");
         }
 
         private void DeleteSelDir_btn_Click(object sender, RoutedEventArgs e)
@@ -126,9 +151,6 @@ namespace App
             {
                 logger.Log($"Some error occured trying to remove directory: {selectedValue}");
             }
-
-            misc.ClearDirList();
-            misc.PopulateDirList();
         }
 
         private void Window_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
@@ -233,6 +255,12 @@ namespace App
         public MainWindow GetMain()
         {
             return this;
+        }
+
+        private void UpdateDirs_btn_Click(object sender, RoutedEventArgs e)
+        {
+            misc.ClearDirList();
+            misc.PopulateDirList();
         }
     }
 }
