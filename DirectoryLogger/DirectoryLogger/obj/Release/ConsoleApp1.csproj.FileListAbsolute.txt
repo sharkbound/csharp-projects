@@ -1,0 +1,5 @@
+C:\Users\owner\Documents\Visual Studio 2017\Projects\ConsoleApp1\ConsoleApp1\bin\Release\ConsoleApp1.exe.config
+C:\Users\owner\Documents\Visual Studio 2017\Projects\ConsoleApp1\ConsoleApp1\bin\Release\ConsoleApp1.exe
+C:\Users\owner\Documents\Visual Studio 2017\Projects\ConsoleApp1\ConsoleApp1\bin\Release\ConsoleApp1.pdb
+C:\Users\owner\Documents\Visual Studio 2017\Projects\ConsoleApp1\ConsoleApp1\obj\Release\ConsoleApp1.exe
+C:\Users\owner\Documents\Visual Studio 2017\Projects\ConsoleApp1\ConsoleApp1\obj\Release\ConsoleApp1.pdb

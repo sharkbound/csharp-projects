@@ -21,6 +21,9 @@ Visual Studio shortcuts:
   Close current file: ctrl + f4
   
   Website with all shortcut listings: http://www.dofactory.com/reference/visual-studio-shortcuts
+  
+ Visual Studio 2017 shortcuts:
+	reload webbrowser in webproject: control + alt + enter 
 
   Visual Studio Code shortcuts:
    format code: shift + alt + f 

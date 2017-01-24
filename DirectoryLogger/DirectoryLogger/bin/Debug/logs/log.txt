@@ -1,0 +1,2 @@
+Entering directory: 
+> [logs, 0]
