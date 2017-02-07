@@ -1,0 +1,14 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot\DiscordBot\bin\Debug\DiscordBot.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot\DiscordBot\bin\Debug\DiscordBot.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot\DiscordBot\bin\Debug\DiscordBot.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot\DiscordBot\obj\Debug\DiscordBot.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot\DiscordBot\obj\Debug\DiscordBot.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot\DiscordBot\obj\Debug\DiscordBot.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot\DiscordBot\bin\Debug\Discord.Net.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot\DiscordBot\bin\Debug\Discord.Net.Commands.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot\DiscordBot\bin\Debug\Newtonsoft.Json.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot\DiscordBot\bin\Debug\Nito.AsyncEx.Concurrent.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot\DiscordBot\bin\Debug\Nito.AsyncEx.Enlightenment.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot\DiscordBot\bin\Debug\Nito.AsyncEx.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot\DiscordBot\bin\Debug\RestSharp.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot\DiscordBot\bin\Debug\WebSocket4Net.dll

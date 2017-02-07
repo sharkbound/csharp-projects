@@ -1,0 +1,8 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\SQliteTestApp\SQliteTestApp\bin\Release\SQliteTestApp.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\SQliteTestApp\SQliteTestApp\bin\Release\SQliteTestApp.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\SQliteTestApp\SQliteTestApp\bin\Release\SQliteTestApp.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\SQliteTestApp\SQliteTestApp\bin\Release\System.Data.SQLite.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\SQliteTestApp\SQliteTestApp\bin\Release\System.Data.SQLite.Linq.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\SQliteTestApp\SQliteTestApp\obj\Release\SQliteTestApp.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\SQliteTestApp\SQliteTestApp\obj\Release\SQliteTestApp.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\SQliteTestApp\SQliteTestApp\obj\Release\SQliteTestApp.pdb

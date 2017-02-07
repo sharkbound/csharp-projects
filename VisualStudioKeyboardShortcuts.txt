@@ -5,6 +5,7 @@ Visual Studio shortcuts:
   Move between open tabs backwards: ctrl + shift + f6
   Search data: ctrl + ,
   Search solution explorer: ctrl + ;   Select stuff with arrowKeys then enter
+  Search everything: ctrl + t
   Cycle Through open tabs forward: ctrl + tab
   Cycle Through open tabs backward: ctrl + shift + tab
   Quick collapse a method, class, ect: put cursor where you want collapsed and press ctrl + m(twice)

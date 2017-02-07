@@ -18,7 +18,7 @@ namespace SQliteTestApp
 
             //sqhelper.AddTable("test", new string[] { "name VARCHAR(20)", "score INT" });
             //sqhelper.AddScore("Bob", 1);
-
+            
             bool inCommandLoop = true;
             string UserInput = "";
             CommandParser cmdParser = new CommandParser();
@@ -28,7 +28,7 @@ namespace SQliteTestApp
                 UserInput = Console.ReadLine();
                 var parameters = Regex.Split(UserInput, @"\s").ToList();
                 var cmdName = parameters[0];
-
+                
                 if (parameters.Count > 1)
                     parameters.RemoveRange(0, 1);
                 else

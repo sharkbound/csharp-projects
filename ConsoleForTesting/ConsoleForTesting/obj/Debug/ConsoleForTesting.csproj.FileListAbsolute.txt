@@ -1,0 +1,5 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\ConsoleForTesting\ConsoleForTesting\bin\Debug\ConsoleForTesting.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\ConsoleForTesting\ConsoleForTesting\bin\Debug\ConsoleForTesting.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\ConsoleForTesting\ConsoleForTesting\obj\Debug\ConsoleForTesting.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\ConsoleForTesting\ConsoleForTesting\obj\Debug\ConsoleForTesting.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\ConsoleForTesting\ConsoleForTesting\obj\Debug\ConsoleForTesting.pdb

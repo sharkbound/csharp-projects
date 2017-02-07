@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace SQliteTestApp
@@ -14,7 +11,7 @@ namespace SQliteTestApp
         {
             return new SQLiteConnection("Data Source=Database.sqlite;");
         }
-
+        
         public SQLiteConnection GetConnectionOpen()
         {
             var connection = new SQLiteConnection("Data Source=Database.sqlite;");
@@ -32,7 +29,7 @@ namespace SQliteTestApp
 
         public void AddTable(string tableName, string[] parameters)
         {
-            var connection = GetConnection();
+            SQLiteConnection connection = GetConnection();
             connection.Open();
 
             string parametersForTable = string.Join(", ", parameters);
@@ -80,10 +77,10 @@ namespace SQliteTestApp
 
         public List<string> GetAllValuesFromTable(string table, string format)
         {
-            var cmd = ConstructCommand(string.Format("select * from {0} order by score desc", table));
-            var reader = cmd.ExecuteReader();
-
-            List<string> results = new List<string>();
+            SQLiteCommand cmd = ConstructCommand(string.Format("select * from {0} order by score desc", table));
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            
+            var results = new List<string>();
             while (reader.Read())
                 results.Add((string.Format(format, reader["name"], reader["score"])));
             return results;

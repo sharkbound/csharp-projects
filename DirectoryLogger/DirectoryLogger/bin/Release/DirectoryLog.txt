@@ -1,5 +1,1 @@
-> [Start of Release]
 > [logs: 0]
---> [Start of logs]
---> [End of logs]
-> [End of Release]
