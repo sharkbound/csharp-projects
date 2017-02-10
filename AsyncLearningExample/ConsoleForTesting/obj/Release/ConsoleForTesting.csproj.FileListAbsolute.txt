@@ -1,0 +1,4 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\ConsoleForTesting\ConsoleForTesting\bin\Release\ConsoleForTesting.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\ConsoleForTesting\ConsoleForTesting\bin\Release\ConsoleForTesting.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\ConsoleForTesting\ConsoleForTesting\obj\Release\ConsoleForTesting.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\ConsoleForTesting\ConsoleForTesting\obj\Release\ConsoleForTesting.pdb
