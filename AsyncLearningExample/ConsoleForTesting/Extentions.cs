@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 
-namespace ConsoleForTesting
+namespace AsyncLearning
 {
     public static class Extentions
     {
@@ -19,6 +19,11 @@ namespace ConsoleForTesting
         public static double GetTotalSecondsElapsed(this DateTime dt)
         {
             return (DateTime.Now - dt).TotalSeconds;
+        }
+
+        public static double RandomDouble(this Random r, int min, int max)
+        {
+            return r.NextDouble() * r.Next(min, max);
         }
     }
 }

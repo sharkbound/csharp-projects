@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26127.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleForTesting", "ConsoleForTesting\ConsoleForTesting.csproj", "{C1472FB7-E03C-419A-A4B8-B1E8D5D7BDB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncLearing", "ConsoleForTesting\AsyncLearing.csproj", "{C1472FB7-E03C-419A-A4B8-B1E8D5D7BDB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

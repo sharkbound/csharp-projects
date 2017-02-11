@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace ConsoleForTesting
+namespace AsyncLearning
 {
     internal class Methods
     {

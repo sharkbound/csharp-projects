@@ -1,0 +1,6 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\AsyncLearningExample\ConsoleForTesting\bin\Debug\ConsoleForTesting.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\AsyncLearningExample\ConsoleForTesting\bin\Debug\ConsoleForTesting.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\AsyncLearningExample\ConsoleForTesting\bin\Debug\ConsoleForTesting.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\AsyncLearningExample\ConsoleForTesting\obj\Debug\AsyncLearing.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\AsyncLearningExample\ConsoleForTesting\obj\Debug\ConsoleForTesting.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\AsyncLearningExample\ConsoleForTesting\obj\Debug\ConsoleForTesting.pdb

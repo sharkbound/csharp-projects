@@ -7,7 +7,7 @@ using System;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
-namespace ConsoleForTesting
+namespace AsyncLearning
 {
     class Program
     {
@@ -25,11 +25,17 @@ namespace ConsoleForTesting
             Console.WriteLine("Waiting for all async operations to complete...");
 
             DateTime start = DateTime.Now;
+            Random r = new Random();
+
+            int 
+                min = 1,
+                max = 5;
+
             await Task.WhenAll(
-                TimeTaskExecAsync(1.75, "1"),
-                TimeTaskExecAsync(0.5, "2"),
-                TimeTaskExecAsync(0.6, "3"),
-                TimeTaskExecAsync(0.891, "4"));
+                TimeTaskExecAsync(r.RandomDouble(min, max), "1"),
+                TimeTaskExecAsync(r.RandomDouble(min, max), "2"),
+                TimeTaskExecAsync(r.RandomDouble(min, max), "3"),
+                TimeTaskExecAsync(r.RandomDouble(min, max), "4"));
 
             CWriteLine($"All async operations finished after {start.GetTotalSecondsElapsed()} seconds!", ConsoleColor.Cyan);
             Pause("Press any key to exit...", ConsoleColor.Red);
