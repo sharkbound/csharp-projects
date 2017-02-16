@@ -20,6 +20,7 @@ Visual Studio shortcuts:
   Run without debugger: ctrl + f5
   Stop debugging: Shift + f5
   Close current file: ctrl + f4
+  Inline Definition peek: alt + f12
   
   Website with all shortcut listings: http://www.dofactory.com/reference/visual-studio-shortcuts
   

@@ -1,0 +1,3 @@
+Package manager console commands:
+	Install-Package Nito.AsyncEx  //Async package
+	Info on it: http://www.nuget.org/packages/Nito.AsyncEx

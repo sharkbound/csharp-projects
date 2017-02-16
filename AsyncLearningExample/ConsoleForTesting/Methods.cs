@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace AsyncLearning
 {
@@ -19,6 +20,8 @@ namespace AsyncLearning
 
         public async Task TimeTaskExecAsync(double delay, string Idenifier)
         {
+            CWriteLine($"{Idenifier} has started sleeping for {delay.ToString("#.000")} seconds...", ConsoleColor.Yellow);
+            
             double execSeconds = await GetTaskExecTimeAsync(async () =>
             {
                 await Task.Delay((int)(delay * 1000));
@@ -47,6 +50,13 @@ namespace AsyncLearning
         {
             CWriteLine(pauseMsg, color);
             Console.ReadKey(true);
-        } 
+        }
+
+        public IEnumerable<string> IterString()
+        {
+            string[] array1 = new string[] { "a", "b", "c", "d", "e", "f", "g", "h" };
+            foreach (string v in array1)
+                yield return v;
+        }
     }
 }

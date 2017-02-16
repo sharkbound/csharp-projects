@@ -22,14 +22,14 @@ namespace AsyncLearning
     {
         public async Task RunAsync()
         {
-            Console.WriteLine("Waiting for all async operations to complete...");
-
             DateTime start = DateTime.Now;
             Random r = new Random();
 
             int 
                 min = 1,
                 max = 5;
+
+            Console.WriteLine("Waiting for all async operations to complete...");
 
             await Task.WhenAll(
                 TimeTaskExecAsync(r.RandomDouble(min, max), "1"),
