@@ -21,6 +21,9 @@ Visual Studio shortcuts:
   Stop debugging: Shift + f5
   Close current file: ctrl + f4
   Inline Definition peek: alt + f12
+  Class View: ctrl + shift + c
+  F4: Properties windows for selected item
+  Object browser: ctrl+alt+j
   
   Website with all shortcut listings: http://www.dofactory.com/reference/visual-studio-shortcuts
   
