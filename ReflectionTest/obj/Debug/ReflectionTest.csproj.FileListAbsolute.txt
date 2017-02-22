@@ -1,0 +1,7 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\ReflectionTest\bin\Debug\ReflectionTest.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\ReflectionTest\bin\Debug\ReflectionTest.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\ReflectionTest\bin\Debug\ReflectionTest.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\ReflectionTest\obj\Debug\ReflectionTest.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\ReflectionTest\obj\Debug\ReflectionTest.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\ReflectionTest\obj\Debug\ReflectionTest.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\ReflectionTest\bin\Debug\Newtonsoft.Json.dll

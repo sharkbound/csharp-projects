@@ -38,6 +38,16 @@ namespace DiscordBot
             Console.ForegroundColor = previousConsoleColor;
         }
 
+        public static void Log(string msg, ConsoleColor c)
+        {
+            var previousConsoleColor = Console.ForegroundColor;
+            Console.ForegroundColor = c;
+
+            Console.WriteLine(msg);
+
+            Console.ForegroundColor = previousConsoleColor;
+        }
+
         public static void LogWarning(string msg)
         {
             var previousConsoleColor = Console.ForegroundColor;

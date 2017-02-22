@@ -27,7 +27,7 @@ namespace DiscordBot
             {
                 x.AppName = "SharkBot";
                 x.AppUrl = "http://sharkbound.weebly.com/";
-                x.LogLevel = LogSeverity.Debug;
+                x.LogLevel = LogSeverity.Info;
                 x.LogHandler = log;
             });
 
@@ -38,6 +38,19 @@ namespace DiscordBot
             });
 
             CreateCommands();
+
+            bot.MessageReceived += async (s, e) =>
+            {
+                if (bot.Status == UserStatus.Offline 
+                || !e.Message.IsAuthor
+                || e.Message.Text[0] == cfg.CommandPrefix) return;
+
+                var msg = $"{e.User.Name}: {e.Message.Text}";
+
+                Logger.Log(msg, ConsoleColor.Red);
+                await e.Channel.SendMessage(msg);
+                await e.User.SendMessage($"You have posted \n\t'{e.Message.Text}' \nin channel \n\t{e.Channel.Name} \nat \n\t{DateTime.Now.ToString()}");
+            };
 
             bot.ExecuteAndWait(async () =>
             {

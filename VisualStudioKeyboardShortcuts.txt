@@ -24,6 +24,15 @@ Visual Studio shortcuts:
   Class View: ctrl + shift + c
   F4: Properties windows for selected item
   Object browser: ctrl+alt+j
+  Find all references: shift + f12
+  Show method parameters: ctrl + shift + space
+  Put blank line under cursor: ctrl + shift + enter
+  Incremental search: ctrl + i 
+  Find in files: ctrl + shift + f
+  Cut current line: ctrl + L
+  Delete current line: ctrl + shift + L
+  Place bookmark: ctrl + k, ctrl + k
+  Goto next bookmark: ctrl + k, ctrl + n
   
   Website with all shortcut listings: http://www.dofactory.com/reference/visual-studio-shortcuts
   
