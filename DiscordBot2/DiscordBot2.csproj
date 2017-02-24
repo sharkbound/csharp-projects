@@ -43,12 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\CommandHelp.cs" />
+    <Compile Include="Commands\CommandPing.cs" />
+    <Compile Include="Commands\CommandQuit.cs" />
     <Compile Include="Extensions\extensions.cs" />
     <Compile Include="Handlers\CommandHandler.cs" />
+    <Compile Include="Interfaces\IDiscordCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\ColorUtil.cs" />
-    <Compile Include="Utils\Config.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="Utils\Logger.cs" />
   </ItemGroup>
   <ItemGroup>

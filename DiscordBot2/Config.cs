@@ -18,6 +18,7 @@ namespace DiscordBot2.Utils
 
         public string Token = "default";
         public char CommandPrefix = '.';
+        public bool LogChat = false;
 
         public static void CreateConfig()
         {

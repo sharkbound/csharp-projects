@@ -16,9 +16,16 @@ namespace DiscordBot2.Utils
             Console.ForegroundColor = oldColor;
         }
 
+
+        public void LogChat(string author, string msg, ConsoleColor color = ConsoleColor.White)
+        {
+            var now = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Central Standard Time"));
+            Log($"[{now.Minute}:{now.Second}] {author}: {msg}", color);
+        }
+
         public void LogInfo(string msg) =>
             Log($"INFO: {msg}", ConsoleColor.White);
-        
+
         public void LogInfo(string msg, ConsoleColor color) =>
             Log($"INFO: {msg}", color);
 

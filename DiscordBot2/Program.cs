@@ -20,11 +20,34 @@ namespace DiscordBot2
     {
         static void Main(string[] args)
         {
-            new Program().Start().GetAwaiter().GetResult();
+            bool botWasQuit = false;
+            string errorMsg = "",
+                stackTrace = "";
+            try
+            {
+                new Program().Start().GetAwaiter().GetResult();
+            }
+            catch (TaskCanceledException ex)
+            {
+                botWasQuit = true;
+            }
+            catch (Exception ex)
+            {
+                errorMsg = ex.Message;
+                stackTrace = ex.StackTrace;
+            }
+
+            if (!botWasQuit)
+            {
+                Console.WriteLine($"Error accured that cause the bot to crash!\n\nError Message: {errorMsg}\n\nStacktrace: {stackTrace}");
+                Console.ReadKey();
+            }
         }
-        
+
+        public static DiscordSocketClient bot;
+        public static CancellationTokenSource cancelSrc = new CancellationTokenSource();
+
         Config cfg = Config.GetConfig();
-        DiscordSocketClient bot;
         CommandService cmd = new CommandService();
         Logger logger = new Logger();
         CommandHandler commandHandler;
@@ -37,7 +60,7 @@ namespace DiscordBot2
                 Title = "TEST"
             }; //(87,183,255) Ocean blue color
 
-            logger.LogInfo($"Got config values:\nToken:\t{cfg.Token}\nCommandPrefix:\t{cfg.CommandPrefix}");
+            logger.LogInfo($"Got config values:\n\tCommandPrefix:  {cfg.CommandPrefix}\n\tLogChat:  {cfg.LogChat.ToString()}\n");
             logger.LogInfo("Starting bot...");
 
             bot = new DiscordSocketClient(new DiscordSocketConfig
@@ -55,16 +78,15 @@ namespace DiscordBot2
                 {
 
                 }
-                else
-                {
+                if (cfg.LogChat)
+                    logger.LogChat(msg.Author.Username, msg.Content);
 
-                }
             };
 
             logger.LogInfo($"Bot logged in as \n\tUser: {bot.CurrentUser.Username}", ConsoleColor.Blue);
 
             // stop program from closing...
-            await Task.Delay(-1);
+            await Task.Delay(-1, cancelSrc.Token);
         }
     }
 }
