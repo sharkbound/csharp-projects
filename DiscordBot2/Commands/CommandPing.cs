@@ -14,6 +14,8 @@ namespace DiscordBot2.Commands
 
         public string Help => "Testing if the bot is responsive";
 
+        public string Permission => "ping";
+
         public async Task ExecuteAsync(SocketUserMessage msg, List<string> parameters)
         {
             await msg.Channel.SendMessageAsync("Pong!");

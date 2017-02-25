@@ -9,22 +9,21 @@ using Discord.Commands;
 using DiscordBot2.Utils;
 using DiscordBot2.Interfaces;
 using System.Reflection;
+using DiscordBot2.Extensions;
 
 namespace DiscordBot2.Handlers
 {
-    
+
     public class CommandHandler
     {
         public static IEnumerable<IDiscordCommand> Commands;
 
         private DiscordSocketClient client;
         private char prefix;
-        private Logger logger;
-        public CommandHandler(DiscordSocketClient c, Logger l, char cmdPrefix)
+        public CommandHandler(DiscordSocketClient c, char cmdPrefix)
         {
             client = c;
             prefix = cmdPrefix;
-            logger = l;
 
             Commands = from t in Assembly.GetExecutingAssembly().GetTypes()
                        where t.GetInterfaces().Contains(typeof(IDiscordCommand)) && t.GetConstructor(Type.EmptyTypes) != null
@@ -32,7 +31,7 @@ namespace DiscordBot2.Handlers
 
             Console.WriteLine("\n");
             foreach (var command in Commands)
-                logger.LogInfo($"Registered command: {command.Name}", ConsoleColor.Green);
+                Logger.LogInfo($"Registered command: {command.Name}", ConsoleColor.Green);
             Console.WriteLine("\n");
         }
 
@@ -41,15 +40,29 @@ namespace DiscordBot2.Handlers
             SocketUserMessage userMsg = socketmsg as SocketUserMessage;
             if (userMsg == null)
                 return false;
-            
+
             if (userMsg.Content[0] == prefix)
             {
                 List<string> parameters = GetParameters(userMsg, out string cmdName);
-                Console.WriteLine(cmdName);
+                Logger.Log("doing checks!");
+
+                if (!CommandExist(cmdName))
+                {
+                    await userMsg.Channel.SendMessageAsync($"{cmdName} is not a valid command");
+                    return false;
+                }
+                else if (!userMsg.Author.HasPermission(cmdName))
+                {
+                    Logger.LogWarning($"denied permission for {prefix}{cmdName} for user {userMsg.Author.Username}");
+                    await userMsg.Channel.SendMessageAsync($"You do not have permission to use {prefix}{cmdName}");
+                    return false;
+                }
+                
+                Logger.Log("checks passed!");
                 await Commands.SingleOrDefault(c => c.Name.ToLower() == cmdName).ExecuteAsync(userMsg, parameters);
                 return true;
             }
-            
+
             return false;
         }
 
@@ -65,6 +78,11 @@ namespace DiscordBot2.Handlers
             }
 
             return parameters;
+        }
+
+        public bool CommandExist(string commandName)
+        {
+            return Commands.SingleOrDefault(c => c.Name.ToLower().Trim() == commandName) != null;
         }
     }
 }

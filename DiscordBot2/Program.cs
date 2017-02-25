@@ -46,11 +46,9 @@ namespace DiscordBot2
 
         public static DiscordSocketClient bot;
         public static CancellationTokenSource cancelSrc = new CancellationTokenSource();
-
-        Config cfg = Config.GetConfig();
-        CommandService cmd = new CommandService();
-        Logger logger = new Logger();
-        CommandHandler commandHandler;
+        public static Config cfg = Config.GetConfig();
+        public static Permissions perms = Permissions.GetPermissions();
+        public static CommandHandler commandHandler = new CommandHandler(bot, cfg.CommandPrefix);
 
         public async Task Start()
         {
@@ -60,8 +58,8 @@ namespace DiscordBot2
                 Title = "TEST"
             }; //(87,183,255) Ocean blue color
 
-            logger.LogInfo($"Got config values:\n\tCommandPrefix:  {cfg.CommandPrefix}\n\tLogChat:  {cfg.LogChat.ToString()}\n");
-            logger.LogInfo("Starting bot...");
+            Logger.LogInfo($"Got config values:\n\tCommandPrefix:  {cfg.CommandPrefix}\n\tLogChat:  {cfg.LogChat.ToString()}\n");
+            Logger.LogInfo("Starting bot...");
 
             bot = new DiscordSocketClient(new DiscordSocketConfig
             {
@@ -70,21 +68,24 @@ namespace DiscordBot2
 
             await bot.LoginAsync(TokenType.Bot, cfg.Token);
             await bot.ConnectAsync();
-            
-            commandHandler = new CommandHandler(bot, logger, cfg.CommandPrefix);
+
             bot.MessageReceived += async msg =>
             {
-                if (await commandHandler.HandleCommandAsync(msg))
+                try
                 {
-
+                    if (!await commandHandler.HandleCommandAsync(msg))
+                    {
+                        if (cfg.LogChat)
+                            Logger.LogChat(msg.Author.Username, msg.Content);
+                    }
                 }
-                if (cfg.LogChat)
-                    logger.LogChat(msg.Author.Username, msg.Content);
-
+                catch (Exception ex)
+                {
+                    Logger.Log(ex.Message + "\n\n" + ex.StackTrace);
+                }
             };
 
-            logger.LogInfo($"Bot logged in as \n\tUser: {bot.CurrentUser.Username}", ConsoleColor.Blue);
-
+            Logger.LogInfo($"Bot logged in as \n\tUser: {bot.CurrentUser.Username}", ConsoleColor.Blue);
             // stop program from closing...
             await Task.Delay(-1, cancelSrc.Token);
         }

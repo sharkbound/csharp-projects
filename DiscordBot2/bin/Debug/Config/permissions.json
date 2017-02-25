@@ -1,0 +1,25 @@
+{
+  "Groups": [
+    {
+      "GroupName": "default",
+      "Members": [
+		"Default Dan"
+	  ],
+      "Commands": [
+		"help",
+		"ping"
+	  ]
+    },
+    {
+      "GroupName": "admin",
+      "Members": [
+		"111609537827500032"
+	  ],
+      "Commands": [
+		"*",
+		"reload",
+		"quit"
+	  ]
+    }
+  ]
+}

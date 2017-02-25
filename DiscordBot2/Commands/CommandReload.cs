@@ -8,19 +8,18 @@ using Discord.WebSocket;
 
 namespace DiscordBot2.Commands
 {
-    class CommandQuit : IDiscordCommand
+    class CommandReload : IDiscordCommand
     {
-        public string Name => "quit";
+        public string Name => "reload";
 
-        public string Help => "Kills the bot";
+        public string Help => "reloads permissions";
 
-        public string Permission => "quit";
+        public string Permission => "permissions.reload";
 
         public async Task ExecuteAsync(SocketUserMessage msg, List<string> parameters)
         {
-            await msg.Channel.SendMessageAsync("**Shutting Down...**");
-            await Program.bot.DisconnectAsync();
-            Program.cancelSrc.Cancel();
+            Program.perms = Permissions.GetPermissions();
+            await msg.Channel.SendMessageAsync("Reloaded permissions");
         }
     }
 }

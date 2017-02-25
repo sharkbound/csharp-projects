@@ -10,11 +10,13 @@ namespace DiscordBot2.Utils
 {
     class Config
     {
-
+        [JsonIgnore]
+        public static readonly string PermissionsFilePath = @"Config\permissions.json";
         [JsonIgnore]
         public static readonly string ConfigFilePath = @"Config\config.json";
         [JsonIgnore]
         public static readonly string ConfigFolderPath = @"Config\";
+
 
         public string Token = "default";
         public char CommandPrefix = '.';

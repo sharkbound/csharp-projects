@@ -8,7 +8,7 @@ namespace DiscordBot2.Utils
 {
     public class Logger
     {
-        public void Log(string msg, ConsoleColor color = ConsoleColor.Gray)
+        public static void Log(string msg, ConsoleColor color = ConsoleColor.Gray)
         {
             ConsoleColor oldColor = Console.ForegroundColor;
             Console.ForegroundColor = color;
@@ -17,25 +17,25 @@ namespace DiscordBot2.Utils
         }
 
 
-        public void LogChat(string author, string msg, ConsoleColor color = ConsoleColor.White)
+        public static void LogChat(string author, string msg, ConsoleColor color = ConsoleColor.White)
         {
-            var now = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Central Standard Time"));
+            var now = DateTime.Now;
             Log($"[{now.Minute}:{now.Second}] {author}: {msg}", color);
         }
 
-        public void LogInfo(string msg) =>
+        public static void LogInfo(string msg) =>
             Log($"INFO: {msg}", ConsoleColor.White);
 
-        public void LogInfo(string msg, ConsoleColor color) =>
+        public static void LogInfo(string msg, ConsoleColor color) =>
             Log($"INFO: {msg}", color);
 
-        public void LogWarning(string msg) =>
+        public static void LogWarning(string msg) =>
             Log($"WARNING: {msg}", ConsoleColor.Yellow);
 
-        public void LogError(string msg) =>
+        public static void LogError(string msg) =>
             Log($"ERROR: {msg}", ConsoleColor.Red);
 
-        public void LogDebug(string msg) =>
+        public static void LogDebug(string msg) =>
             Log($"DEBUG: {msg}", ConsoleColor.Blue);
     }
 }

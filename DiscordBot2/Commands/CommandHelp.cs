@@ -15,6 +15,8 @@ namespace DiscordBot2.Commands
 
         public string Help => "Shows all commands";
 
+        public string Permission => "help";
+
         public async Task ExecuteAsync(SocketUserMessage msg, List<string> parameters)
         {
             StringBuilder sb = new StringBuilder();
@@ -25,7 +27,7 @@ namespace DiscordBot2.Commands
             }
 
             await msg.Author.CreateDMChannelAsync().GetAwaiter().GetResult().SendMessageAsync(sb.ToString());
-            await msg.Channel.SendMessageAsync($"@{msg.Author.Username} Sent you a help DM.");
+            await msg.Channel.SendMessageAsync($"<@{msg.Author.Id}> Sent you a help DM.");
         }
     }
 }
