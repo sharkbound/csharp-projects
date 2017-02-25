@@ -16,7 +16,7 @@ using Discord.Net.Providers.WS4Net;
 
 namespace DiscordBot2
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -71,18 +71,16 @@ namespace DiscordBot2
 
             bot.MessageReceived += async msg =>
             {
-                try
+                if (!await commandHandler.HandleCommandAsync(msg))
                 {
-                    if (!await commandHandler.HandleCommandAsync(msg))
-                    {
-                        if (cfg.LogChat)
-                            Logger.LogChat(msg.Author.Username, msg.Content);
-                    }
+                    if (cfg.LogChat)
+                        Logger.LogChat(msg.Author.Username, msg.Content);
                 }
-                catch (Exception ex)
-                {
-                    Logger.Log(ex.Message + "\n\n" + ex.StackTrace);
-                }
+
+                //catch (Exception ex)
+                //{
+                //    Logger.Log(ex.Message + "\n\n" + ex.StackTrace);
+                //}
             };
 
             Logger.LogInfo($"Bot logged in as \n\tUser: {bot.CurrentUser.Username}", ConsoleColor.Blue);

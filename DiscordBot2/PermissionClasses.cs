@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DiscordBot2
 {
-    sealed class Permissions
+    public sealed class Permissions
     {
         public List<PermissionGroup> Groups = new List<PermissionGroup>();
 
@@ -55,7 +55,7 @@ namespace DiscordBot2
         }
     }
 
-    class PermissionGroup
+    public class PermissionGroup
     {
         public string GroupName;
         public List<string> Members = new List<string> { };

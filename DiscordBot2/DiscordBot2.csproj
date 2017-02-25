@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\CommandFancy.cs" />
     <Compile Include="Commands\CommandHelp.cs" />
     <Compile Include="Commands\CommandPing.cs" />
     <Compile Include="Commands\CommandQuit.cs" />

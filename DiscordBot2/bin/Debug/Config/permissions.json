@@ -7,7 +7,8 @@
 	  ],
       "Commands": [
 		"help",
-		"ping"
+		"ping",
+		"fancy"
 	  ]
     },
     {
@@ -16,7 +17,9 @@
 		"111609537827500032"
 	  ],
       "Commands": [
-		"*",
+		"**",
+		"p.reload",
+		"fancy",
 		"reload",
 		"quit"
 	  ]

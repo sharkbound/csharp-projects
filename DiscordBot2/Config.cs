@@ -8,7 +8,7 @@ using System.IO;
 
 namespace DiscordBot2.Utils
 {
-    class Config
+    public class Config
     {
         [JsonIgnore]
         public static readonly string PermissionsFilePath = @"Config\permissions.json";
@@ -19,7 +19,7 @@ namespace DiscordBot2.Utils
 
 
         public string Token = "default";
-        public char CommandPrefix = '.';
+        public string CommandPrefix = "..";
         public bool LogChat = false;
 
         public static void CreateConfig()

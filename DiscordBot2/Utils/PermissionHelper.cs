@@ -16,7 +16,7 @@ namespace DiscordBot2.Utils
             {
                 groups = new List<PermissionGroup>();
             }
-            groups.Add(Program.perms.Groups.SingleOrDefault(g => g.GroupName.ToString().ToLower() == "default"));
+            groups.Add(Program.perms.Groups.SingleOrDefault(g => g.GroupName.ToLower() == "default"));
 
             var result = groups.Where(g => g.Commands.Contains(permission) || g.Commands.Contains("*"))?.ToList();
             return result != null && result.Count != 0;

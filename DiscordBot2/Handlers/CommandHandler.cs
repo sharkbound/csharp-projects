@@ -19,8 +19,8 @@ namespace DiscordBot2.Handlers
         public static IEnumerable<IDiscordCommand> Commands;
 
         private DiscordSocketClient client;
-        private char prefix;
-        public CommandHandler(DiscordSocketClient c, char cmdPrefix)
+        public string prefix;
+        public CommandHandler(DiscordSocketClient c, string cmdPrefix)
         {
             client = c;
             prefix = cmdPrefix;
@@ -41,24 +41,23 @@ namespace DiscordBot2.Handlers
             if (userMsg == null)
                 return false;
 
-            if (userMsg.Content[0] == prefix)
+            if (userMsg.Content.StartsWith(prefix))
             {
+                IDiscordCommand command = null;
                 List<string> parameters = GetParameters(userMsg, out string cmdName);
-                Logger.Log("doing checks!");
 
-                if (!CommandExist(cmdName))
+                if (!CommandExist(cmdName, out command))
                 {
                     await userMsg.Channel.SendMessageAsync($"{cmdName} is not a valid command");
                     return false;
                 }
-                else if (!userMsg.Author.HasPermission(cmdName))
+                else if (!userMsg.Author.HasPermission(command.Permission.ToLower().Trim()))
                 {
                     Logger.LogWarning($"denied permission for {prefix}{cmdName} for user {userMsg.Author.Username}");
                     await userMsg.Channel.SendMessageAsync($"You do not have permission to use {prefix}{cmdName}");
                     return false;
                 }
                 
-                Logger.Log("checks passed!");
                 await Commands.SingleOrDefault(c => c.Name.ToLower() == cmdName).ExecuteAsync(userMsg, parameters);
                 return true;
             }
@@ -73,7 +72,7 @@ namespace DiscordBot2.Handlers
             var parameters = m.Content.Split(' ').ToList();
             if (parameters.Count >= 1)
             {
-                cmdName = parameters[0].Remove(0, 1).ToLower();
+                cmdName = parameters[0].Remove(0, prefix.Length).ToLower();
                 parameters.Remove(parameters[0]);
             }
 
@@ -83,6 +82,12 @@ namespace DiscordBot2.Handlers
         public bool CommandExist(string commandName)
         {
             return Commands.SingleOrDefault(c => c.Name.ToLower().Trim() == commandName) != null;
+        }
+
+        public bool CommandExist(string commandName, out IDiscordCommand cmd)
+        {
+            cmd = Commands.SingleOrDefault(c => c.Name.ToLower().Trim() == commandName);
+            return cmd != null;
         }
     }
 }
