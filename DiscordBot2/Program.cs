@@ -76,11 +76,6 @@ namespace DiscordBot2
                     if (cfg.LogChat)
                         Logger.LogChat(msg.Author.Username, msg.Content);
                 }
-
-                //catch (Exception ex)
-                //{
-                //    Logger.Log(ex.Message + "\n\n" + ex.StackTrace);
-                //}
             };
 
             Logger.LogInfo($"Bot logged in as \n\tUser: {bot.CurrentUser.Username}", ConsoleColor.Blue);

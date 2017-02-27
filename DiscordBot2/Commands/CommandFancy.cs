@@ -19,14 +19,20 @@ namespace DiscordBot2.Commands
 
         public string Permission => "fancy";
 
-        public async Task ExecuteAsync(SocketUserMessage msg, List<string> parameters)
+        public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
         {
-            if (parameters.Count < 2)
+            if (parameters.Length < 2)
             {
                 await msg.Channel.SendMessageAsync("missing parameters");
                 return;
             }
 
+            for (int i = 0; i < parameters.Length; i++)
+            {
+                if (parameters[i].Contains(@"\n")) parameters[i] = parameters[i].Replace(@"\n", "\n");
+                if (parameters[i].Contains(@"\t")) parameters[i] = parameters[i].Replace(@"\t", "\t");
+            }
+            
             EmbedBuilder eb = new EmbedBuilder()
             {
                 Color = new Color(255, 0, 0)

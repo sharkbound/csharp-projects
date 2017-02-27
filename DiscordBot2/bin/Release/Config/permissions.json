@@ -1,0 +1,14 @@
+{
+  "Groups": [
+    {
+      "GroupName": "default",
+      "Members": [],
+      "Commands": []
+    },
+    {
+      "GroupName": "admin",
+      "Members": [],
+      "Commands": []
+    }
+  ]
+}

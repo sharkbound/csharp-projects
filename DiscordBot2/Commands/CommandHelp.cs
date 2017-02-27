@@ -17,7 +17,7 @@ namespace DiscordBot2.Commands
 
         public string Permission => "help";
 
-        public async Task ExecuteAsync(SocketUserMessage msg, List<string> parameters)
+        public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
         {
             StringBuilder sb = new StringBuilder();
             

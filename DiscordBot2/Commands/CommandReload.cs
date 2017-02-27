@@ -16,7 +16,7 @@ namespace DiscordBot2.Commands
 
         public string Permission => "p.reload";
 
-        public async Task ExecuteAsync(SocketUserMessage msg, List<string> parameters)
+        public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
         {
             Program.perms = Permissions.GetPermissions();
             await msg.Channel.SendMessageAsync("Reloaded permissions");

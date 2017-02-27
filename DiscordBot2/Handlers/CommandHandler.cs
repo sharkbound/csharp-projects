@@ -10,6 +10,7 @@ using DiscordBot2.Utils;
 using DiscordBot2.Interfaces;
 using System.Reflection;
 using DiscordBot2.Extensions;
+using System.Text.RegularExpressions;
 
 namespace DiscordBot2.Handlers
 {
@@ -17,6 +18,7 @@ namespace DiscordBot2.Handlers
     public class CommandHandler
     {
         public static IEnumerable<IDiscordCommand> Commands;
+        private Regex parameterRegex = new Regex(@"""  """, RegexOptions.Compiled); 
 
         private DiscordSocketClient client;
         public string prefix;
@@ -43,10 +45,9 @@ namespace DiscordBot2.Handlers
 
             if (userMsg.Content.StartsWith(prefix))
             {
-                IDiscordCommand command = null;
-                List<string> parameters = GetParameters(userMsg, out string cmdName);
+                string[] parameters = GetParameters(userMsg, out string cmdName);
 
-                if (!CommandExist(cmdName, out command))
+                if (!CommandExist(cmdName, out IDiscordCommand command))
                 {
                     await userMsg.Channel.SendMessageAsync($"{cmdName} is not a valid command");
                     return false;
@@ -65,16 +66,16 @@ namespace DiscordBot2.Handlers
             return false;
         }
 
-        public List<string> GetParameters(SocketUserMessage m, out string cmdName)
+        public string[] GetParameters(SocketUserMessage m, out string cmdName)
         {
+            string[] parameters = { };
             cmdName = "null";
 
-            var parameters = m.Content.Split(' ').ToList();
-            if (parameters.Count >= 1)
-            {
-                cmdName = parameters[0].Remove(0, prefix.Length).ToLower();
-                parameters.Remove(parameters[0]);
-            }
+            // this regex is from https://github.com/RocketMod/Rocket/blob/master/Rocket.Core/Commands/RocketCommandManager.cs in Execute()
+            parameters = Regex.Matches(m.Content, @"[\""](.+?)[\""]|([^ ]+)", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.ExplicitCapture).Cast<Match>().Select(x => x.Value.Trim('"').Trim()).ToArray();
+
+            if (parameters.Length != 0) cmdName = parameters[0].Replace(prefix, "");
+            parameters = parameters.Skip(1).ToArray();
 
             return parameters;
         }
