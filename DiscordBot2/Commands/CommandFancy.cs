@@ -13,11 +13,11 @@ namespace DiscordBot2.Commands
 {
     class CommandFancy : IDiscordCommand
     {
-        public string Name => "fancy";
+        public string Name => "say";
 
         public string Help => "embed test";
 
-        public string Permission => "fancy";
+        public string Permission => "say";
 
         public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
         {
@@ -27,12 +27,8 @@ namespace DiscordBot2.Commands
                 return;
             }
 
-            for (int i = 0; i < parameters.Length; i++)
-            {
-                if (parameters[i].Contains(@"\n")) parameters[i] = parameters[i].Replace(@"\n", "\n");
-                if (parameters[i].Contains(@"\t")) parameters[i] = parameters[i].Replace(@"\t", "\t");
-            }
-            
+            parameters = Command.ReplaceEscapeChars(parameters);
+
             EmbedBuilder eb = new EmbedBuilder()
             {
                 Color = new Color(255, 0, 0)

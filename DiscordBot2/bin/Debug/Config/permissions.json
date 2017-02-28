@@ -17,11 +17,12 @@
 		"111609537827500032"
 	  ],
       "Commands": [
-		"**",
+		"*",
 		"p.reload",
 		"fancy",
 		"reload",
-		"quit"
+		"quit",
+		"say"
 	  ]
     }
   ]

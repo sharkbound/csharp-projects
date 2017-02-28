@@ -18,10 +18,11 @@ namespace DiscordBot2.Handlers
     public class CommandHandler
     {
         public static IEnumerable<IDiscordCommand> Commands;
-        private Regex parameterRegex = new Regex(@"""  """, RegexOptions.Compiled); 
-
+        private Regex parameterRegex = new Regex(@"""  """, RegexOptions.Compiled);
         private DiscordSocketClient client;
         public string prefix;
+
+
         public CommandHandler(DiscordSocketClient c, string cmdPrefix)
         {
             client = c;
@@ -58,7 +59,8 @@ namespace DiscordBot2.Handlers
                     await userMsg.Channel.SendMessageAsync($"You do not have permission to use {prefix}{cmdName}");
                     return false;
                 }
-                
+
+                Events.TriggerOnCommandExecuted(userMsg, userMsg.Author, cmdName, parameters);
                 await Commands.SingleOrDefault(c => c.Name.ToLower() == cmdName).ExecuteAsync(userMsg, parameters);
                 return true;
             }

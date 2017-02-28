@@ -39,7 +39,7 @@ namespace DiscordBot2
 
             if (!botWasQuit)
             {
-                Console.WriteLine($"Error accured that cause the bot to crash!\n\nError Message: {errorMsg}\n\nStacktrace: {stackTrace}");
+                Console.WriteLine($"Error occured that caused the bot to crash!\n\nError Message: {errorMsg}\n\nStacktrace: {stackTrace}");
                 Console.ReadKey();
             }
         }
@@ -52,11 +52,8 @@ namespace DiscordBot2
 
         public async Task Start()
         {
-            EmbedBuilder eB = new EmbedBuilder()
-            {
-                Color = new Color(87, 183, 255),
-                Title = "TEST"
-            }; //(87,183,255) Ocean blue color
+            Events.OnCommandExecuted += event_CommandRun;
+            Events.OnBotSendMessage += Events_OnBotSendMessage;
 
             Logger.LogInfo($"Got config values:\n\tCommandPrefix:  {cfg.CommandPrefix}\n\tLogChat:  {cfg.LogChat.ToString()}\n");
             Logger.LogInfo("Starting bot...");
@@ -71,16 +68,37 @@ namespace DiscordBot2
 
             bot.MessageReceived += async msg =>
             {
-                if (!await commandHandler.HandleCommandAsync(msg))
+                try
                 {
-                    if (cfg.LogChat)
-                        Logger.LogChat(msg.Author.Username, msg.Content);
+                    if (msg.Author.Id == bot.CurrentUser.Id)
+                        Events.TriggerOnBotSendMessage(msg.Content);
+
+                    if (!await commandHandler.HandleCommandAsync(msg))
+                    {
+                        // message was not a command
+                        if (cfg.LogChat && msg.Author.Id != bot.CurrentUser.Id)
+                            Logger.LogChat(msg.Author.Username, msg.Content);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logger.Log($"A error occurned: {ex.Message}\n\n{ex.StackTrace}");
                 }
             };
 
-            Logger.LogInfo($"Bot logged in as \n\tUser: {bot.CurrentUser.Username}", ConsoleColor.Blue);
+            Logger.LogInfo($"Bot logged in as \n\tUser: {bot.CurrentUser.Username}\n\n", ConsoleColor.Cyan);
             // stop program from closing...
             await Task.Delay(-1, cancelSrc.Token);
+        }
+
+        private void Events_OnBotSendMessage(string message)
+        {
+            Logger.Log($"Sent Message: {message}", ConsoleColor.Magenta);
+        }
+
+        private void event_CommandRun(SocketUserMessage msg, SocketUser user, string cmdname, string[] parameters)
+        {
+            Logger.Log($"{user.Username} ran {msg.Content}", ConsoleColor.Magenta);
         }
     }
 }

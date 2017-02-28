@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Discord.WebSocket;
+using DiscordBot2.Handlers;
 
 namespace DiscordBot2.Commands
 {
@@ -20,6 +21,7 @@ namespace DiscordBot2.Commands
         {
             await msg.Channel.SendMessageAsync("**Shutting Down...**");
             await Program.bot.DisconnectAsync();
+            Events.TriggerOnBotShutdown();
             Program.cancelSrc.Cancel();
         }
     }
