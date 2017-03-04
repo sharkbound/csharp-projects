@@ -19,6 +19,8 @@ namespace DiscordBot2.Commands
 
         public string Permission => "say";
 
+        public string Syntax => "<header text> <body text>";
+
         public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
         {
             if (parameters.Length < 2)

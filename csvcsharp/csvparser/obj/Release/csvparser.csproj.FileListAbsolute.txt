@@ -1,0 +1,14 @@
+C:\Users\owner\Desktop\Projects\Mine\csvcsharp\csvparser\bin\Release\csvparser.exe.config
+C:\Users\owner\Desktop\Projects\Mine\csvcsharp\csvparser\bin\Release\csvparser.exe
+C:\Users\owner\Desktop\Projects\Mine\csvcsharp\csvparser\bin\Release\csvparser.pdb
+C:\Users\owner\Desktop\Projects\Mine\csvcsharp\csvparser\obj\Release\csvparser.exe
+C:\Users\owner\Desktop\Projects\Mine\csvcsharp\csvparser\obj\Release\csvparser.pdb
+C:\Users\owner\Desktop\Projects\Mine\csvcsharp\csvparser\obj\Release\csvparser.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\Projects\Mine\csvcsharp\csvparser\bin\Release\FileHelpers.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\csvcsharp\csvparser\bin\Release\csvparser.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\csvcsharp\csvparser\bin\Release\csvparser.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\csvcsharp\csvparser\bin\Release\csvparser.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\csvcsharp\csvparser\bin\Release\FileHelpers.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\csvcsharp\csvparser\obj\Release\csvparser.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\csvcsharp\csvparser\obj\Release\csvparser.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\csvcsharp\csvparser\obj\Release\csvparser.pdb

@@ -50,3 +50,5 @@ DiscordBotGui/DiscordBotGui/bin/Debug/config/config.json
 DiscordBotGui/DiscordBotGui/bin/Debug/lol.txt
 DiscordBot2/bin/Debug/Config/config.json
 DiscordBot2/bin/Release/Config/config.json
+csvcsharp/csvparser/bin/Debug/output.txt
+csvcsharp/csvparser/bin/Release/output.txt

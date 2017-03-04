@@ -16,6 +16,8 @@ namespace DiscordBot2.Commands
 
         public string Permission => "p.reload";
 
+        public string Syntax => "";
+
         public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
         {
             Program.perms = Permissions.GetPermissions();

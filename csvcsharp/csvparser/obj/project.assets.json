@@ -1,0 +1,138 @@
+{
+  "version": 2,
+  "targets": {
+    ".NETFramework,Version=v4.6.2": {
+      "FileHelpers/3.1.5": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net45/FileHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FileHelpers.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win": {
+      "FileHelpers/3.1.5": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net45/FileHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FileHelpers.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win-x64": {
+      "FileHelpers/3.1.5": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net45/FileHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FileHelpers.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win-x86": {
+      "FileHelpers/3.1.5": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net45/FileHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FileHelpers.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FileHelpers/3.1.5": {
+      "sha512": "a7uWBvaxZBEvCKR06jAzBIcexIxth122fUW5odrPkevDMvTmrs1NeVS7zws2WjqqyJaTSv1dEGwUTgfCnVe0Ug==",
+      "type": "package",
+      "path": "filehelpers/3.1.5",
+      "files": [
+        "Readme.txt",
+        "filehelpers.3.1.5.nupkg.sha512",
+        "filehelpers.nuspec",
+        "lib/net20/FileHelpers.dll",
+        "lib/net20/FileHelpers.xml",
+        "lib/net35/FileHelpers.dll",
+        "lib/net35/FileHelpers.xml",
+        "lib/net40/FileHelpers.dll",
+        "lib/net40/FileHelpers.xml",
+        "lib/net45/FileHelpers.dll",
+        "lib/net45/FileHelpers.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.2": [
+      "FileHelpers >= 3.1.5"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\owner\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\owner\\Desktop\\GitHub\\csharp-projects\\csvcsharp\\csvparser\\csvparser.csproj",
+      "projectName": "csvparser",
+      "projectPath": "C:\\Users\\owner\\Desktop\\GitHub\\csharp-projects\\csvcsharp\\csvparser\\csvparser.csproj",
+      "outputPath": "C:\\Users\\owner\\Desktop\\GitHub\\csharp-projects\\csvcsharp\\csvparser\\obj\\",
+      "projectStyle": "PackageReference",
+      "originalTargetFrameworks": [
+        "net462"
+      ],
+      "frameworks": {
+        "net462": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "dependencies": {
+      "FileHelpers": {
+        "target": "Package",
+        "version": "3.1.5"
+      }
+    },
+    "frameworks": {
+      "net462": {
+        "dependencies": {
+          "FileHelpers": {
+            "target": "Package",
+            "version": "3.1.5"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

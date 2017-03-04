@@ -19,6 +19,8 @@ namespace DiscordBot2.Commands
 
         public string Permission => "build";
 
+        public string Syntax => "<add || say || clear>";
+
         public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
         {
             try

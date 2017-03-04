@@ -16,6 +16,8 @@ namespace DiscordBot2.Commands
 
         public string Permission => "ping";
 
+        public string Syntax => "";
+
         public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
         {
             await msg.Channel.SendMessageAsync("Pong!");

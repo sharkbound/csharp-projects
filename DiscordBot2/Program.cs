@@ -27,7 +27,7 @@ namespace DiscordBot2
             {
                 new Program().Start().GetAwaiter().GetResult();
             }
-            catch (TaskCanceledException ex)
+            catch (TaskCanceledException)
             {
                 botWasQuit = true;
             }

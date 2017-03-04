@@ -33,6 +33,8 @@ Visual Studio shortcuts:
   Delete current line: ctrl + shift + L
   Place bookmark: ctrl + k, ctrl + k
   Goto next bookmark: ctrl + k, ctrl + n
+  Jump to ending brace: ctrl + ]
+  Lists members for statement completion: Ctrl + J	
   
   Website with all shortcut listings: http://www.dofactory.com/reference/visual-studio-shortcuts
   

@@ -17,6 +17,8 @@ namespace DiscordBot2.Commands
 
         public string Permission => "quit";
 
+        public string Syntax => "";
+
         public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
         {
             await msg.Channel.SendMessageAsync("**Shutting Down...**");

@@ -17,13 +17,15 @@ namespace DiscordBot2.Commands
 
         public string Permission => "help";
 
+        public string Syntax => "";
+
         public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
         {
             StringBuilder sb = new StringBuilder();
             
             foreach (var cmd in CommandHandler.Commands)
             {
-                sb.AppendLine($"{cmd.Name} : {cmd.Help}");
+                sb.AppendLine($"**{cmd.Name} {cmd.Syntax}** : _{cmd.Help}_");
             }
 
             await msg.Author.CreateDMChannelAsync().GetAwaiter().GetResult().SendMessageAsync(sb.ToString());

@@ -8,7 +8,8 @@
       "Commands": [
 		"help",
 		"ping",
-		"fancy"
+		"fancy",
+		"say"
 	  ]
     },
     {

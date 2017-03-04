@@ -13,6 +13,7 @@ namespace DiscordBot2.Interfaces
     {
         string Name { get; }
         string Help { get; }
+        string Syntax { get; }
         string Permission { get; }
         Task ExecuteAsync(SocketUserMessage msg, string[] parameters);
     }
