@@ -1,0 +1,190 @@
+{
+  "version": 2,
+  "targets": {
+    ".NETFramework,Version=v4.6.2": {
+      "MahApps.Metro/1.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/MahApps.Metro.dll": {},
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MahApps.Metro.dll": {},
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        }
+      },
+      "System.ValueTuple/4.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win": {
+      "MahApps.Metro/1.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/MahApps.Metro.dll": {},
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MahApps.Metro.dll": {},
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        }
+      },
+      "System.ValueTuple/4.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win-x64": {
+      "MahApps.Metro/1.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/MahApps.Metro.dll": {},
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MahApps.Metro.dll": {},
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        }
+      },
+      "System.ValueTuple/4.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win-x86": {
+      "MahApps.Metro/1.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/MahApps.Metro.dll": {},
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MahApps.Metro.dll": {},
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        }
+      },
+      "System.ValueTuple/4.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MahApps.Metro/1.4.3": {
+      "sha512": "svc9GCcZEEYn/7WxoAGhscSDyfPCqG64YIiHgC+aFG4lOSJM1jXs8iTtrFH6XESb1TMfl8E6vPHpBpeP9E7eUw==",
+      "type": "package",
+      "path": "mahapps.metro/1.4.3",
+      "files": [
+        "lib/net40/MahApps.Metro.XML",
+        "lib/net40/MahApps.Metro.dll",
+        "lib/net40/MahApps.Metro.pdb",
+        "lib/net40/System.Windows.Interactivity.dll",
+        "lib/net45/MahApps.Metro.XML",
+        "lib/net45/MahApps.Metro.dll",
+        "lib/net45/MahApps.Metro.pdb",
+        "lib/net45/System.Windows.Interactivity.dll",
+        "mahapps.metro.1.4.3.nupkg.sha512",
+        "mahapps.metro.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "System.ValueTuple/4.3.0": {
+      "sha512": "cNLEvBX3d6MMQRZe3SMFNukVbitDAEpVZO17qa0/2FHxZ7Y7PpFRpr6m2615XYM/tYYYf0B+WyHNujqIw8Luwg==",
+      "type": "package",
+      "path": "system.valuetuple/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/.xml",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/.xml",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "system.valuetuple.4.3.0.nupkg.sha512",
+        "system.valuetuple.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.2": [
+      "MahApps.Metro >= 1.4.3",
+      "System.ValueTuple >= 4.3.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\owner\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\owner\\Desktop\\GitHub\\csharp-projects\\DarkMetroUI\\DarkMetroUI.csproj",
+      "projectName": "DarkMetroUI",
+      "projectPath": "C:\\Users\\owner\\Desktop\\GitHub\\csharp-projects\\DarkMetroUI\\DarkMetroUI.csproj",
+      "outputPath": "C:\\Users\\owner\\Desktop\\GitHub\\csharp-projects\\DarkMetroUI\\obj\\",
+      "projectStyle": "PackageReference",
+      "originalTargetFrameworks": [
+        "net462"
+      ],
+      "frameworks": {
+        "net462": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "dependencies": {
+      "MahApps.Metro": {
+        "target": "Package",
+        "version": "1.4.3"
+      },
+      "System.ValueTuple": {
+        "target": "Package",
+        "version": "4.3.0"
+      }
+    },
+    "frameworks": {
+      "net462": {
+        "dependencies": {
+          "MahApps.Metro": {
+            "target": "Package",
+            "version": "1.4.3"
+          },
+          "System.ValueTuple": {
+            "target": "Package",
+            "version": "4.3.0"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

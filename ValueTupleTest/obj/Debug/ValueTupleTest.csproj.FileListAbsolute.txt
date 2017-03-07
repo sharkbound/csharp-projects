@@ -1,0 +1,7 @@
+c:\users\owner\desktop\github\csharp-projects\ValueTupleTest\bin\Debug\ValueTupleTest.exe.config
+c:\users\owner\desktop\github\csharp-projects\ValueTupleTest\bin\Debug\ValueTupleTest.exe
+c:\users\owner\desktop\github\csharp-projects\ValueTupleTest\bin\Debug\ValueTupleTest.pdb
+c:\users\owner\desktop\github\csharp-projects\ValueTupleTest\bin\Debug\System.ValueTuple.dll
+c:\users\owner\desktop\github\csharp-projects\ValueTupleTest\obj\Debug\ValueTupleTest.csprojResolveAssemblyReference.cache
+c:\users\owner\desktop\github\csharp-projects\ValueTupleTest\obj\Debug\ValueTupleTest.exe
+c:\users\owner\desktop\github\csharp-projects\ValueTupleTest\obj\Debug\ValueTupleTest.pdb
