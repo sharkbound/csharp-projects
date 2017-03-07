@@ -15,6 +15,11 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls.Dialogs;
 using Utilities;
+using System.Timers;
+using System.Threading;
+using System.Windows.Threading;
+
+using Timer = System.Timers.Timer;
 
 namespace Metro2
 {
@@ -23,7 +28,8 @@ namespace Metro2
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
-        public static bool IsReady = false;
+        public static bool WindowInitialized = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,7 +39,18 @@ namespace Metro2
         {
             MetroDialogOptions.AnimateShow = false;
             MetroDialogOptions.AnimateHide = false;
-            IsReady = true;
+            WindowInitialized = true;
+
+            DispatcherTimer dt = new DispatcherTimer();
+            dt.Interval = TimeSpan.FromMilliseconds(700);
+            dt.Tick += (ss, ee) => ProgBar.Value += 1;
+            dt.Start();
+        }
+
+        private void MetroWindow_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.F)
+                flyout1.IsOpen = !flyout1.IsOpen;
         }
     }
 }

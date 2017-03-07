@@ -8,15 +8,21 @@
         xmlns:local="clr-namespace:Metro2"
         xmlns:Dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro" xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" x:Class="Metro2.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" Initialized="MetroWindow_Initialized" Background="#252525" ResizeMode="NoResize">
+        Title="MainWindow" Height="350" Width="525" Initialized="MetroWindow_Initialized" Background="#252525" ResizeMode="NoResize" KeyDown="MetroWindow_KeyDown">
     <Grid x:Name="MainGrid">
         <TabControl HorizontalAlignment="Left" Height="312" VerticalAlignment="Top" Width="501.55">
             <TabItem Header="Main">
                 <Grid Background="#FF252525"/>
             </TabItem>
-            <TabItem Header="Settings" Background="#FF252525">
+            <TabItem Header="Buttons" Background="#FF252525">
+                <Grid Background="#FF252525"/>
+            </TabItem>
+            <TabItem Header="Settings">
                 <Grid Background="#FF252525"/>
             </TabItem>
         </TabControl>
+        <Controls:Flyout x:Name="flyout1" HorizontalAlignment="Left" VerticalAlignment="Top" Position="Right" Width="519" d:IsHidden="True">
+            <Controls:MetroProgressBar x:Name="ProgBar" HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" Width="364"/>
+        </Controls:Flyout>
     </Grid>
 </Controls:MetroWindow>
