@@ -20,6 +20,7 @@ using System.Threading;
 using System.Windows.Threading;
 
 using Timer = System.Timers.Timer;
+using System.Data;
 
 namespace Metro2
 {
@@ -29,12 +30,15 @@ namespace Metro2
     public partial class MainWindow : MetroWindow
     {
         public static bool WindowInitialized = false;
+        public static DataTable Table = new DataTable();
+
+        (byte a, byte r, byte g, byte b) currColor = (255, 0, 0, 0);
 
         public MainWindow()
         {
             InitializeComponent();
         }
-
+        
         private void MetroWindow_Initialized(object sender, EventArgs e)
         {
             MetroDialogOptions.AnimateShow = false;
@@ -43,14 +47,41 @@ namespace Metro2
 
             DispatcherTimer dt = new DispatcherTimer();
             dt.Interval = TimeSpan.FromMilliseconds(700);
-            dt.Tick += (ss, ee) => ProgBar.Value += 1;
+            dt.Tick += tickAction;
             dt.Start();
+
+            DispatcherTimer dt2 = new DispatcherTimer();
+            dt2.Interval = TimeSpan.FromMilliseconds(500);
+            dt2.Tick += rainbowSettings;
+            dt2.Start();
+
+            DataGrid1.DataContext = Table.DefaultView;
+            Table.Columns.Add("Placeholder");
+            Table.Rows.Add("placeholder");
+
+            void tickAction(object tickSender, EventArgs tickArgs)
+            {
+                double currentVal = ProgBar.Value;
+                ProgBar.Value = currentVal >= 90 ? 0 : currentVal + 5;
+            }
+
+            void rainbowSettings(object tickSender, EventArgs tickArgs)
+            {
+                currColor.r = Convert.ToByte(currColor.r + 1);
+                currColor.g = Convert.ToByte(currColor.g + 1);
+                //currColor.b = Convert.ToByte(currColor.b + 1);
+                SettingsTab.Background = ColorUtil.GetSolidColorBrushFromRBG(currColor.a, currColor.r, currColor.g, currColor.b);
+            }
         }
 
         private void MetroWindow_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.F)
-                flyout1.IsOpen = !flyout1.IsOpen;
+            switch (e.Key)
+            {
+                case Key.F:
+                    ProgBarFlyout.IsOpen = !ProgBarFlyout.IsOpen;
+                    break;
+            }
         }
     }
 }

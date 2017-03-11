@@ -13,13 +13,21 @@ namespace Utilities
     {
         public static (byte a, byte r, byte g, byte b) GetRgbValuesFromHex(string hex)
         {
-            var c = Drawing.ColorTranslator.FromHtml($"#{hex}");
+            if (!hex.Contains("#"))
+                hex = hex.Insert(0, "#");
+
+            var c = Drawing.ColorTranslator.FromHtml(hex);
             return (c.A, c.R, c.G, c.B);
         }
 
         public static Media.SolidColorBrush GetSolidColorBrushFromHex(string hex)
         {
             var (a, r, g, b) = GetRgbValuesFromHex(hex);
+            return new Media.SolidColorBrush(Media.Color.FromArgb(a, r, g, b));
+        }
+
+        public static Media.SolidColorBrush GetSolidColorBrushFromRBG(byte a, byte r, byte g, byte b)
+        {
             return new Media.SolidColorBrush(Media.Color.FromArgb(a, r, g, b));
         }
     }

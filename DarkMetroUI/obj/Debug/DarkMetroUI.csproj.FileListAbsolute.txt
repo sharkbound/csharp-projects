@@ -27,3 +27,4 @@ C:\Users\owner\Desktop\GitHub\csharp-projects\DarkMetroUI\obj\Debug\Metro2.Prope
 C:\Users\owner\Desktop\GitHub\csharp-projects\DarkMetroUI\obj\Debug\DarkMetroUI.csproj.GenerateResource.Cache
 C:\Users\owner\Desktop\GitHub\csharp-projects\DarkMetroUI\obj\Debug\Metro2.exe
 C:\Users\owner\Desktop\GitHub\csharp-projects\DarkMetroUI\obj\Debug\Metro2.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\DarkMetroUI\obj\Debug\Resources\PresetColors.baml
