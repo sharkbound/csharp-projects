@@ -35,6 +35,7 @@ Visual Studio shortcuts:
   Goto next bookmark: ctrl + k, ctrl + n
   Jump to ending brace: ctrl + ]
   Lists members for statement completion: Ctrl + J	
+  Linear mutli-cursor : shift + alt + up arrow or down arrow # click to select alot of rows at once
   
   Website with all shortcut listings: http://www.dofactory.com/reference/visual-studio-shortcuts
   

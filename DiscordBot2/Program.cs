@@ -57,7 +57,7 @@ namespace DiscordBot2
 
             Logger.LogInfo($"Got config values:\n\tCommandPrefix:  {cfg.CommandPrefix}\n\tLogChat:  {cfg.LogChat.ToString()}\n");
             Logger.LogInfo("Starting bot...");
-
+            
             bot = new DiscordSocketClient(new DiscordSocketConfig
             {
                 WebSocketProvider = WS4NetProvider.Instance

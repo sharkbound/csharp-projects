@@ -18,7 +18,7 @@ namespace DiscordBot2.Handlers
     public class CommandHandler
     {
         public static IEnumerable<IDiscordCommand> Commands;
-        private Regex parameterRegex = new Regex(@"""  """, RegexOptions.Compiled);
+        //private Regex parameterRegex = new Regex(@"""  """, RegexOptions.Compiled);
         private DiscordSocketClient client;
         public string prefix;
 

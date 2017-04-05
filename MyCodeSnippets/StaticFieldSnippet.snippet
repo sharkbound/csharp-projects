@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>sfield</Title>
+      <Shortcut>sfield</Shortcut>
+      <Description>Code snippet for static field</Description>
+      <Author>Kevin Hogg</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>fieldname</ID>
+          <ToolTip>field name</ToolTip>
+          <Function>fieldname</Function>
+          <Default>FieldNamePlaceholder</Default>
+        </Literal>
+        <Literal>
+          <ID>fieldtype</ID>
+          <ToolTip>field type</ToolTip>
+          <Function>returntype</Function>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>accessmodifier</ID>
+          <ToolTip>Field Accessmodifier</ToolTip>
+          <Function>accessmodifier</Function>
+          <Default>public</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessmodifier$ static $fieldtype$ $fieldname$;]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
