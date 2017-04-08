@@ -1,0 +1,4 @@
+delete:
+	C:\Users\<user>\AppData\Local\Microsoft\Blend\15.0_c2edcfdc\privateregistry.bin
+
+This resets Blend/VS settings also

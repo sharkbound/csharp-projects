@@ -44,7 +44,7 @@ namespace DiscordBot2
             }
         }
 
-        public static DiscordSocketClient bot;
+        public static DiscordSocketClient bot { get; private set; }
         public static CancellationTokenSource cancelSrc = new CancellationTokenSource();
         public static Config cfg = Config.GetConfig();
         public static Permissions perms = Permissions.GetPermissions();
