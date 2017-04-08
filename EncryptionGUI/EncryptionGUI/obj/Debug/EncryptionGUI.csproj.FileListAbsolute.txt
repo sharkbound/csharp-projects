@@ -1,0 +1,16 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\EncryptionGUI\EncryptionGUI\bin\Debug\EncryptionGUI.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\EncryptionGUI\EncryptionGUI\bin\Debug\EncryptionGUI.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\EncryptionGUI\EncryptionGUI\bin\Debug\EncryptionGUI.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\EncryptionGUI\EncryptionGUI\obj\Debug\EncryptionGUI.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\EncryptionGUI\EncryptionGUI\obj\Debug\Simple Styles.baml
+C:\Users\owner\Desktop\GitHub\csharp-projects\EncryptionGUI\EncryptionGUI\obj\Debug\MainWindow.g.cs
+C:\Users\owner\Desktop\GitHub\csharp-projects\EncryptionGUI\EncryptionGUI\obj\Debug\App.g.cs
+C:\Users\owner\Desktop\GitHub\csharp-projects\EncryptionGUI\EncryptionGUI\obj\Debug\EncryptionGUI_MarkupCompile.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\EncryptionGUI\EncryptionGUI\obj\Debug\EncryptionGUI_MarkupCompile.lref
+C:\Users\owner\Desktop\GitHub\csharp-projects\EncryptionGUI\EncryptionGUI\obj\Debug\App.baml
+C:\Users\owner\Desktop\GitHub\csharp-projects\EncryptionGUI\EncryptionGUI\obj\Debug\MainWindow.baml
+C:\Users\owner\Desktop\GitHub\csharp-projects\EncryptionGUI\EncryptionGUI\obj\Debug\EncryptionGUI.g.resources
+C:\Users\owner\Desktop\GitHub\csharp-projects\EncryptionGUI\EncryptionGUI\obj\Debug\EncryptionGUI.Properties.Resources.resources
+C:\Users\owner\Desktop\GitHub\csharp-projects\EncryptionGUI\EncryptionGUI\obj\Debug\EncryptionGUI.csproj.GenerateResource.Cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\EncryptionGUI\EncryptionGUI\obj\Debug\EncryptionGUI.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\EncryptionGUI\EncryptionGUI\obj\Debug\EncryptionGUI.pdb
