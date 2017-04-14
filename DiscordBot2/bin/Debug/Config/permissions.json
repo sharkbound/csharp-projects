@@ -3,13 +3,14 @@
     {
       "GroupName": "default",
       "Members": [
-		"Default Dan"
+		"Default Dan",
 	  ],
       "Commands": [
 		"help",
 		"ping",
 		"fancy",
-		"say"
+		"say",
+		"groups"
 	  ]
     },
     {
@@ -18,12 +19,10 @@
 		"111609537827500032"
 	  ],
       "Commands": [
-		"*",
 		"p.reload",
 		"fancy",
 		"reload",
-		"quit",
-		"say"
+		"*"
 	  ]
     }
   ]

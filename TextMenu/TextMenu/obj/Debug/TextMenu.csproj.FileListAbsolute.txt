@@ -1,0 +1,6 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\TextMenu\TextMenu\bin\Debug\TextMenu.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\TextMenu\TextMenu\bin\Debug\TextMenu.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\TextMenu\TextMenu\bin\Debug\TextMenu.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\TextMenu\TextMenu\obj\Debug\TextMenu.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\TextMenu\TextMenu\obj\Debug\TextMenu.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\TextMenu\TextMenu\obj\Debug\TextMenu.pdb
