@@ -6,5 +6,6 @@ C:\Users\owner\Desktop\GitHub\csharp-projects\AutoClearStandalone\AutoClearStand
 C:\Users\owner\Desktop\GitHub\csharp-projects\AutoClearStandalone\AutoClearStandalone\bin\Release\Rocket.Core.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\AutoClearStandalone\AutoClearStandalone\bin\Release\Rocket.Unturned.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\AutoClearStandalone\AutoClearStandalone\bin\Release\UnityEngine.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\AutoClearStandalone\AutoClearStandalone\obj\Release\AutoClearStandalone.csprojResolveAssemblyReference.cache
 C:\Users\owner\Desktop\GitHub\csharp-projects\AutoClearStandalone\AutoClearStandalone\obj\Release\AutoClear.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\AutoClearStandalone\AutoClearStandalone\obj\Release\AutoClear.pdb
