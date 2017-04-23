@@ -36,11 +36,12 @@ Visual Studio shortcuts:
   Jump to ending brace: ctrl + ]
   Lists members for statement completion: Ctrl + J	
   Linear mutli-cursor : shift + alt + up arrow or down arrow # click to select alot of rows at once
+  Execute in interactive (selected text) : ctrl + e; ctrl + e 
   
   Website with all shortcut listings: http://www.dofactory.com/reference/visual-studio-shortcuts
   
  Visual Studio 2017 shortcuts:
 	reload webbrowser in webproject: control + alt + enter 
 
-  Visual Studio Code shortcuts:
-   format code: shift + alt + f 
+ Visual Studio Code shortcuts:
+	format code: shift + alt + f 
