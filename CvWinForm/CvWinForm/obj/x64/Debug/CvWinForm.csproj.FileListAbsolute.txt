@@ -1,0 +1,38 @@
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\bin\x64\Debug\cvextern.dll
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\bin\x64\Debug\msvcp140.dll
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\bin\x64\Debug\opencv_ffmpeg310_64.dll
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\bin\x64\Debug\vcruntime140.dll
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\bin\x64\Debug\CvWinForm.exe.config
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\bin\x64\Debug\CvWinForm.exe
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\bin\x64\Debug\CvWinForm.pdb
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\bin\x64\Debug\Emgu.CV.DebuggerVisualizers.VS2017.dll
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\bin\x64\Debug\Emgu.CV.UI.dll
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\bin\x64\Debug\Emgu.CV.UI.GL.dll
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\bin\x64\Debug\Emgu.CV.World.dll
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\bin\x64\Debug\ZedGraph.dll
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\bin\x64\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\obj\x64\Debug\CvWinForm.csprojResolveAssemblyReference.cache
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\obj\x64\Debug\CvWinForm.Form1.resources
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\obj\x64\Debug\CvWinForm.Properties.Resources.resources
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\obj\x64\Debug\CvWinForm.csproj.GenerateResource.Cache
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\obj\x64\Debug\CvWinForm.exe
+C:\Users\owner\Documents\Visual Studio 2017\Projects\CvWinForm\obj\x64\Debug\CvWinForm.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\bin\x64\Debug\cvextern.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\bin\x64\Debug\msvcp140.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\bin\x64\Debug\opencv_ffmpeg310_64.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\bin\x64\Debug\vcruntime140.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\bin\x64\Debug\CvWinForm.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\bin\x64\Debug\CvWinForm.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\bin\x64\Debug\CvWinForm.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\bin\x64\Debug\Emgu.CV.DebuggerVisualizers.VS2017.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\bin\x64\Debug\Emgu.CV.UI.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\bin\x64\Debug\Emgu.CV.UI.GL.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\bin\x64\Debug\Emgu.CV.World.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\bin\x64\Debug\ZedGraph.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\bin\x64\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\obj\x64\Debug\CvWinForm.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\obj\x64\Debug\CvWinForm.Form1.resources
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\obj\x64\Debug\CvWinForm.Properties.Resources.resources
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\obj\x64\Debug\CvWinForm.csproj.GenerateResource.Cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\obj\x64\Debug\CvWinForm.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\CvWinForm\CvWinForm\obj\x64\Debug\CvWinForm.pdb
