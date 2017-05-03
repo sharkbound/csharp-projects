@@ -1,0 +1,6 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\bin\Debug\dotnet47.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\bin\Debug\dotnet47.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\bin\Debug\dotnet47.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\obj\Debug\dotnet47.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\obj\Debug\dotnet47.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\obj\Debug\dotnet47.pdb

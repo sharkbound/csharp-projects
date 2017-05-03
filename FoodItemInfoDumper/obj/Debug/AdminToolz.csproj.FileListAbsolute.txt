@@ -1,0 +1,4 @@
+C:\Users\owner\Desktop\GitHub\RocketModPlugins\RocketModAdminToolz\bin\Debug\AdminToolz.dll
+C:\Users\owner\Desktop\GitHub\RocketModPlugins\RocketModAdminToolz\bin\Debug\AdminToolz.pdb
+C:\Users\owner\Desktop\GitHub\RocketModPlugins\RocketModAdminToolz\obj\Debug\AdminToolz.dll
+C:\Users\owner\Desktop\GitHub\RocketModPlugins\RocketModAdminToolz\obj\Debug\AdminToolz.pdb
