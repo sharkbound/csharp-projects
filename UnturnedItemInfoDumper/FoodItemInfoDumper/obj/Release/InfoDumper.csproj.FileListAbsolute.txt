@@ -1,0 +1,5 @@
+C:\Users\owner\Desktop\FoodItemInfoDumper (1)\FoodItemInfoDumper\bin\Release\InfoDumper.dll
+C:\Users\owner\Desktop\FoodItemInfoDumper (1)\FoodItemInfoDumper\bin\Release\InfoDumper.pdb
+C:\Users\owner\Desktop\FoodItemInfoDumper (1)\FoodItemInfoDumper\obj\Release\InfoDumper.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\FoodItemInfoDumper (1)\FoodItemInfoDumper\obj\Release\InfoDumper.dll
+C:\Users\owner\Desktop\FoodItemInfoDumper (1)\FoodItemInfoDumper\obj\Release\InfoDumper.pdb

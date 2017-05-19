@@ -1,0 +1,1 @@
+list shortcuts: CTRL + K, CTRL + S

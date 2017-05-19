@@ -1,0 +1,424 @@
+{
+  "movies": [
+    {
+      "Rated": "PG",
+      "Title": "Back to the Future",
+      "Length": "116 min",
+      "Genre": "Adventure, Comedy, Sci-Fi"
+    },
+    {
+      "Rated": "R",
+      "Title": "Children of Men",
+      "Length": "109 min",
+      "Genre": "Drama, Sci-Fi, Thriller"
+    },
+    {
+      "Rated": "PG",
+      "Title": "Star Wars: Episode V - The Empire Strikes Back",
+      "Length": "124 min",
+      "Genre": "Action, Adventure, Fantasy"
+    },
+    {
+      "Rated": "PG-13",
+      "Title": "Hotel Rwanda",
+      "Length": "121 min",
+      "Genre": "Biography, Drama, History"
+    },
+    {
+      "Rated": "R",
+      "Title": "Chinatown",
+      "Length": "130 min",
+      "Genre": "Drama, Mystery, Thriller"
+    },
+    {
+      "Rated": "APPROVED",
+      "Title": "The Graduate",
+      "Length": "106 min",
+      "Genre": "Comedy, Drama"
+    },
+    {
+      "Rated": "R",
+      "Title": "127 Hours",
+      "Length": "94 min",
+      "Genre": "Adventure, Biography, Drama"
+    },
+    {
+      "Rated": "R",
+      "Title": "Scarface",
+      "Length": "170 min",
+      "Genre": "Crime, Drama"
+    },
+    {
+      "Rated": "R",
+      "Title": "The Green Mile",
+      "Length": "189 min",
+      "Genre": "Crime, Drama, Fantasy"
+    },
+    {
+      "Rated": "N/A",
+      "Title": "The Girl with the Red Scarf",
+      "Length": "90 min",
+      "Genre": "Drama, Romance"
+    },
+    {
+      "Rated": "R",
+      "Title": "The Fall",
+      "Length": "117 min",
+      "Genre": "Adventure, Comedy, Drama"
+    },
+    {
+      "Rated": "PG-13",
+      "Title": "Crimes and Misdemeanors",
+      "Length": "104 min",
+      "Genre": "Comedy, Crime, Drama"
+    },
+    {
+      "Rated": "R",
+      "Title": "Elite Squad",
+      "Length": "115 min",
+      "Genre": "Action, Crime, Drama"
+    },
+    {
+      "Rated": "PG-13",
+      "Title": "Walk the Line",
+      "Length": "136 min",
+      "Genre": "Biography, Drama, Music"
+    },
+    {
+      "Rated": "APPROVED",
+      "Title": "The Great Escape",
+      "Length": "172 min",
+      "Genre": "Adventure, Drama, History"
+    },
+    {
+      "Rated": "G",
+      "Title": "Ratatouille",
+      "Length": "111 min",
+      "Genre": "Animation, Comedy, Family"
+    },
+    {
+      "Rated": "APPROVED",
+      "Title": "Rear Window",
+      "Length": "112 min",
+      "Genre": "Mystery, Thriller"
+    },
+    {
+      "Rated": "R",
+      "Title": "Boogie Nights",
+      "Length": "155 min",
+      "Genre": "Drama"
+    },
+    {
+      "Rated": "R",
+      "Title": "Stand by Me",
+      "Length": "89 min",
+      "Genre": "Adventure, Drama"
+    },
+    {
+      "Rated": "R",
+      "Title": "Casino",
+      "Length": "178 min",
+      "Genre": "Crime, Drama"
+    },
+    {
+      "Rated": "NOT RATED",
+      "Title": "Persona",
+      "Length": "83 min",
+      "Genre": "Drama, Thriller"
+    },
+    {
+      "Rated": "R",
+      "Title": "Alien",
+      "Length": "117 min",
+      "Genre": "Horror, Sci-Fi"
+    },
+    {
+      "Rated": "PG",
+      "Title": "Rocky",
+      "Length": "120 min",
+      "Genre": "Drama, Sport"
+    },
+    {
+      "Rated": "PG-13",
+      "Title": "The Bourne Ultimatum",
+      "Length": "115 min",
+      "Genre": "Action, Mystery, Thriller"
+    },
+    {
+      "Rated": "N/A",
+      "Title": "The Chaos Class Is Waking Up",
+      "Length": "94 min",
+      "Genre": "Comedy"
+    },
+    {
+      "Rated": "N/A",
+      "Title": "The Foster Brothers",
+      "Length": "80 min",
+      "Genre": "Comedy, Family, Mystery"
+    },
+    {
+      "Rated": "NOT RATED",
+      "Title": "Sweet Smell of Success",
+      "Length": "96 min",
+      "Genre": "Drama, Film-Noir"
+    },
+    {
+      "Rated": "R",
+      "Title": "The Best of Youth",
+      "Length": "366 min",
+      "Genre": "Drama, Romance"
+    },
+    {
+      "Rated": "APPROVED",
+      "Title": "In the Heat of the Night",
+      "Length": "109 min",
+      "Genre": "Crime, Drama, Mystery"
+    },
+    {
+      "Rated": "PG",
+      "Title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+      "Length": "95 min",
+      "Genre": "Comedy"
+    },
+    {
+      "Rated": "R",
+      "Title": "Run Lola Run",
+      "Length": "80 min",
+      "Genre": "Crime, Drama, Thriller"
+    },
+    {
+      "Rated": "NOT RATED",
+      "Title": "High and Low",
+      "Length": "143 min",
+      "Genre": "Crime, Drama, Mystery"
+    },
+    {
+      "Rated": "PG",
+      "Title": "Airplane!",
+      "Length": "88 min",
+      "Genre": "Comedy"
+    },
+    {
+      "Rated": "R",
+      "Title": "The Fall",
+      "Length": "117 min",
+      "Genre": "Adventure, Comedy, Drama"
+    },
+    {
+      "Rated": "R",
+      "Title": "The Green Mile",
+      "Length": "189 min",
+      "Genre": "Crime, Drama, Fantasy"
+    },
+    {
+      "Rated": "R",
+      "Title": "JFK",
+      "Length": "189 min",
+      "Genre": "Drama, History, Thriller"
+    },
+    {
+      "Rated": "NOT RATED",
+      "Title": "The Wages of Fear",
+      "Length": "131 min",
+      "Genre": "Adventure, Drama, Thriller"
+    },
+    {
+      "Rated": "G",
+      "Title": "City Lights",
+      "Length": "87 min",
+      "Genre": "Comedy, Drama, Romance"
+    },
+    {
+      "Rated": "UNRATED",
+      "Title": "Yojimbo",
+      "Length": "110 min",
+      "Genre": "Action, Drama, Thriller"
+    },
+    {
+      "Rated": "R",
+      "Title": "The Usual Suspects",
+      "Length": "106 min",
+      "Genre": "Crime, Drama, Mystery"
+    },
+    {
+      "Rated": "R",
+      "Title": "Gone Girl",
+      "Length": "149 min",
+      "Genre": "Crime, Drama, Mystery"
+    },
+    {
+      "Rated": "NOT RATED",
+      "Title": "Rififi",
+      "Length": "118 min",
+      "Genre": "Crime, Thriller"
+    },
+    {
+      "Rated": "R",
+      "Title": "Saving Private Ryan",
+      "Length": "169 min",
+      "Genre": "Drama, War"
+    },
+    {
+      "Rated": "PG-13",
+      "Title": "The Notebook",
+      "Length": "123 min",
+      "Genre": "Drama, Romance"
+    },
+    {
+      "Rated": "R",
+      "Title": "Donnie Darko",
+      "Length": "113 min",
+      "Genre": "Drama, Sci-Fi, Thriller"
+    },
+    {
+      "Rated": "R",
+      "Title": "The Insider",
+      "Length": "157 min",
+      "Genre": "Biography, Drama, Thriller"
+    },
+    {
+      "Rated": "PASSED",
+      "Title": "Double Indemnity",
+      "Length": "107 min",
+      "Genre": "Crime, Drama, Film-Noir"
+    },
+    {
+      "Rated": "R",
+      "Title": "Adaptation.",
+      "Length": "114 min",
+      "Genre": "Comedy, Drama"
+    },
+    {
+      "Rated": "G",
+      "Title": "City Lights",
+      "Length": "87 min",
+      "Genre": "Comedy, Drama, Romance"
+    },
+    {
+      "Rated": "PG",
+      "Title": "East of Eden",
+      "Length": "115 min",
+      "Genre": "Drama"
+    },
+    {
+      "Rated": "PG",
+      "Title": "Monty Python and the Holy Grail",
+      "Length": "91 min",
+      "Genre": "Adventure, Comedy, Fantasy"
+    },
+    {
+      "Rated": "UNRATED",
+      "Title": "It Happened One Night",
+      "Length": "105 min",
+      "Genre": "Comedy, Romance"
+    },
+    {
+      "Rated": "APPROVED",
+      "Title": "Rome, Open City",
+      "Length": "103 min",
+      "Genre": "Drama, Thriller, War"
+    },
+    {
+      "Rated": "R",
+      "Title": "In the Name of the Father",
+      "Length": "133 min",
+      "Genre": "Biography, Drama"
+    },
+    {
+      "Rated": "PG",
+      "Title": "NausicaÃ¤ of the Valley of the Wind",
+      "Length": "117 min",
+      "Genre": "Animation, Adventure, Fantasy"
+    },
+    {
+      "Rated": "UNRATED",
+      "Title": "Battleship Potemkin",
+      "Length": "66 min",
+      "Genre": "Drama, History"
+    },
+    {
+      "Rated": "NOT RATED",
+      "Title": "Underground",
+      "Length": "167 min",
+      "Genre": "Comedy, Drama, War"
+    },
+    {
+      "Rated": "PG",
+      "Title": "The Elephant Man",
+      "Length": "124 min",
+      "Genre": "Biography, Drama"
+    },
+    {
+      "Rated": "PG",
+      "Title": "A Christmas Story",
+      "Length": "94 min",
+      "Genre": "Comedy, Family"
+    },
+    {
+      "Rated": "R",
+      "Title": "The Matrix",
+      "Length": "136 min",
+      "Genre": "Action, Sci-Fi"
+    },
+    {
+      "Rated": "R",
+      "Title": "Let the Right One In",
+      "Genre": "Drama, Horror, Romance",
+      "Length": "115 min"
+    },
+    {
+      "Rated": "NOT RATED",
+      "Title": "Mary and Max",
+      "Genre": "Animation, Comedy, Drama",
+      "Length": "92 min"
+    },
+    {
+      "Rated": "R",
+      "Title": "Almost Famous",
+      "Genre": "Adventure, Comedy, Drama",
+      "Length": "122 min"
+    },
+    {
+      "Rated": "R",
+      "Title": "American History X",
+      "Genre": "Crime, Drama",
+      "Length": "119 min"
+    },
+    {
+      "Rated": "R",
+      "Title": "Kill Bill: Vol. 2",
+      "Genre": "Action, Crime, Drama",
+      "Length": "137 min"
+    },
+    {
+      "Rated": "APPROVED",
+      "Title": "His Girl Friday",
+      "Genre": "Comedy, Drama, Romance",
+      "Length": "92 min"
+    },
+    {
+      "Rated": "NOT RATED",
+      "Title": "Stalag 17",
+      "Genre": "Drama, War",
+      "Length": "120 min"
+    },
+    {
+      "Rated": "G",
+      "Title": "Finding Nemo",
+      "Genre": "Animation, Adventure, Comedy",
+      "Length": "100 min"
+    },
+    {
+      "Rated": "PG-13",
+      "Title": "Juno",
+      "Genre": "Comedy, Drama",
+      "Length": "96 min"
+    },
+    {
+      "Rated": "R",
+      "Title": "Papillon",
+      "Genre": "Biography, Crime, Drama",
+      "Length": "151 min"
+    }
+  ]
+}

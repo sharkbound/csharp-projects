@@ -1,5 +1,0 @@
-C:\Users\owner\Desktop\GitHub\RocketModPlugins\FoodItemInfoDumper\bin\Release\FoodInfoDumper.dll
-C:\Users\owner\Desktop\GitHub\RocketModPlugins\FoodItemInfoDumper\bin\Release\FoodInfoDumper.pdb
-C:\Users\owner\Desktop\GitHub\RocketModPlugins\FoodItemInfoDumper\obj\Release\ItemFoodInfoDumper.csprojResolveAssemblyReference.cache
-C:\Users\owner\Desktop\GitHub\RocketModPlugins\FoodItemInfoDumper\obj\Release\FoodInfoDumper.dll
-C:\Users\owner\Desktop\GitHub\RocketModPlugins\FoodItemInfoDumper\obj\Release\FoodInfoDumper.pdb

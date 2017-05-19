@@ -1,0 +1,8 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\bin\Release\dotnet47.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\bin\Release\dotnet47.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\bin\Release\dotnet47.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\obj\Release\dotnet47.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\obj\Release\dotnet47.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\obj\Release\dotnet47.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\bin\Release\Newtonsoft.Json.dll

@@ -1,9 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
+using System.Text.RegularExpressions;
+using Newtonsoft.Json.Linq;
+using static dotnet47.Methods.Util;
+using MoreLinq;
 
 namespace dotnet47
 {
@@ -12,34 +18,17 @@ namespace dotnet47
         static void Main(string[] args)
         {
             new Program().Start();
-        }
 
-        Random r = new Random();
-        char[] _AsciiLetters = Enumerable.Range('a', 'z' - 'a' + 1).Select(i => (char)i).ToArray();
-
-        (string name, int age) getPerson()
-        {
-            string retName = "";
-            for (int i = 0; i < 20; i++)
+            if (Debugger.IsAttached)
             {
-                retName += _AsciiLetters[r.Next(0, _AsciiLetters.Length)];
+                Console.WriteLine("Press any key to exit...");
+                Console.ReadKey();
             }
-
-            return (retName, r.Next(0, 100));
         }
 
         private void Start()
         {
-
-            var info = getPerson();
-            Console.WriteLine($"{info.name} : {info.age}");
-
-            foreach (char c in _AsciiLetters)
-            {
-                Console.Write(c);
-            }
-
-            Console.ReadKey();
+            int[] nums = { 1, 2, 4, 5, 6, 7, 8, 16 };
         }
     }
 }
