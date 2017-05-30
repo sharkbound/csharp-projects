@@ -1,4 +1,0 @@
-C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\bin\x64\Release\dotnet47.exe.config
-C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\bin\x64\Release\dotnet47.exe
-C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\bin\x64\Release\System.Threading.Tasks.Extensions.dll
-C:\Users\owner\Desktop\GitHub\csharp-projects\dotnet47\dotnet47\obj\x64\Release\dotnet47.exe

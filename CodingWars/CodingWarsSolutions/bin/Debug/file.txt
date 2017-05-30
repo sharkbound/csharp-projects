@@ -1,0 +1,56 @@
+UDPv6
+.NET Data Provider for MySQL
+ASP.NET State Service
+Event Tracing for Windows Session
+Server
+Processor Information
+HTTP Service Url Groups
+Network Interface
+ASP.NET Applications
+SMSvcHost 3.0.0.0
+ASP.NET v4.0.30319
+Windows Workflow Foundation
+Cache
+Paging File
+USB
+Per Processor Network Activity Cycles
+IPsec Driver
+WFPv6
+ASP.NET Apps v4.0.30319
+.NET CLR Exceptions
+.NET CLR Data
+Synchronization
+Power Meter
+MSDTC Bridge 3.0.0.0
+.NET CLR Remoting
+System
+Server Work Queues
+.NET CLR Networking 4.0.0.0
+Terminal Services
+ServiceModelService 3.0.0.0
+Terminal Services Session
+MSDTC Bridge 4.0.0.0
+Thread
+RAS Total
+.NET CLR Networking
+RAS Port
+ICMPv6
+Processor
+ServiceModelOperation 3.0.0.0
+WFPv4
+LogicalDisk
+Peer Name Resolution Protocol
+.NET CLR Memory
+Per Processor Network Interface Card Activity
+.NET CLR Interop
+Job Object
+.NET Data Provider for SqlServer
+ASP.NET
+Memory
+Objects
+Job Object Details
+WFP
+Teredo Client
+.NET CLR Loading
+Client Side Caching
+HTTP Serv

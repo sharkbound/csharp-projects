@@ -1,0 +1,184 @@
+{
+  "version": 2,
+  "targets": {
+    ".NETFramework,Version=v4.7": {
+      "NUnit/3.7.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/nunit.framework.dll": {}
+        }
+      },
+      "NUnit3TestAdapter/3.8.0-alpha1": {
+        "type": "package",
+        "build": {
+          "build/net35/NUnit3TestAdapter.props": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7/win": {
+      "NUnit/3.7.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/nunit.framework.dll": {}
+        }
+      },
+      "NUnit3TestAdapter/3.8.0-alpha1": {
+        "type": "package",
+        "build": {
+          "build/net35/NUnit3TestAdapter.props": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7/win-x64": {
+      "NUnit/3.7.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/nunit.framework.dll": {}
+        }
+      },
+      "NUnit3TestAdapter/3.8.0-alpha1": {
+        "type": "package",
+        "build": {
+          "build/net35/NUnit3TestAdapter.props": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7/win-x86": {
+      "NUnit/3.7.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/nunit.framework.dll": {}
+        }
+      },
+      "NUnit3TestAdapter/3.8.0-alpha1": {
+        "type": "package",
+        "build": {
+          "build/net35/NUnit3TestAdapter.props": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NUnit/3.7.0": {
+      "sha512": "mjjCGs12dN+MgYU7Hh59DYMzO/wvpWgv9KKvCubj+GLcJ99bL5rKKUiybVPgc75A4qGL0tIVSxB4vGABhn06ig==",
+      "type": "package",
+      "path": "nunit/3.7.0",
+      "files": [
+        "CHANGES.md",
+        "LICENSE.txt",
+        "NOTICES.txt",
+        "lib/net20/NUnit.System.Linq.dll",
+        "lib/net20/nunit.framework.dll",
+        "lib/net20/nunit.framework.xml",
+        "lib/net35/nunit.framework.dll",
+        "lib/net35/nunit.framework.xml",
+        "lib/net40/nunit.framework.dll",
+        "lib/net40/nunit.framework.xml",
+        "lib/net45/nunit.framework.dll",
+        "lib/net45/nunit.framework.xml",
+        "lib/netstandard1.3/nunit.framework.dll",
+        "lib/netstandard1.3/nunit.framework.xml",
+        "lib/netstandard1.6/nunit.framework.dll",
+        "lib/netstandard1.6/nunit.framework.xml",
+        "nunit.3.7.0.nupkg.sha512",
+        "nunit.nuspec"
+      ]
+    },
+    "NUnit3TestAdapter/3.8.0-alpha1": {
+      "sha512": "g1TSjyY8Q/+7s9HmURvNxpMXMjvUIWuemq61LvgeBr7iMvwjoWdSqGlF9VywOASuW90AIT1FSkSGvV9j//xPog==",
+      "type": "package",
+      "path": "nunit3testadapter/3.8.0-alpha1",
+      "files": [
+        "LICENSE.txt",
+        "build/net35/Mono.Cecil.Mdb.dll",
+        "build/net35/Mono.Cecil.Pdb.dll",
+        "build/net35/Mono.Cecil.Rocks.dll",
+        "build/net35/Mono.Cecil.dll",
+        "build/net35/NUnit3.TestAdapter.dll",
+        "build/net35/NUnit3TestAdapter.props",
+        "build/net35/nunit.engine.api.dll",
+        "build/net35/nunit.engine.dll",
+        "build/netcoreapp1.0/Mono.Cecil.dll",
+        "build/netcoreapp1.0/NUnit3.TestAdapter.dll",
+        "build/netcoreapp1.0/NUnit3TestAdapter.props",
+        "build/netcoreapp1.0/nunit.engine.netstandard.dll",
+        "nunit3testadapter.3.8.0-alpha1.nupkg.sha512",
+        "nunit3testadapter.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7": [
+      "NUnit >= 3.7.0",
+      "NUnit3TestAdapter >= 3.8.0-alpha1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\owner\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\owner\\Desktop\\GitHub\\csharp-projects\\CodingWars\\CodingWarsSolutions\\CodingWarsSolutions.csproj",
+      "projectName": "CodingWarsSolutions",
+      "projectPath": "C:\\Users\\owner\\Desktop\\GitHub\\csharp-projects\\CodingWars\\CodingWarsSolutions\\CodingWarsSolutions.csproj",
+      "outputPath": "C:\\Users\\owner\\Desktop\\GitHub\\csharp-projects\\CodingWars\\CodingWarsSolutions\\obj\\",
+      "projectStyle": "PackageReference",
+      "originalTargetFrameworks": [
+        "net47"
+      ],
+      "frameworks": {
+        "net47": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "dependencies": {
+      "NUnit": {
+        "target": "Package",
+        "version": "3.7.0"
+      },
+      "NUnit3TestAdapter": {
+        "target": "Package",
+        "version": "3.8.0-alpha1"
+      }
+    },
+    "frameworks": {
+      "net47": {
+        "dependencies": {
+          "NUnit": {
+            "target": "Package",
+            "version": "3.7.0"
+          },
+          "NUnit3TestAdapter": {
+            "target": "Package",
+            "version": "3.8.0-alpha1"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

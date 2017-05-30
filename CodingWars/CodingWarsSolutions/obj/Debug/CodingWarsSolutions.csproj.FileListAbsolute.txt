@@ -1,0 +1,14 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\CodingWars\CodingWarsSolutions\bin\Debug\CodingWarsSolutions.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\CodingWars\CodingWarsSolutions\bin\Debug\CodingWarsSolutions.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\CodingWars\CodingWarsSolutions\bin\Debug\CodingWarsSolutions.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\CodingWars\CodingWarsSolutions\obj\Debug\CodingWarsSolutions.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\CodingWars\CodingWarsSolutions\obj\Debug\CodingWarsSolutions.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\CodingWars\CodingWarsSolutions\obj\Debug\CodingWarsSolutions.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\CodingWars\CodingWarsSolutions\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CodingWars\CodingWarsSolutions\bin\Debug\nunit.engine.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CodingWars\CodingWarsSolutions\bin\Debug\nunit.engine.api.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CodingWars\CodingWarsSolutions\bin\Debug\Mono.Cecil.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CodingWars\CodingWarsSolutions\bin\Debug\Mono.Cecil.Pdb.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CodingWars\CodingWarsSolutions\bin\Debug\Mono.Cecil.Mdb.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CodingWars\CodingWarsSolutions\bin\Debug\Mono.Cecil.Rocks.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\CodingWars\CodingWarsSolutions\bin\Debug\nunit.framework.dll

@@ -1,0 +1,6 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\TrollMaze\TrollMaze\bin\Debug\TrollMaze.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\TrollMaze\TrollMaze\bin\Debug\TrollMaze.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\TrollMaze\TrollMaze\bin\Debug\TrollMaze.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\TrollMaze\TrollMaze\obj\Debug\TrollMaze.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\TrollMaze\TrollMaze\obj\Debug\TrollMaze.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\TrollMaze\TrollMaze\obj\Debug\TrollMaze.pdb

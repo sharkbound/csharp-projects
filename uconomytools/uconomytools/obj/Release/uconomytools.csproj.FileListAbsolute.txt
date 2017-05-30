@@ -1,0 +1,13 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\uconomytools\uconomytools\bin\Release\uconomytools.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\uconomytools\uconomytools\bin\Release\uconomytools.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\uconomytools\uconomytools\bin\Release\Assembly-CSharp-firstpass.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\uconomytools\uconomytools\bin\Release\Assembly-CSharp.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\uconomytools\uconomytools\bin\Release\I18N.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\uconomytools\uconomytools\bin\Release\I18N.West.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\uconomytools\uconomytools\bin\Release\MySql.Data.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\uconomytools\uconomytools\bin\Release\Rocket.API.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\uconomytools\uconomytools\bin\Release\Rocket.Core.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\uconomytools\uconomytools\bin\Release\Rocket.Unturned.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\uconomytools\uconomytools\bin\Release\UnityEngine.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\uconomytools\uconomytools\obj\Release\uconomytools.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\uconomytools\uconomytools\obj\Release\uconomytools.pdb
