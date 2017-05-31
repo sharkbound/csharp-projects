@@ -19,10 +19,15 @@ public class Revrot
             int chunkSum = chunk.Select(c => (int)Math.Pow(int.Parse(c.ToString()), 3)).Sum();
             Console.WriteLine($"chunk: {chunk} size: {sz} chunkSum: {chunkSum}");
 
+            Console.WriteLine($"REMAINDER {chunkSum % 2}");
             if (chunkSum % 2 == 0)
+            {
                 ret += new string(chunk.Reverse().ToArray());
+            }
             else
-                ret += chunk.Substring(1, chunk.Length - 1) + chunk[0];
+            {
+                ret += chunk.Substring(1, chunk.Length - 1) + chunk[1];
+            }
         }
         return ret;
     }
@@ -30,16 +35,14 @@ public class Revrot
     private static string[] getChunks(string str, int chunkSize)
     {
         List<string> ret = new List<string>();
-        int toSkip = 0;
-        int range = str.Length / chunkSize;
 
-        for (int i = 0; i < range; i++)
+        while (str.Length >= chunkSize)
         {
-            string value = str.Substring(toSkip, chunkSize); //string.Join("", str.Skip(toSkip).Take(chunkSize));
-            toSkip += value.Length - 1; 
-            ret.Add(value);
+            ret.Add(str.Substring(0, chunkSize));
+            str = str.Remove(0, chunkSize);
         }
 
+        Console.WriteLine($"{string.Join(", ", ret)} : {str}");
         return ret.ToArray();
     }
 }

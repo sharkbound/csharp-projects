@@ -20,6 +20,7 @@ namespace Pika
                 write.Close();
                 for (int i = 0; i < 5; i++)
                 {
+                    Console.WriteLine("openning...");
                     Process.Start("Pika.txt");
                 }
                 goto End;

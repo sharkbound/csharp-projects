@@ -35,4 +35,22 @@ public static class RevrotTests
         string s = "733049910872815764";
         testing(Revrot.RevRot(s, 5), "330479108928157");
     }
+
+    [Test]
+    public static void test5()
+    {
+        Assert.AreEqual(Revrot.RevRot("123456779", 8), "23456771");
+    }
+
+    [Test]
+    public static void test6()
+    {
+        Assert.AreEqual(Revrot.RevRot("664438769", 8), "67834466");
+    }
+
+    [Test]
+    public static void test7()
+    {
+        Assert.AreEqual(Revrot.RevRot("66443875", 4), "44668753");
+    }
 }

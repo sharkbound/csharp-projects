@@ -4,3 +4,9 @@ c:\users\8\documents\visual studio 2013\Projects\Pika\Pika\bin\Debug\Pika.pdb
 c:\users\8\documents\visual studio 2013\Projects\Pika\Pika\obj\Debug\Pika.csprojResolveAssemblyReference.cache
 c:\users\8\documents\visual studio 2013\Projects\Pika\Pika\obj\Debug\Pika.exe
 c:\users\8\documents\visual studio 2013\Projects\Pika\Pika\obj\Debug\Pika.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\Pika\Pika\bin\Debug\Pika.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\Pika\Pika\bin\Debug\Pika.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\Pika\Pika\bin\Debug\Pika.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\Pika\Pika\obj\Debug\Pika.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\Pika\Pika\obj\Debug\Pika.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\Pika\Pika\obj\Debug\Pika.pdb
