@@ -3,6 +3,7 @@ using System.Diagnostics;
 using NUnit.Framework;
 
 [TestFixture]
+[Ignore("not current test")]
 public static class RevrotTests
 {
 

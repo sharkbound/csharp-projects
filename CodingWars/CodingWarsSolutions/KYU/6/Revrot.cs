@@ -2,11 +2,11 @@
 using System.Linq;
 using System.Collections.Generic;
 
+
 public class Revrot
 {
     public static string RevRot(string str, int sz)
     {
-        Console.WriteLine("string passed in: " + str);
         // your code
         if (sz <= 0 || string.IsNullOrEmpty(str) || sz > str.Length)
             return "";
@@ -17,17 +17,11 @@ public class Revrot
         foreach (var chunk in chunks)
         {
             int chunkSum = chunk.Select(c => (int)Math.Pow(int.Parse(c.ToString()), 3)).Sum();
-            Console.WriteLine($"chunk: {chunk} size: {sz} chunkSum: {chunkSum}");
-
-            Console.WriteLine($"REMAINDER {chunkSum % 2}");
+            
             if (chunkSum % 2 == 0)
-            {
                 ret += new string(chunk.Reverse().ToArray());
-            }
             else
-            {
-                ret += chunk.Substring(1, chunk.Length - 1) + chunk[1];
-            }
+                ret += chunk.Substring(1, chunk.Length - 1) + chunk[0];
         }
         return ret;
     }
@@ -41,8 +35,7 @@ public class Revrot
             ret.Add(str.Substring(0, chunkSize));
             str = str.Remove(0, chunkSize);
         }
-
-        Console.WriteLine($"{string.Join(", ", ret)} : {str}");
+        
         return ret.ToArray();
     }
 }

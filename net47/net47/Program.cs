@@ -15,6 +15,7 @@ using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace dotnet47
 {
@@ -33,7 +34,36 @@ namespace dotnet47
 
         private void Start()
         {
+            IEnumerable<BigInteger> fib(int n = -1, bool continuousYield = false)
+            {
+                BigInteger cur = 0, nxt = 1;
+                int loop = 0;
+                while (true)
+                {
+                    if (n > 0 && loop > n)
+                    {
+                        yield return cur;
+                        break;
+                    }
 
+                    if (continuousYield)
+                        yield return cur;
+
+                    (cur, nxt) = (cur + nxt, cur);
+                    loop++;
+
+                }
+            }
+
+            DateTime start = DateTime.Now;
+            using (StreamWriter w = new StreamWriter("fibtest.txt"))
+            {
+                foreach (var f in fib(500_000))
+                {
+                    w.WriteLine(f);
+                }
+                w.WriteLine($"\n\n{(DateTime.Now - start).TotalSeconds}");
+            }
         }
     }
 }

@@ -46,7 +46,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="KYU\7\Mumbling.cs" />
-    <Compile Include="Tests.cs" />
+    <Compile Include="Tests\KYU\6\RevRotTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
