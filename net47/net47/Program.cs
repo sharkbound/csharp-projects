@@ -16,16 +16,18 @@ using System.Collections;
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
 using System.Globalization;
+using LiteDB;
 
 namespace dotnet47
 {
     class Program
     {
+        static bool waitForDebugKey = false;
         static void Main(string[] args)
         {
             new Program().Start();
 
-            if (Debugger.IsAttached)
+            if (Debugger.IsAttached && waitForDebugKey)
             {
                 Console.WriteLine("Press any key to exit...");
                 Console.ReadKey();
@@ -34,36 +36,37 @@ namespace dotnet47
 
         private void Start()
         {
-            IEnumerable<BigInteger> fib(int n = -1, bool continuousYield = false)
+            Random r = new Random();
+            string letters = "abcdefghijklmnopqrstuvwxyz";
+            letters += letters.ToUpper();
+
+            string randomName = "";
+            foreach (var _ in Enumerable.Range(0, 10))
+                randomName += letters.PickRandom();
+
+            using (LiteDatabase db = new LiteDatabase("dbd"))
             {
-                BigInteger cur = 0, nxt = 1;
-                int loop = 0;
-                while (true)
+                var c = db.GetCollection<Account>("balances");
+                c.Upsert(new Account(randomName));
+
+                foreach (Account i in c.Find(x => x.Balance > 50))
                 {
-                    if (n > 0 && loop > n)
-                    {
-                        yield return cur;
-                        break;
-                    }
-
-                    if (continuousYield)
-                        yield return cur;
-
-                    (cur, nxt) = (cur + nxt, cur);
-                    loop++;
-
+                    Console.WriteLine(c.FindById(i.Index));
                 }
-            }
-
-            DateTime start = DateTime.Now;
-            using (StreamWriter w = new StreamWriter("fibtest.txt"))
-            {
-                foreach (var f in fib(500_000))
-                {
-                    w.WriteLine(f);
-                }
-                w.WriteLine($"\n\n{(DateTime.Now - start).TotalSeconds}");
             }
         }
+    }
+
+    class Account
+    {
+        public Account() { }
+        public Account(string id, int bal = 0) { CallerId = id; Balance = bal; }
+
+        public override string ToString() => $"{Index}: {CallerId} -> {Balance}";
+
+        [BsonId]
+        public int Index { get; set; }
+        public string CallerId { get; set; }
+        public int Balance { get; set; }
     }
 }

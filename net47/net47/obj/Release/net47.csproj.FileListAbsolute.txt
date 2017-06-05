@@ -5,3 +5,4 @@ C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Release\Newtonsoft
 C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\obj\Release\net47.exe
 C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\obj\Release\net47.pdb
 C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\obj\Release\net47.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Release\LiteDB.dll

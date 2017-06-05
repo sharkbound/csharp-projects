@@ -11,7 +11,7 @@ namespace CodingWarsSolutions
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine();
         }
     }
 }

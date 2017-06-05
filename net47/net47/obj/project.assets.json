@@ -2,6 +2,15 @@
   "version": 2,
   "targets": {
     ".NETFramework,Version=v4.7": {
+      "LiteDB/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/net35/LiteDB.dll": {}
+        }
+      },
       "Newtonsoft.Json/10.0.2": {
         "type": "package",
         "compile": {
@@ -13,6 +22,15 @@
       }
     },
     ".NETFramework,Version=v4.7/win": {
+      "LiteDB/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/net35/LiteDB.dll": {}
+        }
+      },
       "Newtonsoft.Json/10.0.2": {
         "type": "package",
         "compile": {
@@ -24,6 +42,15 @@
       }
     },
     ".NETFramework,Version=v4.7/win-x64": {
+      "LiteDB/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/net35/LiteDB.dll": {}
+        }
+      },
       "Newtonsoft.Json/10.0.2": {
         "type": "package",
         "compile": {
@@ -35,6 +62,15 @@
       }
     },
     ".NETFramework,Version=v4.7/win-x86": {
+      "LiteDB/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/net35/LiteDB.dll": {}
+        }
+      },
       "Newtonsoft.Json/10.0.2": {
         "type": "package",
         "compile": {
@@ -47,6 +83,19 @@
     }
   },
   "libraries": {
+    "LiteDB/3.1.0": {
+      "sha512": "rBu7QEMS42bFCSmc/n8qvmV36/nBVmlDUfVCFCG7KTRPwy/RQYnexxEoznvWB/pmn/aIKshuDX4FCEDUBQV0XA==",
+      "type": "package",
+      "path": "litedb/3.1.0",
+      "files": [
+        "lib/net35/LiteDB.dll",
+        "lib/net35/LiteDB.xml",
+        "lib/netstandard1.4/LiteDB.dll",
+        "lib/netstandard1.4/LiteDB.xml",
+        "litedb.3.1.0.nupkg.sha512",
+        "litedb.nuspec"
+      ]
+    },
     "Newtonsoft.Json/10.0.2": {
       "sha512": "iwElSU2IXmwGvytJsezyDML2ZWDkG2JzTYzlU/BNlmzMdlmRvbnwITsGGY74gwVEpDli1UdOLkMT7/3jxWvXzA==",
       "type": "package",
@@ -77,6 +126,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7": [
+      "LiteDB >= 3.1.0",
       "Newtonsoft.Json >= 10.0.2"
     ]
   },
@@ -101,6 +151,10 @@
       }
     },
     "dependencies": {
+      "LiteDB": {
+        "target": "Package",
+        "version": "3.1.0"
+      },
       "Newtonsoft.Json": {
         "target": "Package",
         "version": "10.0.2"
@@ -109,6 +163,10 @@
     "frameworks": {
       "net47": {
         "dependencies": {
+          "LiteDB": {
+            "target": "Package",
+            "version": "3.1.0"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "10.0.2"
