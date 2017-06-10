@@ -42,11 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions.cs" />
     <Compile Include="KYU\6\BouncingBalls.cs" />
     <Compile Include="KYU\6\CalculateStringRotation.cs" />
     <Compile Include="KYU\6\CountingDuplicates.cs" />
     <Compile Include="KYU\6\CountTheSmiles.cs" />
+    <Compile Include="KYU\6\RainFall.cs" />
     <Compile Include="KYU\6\Revrot.cs" />
+    <Compile Include="KYU\6\SumConsecutives.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="KYU\7\Mumbling.cs" />

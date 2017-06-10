@@ -1,37 +1,43 @@
 ﻿using NUnit.Framework;
 
-public class BouncingBall
+namespace CodingWarsSolutions
 {
-    public static int bouncingBall(double h, double bounce, double window)
+    namespace CodingWarsSolutions
     {
-        if (h <= 0 || bounce >= 1 || bounce < 0 || window >= h)
-            return -1;
-
-        int bouncesSeen = 0;
-        while (h > window)
+        public class BouncingBall
         {
-            h *= bounce;
-            bouncesSeen++;
+            public static int bouncingBall(double h, double bounce, double window)
+            {
+                if (h <= 0 || bounce >= 1 || bounce < 0 || window >= h)
+                    return -1;
+
+                int bouncesSeen = 0;
+                while (h > window)
+                {
+                    h *= bounce;
+                    bouncesSeen++;
+                }
+
+                return bouncesSeen + bouncesSeen - 1; ;
+            }
         }
 
-        return bouncesSeen + bouncesSeen - 1; ;
-    }
-}
 
+        [TestFixture]
+        [Ignore("not current test")]
+        public class BouncingBallTests
+        {
 
-[TestFixture]
-[Ignore("not current test")]
-public class BouncingBallTests
-{
-
-    [Test]
-    public void Test1()
-    {
-        Assert.AreEqual(3, BouncingBall.bouncingBall(3.0, 0.66, 1.5));
-    }
-    [Test]
-    public void Test2()
-    {
-        Assert.AreEqual(15, BouncingBall.bouncingBall(30.0, 0.66, 1.5));
+            [Test]
+            public void Test1()
+            {
+                Assert.AreEqual(3, BouncingBall.bouncingBall(3.0, 0.66, 1.5));
+            }
+            [Test]
+            public void Test2()
+            {
+                Assert.AreEqual(15, BouncingBall.bouncingBall(30.0, 0.66, 1.5));
+            }
+        }
     }
 }

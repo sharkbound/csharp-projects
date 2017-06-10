@@ -36,6 +36,28 @@ namespace dotnet47
 
         private void Start()
         {
+            var db = new LiteDatabase("bankdb");
+            var col = db.GetCollection<Account>("bank");
+
+            if (!col.Exists(Query.Contains("callerid", "hacker")))
+                col.Insert(new Account("hacker", 1337));
+        }
+    }
+
+    class Account
+    {
+        public Account() { }
+        public Account(string id, int bal = 0) => (CallerId, Balance) = (id, bal);
+
+        public override string ToString() => $"{Index}: {CallerId} -> {Balance}";
+
+        [BsonId]
+        public int Index { get; set; }
+        public string CallerId { get; set; }
+        public int Balance { get; set; }
+    }
+
+    /*
             Random r = new Random();
             string letters = "abcdefghijklmnopqrstuvwxyz";
             letters += letters.ToUpper();
@@ -54,19 +76,5 @@ namespace dotnet47
                     Console.WriteLine(c.FindById(i.Index));
                 }
             }
-        }
-    }
-
-    class Account
-    {
-        public Account() { }
-        public Account(string id, int bal = 0) { CallerId = id; Balance = bal; }
-
-        public override string ToString() => $"{Index}: {CallerId} -> {Balance}";
-
-        [BsonId]
-        public int Index { get; set; }
-        public string CallerId { get; set; }
-        public int Balance { get; set; }
-    }
+            */
 }
