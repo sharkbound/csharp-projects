@@ -11,22 +11,25 @@ namespace CodingWarsSolutions
     {
         public static List<int> SumConsecutives(List<int> s)
         {
-            s.Add(0);
             List<int> ret = new List<int>();
-            int last = s[0], count = 0;
+            int last = s[0], count = 0, index = 0;
 
-            for (int i = 0; i < s.Count - 1; i++)
+            foreach (int c in s)
             {
-                if (s[i + 1] != last)
+                if (c != last)
                 {
-                    ret.Add(last * (count < 1 ? 1 : count));
-                    Console.WriteLine($"FOUND ({s[i]}) {count} times! Last value is: {last}, Current index is: {i}");
-                    last = s[i + 1];
+                    ret.Add(last * count);
                     count = 0;
                 }
+                last = c;
                 count++;
             }
-            Console.WriteLine(string.Join(", ", ret));
+
+            if (last == ret.Last())
+                ret[ret.Count - 1] += last;
+            else
+                ret.Add(last);
+            
             return ret;
         }
 
@@ -35,6 +38,7 @@ namespace CodingWarsSolutions
 
 
     [TestFixture]
+    [Ignore("not current test")]
     public static class ConsecutivesTests
     {
         [Test]
