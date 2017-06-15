@@ -6,6 +6,7 @@ C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\obj\Debug\net47.csproj
 C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\obj\Debug\net47.exe
 C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\obj\Debug\net47.pdb
 C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Debug\LiteDB.dll
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Debug\Google.Protobuf.dll
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Debug\MySql.Data.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Debug\MongoDB.Bson.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Debug\MongoDB.Driver.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Debug\MongoDB.Driver.Core.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll

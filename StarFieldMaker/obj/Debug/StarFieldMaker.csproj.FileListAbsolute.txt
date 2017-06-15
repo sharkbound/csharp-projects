@@ -1,0 +1,6 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\StarFieldMaker\bin\Debug\StarFieldMaker.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\StarFieldMaker\bin\Debug\StarFieldMaker.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\StarFieldMaker\bin\Debug\StarFieldMaker.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\StarFieldMaker\obj\Debug\StarFieldMaker.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\StarFieldMaker\obj\Debug\StarFieldMaker.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\StarFieldMaker\obj\Debug\StarFieldMaker.pdb

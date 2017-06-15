@@ -16,7 +16,10 @@ using System.Collections;
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
 using System.Globalization;
-using LiteDB;
+using Timer = System.Timers.Timer;
+using MongoDB.Driver.Linq;
+using MongoDB.Driver;
+using System.Xml.Serialization;
 
 namespace dotnet47
 {
@@ -33,48 +36,12 @@ namespace dotnet47
                 Console.ReadKey();
             }
         }
-
+        
         private void Start()
         {
-            var db = new LiteDatabase("bankdb");
-            var col = db.GetCollection<Account>("bank");
 
-            if (!col.Exists(Query.Contains("callerid", "hacker")))
-                col.Insert(new Account("hacker", 1337));
         }
     }
-
-    class Account
-    {
-        public Account() { }
-        public Account(string id, int bal = 0) => (CallerId, Balance) = (id, bal);
-
-        public override string ToString() => $"{Index}: {CallerId} -> {Balance}";
-
-        [BsonId]
-        public int Index { get; set; }
-        public string CallerId { get; set; }
-        public int Balance { get; set; }
-    }
-
-    /*
-            Random r = new Random();
-            string letters = "abcdefghijklmnopqrstuvwxyz";
-            letters += letters.ToUpper();
-
-            string randomName = "";
-            foreach (var _ in Enumerable.Range(0, 10))
-                randomName += letters.PickRandom();
-
-            using (LiteDatabase db = new LiteDatabase("dbd"))
-            {
-                var c = db.GetCollection<Account>("balances");
-                c.Upsert(new Account(randomName));
-
-                foreach (Account i in c.Find(x => x.Balance > 50))
-                {
-                    Console.WriteLine(c.FindById(i.Index));
-                }
-            }
-            */
 }
+            
+
