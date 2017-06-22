@@ -14,12 +14,16 @@ namespace dotnet47.Methods
         {
             Stopwatch sw = new Stopwatch();
             sw.Start();
-            for (int i = 0; i < times; i++)
-            {
-                func();
-            }
+            for (int i = 0; i < times; i++) func();
             sw.Stop();
             return sw;
+        }
+
+        public static string PadText(string input, string padding)
+        {
+            string middle = $"{padding} {input} {padding}";
+            string row = string.Concat(Enumerable.Repeat(padding, middle.Length / padding.Length));
+            return $"{row}\n{middle}\n{row}";
         }
     }
 }

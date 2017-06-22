@@ -8,9 +8,9 @@ namespace CodingWarsSolutions
 {
     public static class Extensions
     {
-        public static string Format<T>(this IEnumerable<T> src, string separater = ", ", bool enclosingBrackets = true)
+        public static string Format<T>(this IEnumerable<T> src, string separater = ", ", bool brackets = true, string openB = "[", string closeB = "]")
         {
-            return (enclosingBrackets ? "[" : "") + string.Join(separater, src) + (enclosingBrackets ? "]" : "");
+            return (brackets ? openB : "") + string.Join(separater, src) + (brackets ? closeB : "");
         }
     }
 }

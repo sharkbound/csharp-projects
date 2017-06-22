@@ -46,6 +46,15 @@
           "lib/net45/MongoDB.Driver.Core.dll": {}
         }
       },
+      "MySql.Data/6.9.9": {
+        "type": "package",
+        "compile": {
+          "lib/net45/MySql.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MySql.Data.dll": {}
+        }
+      },
       "Newtonsoft.Json/10.0.2": {
         "type": "package",
         "compile": {
@@ -120,6 +129,15 @@
           "lib/net45/MongoDB.Driver.Core.dll": {}
         }
       },
+      "MySql.Data/6.9.9": {
+        "type": "package",
+        "compile": {
+          "lib/net45/MySql.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MySql.Data.dll": {}
+        }
+      },
       "Newtonsoft.Json/10.0.2": {
         "type": "package",
         "compile": {
@@ -184,6 +202,15 @@
           "lib/net45/MongoDB.Driver.Core.dll": {}
         }
       },
+      "MySql.Data/6.9.9": {
+        "type": "package",
+        "compile": {
+          "lib/net45/MySql.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MySql.Data.dll": {}
+        }
+      },
       "Newtonsoft.Json/10.0.2": {
         "type": "package",
         "compile": {
@@ -246,6 +273,15 @@
         },
         "runtime": {
           "lib/net45/MongoDB.Driver.Core.dll": {}
+        }
+      },
+      "MySql.Data/6.9.9": {
+        "type": "package",
+        "compile": {
+          "lib/net45/MySql.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MySql.Data.dll": {}
         }
       },
       "Newtonsoft.Json/10.0.2": {
@@ -324,6 +360,21 @@
         "mongodb.driver.core.nuspec"
       ]
     },
+    "MySql.Data/6.9.9": {
+      "sha512": "rhpv2iJBqvvHU9gkhn/OZfhanQT/jZpfovyO9TEbJl5jLKMvABgxSkIPQbubrvR04M2/ZtdTeI9fC9WSkBe2wA==",
+      "type": "package",
+      "path": "mysql.data/6.9.9",
+      "files": [
+        "CHANGES",
+        "Readme.txt",
+        "content/app.config.transform",
+        "content/web.config.transform",
+        "lib/net40/MySql.Data.dll",
+        "lib/net45/MySql.Data.dll",
+        "mysql.data.6.9.9.nupkg.sha512",
+        "mysql.data.nuspec"
+      ]
+    },
     "Newtonsoft.Json/10.0.2": {
       "sha512": "iwElSU2IXmwGvytJsezyDML2ZWDkG2JzTYzlU/BNlmzMdlmRvbnwITsGGY74gwVEpDli1UdOLkMT7/3jxWvXzA==",
       "type": "package",
@@ -388,6 +439,7 @@
     ".NETFramework,Version=v4.7": [
       "LiteDB >= 3.1.0",
       "MongoDB.Driver >= 2.4.4",
+      "MySql.Data >= 6.9.9",
       "Newtonsoft.Json >= 10.0.2"
     ]
   },
@@ -420,6 +472,10 @@
         "target": "Package",
         "version": "2.4.4"
       },
+      "MySql.Data": {
+        "target": "Package",
+        "version": "6.9.9"
+      },
       "Newtonsoft.Json": {
         "target": "Package",
         "version": "10.0.2"
@@ -435,6 +491,10 @@
           "MongoDB.Driver": {
             "target": "Package",
             "version": "2.4.4"
+          },
+          "MySql.Data": {
+            "target": "Package",
+            "version": "6.9.9"
           },
           "Newtonsoft.Json": {
             "target": "Package",

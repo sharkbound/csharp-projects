@@ -12,17 +12,31 @@ namespace CodingWarsSolutions.KYU._5
     {
         public static string Phone(string str, string num)
         {
-            string[] split = str.Split('\n');
-            var names = Regex.Matches(str, @"(<[A-Za-z]*>)");
-            foreach (Match m in names)
-            {
-                Console.WriteLine(m.Value);
-            }
-            return "";
+            var entries = str.Split('\n')
+                .Select(x => new {
+                    name = Regex.Match(x, @"<(.*)>").Groups[1].Value,
+                    phone = Regex.Match(x, @"\+([0-9]{1,2}\-[0-9]{3}\-[0-9]{3}\-[0-9]{4})").Groups[1].Value,
+                    raw = x
+            });
+
+            var matching = entries.Where(i => i.phone == num);
+            if (matching.Count() > 1)
+                return "Error => Too many people: " + num;
+            else if (matching.Count() == 0)
+                return "Error => Not found: " + num;
+            
+            var first = matching.First();
+            var address = first.raw.Replace($"<{first.name}>", "").Replace($"+{first.phone}", "").Replace('_', ' ')
+                .Split(' ')
+                .Where(x => x.Length > 1)
+                .Select(x => Regex.Replace(x.Trim(), @"[^a-zA-Z0-9\-\.]", "").Replace("  ", " "));
+
+            return $"Phone => {first.phone}, Name => {first.name}, Address => {string.Join(" ", address)}";
         }
     }
 
-    [TestFixture][Ignore("")]
+    [TestFixture]
+    [Ignore("not current test")]
     public static class PhoneDirTests
     {
 
@@ -46,16 +60,49 @@ namespace CodingWarsSolutions.KYU._5
         [Test]
         public static void test1()
         {
-            Console.WriteLine("Phone");
             testing(PhoneDir.Phone(dr, "48-421-674-8974"), "Phone => 48-421-674-8974, Name => Anastasia, Address => Via Quirinal Roma");
-            testing(PhoneDir.Phone(dr, "1-921-512-2222"), "Phone => 1-921-512-2222, Name => Wilfrid Stevens, Address => Wild Street AA-67209");
-            testing(PhoneDir.Phone(dr, "1-908-512-2222"), "Phone => 1-908-512-2222, Name => Peter O'Brien, Address => High Street CC-47209");
-            testing(PhoneDir.Phone(dr, "1-541-754-3010"), "Phone => 1-541-754-3010, Name => J Steeve, Address => 156 Alphand St.");
-            testing(PhoneDir.Phone(dr, "1-121-504-8974"), "Phone => 1-121-504-8974, Name => Arthur Clarke, Address => San Antonio TT-45120");
-            testing(PhoneDir.Phone(dr, "1-498-512-2222"), "Phone => 1-498-512-2222, Name => Bernard Deltheil, Address => Mount Av. Eldorado");
-            testing(PhoneDir.Phone(dr, "1-098-512-2222"), "Error => Too many people: 1-098-512-2222");
-            testing(PhoneDir.Phone(dr, "5-555-555-5555"), "Error => Not found: 5-555-555-5555");
+        }
 
+        [Test]
+        public static void test2()
+        {
+            testing(PhoneDir.Phone(dr, "1-921-512-2222"), "Phone => 1-921-512-2222, Name => Wilfrid Stevens, Address => Wild Street AA-67209");
+        }
+
+        [Test]
+        public static void test3()
+        {
+            testing(PhoneDir.Phone(dr, "1-908-512-2222"), "Phone => 1-908-512-2222, Name => Peter O'Brien, Address => High Street CC-47209");
+        }
+
+        [Test]
+        public static void test4()
+        {
+            testing(PhoneDir.Phone(dr, "1-541-754-3010"), "Phone => 1-541-754-3010, Name => J Steeve, Address => 156 Alphand St.");
+        }
+
+        [Test]
+        public static void test5()
+        {
+            testing(PhoneDir.Phone(dr, "1-121-504-8974"), "Phone => 1-121-504-8974, Name => Arthur Clarke, Address => San Antonio TT-45120");
+        }
+
+        [Test]
+        public static void test6()
+        {
+            testing(PhoneDir.Phone(dr, "1-498-512-2222"), "Phone => 1-498-512-2222, Name => Bernard Deltheil, Address => Mount Av. Eldorado");
+        }
+
+        [Test]
+        public static void test7()
+        {
+            testing(PhoneDir.Phone(dr, "1-098-512-2222"), "Error => Too many people: 1-098-512-2222");
+        }
+
+        [Test]
+        public static void test8()
+        {
+            testing(PhoneDir.Phone(dr, "5-555-555-5555"), "Error => Not found: 5-555-555-5555");
         }
     }
 }

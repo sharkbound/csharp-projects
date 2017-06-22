@@ -12,22 +12,30 @@ namespace CodingWarsSolutions.KYU._5
     {
         public static bool IsBalanced(string s, string caps)
         {
-            s = Regex.Replace(s, $"[^{string.Join("\\", caps)}]", "");
-            if (s.Length % 2 != 0)
-                return false;
+            s = string.Concat(s.Where(x => caps.Contains(x)));
+            if (s.Length % 2 != 0) return false;
 
-            string chain = s[0].ToString();
-            char[] chars = s.ToCharArray();
+            List<char>
+                open = caps.Where((c, i) => i % 2 == 0).ToList(),
+                close = caps.Where((c, i) => i % 2 > 0).ToList();
+            var pairs = new Dictionary<char, char>();
+            for (int i = 0; i < open.Count; i++) pairs.Add(open[i], close[i]);
             
-            for (int i = 0; i < chars.Length; i++)
+            var found = new List<char>();
+            for (int i = 0; i < s.Length; i++)
             {
-                Console.Write(chars[i]);
+                if (open.Contains(s[i])) found.Add(s[i]);
+                else if (close.Contains(s[i]) && found.Last() == pairs.First(x => x.Value == s[i]).Key)
+                {
+                    found.RemoveAt(found.Count - 1);
+                }
+                else return false;
             }
             return true;
         }
     }
 
-    [TestFixture]
+    [TestFixture][Ignore("not current test")]
     public class KataTests
     {
         [Test]
@@ -65,6 +73,12 @@ namespace CodingWarsSolutions.KYU._5
         public void test5()
         {
             Assert.AreEqual(false, AllThatIsOpenMustBeClosed.IsBalanced("Sensei -says no!", "--"));
+        }
+
+        [Test]
+        public void testNotMatchingButEven()
+        {
+            Assert.AreEqual(false, AllThatIsOpenMustBeClosed.IsBalanced("Sensei [{says no!]}", "[]{}"));
         }
     }
 

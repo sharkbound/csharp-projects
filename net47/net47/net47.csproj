@@ -54,8 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DatabaseTesting.cs" />
-    <Compile Include="Data\JsonTemplate.cs" />
-    <Compile Include="Data\TEXT.cs" />
     <Compile Include="Extensions\IEnumExts.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Methods\Util.cs" />
@@ -74,6 +72,9 @@
     </PackageReference>
     <PackageReference Include="MongoDB.Driver">
       <Version>2.4.4</Version>
+    </PackageReference>
+    <PackageReference Include="MySql.Data">
+      <Version>6.9.9</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>10.0.2</Version>
