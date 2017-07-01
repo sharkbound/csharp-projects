@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions.cs" />
+    <Compile Include="KYU\4\DoubleLinear.cs" />
     <Compile Include="KYU\5\AllThatIsOpenMustBeClosed.cs" />
     <Compile Include="KYU\5\PhoneDir.cs" />
     <Compile Include="KYU\6\BouncingBalls.cs" />

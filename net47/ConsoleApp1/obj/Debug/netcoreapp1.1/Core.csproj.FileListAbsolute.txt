@@ -4,3 +4,6 @@ C:\Users\owner\Desktop\GitHub\csharp-projects\net47\ConsoleApp1\bin\Debug\netcor
 C:\Users\owner\Desktop\GitHub\csharp-projects\net47\ConsoleApp1\bin\Debug\netcoreapp1.1\Core.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\net47\ConsoleApp1\obj\Debug\netcoreapp1.1\Core.csprojResolveAssemblyReference.cache
 C:\Users\owner\Desktop\GitHub\csharp-projects\net47\ConsoleApp1\obj\Debug\netcoreapp1.1\Core.AssemblyInfo.cs
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\ConsoleApp1\bin\Debug\netcoreapp1.1\Core.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\ConsoleApp1\obj\Debug\netcoreapp1.1\Core.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\ConsoleApp1\obj\Debug\netcoreapp1.1\Core.pdb
