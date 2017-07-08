@@ -5,15 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using LiteDB;
 using TwitchLibBot.Data;
-using TwitchLibBot.Data.Resources;
 
 namespace TwitchLibBot.Core.Database
 {
     class Database
     {
         // properties
-        internal static string QuoteDbName => TwitchInfo.ChannelName + "_Quotes";
-        internal static string CommandDbName => TwitchInfo.ChannelName + "_Commands";
+        internal static string QuoteDbName => Config.Instance.ChannelName + "_Quotes";
+        internal static string CommandDbName => Config.Instance.ChannelName + "_Commands";
 
         public static LiteDatabase DB => new LiteDatabase("TwitchData.litedb");
         public static LiteCollection<CustomCommand> CommandDB => DB.GetCollection<CustomCommand>(CommandDbName);

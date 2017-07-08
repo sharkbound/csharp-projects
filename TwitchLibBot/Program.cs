@@ -10,6 +10,7 @@ using TwitchLib.Events.Client;
 using System.Threading;
 using TwitchLibBot.Core.Handlers;
 using TwitchLibBot.Core.Database;
+using TwitchLibBot.Data;
 
 namespace TwitchLibBot
 {
@@ -19,6 +20,8 @@ namespace TwitchLibBot
         
         static void Main(string[] args)
         {
+            Config.Load();
+
             CommandHandler.RegisterCommands();
 
             foreach (var command in CommandHandler.Commands)

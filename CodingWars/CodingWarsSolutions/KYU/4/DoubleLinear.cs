@@ -11,15 +11,16 @@ namespace CodingWarsSolutions.KYU._4
     {
         public static int DblLinear(int n)
         {
-            var nList = new List<int> { 1,3,4 };
-            int index = 1;
+            var nList = new List<int> { 1 };
+            int index = 0;
             for (int i = 0; i < n; i++)
             {
                 nList.Add(nList[index] * 2 + 1);
                 nList.Add(nList[index] * 3 + 1);
                 index++;
             }
-            return nList.Distinct().OrderBy(x => x).ElementAt(n);
+            nList = nList.Distinct().OrderBy(x => x).ToList();
+            return nList.ElementAt(n);
         }
     }
 
@@ -58,6 +59,12 @@ namespace CodingWarsSolutions.KYU._4
         {
             testing(DoubleLinear.DblLinear(50), 175);
 
+        }
+
+        [Test]
+        public static void testBigNumber()
+        {
+            testing(DoubleLinear.DblLinear(23443), 461781);
         }
     }
 }

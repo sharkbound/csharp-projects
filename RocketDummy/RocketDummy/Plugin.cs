@@ -10,6 +10,7 @@ using Logger = Rocket.Core.Logging.Logger;
 using System.Timers;
 using SDG.Unturned;
 using Rocket.Unturned.Player;
+using Rocket.Unturned.Events;
 
 namespace RocketDummy
 {
@@ -20,26 +21,11 @@ namespace RocketDummy
 
         protected override void Load()
         {
-            timer = new Timer(1000);
-            timer.Start();
-            timer.Elapsed += Timer_Elapsed;
-            Instance = this;
-            Logger.Log("DummyPlugin has loaded");
+
         }
 
         protected override void Unload()
         {
-            Logger.Log("DummyPlugin has unloaded");
-        }
-
-        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
-        {
-            foreach (var client in Provider.clients)
-            {
-                UnturnedPlayer plr = UnturnedPlayer.FromSteamPlayer(client);
-                plr.Experience += 10_000;
-                Logger.Log($"giving {plr.DisplayName} 10,000 xp");
-            }
         }
     }
 }

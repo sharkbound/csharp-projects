@@ -3,20 +3,20 @@ using TwitchLib;
 using TwitchLib.Models.Client;
 using TwitchLib.Models.API.v5.Users;
 using TwitchLib.Events.Client;
-using TwitchLibBot.Data.Resources;
 using TwitchLibBot.Core.Handlers;
 using TwitchLib.Services;
+using TwitchLibBot.Data;
 
 namespace TwitchLibBot
 {
     internal class TwitchBot
     {
-        readonly ConnectionCredentials credentials = new ConnectionCredentials(TwitchInfo.Nick, TwitchInfo.Oauth);
+        readonly ConnectionCredentials credentials = new ConnectionCredentials(Config.Instance.BotNickName, Config.Instance.Oauth);
         public TwitchClient client;
         
         internal void Connect()
         {
-            client = new TwitchClient(credentials, TwitchInfo.ChannelName, logging: false)
+            client = new TwitchClient(credentials, Config.Instance.ChannelName, logging: false)
             {
                 ChatThrottler = new MessageThrottler(10, TimeSpan.FromSeconds(30)),
                 WhisperThrottler = new MessageThrottler(10, TimeSpan.FromSeconds(30))
@@ -26,7 +26,7 @@ namespace TwitchLibBot
             client.OnConnectionError += Client_OnConnectionError;
             client.OnMessageReceived += Client_OnMessageReceived;
 
-            Console.WriteLine($"Connecting to channel {TwitchInfo.ChannelName} as {TwitchInfo.Nick}");
+            Console.WriteLine($"Connecting to channel {Config.Instance.ChannelName} as {Config.Instance.BotNickName}");
 
             client.Connect();
         }

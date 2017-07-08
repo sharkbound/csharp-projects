@@ -1,30 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Text;
-using System.Text.RegularExpressions;
-using Newtonsoft.Json.Linq;
-using static dotnet47.Methods.Util;
-using System.Numerics;
-using System.Threading;
+using System.Collections.Generic;
+using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
-using System.Collections;
-using System.Collections.Concurrent;
-using System.Threading.Tasks;
-using System.Globalization;
-using Timer = System.Timers.Timer;
-using MongoDB.Driver.Linq;
-using MongoDB.Driver;
-using System.Xml.Serialization;
+using System.Text;
+using System.IO;
+using System.Reflection;
 
 namespace dotnet47
 {
     class Program
     {
+        Program Instance;
         static bool waitForDebugKey = false;
         static void Main(string[] args)
         {
@@ -36,12 +24,11 @@ namespace dotnet47
                 Console.ReadKey();
             }
         }
-        
+
         private void Start()
         {
-
         }
     }
 }
-            
+
 
