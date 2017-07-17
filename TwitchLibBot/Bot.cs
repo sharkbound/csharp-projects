@@ -6,6 +6,8 @@ using TwitchLib.Events.Client;
 using TwitchLibBot.Core.Handlers;
 using TwitchLib.Services;
 using TwitchLibBot.Data;
+using System.Linq;
+using TwitchLibBot.Core.Helpers;
 
 namespace TwitchLibBot
 {
@@ -25,10 +27,22 @@ namespace TwitchLibBot
             client.OnLog += Client_OnLog;
             client.OnConnectionError += Client_OnConnectionError;
             client.OnMessageReceived += Client_OnMessageReceived;
+            client.OnMessageSent += Client_OnMessageSent;
+            client.OnWhisperSent += Client_OnWhisperSent;
 
             Console.WriteLine($"Connecting to channel {Config.Instance.ChannelName} as {Config.Instance.BotNickName}");
 
             client.Connect();
+        }
+
+        private void Client_OnWhisperSent(object sender, OnWhisperSentArgs e)
+        {
+            Console.WriteLine($"SENT PM >>> {e.Receiver} -> {e.Message}");
+        }
+
+        private void Client_OnMessageSent(object sender, OnMessageSentArgs e)
+        {
+            Console.WriteLine($"{Config.Instance.ChannelName} >>> {e.SentMessage.Message}");
         }
 
         private void Client_OnMessageReceived(object sender, OnMessageReceivedArgs e)

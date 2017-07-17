@@ -61,4 +61,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "C:\Users\owner\Desktop\Unturned\unturned\Servers\testserver\Rocket\Plugins\"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

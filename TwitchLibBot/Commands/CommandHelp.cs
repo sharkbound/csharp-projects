@@ -17,7 +17,7 @@ namespace TwitchLibBot.Commands
         public void Execute(ChatMessage msg, string[] parameters)
         {
             string commands = "Commands:  " + string.Join(", ", CommandHandler.Commands.Select(x => x.Command));
-            Chat.Send(commands);
+            ChannelChat.Send(commands);
         }
     }
 }

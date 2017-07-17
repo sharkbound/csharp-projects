@@ -11,6 +11,7 @@ using System.Threading;
 using TwitchLibBot.Core.Handlers;
 using TwitchLibBot.Core.Database;
 using TwitchLibBot.Data;
+using TwitchLibBot.Core.Helpers;
 
 namespace TwitchLibBot
 {
@@ -39,6 +40,26 @@ namespace TwitchLibBot
                     Bot.Disconnect();
                     Thread.Sleep(250);
                     break;
+                }
+                else if (key.Key == ConsoleKey.C)
+                {
+                    Console.Write("Enter text to send >>> ");
+                    string text = Console.ReadLine();
+
+                    if (text.StartsWith(".") || text.StartsWith("/"))
+                    {
+                        Console.WriteLine("Text cannot start with . or /");
+                        continue;
+                    }
+
+                    if (string.IsNullOrEmpty(text) || string.IsNullOrWhiteSpace(text))
+                    {
+                        Console.WriteLine("Text cannot be empty or only whitespace");
+                        continue;
+                    }
+
+                    ChannelChat.Send(text);
+                    continue;
                 }
             }
         }

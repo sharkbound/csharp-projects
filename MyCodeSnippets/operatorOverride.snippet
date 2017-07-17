@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>OverrideOperator</Title>
+      <Shortcut>OverrideOperator</Shortcut>
+      <Description>Code snippet for operator overriding</Description>
+      <Author>Kevin Hogg</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>operator</ID>
+          <ToolTip>operator</ToolTip>
+          <Function>operatorfunc</Function>
+          <Default>+</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>type</ToolTip>
+          <Function>typefunc</Function>
+          <Default>string</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[public static $type$ operator $operator$($type$ first)
+        {
+            return $end$; 
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

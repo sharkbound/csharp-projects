@@ -1,0 +1,12 @@
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\bin\Debug\TwitchLibBot.exe.config
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\bin\Debug\TwitchLibBot.exe
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\bin\Debug\TwitchLibBot.pdb
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\bin\Debug\Newtonsoft.Json.dll
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\bin\Debug\TwitchLib.dll
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\bin\Debug\websocket-sharp.dll
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\obj\Debug\TwitchLibBot.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\obj\Debug\TwitchLibBot.csproj.GenerateResource.Cache
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\obj\Debug\TwitchLibBot.exe
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\obj\Debug\TwitchLibBot.pdb
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\bin\Debug\LiteDB.dll
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\obj\Debug\TwitchLibBot.Data.Resources.TwitchInfo.resources

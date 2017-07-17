@@ -47,7 +47,7 @@
     <Compile Include="Commands\CommandCourse.cs" />
     <Compile Include="Commands\CommandCustoms.cs" />
     <Compile Include="Commands\CommandDiscord.cs" />
-    <Compile Include="Commands\CommandHeartLit.cs" />
+    <Compile Include="Commands\CommandHeartsLit.cs" />
     <Compile Include="Commands\CommandHearts.cs" />
     <Compile Include="Commands\CommandHelp.cs" />
     <Compile Include="Commands\CommandHint.cs" />

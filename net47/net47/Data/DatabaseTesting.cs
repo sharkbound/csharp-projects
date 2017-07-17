@@ -8,7 +8,7 @@ using MongoDB.Driver;
 using MongoId = MongoDB.Bson.Serialization.Attributes.BsonIdAttribute;
 using MongoObjectId = MongoDB.Bson.ObjectId;
 
-namespace dotnet47
+namespace net47
 {
     class DBT
     {

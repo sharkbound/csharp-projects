@@ -1,9 +1,0 @@
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\ConsoleApp1\bin\Release\netcoreapp1.1\Core.deps.json
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\ConsoleApp1\bin\Release\netcoreapp1.1\Core.runtimeconfig.json
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\ConsoleApp1\bin\Release\netcoreapp1.1\Core.runtimeconfig.dev.json
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\ConsoleApp1\bin\Release\netcoreapp1.1\Core.dll
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\ConsoleApp1\bin\Release\netcoreapp1.1\Core.pdb
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\ConsoleApp1\obj\Release\netcoreapp1.1\Core.csprojResolveAssemblyReference.cache
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\ConsoleApp1\obj\Release\netcoreapp1.1\Core.AssemblyInfo.cs
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\ConsoleApp1\obj\Release\netcoreapp1.1\Core.dll
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\ConsoleApp1\obj\Release\netcoreapp1.1\Core.pdb

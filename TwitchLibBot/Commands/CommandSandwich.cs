@@ -15,7 +15,7 @@ namespace TwitchLibBot.Commands
 
         public void Execute(ChatMessage msg, string[] parameters)
         {
-            Chat.Send("I'm a bot, not a personal assistant LUL");
+            ChannelChat.Send("I'm a bot, not a personal assistant LUL");
         }
     }
 }

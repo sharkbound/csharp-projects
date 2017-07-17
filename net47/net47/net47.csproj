@@ -56,9 +56,11 @@
     <Compile Include="Data\DatabaseTesting.cs" />
     <Compile Include="Extensions\IEnumExts.cs" />
     <Compile Include="Extensions\Extensions.cs" />
+    <Compile Include="Methods\CommandParserThing.cs" />
     <Compile Include="Methods\Util.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestingFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -79,6 +81,12 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>10.0.2</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{2eebb725-fcf3-407d-a71d-29e861b3777c}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

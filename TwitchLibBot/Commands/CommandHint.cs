@@ -15,7 +15,7 @@ namespace TwitchLibBot.Commands
 
         public void Execute(ChatMessage msg, string[] parameters)
         {
-            Chat.Send("Please do not directly give awnsers, instead hint them towards the awnser/solution.");
+            ChannelChat.Send("Please do not directly give awnsers, instead hint them towards the awnser/solution.");
         }
     }
 }

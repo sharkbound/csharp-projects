@@ -7,8 +7,13 @@ using Newtonsoft.Json;
 using System.Text;
 using System.IO;
 using System.Reflection;
+using System.Text.RegularExpressions;
+using System.Runtime.Serialization;
+using System.Linq.Expressions;
+using net47.Methods;
+using Core;
 
-namespace dotnet47
+namespace net47
 {
     class Program
     {
@@ -27,6 +32,7 @@ namespace dotnet47
 
         private void Start()
         {
+
         }
     }
 }

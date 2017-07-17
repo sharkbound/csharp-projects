@@ -8,7 +8,7 @@ using TwitchLibBot.Data;
 
 namespace TwitchLibBot.Core.Helpers
 {
-    class Chat
+    class ChannelChat
     {
         public static void Send(string msg)
         {

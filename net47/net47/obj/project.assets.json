@@ -82,6 +82,9 @@
             "rid": "win"
           }
         }
+      },
+      "Core/1.0.0": {
+        "type": "project"
       }
     },
     ".NETFramework,Version=v4.7/win": {
@@ -155,6 +158,9 @@
         "runtime": {
           "runtimes/win/lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll": {}
         }
+      },
+      "Core/1.0.0": {
+        "type": "project"
       }
     },
     ".NETFramework,Version=v4.7/win-x64": {
@@ -228,6 +234,9 @@
         "runtime": {
           "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll": {}
         }
+      },
+      "Core/1.0.0": {
+        "type": "project"
       }
     },
     ".NETFramework,Version=v4.7/win-x86": {
@@ -301,6 +310,9 @@
         "runtime": {
           "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll": {}
         }
+      },
+      "Core/1.0.0": {
+        "type": "project"
       }
     }
   },
@@ -433,10 +445,16 @@
         "system.runtime.interopservices.runtimeinformation.4.0.0.nupkg.sha512",
         "system.runtime.interopservices.runtimeinformation.nuspec"
       ]
+    },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7": [
+      "Core >= 1.0.0",
       "LiteDB >= 3.1.0",
       "MongoDB.Driver >= 2.4.4",
       "MySql.Data >= 6.9.9",
@@ -459,7 +477,11 @@
       ],
       "frameworks": {
         "net47": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\owner\\Desktop\\GitHub\\csharp-projects\\net47\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\owner\\Desktop\\GitHub\\csharp-projects\\net47\\Core\\Core.csproj"
+            }
+          }
         }
       }
     },

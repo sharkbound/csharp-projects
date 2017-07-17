@@ -17,11 +17,16 @@ namespace RocketDummy
     public class Plugin : RocketPlugin<Config>
     {
         public static Plugin Instance { get; private set; }
-        Timer timer;
 
         protected override void Load()
         {
-
+            ushort id = 1475;
+            ItemMeleeAsset a = (ItemMeleeAsset)Assets.find(EAssetType.ITEM, id);
+            Console.WriteLine($"ORIG {a.isInvulnerable}");
+            Console.WriteLine("SETTING TO " + !a.isInvulnerable);
+            a.isInvulnerable = !a.isInvulnerable;
+            a = null;
+            Console.WriteLine("NEW " + ((ItemMeleeAsset)Assets.find(EAssetType.ITEM, id)).isInvulnerable);
         }
 
         protected override void Unload()

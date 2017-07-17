@@ -20,7 +20,7 @@ namespace TwitchLibBot.Commands
         {
             if (parameters.Length == 0)
             {
-                Chat.Send(usage);
+                ChannelChat.Send(usage);
                 return;
             }
 
@@ -31,39 +31,45 @@ namespace TwitchLibBot.Commands
 
                 if (command == null)
                 {
-                    Chat.Send("Command not found");
+                    ChannelChat.Send("Command not found");
                     return;
                 }
                 Database.DeleteCustomCommand(command);
-                Chat.Send($"Deleted Command {command.CmdName}");
+                ChannelChat.Send($"Deleted Command {command.CmdName}");
                 return;
             }
 
             if (!(parameters.Length >= 3))
             {
-                Chat.Send(usage);
+                ChannelChat.Send(usage);
                 return;
             }
 
             string CName = parameters[1].ToLower();
             string resp = string.Join(" ", parameters.Skip(2));
 
+            if (CName.StartsWith("/") || CName.StartsWith(".") || resp.StartsWith("/") || resp.StartsWith("."))
+            {
+                ChannelChat.Send("Command names or responses cannot start with . or /");
+                return;
+            }
+
             if (parameters[0].ToLower() == "add")
             {
                 if (CommandHandler.Commands.FirstOrDefault(x => x.Command.ToLower() == CName) != null)
                 {
-                    Chat.Send($"Command {CName} already exist");
+                    ChannelChat.Send($"Command {CName} already exist");
                     return;
                 }
                 Database.AddOrUpdateCustomCommand(new Data.CustomCommand { CmdName = CName, Reponse = resp });
-                Chat.Send($"Added Command {CName}");
+                ChannelChat.Send($"Added Command {CName}");
             }
             else if (parameters[0].ToLower() == "edit")
             {
                 var cmd = Database.GetCustomCommand(CName);
                 cmd.Reponse = resp;
                 Database.AddOrUpdateCustomCommand(cmd);
-                Chat.Send($"Editted Command {CName}");
+                ChannelChat.Send($"Editted Command {CName}");
             }
         }
     }

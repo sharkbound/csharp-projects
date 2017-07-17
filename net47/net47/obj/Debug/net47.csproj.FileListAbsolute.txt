@@ -11,3 +11,6 @@ C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Debug\MongoDB.Driv
 C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Debug\MongoDB.Driver.Core.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Debug\MySql.Data.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Debug\Core.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Debug\Core.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Debug\Core.exe.config

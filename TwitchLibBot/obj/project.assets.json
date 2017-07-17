@@ -1,0 +1,308 @@
+{
+  "version": 2,
+  "targets": {
+    ".NETFramework,Version=v4.7": {
+      "LiteDB/3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net35/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/net35/LiteDB.dll": {}
+        }
+      },
+      "Newtonsoft.Json/10.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "TwitchLib/1.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1",
+          "WebSocketSharp-NonPreRelease": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/TwitchLib.dll": {}
+        },
+        "runtime": {
+          "lib/net45/TwitchLib.dll": {}
+        }
+      },
+      "WebSocketSharp-NonPreRelease/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/websocket-sharp.dll": {}
+        },
+        "runtime": {
+          "lib/net35/websocket-sharp.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7/win": {
+      "LiteDB/3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net35/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/net35/LiteDB.dll": {}
+        }
+      },
+      "Newtonsoft.Json/10.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "TwitchLib/1.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1",
+          "WebSocketSharp-NonPreRelease": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/TwitchLib.dll": {}
+        },
+        "runtime": {
+          "lib/net45/TwitchLib.dll": {}
+        }
+      },
+      "WebSocketSharp-NonPreRelease/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/websocket-sharp.dll": {}
+        },
+        "runtime": {
+          "lib/net35/websocket-sharp.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7/win-x64": {
+      "LiteDB/3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net35/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/net35/LiteDB.dll": {}
+        }
+      },
+      "Newtonsoft.Json/10.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "TwitchLib/1.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1",
+          "WebSocketSharp-NonPreRelease": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/TwitchLib.dll": {}
+        },
+        "runtime": {
+          "lib/net45/TwitchLib.dll": {}
+        }
+      },
+      "WebSocketSharp-NonPreRelease/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/websocket-sharp.dll": {}
+        },
+        "runtime": {
+          "lib/net35/websocket-sharp.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7/win-x86": {
+      "LiteDB/3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net35/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/net35/LiteDB.dll": {}
+        }
+      },
+      "Newtonsoft.Json/10.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "TwitchLib/1.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1",
+          "WebSocketSharp-NonPreRelease": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/TwitchLib.dll": {}
+        },
+        "runtime": {
+          "lib/net45/TwitchLib.dll": {}
+        }
+      },
+      "WebSocketSharp-NonPreRelease/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/websocket-sharp.dll": {}
+        },
+        "runtime": {
+          "lib/net35/websocket-sharp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LiteDB/3.1.1": {
+      "sha512": "VA03iV8N8YeBZo5GzjCRE5p2yulVxHcvkQK0MH2E9npjUoKihG/HiQ0SjP3t2SgkDVtW6C77mCm4CeWfiQ3iUg==",
+      "type": "package",
+      "path": "litedb/3.1.1",
+      "files": [
+        "lib/net35/LiteDB.dll",
+        "lib/net35/LiteDB.xml",
+        "lib/netstandard1.4/LiteDB.dll",
+        "lib/netstandard1.4/LiteDB.xml",
+        "litedb.3.1.1.nupkg.sha512",
+        "litedb.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/10.0.3": {
+      "sha512": "wBM7i7i3U2WX0ecor4zdVGvgrwFUjuigBoHKiL+nH39fCOpCPjBY3RDqJM32edvdyTAVdjzlccHsg41+/+zpSA==",
+      "type": "package",
+      "path": "newtonsoft.json/10.0.3",
+      "files": [
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.10.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "TwitchLib/1.5.2": {
+      "sha512": "OUmABqwEMgKjaA/3O+4jFi1eR9Mkzc6c3tylPNax0JNcChlIQ8PNVfttUIYgSI1i30vlhzqh3Ey8cf1+WWsn1w==",
+      "type": "package",
+      "path": "twitchlib/1.5.2",
+      "files": [
+        "TwitchLib.XML",
+        "lib/net45/TwitchLib.XML",
+        "lib/net45/TwitchLib.dll",
+        "twitchlib.1.5.2.nupkg.sha512",
+        "twitchlib.nuspec"
+      ]
+    },
+    "WebSocketSharp-NonPreRelease/1.0.0": {
+      "sha512": "O1TLFp8hwgVFEI0bjAGLAdsGwtT+yggdRYAlOSw+ZCtwHVc5LmUBU52H+KgG37med9e11lsxmlNzzlF6/hW+Bg==",
+      "type": "package",
+      "path": "websocketsharp-nonprerelease/1.0.0",
+      "files": [
+        "lib/net35/websocket-sharp.dll",
+        "websocketsharp-nonprerelease.1.0.0.nupkg.sha512",
+        "websocketsharp-nonprerelease.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7": [
+      "LiteDB >= 3.1.1",
+      "Newtonsoft.Json >= 10.0.3",
+      "TwitchLib >= 1.5.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\owner\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\owner\\Desktop\\Projects\\VSRepo\\PrivateRepo\\TwitchLibBot\\TwitchLibBot.csproj",
+      "projectName": "TwitchLibBot",
+      "projectPath": "C:\\Users\\owner\\Desktop\\Projects\\VSRepo\\PrivateRepo\\TwitchLibBot\\TwitchLibBot.csproj",
+      "outputPath": "C:\\Users\\owner\\Desktop\\Projects\\VSRepo\\PrivateRepo\\TwitchLibBot\\obj\\",
+      "projectStyle": "PackageReference",
+      "originalTargetFrameworks": [
+        "net47"
+      ],
+      "frameworks": {
+        "net47": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "dependencies": {
+      "LiteDB": {
+        "target": "Package",
+        "version": "3.1.1"
+      },
+      "Newtonsoft.Json": {
+        "target": "Package",
+        "version": "10.0.3"
+      },
+      "TwitchLib": {
+        "target": "Package",
+        "version": "1.5.2"
+      }
+    },
+    "frameworks": {
+      "net47": {
+        "dependencies": {
+          "LiteDB": {
+            "target": "Package",
+            "version": "3.1.1"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "10.0.3"
+          },
+          "TwitchLib": {
+            "target": "Package",
+            "version": "1.5.2"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

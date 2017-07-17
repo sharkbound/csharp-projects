@@ -20,7 +20,7 @@ namespace TwitchLibBot.Commands
             {
                 message += $"{c.CmdName}, ";
             }
-            Chat.Send(message == "Custom Commands: " ? "No Custom Commands Found" : message);
+            ChannelChat.Send(message == "Custom Commands: " ? "No Custom Commands Found" : message);
         }
     }
 }

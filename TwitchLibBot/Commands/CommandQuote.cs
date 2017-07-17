@@ -21,22 +21,22 @@ namespace TwitchLibBot.Commands
         {
             if (parameters.Length == 0)
             {
-                Chat.Send(usage);
+                ChannelChat.Send(usage);
                 return;
             }
 
             if (int.TryParse(parameters[0], out int id))
             {
                 Quote quote = Database.GetQuote(id);
-                if (quote != null) Chat.Send(quote.Text);
-                else Chat.Send($"No quote found by id: {id}");
+                if (quote != null) ChannelChat.Send(quote.Text);
+                else ChannelChat.Send($"No quote found by id: {id}");
                 return;
             }
             else if (parameters[0].ToLower() == "random")
             {
                 Quote[] quotes = Database.QuoteDB.FindAll().ToArray();
                 string quote = quotes.Length == 0 ? "No quotes found" : quotes[r.Next(quotes.Length)].Text;
-                Chat.Send(quote);
+                ChannelChat.Send(quote);
                 return;
             }
 
@@ -44,7 +44,7 @@ namespace TwitchLibBot.Commands
             bool isEditOrDel = parameters[0].ToLower() == "del" || parameters[0].ToLower() == "edit";
             if (!int.TryParse(parameters[1], out quoteId) && isEditOrDel)
             {
-                Chat.Send("Quote ID must be numeric");
+                ChannelChat.Send("Quote ID must be numeric");
                 return;
             }
             
@@ -53,14 +53,14 @@ namespace TwitchLibBot.Commands
             {
                 case "del" when parameters.Length == 2:
                     if (q != null) Database.DeleteQuote(q);
-                    Chat.Send(q != null ? $"Deleted quote {quoteId}" : $"Could not find any quotes by id of {quoteId}");
+                    ChannelChat.Send(q != null ? $"Deleted quote {quoteId}" : $"Could not find any quotes by id of {quoteId}");
                     break;
 
                 case "add" when parameters.Length >= 1:
                     string addText = string.Join(" ", parameters.Skip(1));
                     if (q == null)
                         Database.AddOrUpdateQuote(new Quote { Text = addText });
-                    Chat.Send(q == null ? $"Added quote \"{addText}\" with id: {Database.QuoteDB.FindAll().LastOrDefault().Id}" : $"Quote already exist");
+                    ChannelChat.Send(q == null ? $"Added quote \"{addText}\" with id: {Database.QuoteDB.FindAll().LastOrDefault().Id}" : $"Quote already exist");
                     break;
 
                 case "edit" when parameters.Length >= 2:
@@ -70,11 +70,11 @@ namespace TwitchLibBot.Commands
                         q.Text = editText;
                         Database.AddOrUpdateQuote(q);
                     }
-                    Chat.Send(q != null ? $"Updated quote {quoteId}" : $"Quote {quoteId} does not exist");
+                    ChannelChat.Send(q != null ? $"Updated quote {quoteId}" : $"Quote {quoteId} does not exist");
                     break;
 
                 default:
-                    Chat.Send("Invalid parameter, Usage: " + usage);
+                    ChannelChat.Send("Invalid parameter, Usage: " + usage);
                     break;
             }
         }

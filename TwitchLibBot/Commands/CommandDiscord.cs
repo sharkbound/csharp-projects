@@ -15,7 +15,7 @@ namespace TwitchLibBot.Commands
 
         public void Execute(ChatMessage msg, string[] parameters)
         {
-            Chat.Send("Discord Server: https://discord.gg/5DaYe6j");
+            ChannelChat.Send("Discord Server: https://discord.gg/5DaYe6j");
         }
     }
 }

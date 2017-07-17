@@ -22,7 +22,7 @@ namespace TwitchLibBot.Commands
             for (int i = 0; i < 7; i++)
                 message += $"{emotes[r.Next(emotes.Length)]} ";
 
-            Chat.Send(message);
+            ChannelChat.Send(message);
         }
     }
 }

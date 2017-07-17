@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 
-namespace dotnet47.Methods
+namespace net47.Methods
 {
     class Util
     {

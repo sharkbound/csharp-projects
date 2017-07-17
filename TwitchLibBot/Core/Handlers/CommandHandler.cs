@@ -22,19 +22,25 @@ namespace TwitchLibBot.Core.Handlers
 
         internal static IEnumerable<IChatCommand> Commands { get; private set; }
 
+
+        internal static string[] GetParameters(string chatMsg)
+        {
+            return Regex.Matches(chatMsg, @"[\""](.+?)[\""]|([^ ]+)", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.ExplicitCapture).Cast<Match>().Select(x => x.Value.Trim('"').Trim()).ToArray();
+        }
+
         public static void ProcessMessage(ChatMessage chatMsg)
         {
             string msg = chatMsg.Message.ToLower();
             try
             {
-                string[] parameters = Regex.Matches(chatMsg.Message, @"[\""](.+?)[\""]|([^ ]+)", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.ExplicitCapture).Cast<Match>().Select(x => x.Value.Trim('"').Trim()).ToArray();
+                string[] parameters = GetParameters(chatMsg.Message);
                 var foundCommand = Commands.FirstOrDefault(c => c.Command == msg.Split().FirstOrDefault());
                 foundCommand?.Execute(chatMsg, parameters.Skip(1).ToArray());
 
                 var customCommand = Database.Database.GetCustomCommand(parameters.FirstOrDefault().ToLower());
                 if (foundCommand == null && customCommand != null)
                 {
-                    Chat.Send(Chat.FormatCustomCommandResponse(customCommand.Reponse, chatMsg));
+                    ChannelChat.Send(ChannelChat.FormatCustomCommandResponse(customCommand.Reponse, chatMsg));
                 }
             }
             catch (Exception e)

@@ -1,0 +1,11 @@
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\bin\Release\TwitchLibBot.exe
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\bin\Release\Newtonsoft.Json.dll
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\bin\Release\TwitchLib.dll
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\bin\Release\websocket-sharp.dll
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\bin\Release\LiteDB.dll
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\bin\Release\TwitchLibBot.exe.config
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\obj\Release\TwitchLibBot.csproj.TwitchLibBot.exe.config
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\obj\Release\TwitchLibBot.exe
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\obj\Release\TwitchLibBot.pdb
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\bin\Release\TwitchLibBot.pdb
+C:\Users\owner\Desktop\Projects\VSRepo\PrivateRepo\TwitchLibBot\obj\Release\TwitchLibBot.csprojResolveAssemblyReference.cache

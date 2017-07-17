@@ -15,7 +15,7 @@ namespace TwitchLibBot.Commands
 
         public void Execute(ChatMessage msg, string[] parameters)
         {
-            Chat.Send("Current Java Course: http://mooc.fi/english.html");
+            ChannelChat.Send("Current Java Course: http://mooc.fi/english.html");
         }
     }
 }
