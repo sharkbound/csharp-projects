@@ -20,7 +20,7 @@ namespace CodingWarsSolutions.KYU._4
                 index++;
             }
             nList = nList.Distinct().OrderBy(x => x).ToList();
-            return nList.ElementAt(n);
+            return nList[n];
         }
     }
 

@@ -1,0 +1,6 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\ConsoleMenuSystem\ConsoleMenuSystem\obj\Debug\ConsoleMenuSystem.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\ConsoleMenuSystem\ConsoleMenuSystem\bin\Debug\ConsoleMenuSystem.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\ConsoleMenuSystem\ConsoleMenuSystem\bin\Debug\ConsoleMenuSystem.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\ConsoleMenuSystem\ConsoleMenuSystem\bin\Debug\ConsoleMenuSystem.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\ConsoleMenuSystem\ConsoleMenuSystem\obj\Debug\ConsoleMenuSystem.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\ConsoleMenuSystem\ConsoleMenuSystem\obj\Debug\ConsoleMenuSystem.pdb

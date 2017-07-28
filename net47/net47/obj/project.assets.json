@@ -11,41 +11,6 @@
           "lib/net35/LiteDB.dll": {}
         }
       },
-      "MongoDB.Bson/2.4.4": {
-        "type": "package",
-        "compile": {
-          "lib/net45/MongoDB.Bson.dll": {}
-        },
-        "runtime": {
-          "lib/net45/MongoDB.Bson.dll": {}
-        }
-      },
-      "MongoDB.Driver/2.4.4": {
-        "type": "package",
-        "dependencies": {
-          "MongoDB.Bson": "2.4.4",
-          "MongoDB.Driver.Core": "2.4.4"
-        },
-        "compile": {
-          "lib/net45/MongoDB.Driver.dll": {}
-        },
-        "runtime": {
-          "lib/net45/MongoDB.Driver.dll": {}
-        }
-      },
-      "MongoDB.Driver.Core/2.4.4": {
-        "type": "package",
-        "dependencies": {
-          "MongoDB.Bson": "2.4.4",
-          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0"
-        },
-        "compile": {
-          "lib/net45/MongoDB.Driver.Core.dll": {}
-        },
-        "runtime": {
-          "lib/net45/MongoDB.Driver.Core.dll": {}
-        }
-      },
       "MySql.Data/6.9.9": {
         "type": "package",
         "compile": {
@@ -62,25 +27,6 @@
         },
         "runtime": {
           "lib/net45/Newtonsoft.Json.dll": {}
-        }
-      },
-      "System.Runtime.InteropServices.RuntimeInformation/4.0.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {}
-        },
-        "runtime": {
-          "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/unix/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
-          "runtimes/win/lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
         }
       },
       "Core/1.0.0": {
@@ -97,41 +43,6 @@
           "lib/net35/LiteDB.dll": {}
         }
       },
-      "MongoDB.Bson/2.4.4": {
-        "type": "package",
-        "compile": {
-          "lib/net45/MongoDB.Bson.dll": {}
-        },
-        "runtime": {
-          "lib/net45/MongoDB.Bson.dll": {}
-        }
-      },
-      "MongoDB.Driver/2.4.4": {
-        "type": "package",
-        "dependencies": {
-          "MongoDB.Bson": "2.4.4",
-          "MongoDB.Driver.Core": "2.4.4"
-        },
-        "compile": {
-          "lib/net45/MongoDB.Driver.dll": {}
-        },
-        "runtime": {
-          "lib/net45/MongoDB.Driver.dll": {}
-        }
-      },
-      "MongoDB.Driver.Core/2.4.4": {
-        "type": "package",
-        "dependencies": {
-          "MongoDB.Bson": "2.4.4",
-          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0"
-        },
-        "compile": {
-          "lib/net45/MongoDB.Driver.Core.dll": {}
-        },
-        "runtime": {
-          "lib/net45/MongoDB.Driver.Core.dll": {}
-        }
-      },
       "MySql.Data/6.9.9": {
         "type": "package",
         "compile": {
@@ -148,15 +59,6 @@
         },
         "runtime": {
           "lib/net45/Newtonsoft.Json.dll": {}
-        }
-      },
-      "System.Runtime.InteropServices.RuntimeInformation/4.0.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {}
-        },
-        "runtime": {
-          "runtimes/win/lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll": {}
         }
       },
       "Core/1.0.0": {
@@ -173,41 +75,6 @@
           "lib/net35/LiteDB.dll": {}
         }
       },
-      "MongoDB.Bson/2.4.4": {
-        "type": "package",
-        "compile": {
-          "lib/net45/MongoDB.Bson.dll": {}
-        },
-        "runtime": {
-          "lib/net45/MongoDB.Bson.dll": {}
-        }
-      },
-      "MongoDB.Driver/2.4.4": {
-        "type": "package",
-        "dependencies": {
-          "MongoDB.Bson": "2.4.4",
-          "MongoDB.Driver.Core": "2.4.4"
-        },
-        "compile": {
-          "lib/net45/MongoDB.Driver.dll": {}
-        },
-        "runtime": {
-          "lib/net45/MongoDB.Driver.dll": {}
-        }
-      },
-      "MongoDB.Driver.Core/2.4.4": {
-        "type": "package",
-        "dependencies": {
-          "MongoDB.Bson": "2.4.4",
-          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0"
-        },
-        "compile": {
-          "lib/net45/MongoDB.Driver.Core.dll": {}
-        },
-        "runtime": {
-          "lib/net45/MongoDB.Driver.Core.dll": {}
-        }
-      },
       "MySql.Data/6.9.9": {
         "type": "package",
         "compile": {
@@ -224,15 +91,6 @@
         },
         "runtime": {
           "lib/net45/Newtonsoft.Json.dll": {}
-        }
-      },
-      "System.Runtime.InteropServices.RuntimeInformation/4.0.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {}
-        },
-        "runtime": {
-          "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll": {}
         }
       },
       "Core/1.0.0": {
@@ -249,41 +107,6 @@
           "lib/net35/LiteDB.dll": {}
         }
       },
-      "MongoDB.Bson/2.4.4": {
-        "type": "package",
-        "compile": {
-          "lib/net45/MongoDB.Bson.dll": {}
-        },
-        "runtime": {
-          "lib/net45/MongoDB.Bson.dll": {}
-        }
-      },
-      "MongoDB.Driver/2.4.4": {
-        "type": "package",
-        "dependencies": {
-          "MongoDB.Bson": "2.4.4",
-          "MongoDB.Driver.Core": "2.4.4"
-        },
-        "compile": {
-          "lib/net45/MongoDB.Driver.dll": {}
-        },
-        "runtime": {
-          "lib/net45/MongoDB.Driver.dll": {}
-        }
-      },
-      "MongoDB.Driver.Core/2.4.4": {
-        "type": "package",
-        "dependencies": {
-          "MongoDB.Bson": "2.4.4",
-          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0"
-        },
-        "compile": {
-          "lib/net45/MongoDB.Driver.Core.dll": {}
-        },
-        "runtime": {
-          "lib/net45/MongoDB.Driver.Core.dll": {}
-        }
-      },
       "MySql.Data/6.9.9": {
         "type": "package",
         "compile": {
@@ -300,15 +123,6 @@
         },
         "runtime": {
           "lib/net45/Newtonsoft.Json.dll": {}
-        }
-      },
-      "System.Runtime.InteropServices.RuntimeInformation/4.0.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {}
-        },
-        "runtime": {
-          "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll": {}
         }
       },
       "Core/1.0.0": {
@@ -328,48 +142,6 @@
         "lib/netstandard1.4/LiteDB.xml",
         "litedb.3.1.0.nupkg.sha512",
         "litedb.nuspec"
-      ]
-    },
-    "MongoDB.Bson/2.4.4": {
-      "sha512": "BavFx+rmR5k+dx14tC23KTyjCPkASvTQ1WxzLYHt2w3Mkqel5lJV6+gWzWV3DX9hnTewCC09OKqNqckiJl4sIw==",
-      "type": "package",
-      "path": "mongodb.bson/2.4.4",
-      "files": [
-        "License.rtf",
-        "lib/net45/MongoDB.Bson.dll",
-        "lib/net45/MongoDB.Bson.xml",
-        "lib/netstandard1.5/MongoDB.Bson.dll",
-        "lib/netstandard1.5/MongoDB.Bson.xml",
-        "mongodb.bson.2.4.4.nupkg.sha512",
-        "mongodb.bson.nuspec"
-      ]
-    },
-    "MongoDB.Driver/2.4.4": {
-      "sha512": "sG+4H7732fG3XGCXWsxwuUQBvnbVO/bzzxBVZHtHa5R2UDsRXR7BfQxAS/d9Qk8FlNDHOjTjz+GzWTgzjgopQw==",
-      "type": "package",
-      "path": "mongodb.driver/2.4.4",
-      "files": [
-        "License.rtf",
-        "lib/net45/MongoDB.Driver.dll",
-        "lib/net45/MongoDB.Driver.xml",
-        "lib/netstandard1.5/MongoDB.Driver.dll",
-        "lib/netstandard1.5/MongoDB.Driver.xml",
-        "mongodb.driver.2.4.4.nupkg.sha512",
-        "mongodb.driver.nuspec"
-      ]
-    },
-    "MongoDB.Driver.Core/2.4.4": {
-      "sha512": "fVjXuQE5Qe2P38xz9wz5V0QhT54+ZT78/JUKMMbIXOKYVFgkzEOE7UU6ZsbC/AbR4lwGIpRQZoiv7wW3rJb3xQ==",
-      "type": "package",
-      "path": "mongodb.driver.core/2.4.4",
-      "files": [
-        "License.rtf",
-        "lib/net45/MongoDB.Driver.Core.dll",
-        "lib/net45/MongoDB.Driver.Core.xml",
-        "lib/netstandard1.5/MongoDB.Driver.Core.dll",
-        "lib/netstandard1.5/MongoDB.Driver.Core.xml",
-        "mongodb.driver.core.2.4.4.nupkg.sha512",
-        "mongodb.driver.core.nuspec"
       ]
     },
     "MySql.Data/6.9.9": {
@@ -414,38 +186,6 @@
         "tools/install.ps1"
       ]
     },
-    "System.Runtime.InteropServices.RuntimeInformation/4.0.0": {
-      "sha512": "hWPhJxc453RCa8Z29O91EmfGeZIHX1ZH2A8L6lYQVSaKzku2DfArSfMEb1/MYYzPQRJZeu0c9dmYeJKxW5Fgng==",
-      "type": "package",
-      "path": "system.runtime.interopservices.runtimeinformation/4.0.0",
-      "files": [
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
-        "lib/win8/System.Runtime.InteropServices.RuntimeInformation.dll",
-        "lib/wpa81/System.Runtime.InteropServices.RuntimeInformation.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/aot/lib/netcore50/System.Runtime.InteropServices.RuntimeInformation.dll",
-        "runtimes/unix/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
-        "runtimes/win/lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
-        "runtimes/win/lib/netcore50/System.Runtime.InteropServices.RuntimeInformation.dll",
-        "runtimes/win/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
-        "system.runtime.interopservices.runtimeinformation.4.0.0.nupkg.sha512",
-        "system.runtime.interopservices.runtimeinformation.nuspec"
-      ]
-    },
     "Core/1.0.0": {
       "type": "project",
       "path": "../Core/Core.csproj",
@@ -456,7 +196,6 @@
     ".NETFramework,Version=v4.7": [
       "Core >= 1.0.0",
       "LiteDB >= 3.1.0",
-      "MongoDB.Driver >= 2.4.4",
       "MySql.Data >= 6.9.9",
       "Newtonsoft.Json >= 10.0.2"
     ]
@@ -490,10 +229,6 @@
         "target": "Package",
         "version": "3.1.0"
       },
-      "MongoDB.Driver": {
-        "target": "Package",
-        "version": "2.4.4"
-      },
       "MySql.Data": {
         "target": "Package",
         "version": "6.9.9"
@@ -509,10 +244,6 @@
           "LiteDB": {
             "target": "Package",
             "version": "3.1.0"
-          },
-          "MongoDB.Driver": {
-            "target": "Package",
-            "version": "2.4.4"
           },
           "MySql.Data": {
             "target": "Package",

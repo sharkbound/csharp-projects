@@ -1,0 +1,5 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\Core\bin\Release\Core.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\Core\bin\Release\Core.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\Core\bin\Release\Core.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\Core\obj\Release\Core.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\Core\obj\Release\Core.pdb

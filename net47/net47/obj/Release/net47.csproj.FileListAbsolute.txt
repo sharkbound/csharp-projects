@@ -6,3 +6,11 @@ C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\obj\Release\net47.exe
 C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\obj\Release\net47.pdb
 C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\obj\Release\net47.csprojResolveAssemblyReference.cache
 C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Release\LiteDB.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Release\MongoDB.Bson.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Release\MongoDB.Driver.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Release\MongoDB.Driver.Core.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Release\MySql.Data.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Release\Core.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Release\Core.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\Release\Core.exe.config

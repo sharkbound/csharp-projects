@@ -1,40 +1,31 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Linq;
 using System.Collections.Generic;
-using MySql.Data.MySqlClient;
-using Newtonsoft.Json;
-using System.Text;
-using System.IO;
-using System.Reflection;
 using System.Text.RegularExpressions;
-using System.Runtime.Serialization;
-using System.Linq.Expressions;
 using net47.Methods;
-using Core;
+using System.Globalization;
+using System.IO;
+using System.Numerics;
+using System.Reflection;
+using System.Collections;
+using System.Text;
+using net47.Extensions;
+using System.Linq;
+using System.Threading;
 
 namespace net47
 {
     class Program
     {
-        Program Instance;
-        static bool waitForDebugKey = false;
         static void Main(string[] args)
         {
             new Program().Start();
-
-            if (Debugger.IsAttached && waitForDebugKey)
-            {
-                Console.WriteLine("Press any key to exit...");
-                Console.ReadKey();
-            }
         }
+        Random r = new Random();
 
-        private void Start()
+        void Start()
         {
 
         }
     }
 }
-
-
