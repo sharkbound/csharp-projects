@@ -1,4 +1,0 @@
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\x64\Release\net47.exe.config
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\x64\Release\net47.exe
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\bin\x64\Release\Newtonsoft.Json.dll
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\net47\obj\x64\Release\net47.exe

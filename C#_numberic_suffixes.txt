@@ -1,0 +1,6 @@
+F:  float
+D:  double
+U:  uint
+L:  long
+UL: ulong
+M:  decimal

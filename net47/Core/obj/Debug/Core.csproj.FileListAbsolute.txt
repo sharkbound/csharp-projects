@@ -1,5 +1,0 @@
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\Core\bin\Debug\Core.exe.config
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\Core\bin\Debug\Core.exe
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\Core\bin\Debug\Core.pdb
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\Core\obj\Debug\Core.exe
-C:\Users\owner\Desktop\GitHub\csharp-projects\net47\Core\obj\Debug\Core.pdb
