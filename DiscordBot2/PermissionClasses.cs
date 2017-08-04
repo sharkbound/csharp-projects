@@ -12,6 +12,7 @@ namespace DiscordBot2
     public sealed class Permissions
     {
         public List<PermissionGroup> Groups = new List<PermissionGroup>();
+        public static Permissions Instance { get; private set; }
 
         public static void CreateConfigIfNotExist()
         {
@@ -34,12 +35,11 @@ namespace DiscordBot2
             return File.ReadAllText(Config.PermissionsFilePath);
         }
 
-        public static Permissions GetPermissions()
+        public static void Load()
         {
             CreateConfigIfNotExist();
-            Permissions p = new Permissions { };
-            JsonConvert.PopulateObject(ReadPermissionsFile(), p);
-            return p;
+            Instance = new Permissions();
+            JsonConvert.PopulateObject(ReadPermissionsFile(), Instance);
         }
 
         public static void PrintAllPermissionValues(Permissions p)

@@ -22,7 +22,7 @@ namespace DiscordBot2.Commands
         public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
         {
             await msg.Channel.SendMessageAsync("**Shutting Down...**");
-            await Program.bot.DisconnectAsync();
+            await Program.bot.StopAsync();
             Events.TriggerOnBotShutdown();
             Program.cancelSrc.Cancel();
         }

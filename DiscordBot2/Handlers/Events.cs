@@ -20,17 +20,17 @@ namespace DiscordBot2.Handlers
 
         public static void TriggerOnCommandExecuted(SocketUserMessage msg, SocketUser user, string commandname, string[] parameters)
         {
-            OnCommandExecuted(msg, user, commandname, parameters);
+            OnCommandExecuted?.Invoke(msg, user, commandname, parameters);
         }
 
         public static void TriggerOnBotSendMessage(string msg)
         {
-            OnBotSendMessage(msg);
+            OnBotSendMessage?.Invoke(msg);
         }
 
         public static void TriggerOnBotShutdown()
         {
-            OnBotShutdown();
+            OnBotShutdown?.Invoke();
         }
     }
 }

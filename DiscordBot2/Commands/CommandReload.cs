@@ -20,7 +20,7 @@ namespace DiscordBot2.Commands
 
         public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
         {
-            Program.perms = Permissions.GetPermissions();
+            Permissions.Load();
             await msg.Channel.SendMessageAsync("Reloaded permissions");
         }
     }

@@ -16,7 +16,7 @@ namespace DiscordBot2.Utils
             {
                 groups = new List<PermissionGroup>();
             }
-            groups.Add(Program.perms.Groups.SingleOrDefault(g => g.GroupName.ToLower() == "default"));
+            groups.Add(Permissions.Instance.Groups.SingleOrDefault(g => g.GroupName.ToLower() == "default"));
 
             var result = groups.Where(g => g.Commands.Contains(permission) || g.Commands.Contains("*"))?.ToList();
             return result != null && result.Count != 0;
@@ -24,12 +24,12 @@ namespace DiscordBot2.Utils
 
         public static bool HasPermission(string id, string permission)
         {
-            List<PermissionGroup> groups = Program.perms.Groups.Where(g => g.Members.Contains(id))?.ToList();
+            List<PermissionGroup> groups = Permissions.Instance.Groups.Where(g => g.Members.Contains(id))?.ToList();
             if (groups.Equals(null))
             {
                 groups = new List<PermissionGroup>();
             }
-            groups.Add(Program.perms.Groups.SingleOrDefault(g => g.GroupName.ToLower() == "default"));
+            groups.Add(Permissions.Instance.Groups.SingleOrDefault(g => g.GroupName.ToLower() == "default"));
 
             var result = groups.Where(g => g.Commands.Contains(permission) || g.Commands.Contains("*"))?.ToList();
             return result != null && result.Count != 0;
@@ -38,7 +38,7 @@ namespace DiscordBot2.Utils
         public static List<PermissionGroup> GetUserGroups(SocketUser user)
         {
             //var userGroups = Program.perms.Groups.Where(g => g.Members.Contains(user.Id.ToString()))?.ToList();
-            return Program.perms.Groups.Where(g => g.Members.Contains(user.Id.ToString()))?.ToList();
+            return Permissions.Instance.Groups.Where(g => g.Members.Contains(user.Id.ToString()))?.ToList();
         }
     }
 }

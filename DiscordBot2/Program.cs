@@ -47,11 +47,12 @@ namespace DiscordBot2
         public static DiscordSocketClient bot { get; private set; }
         public static CancellationTokenSource cancelSrc = new CancellationTokenSource();
         public static Config cfg = Config.GetConfig();
-        public static Permissions perms = Permissions.GetPermissions();
         public static CommandHandler commandHandler = new CommandHandler(bot, cfg.CommandPrefix);
 
         public async Task Start()
         {
+            Permissions.Load();
+
             Events.OnCommandExecuted += event_CommandRun;
             Events.OnBotSendMessage += Events_OnBotSendMessage;
 
@@ -64,7 +65,7 @@ namespace DiscordBot2
             });
 
             await bot.LoginAsync(TokenType.Bot, cfg.Token);
-            await bot.ConnectAsync();
+            await bot.StartAsync();
 
             bot.MessageReceived += async msg =>
             {
@@ -86,7 +87,12 @@ namespace DiscordBot2
                 }
             };
 
-            Logger.LogInfo($"Bot logged in as \n\tUser: {bot.CurrentUser.Username}\n\n", ConsoleColor.Cyan);
+            bot.Ready += async () =>
+            {
+                Logger.LogInfo($"Bot logged in as {bot.CurrentUser.Username}\n\n", ConsoleColor.Cyan);
+                await Task.CompletedTask;
+            };
+
             // stop program from closing...
             await Task.Delay(-1, cancelSrc.Token);
         }

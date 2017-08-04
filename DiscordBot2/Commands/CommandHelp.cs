@@ -28,7 +28,7 @@ namespace DiscordBot2.Commands
                 sb.AppendLine($"**{cmd.Name} {cmd.Syntax}** : _{cmd.Help}_");
             }
 
-            await msg.Author.CreateDMChannelAsync().GetAwaiter().GetResult().SendMessageAsync(sb.ToString());
+            await msg.Author.GetOrCreateDMChannelAsync().GetAwaiter().GetResult().SendMessageAsync(sb.ToString());
             await msg.Channel.SendMessageAsync($"<@{msg.Author.Id}> Sent you a help DM.");
         }
     }

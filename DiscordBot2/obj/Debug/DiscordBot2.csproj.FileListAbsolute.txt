@@ -19,12 +19,8 @@ C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.IO.Co
 C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.IO.FileSystem.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.IO.FileSystem.Primitives.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.Net.Http.dll
-C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.Net.NameResolution.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.Net.Sockets.dll
-C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.Net.WebSockets.dll
-C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.Net.WebSockets.Client.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.Runtime.Serialization.Primitives.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.Security.Cryptography.Algorithms.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.Security.Cryptography.Encoding.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.Security.Cryptography.Primitives.dll
@@ -41,3 +37,7 @@ C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.Runti
 C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.Runtime.InteropServices.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\Discord.Net.Providers.WS4Net.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\WebSocket4Net.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\Discord.Net.Webhook.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.Xml.ReaderWriter.dll

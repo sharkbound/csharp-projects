@@ -23,10 +23,7 @@ namespace DiscordBot2.Utils
             Log($"[{now.Minute}:{now.Second}] {author}: {msg}", color);
         }
 
-        public static void LogInfo(string msg) =>
-            Log($"INFO: {msg}", ConsoleColor.White);
-
-        public static void LogInfo(string msg, ConsoleColor color) =>
+        public static void LogInfo(string msg, ConsoleColor color = ConsoleColor.White) =>
             Log($"INFO: {msg}", color);
 
         public static void LogWarning(string msg) =>

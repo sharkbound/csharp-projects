@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\CommandBuild.cs" />
+    <Compile Include="Commands\CommandEB.cs" />
     <Compile Include="Commands\CommandFancy.cs" />
     <Compile Include="Commands\CommandHelp.cs" />
     <Compile Include="Commands\CommandPing.cs" />
@@ -70,16 +71,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Discord.Net">
-      <Version>1.0.0-rc-00604</Version>
-    </PackageReference>
-    <PackageReference Include="Discord.Net.Commands">
-      <Version>1.0.0-rc-00604</Version>
+      <Version>1.0.1</Version>
     </PackageReference>
     <PackageReference Include="Discord.Net.Providers.WS4Net">
-      <Version>1.0.0-rc-00604</Version>
+      <Version>1.0.1</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>9.0.1</Version>
+      <Version>10.0.3</Version>
     </PackageReference>
     <PackageReference Include="System.Diagnostics.DiagnosticSource">
       <Version>4.0.0</Version>
