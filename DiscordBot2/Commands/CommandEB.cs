@@ -25,9 +25,12 @@ namespace DiscordBot2.Commands
             eb.AddField("hello world!", "hello :)", inline: true);
             eb.AddField("hello world!", "hello :)", inline: true);
             eb.WithImageUrl("https://vignette2.wikia.nocookie.net/steven-universe/images/2/25/Pikachu_waving.gif/revision/latest?cb=20151224010309");
-            eb.WithImageUrl("https://vignette2.wikia.nocookie.net/steven-universe/images/2/25/Pikachu_waving.gif/revision/latest?cb=20151224010309");
-            //eb.ImageUrl = @"https://vignette2.wikia.nocookie.net/steven-universe/images/2/25/Pikachu_waving.gif/revision/latest?cb=20151224010309";
-            await msg.Channel.SendMessageAsync("", embed: eb);
+
+            var newMsg = await msg.Channel.SendMessageAsync("", embed: eb);
+
+            await Task.Delay(2000);
+            await newMsg.DeleteAsync();
+            await msg.DeleteAsync();
         }
     }
 }
