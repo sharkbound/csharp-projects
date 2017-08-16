@@ -1,0 +1,14 @@
+C#:
+	name capture group: (?<NAME>MATCH_PATTEN)
+	back reference for named capture group in match pattern: \k<NAME>
+	back reference for numbered capture group in match pattern: \NUMBER
+	reference named capture group in Regex.Replace: ${NAME}
+	reference number capture group in Regex.Replace: $NUMBER
+	
+Python:
+	named capture group: (?P<NAME>MATCH_PATTEN)
+	back reference for named capture group in match pattern: (?P=NAME)
+	back reference for named capture group in match pattern:  \NUMBER
+	reference named capture group in re.sub: \g<NAME>
+	reference number capture group in re.sub: \NUMBER
+	

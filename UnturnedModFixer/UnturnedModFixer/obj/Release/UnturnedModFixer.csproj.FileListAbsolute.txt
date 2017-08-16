@@ -1,0 +1,8 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\UnturnedModFixer\UnturnedModFixer\bin\Release\UnturnedModFixer.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\UnturnedModFixer\UnturnedModFixer\bin\Release\UnturnedModFixer.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\UnturnedModFixer\UnturnedModFixer\bin\Release\UnturnedModFixer.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\UnturnedModFixer\UnturnedModFixer\obj\Release\UnturnedModFixer.Form1.resources
+C:\Users\owner\Desktop\GitHub\csharp-projects\UnturnedModFixer\UnturnedModFixer\obj\Release\UnturnedModFixer.Properties.Resources.resources
+C:\Users\owner\Desktop\GitHub\csharp-projects\UnturnedModFixer\UnturnedModFixer\obj\Release\UnturnedModFixer.csproj.GenerateResource.Cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\UnturnedModFixer\UnturnedModFixer\obj\Release\UnturnedModFixer.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\UnturnedModFixer\UnturnedModFixer\obj\Release\UnturnedModFixer.pdb

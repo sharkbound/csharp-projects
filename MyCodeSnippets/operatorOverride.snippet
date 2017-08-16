@@ -2,8 +2,8 @@
 <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>OverrideOperator</Title>
-      <Shortcut>OverrideOperator</Shortcut>
+      <Title>OperatorOverride</Title>
+      <Shortcut>OperatorOverride</Shortcut>
       <Description>Code snippet for operator overriding</Description>
       <Author>Kevin Hogg</Author>
       <SnippetTypes>
@@ -14,19 +14,31 @@
       <Declarations>
         <Literal>
           <ID>operator</ID>
-          <ToolTip>operator</ToolTip>
-          <Function>operatorfunc</Function>
+          <ToolTip>The Operator To Override</ToolTip>
+          <Function></Function>
           <Default>+</Default>
         </Literal>
         <Literal>
-          <ID>type</ID>
-          <ToolTip>type</ToolTip>
-          <Function>typefunc</Function>
+          <ID>firstType</ID>
+          <ToolTip>First Parameters Type</ToolTip>
+          <Function>ClassName()</Function>
+          <Default>string</Default>
+        </Literal>
+		<Literal>
+          <ID>secondType</ID>
+          <ToolTip>Second Parameters Type</ToolTip>
+          <Function>ClassName()</Function>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>returnType</ID>
+          <ToolTip>The Return Type</ToolTip>
+          <Function>ClassName()</Function>
           <Default>string</Default>
         </Literal>
       </Declarations>
       <Code Language="csharp">
-        <![CDATA[public static $type$ operator $operator$($type$ first)
+        <![CDATA[public static $returnType$ operator $operator$($firstType$ first, $secondType$ second)
         {
             return $end$; 
         }]]>

@@ -47,7 +47,7 @@ namespace UnturnedModFixer
 
                         foreach (var file in files)
                         {
-                            var reader = File.OpenText(file);
+                            StreamReader reader = File.OpenText(file);
                             results = reader.ReadToEnd();
 
                             if (isItem(results) && !results.Contains(bypass))
