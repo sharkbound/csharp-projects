@@ -1,0 +1,7 @@
+C:\Users\owner\Desktop\GitHub\csharp-projects\TickTackToe\TickTackToe\bin\Debug\TickTackToe.exe.config
+C:\Users\owner\Desktop\GitHub\csharp-projects\TickTackToe\TickTackToe\bin\Debug\TickTackToe.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\TickTackToe\TickTackToe\bin\Debug\TickTackToe.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\TickTackToe\TickTackToe\obj\Debug\TickTackToe.csprojResolveAssemblyReference.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\TickTackToe\TickTackToe\obj\Debug\TickTackToe.csproj.CoreCompileInputs.cache
+C:\Users\owner\Desktop\GitHub\csharp-projects\TickTackToe\TickTackToe\obj\Debug\TickTackToe.exe
+C:\Users\owner\Desktop\GitHub\csharp-projects\TickTackToe\TickTackToe\obj\Debug\TickTackToe.pdb
