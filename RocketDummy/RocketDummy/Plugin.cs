@@ -11,6 +11,9 @@ using System.Timers;
 using SDG.Unturned;
 using Rocket.Unturned.Player;
 using Rocket.Unturned.Events;
+using Rocket.Core.Commands;
+using System.Text.RegularExpressions;
+using Rocket.Core;
 
 namespace RocketDummy
 {
@@ -20,17 +23,12 @@ namespace RocketDummy
 
         protected override void Load()
         {
-            ushort id = 1475;
-            ItemMeleeAsset a = (ItemMeleeAsset)Assets.find(EAssetType.ITEM, id);
-            Console.WriteLine($"ORIG {a.isInvulnerable}");
-            Console.WriteLine("SETTING TO " + !a.isInvulnerable);
-            a.isInvulnerable = !a.isInvulnerable;
-            a = null;
-            Console.WriteLine("NEW " + ((ItemMeleeAsset)Assets.find(EAssetType.ITEM, id)).isInvulnerable);
+
         }
 
         protected override void Unload()
         {
+
         }
     }
 }

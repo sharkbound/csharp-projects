@@ -9,3 +9,4 @@ C:\Users\owner\Desktop\GitHub\csharp-projects\RocketDummy\RocketDummy\bin\Debug\
 C:\Users\owner\Desktop\GitHub\csharp-projects\RocketDummy\RocketDummy\obj\Debug\RocketDummy.csprojResolveAssemblyReference.cache
 C:\Users\owner\Desktop\GitHub\csharp-projects\RocketDummy\RocketDummy\obj\Debug\RocketDummy.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\RocketDummy\RocketDummy\obj\Debug\RocketDummy.pdb
+C:\Users\owner\Desktop\GitHub\csharp-projects\RocketDummy\RocketDummy\obj\Debug\RocketDummy.csproj.CoreCompileInputs.cache
