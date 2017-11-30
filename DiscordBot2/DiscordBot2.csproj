@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Commandtest.cs" />
     <Compile Include="Commands\CommandBuild.cs" />
     <Compile Include="Commands\CommandEB.cs" />
     <Compile Include="Commands\CommandFancy.cs" />
@@ -52,10 +53,12 @@
     <Compile Include="Commands\CommandQuit.cs" />
     <Compile Include="Commands\CommandReload.cs" />
     <Compile Include="Commands\CommandRoles.cs" />
+    <Compile Include="Commands\CommandThreaded.cs" />
     <Compile Include="Extensions\extensions.cs" />
     <Compile Include="Handlers\CommandHandler.cs" />
     <Compile Include="Handlers\Events.cs" />
     <Compile Include="Interfaces\IDiscordCommand.cs" />
+    <Compile Include="Interfaces\ThreadedDiscordCommand.cs" />
     <Compile Include="PermissionClasses.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,10 +74,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Discord.Net">
-      <Version>1.0.1</Version>
+      <Version>1.0.2</Version>
     </PackageReference>
     <PackageReference Include="Discord.Net.Providers.WS4Net">
-      <Version>1.0.1</Version>
+      <Version>1.0.2</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>10.0.3</Version>

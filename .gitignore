@@ -53,3 +53,5 @@ DiscordBot2/bin/Release/Config/config.json
 csvcsharp/csvparser/bin/Debug/output.txt
 csvcsharp/csvparser/bin/Release/output.txt
 CLOC_OUTPUT.TXT
+.vs/
+obj/

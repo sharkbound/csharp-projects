@@ -1,22 +1,22 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETFramework,Version=v4.6.2": {
-      "Discord.Net/1.0.1": {
+      "Discord.Net/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Commands": "1.0.1",
-          "Discord.Net.Core": "1.0.1",
-          "Discord.Net.Rest": "1.0.1",
-          "Discord.Net.Rpc": "1.0.1",
-          "Discord.Net.WebSocket": "1.0.1",
-          "Discord.Net.Webhook": "1.0.1"
+          "Discord.Net.Commands": "1.0.2",
+          "Discord.Net.Core": "1.0.2",
+          "Discord.Net.Rest": "1.0.2",
+          "Discord.Net.Rpc": "1.0.2",
+          "Discord.Net.WebSocket": "1.0.2",
+          "Discord.Net.Webhook": "1.0.2"
         }
       },
-      "Discord.Net.Commands/1.0.1": {
+      "Discord.Net.Commands/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
+          "Discord.Net.Core": "1.0.2",
           "Microsoft.Extensions.DependencyInjection": "1.1.1",
           "NETStandard.Library": "1.6.1"
         },
@@ -27,7 +27,7 @@
           "lib/netstandard1.1/Discord.Net.Commands.dll": {}
         }
       },
-      "Discord.Net.Core/1.0.1": {
+      "Discord.Net.Core/1.0.2": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "10.0.2",
@@ -41,10 +41,10 @@
           "lib/net45/Discord.Net.Core.dll": {}
         }
       },
-      "Discord.Net.Providers.WS4Net/1.0.1": {
+      "Discord.Net.Providers.WS4Net/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
+          "Discord.Net.Core": "1.0.2",
           "WebSocket4Net": "0.14.1"
         },
         "compile": {
@@ -54,11 +54,14 @@
           "lib/net45/Discord.Net.Providers.WS4Net.dll": {}
         }
       },
-      "Discord.Net.Rest/1.0.1": {
+      "Discord.Net.Rest/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1"
+          "Discord.Net.Core": "1.0.2"
         },
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
         "compile": {
           "lib/net45/Discord.Net.Rest.dll": {}
         },
@@ -66,11 +69,11 @@
           "lib/net45/Discord.Net.Rest.dll": {}
         }
       },
-      "Discord.Net.Rpc/1.0.1": {
+      "Discord.Net.Rpc/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
-          "Discord.Net.Rest": "1.0.1"
+          "Discord.Net.Core": "1.0.2",
+          "Discord.Net.Rest": "1.0.2"
         },
         "compile": {
           "lib/net45/Discord.Net.Rpc.dll": {}
@@ -79,11 +82,11 @@
           "lib/net45/Discord.Net.Rpc.dll": {}
         }
       },
-      "Discord.Net.Webhook/1.0.1": {
+      "Discord.Net.Webhook/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
-          "Discord.Net.Rest": "1.0.1",
+          "Discord.Net.Core": "1.0.2",
+          "Discord.Net.Rest": "1.0.2",
           "NETStandard.Library": "1.6.1"
         },
         "compile": {
@@ -93,11 +96,11 @@
           "lib/netstandard1.1/Discord.Net.Webhook.dll": {}
         }
       },
-      "Discord.Net.WebSocket/1.0.1": {
+      "Discord.Net.WebSocket/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
-          "Discord.Net.Rest": "1.0.1"
+          "Discord.Net.Core": "1.0.2",
+          "Discord.Net.Rest": "1.0.2"
         },
         "compile": {
           "lib/net45/Discord.Net.WebSocket.dll": {}
@@ -475,6 +478,10 @@
           "lib/net46/System.Net.Http.dll": {}
         },
         "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.6/System.Net.Http.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
           "runtimes/win/lib/net46/System.Net.Http.dll": {
             "assetType": "runtime",
             "rid": "win"
@@ -661,6 +668,14 @@
           "lib/net461/System.Security.Cryptography.Algorithms.dll": {}
         },
         "runtimeTargets": {
+          "runtimes/osx/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {
+            "assetType": "runtime",
+            "rid": "osx"
+          },
+          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
           "runtimes/win/lib/net461/System.Security.Cryptography.Algorithms.dll": {
             "assetType": "runtime",
             "rid": "win"
@@ -720,6 +735,10 @@
           "lib/net461/System.Security.Cryptography.X509Certificates.dll": {}
         },
         "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
           "runtimes/win/lib/net461/System.Security.Cryptography.X509Certificates.dll": {
             "assetType": "runtime",
             "rid": "win"
@@ -826,21 +845,21 @@
       }
     },
     ".NETFramework,Version=v4.6.2/win": {
-      "Discord.Net/1.0.1": {
+      "Discord.Net/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Commands": "1.0.1",
-          "Discord.Net.Core": "1.0.1",
-          "Discord.Net.Rest": "1.0.1",
-          "Discord.Net.Rpc": "1.0.1",
-          "Discord.Net.WebSocket": "1.0.1",
-          "Discord.Net.Webhook": "1.0.1"
+          "Discord.Net.Commands": "1.0.2",
+          "Discord.Net.Core": "1.0.2",
+          "Discord.Net.Rest": "1.0.2",
+          "Discord.Net.Rpc": "1.0.2",
+          "Discord.Net.WebSocket": "1.0.2",
+          "Discord.Net.Webhook": "1.0.2"
         }
       },
-      "Discord.Net.Commands/1.0.1": {
+      "Discord.Net.Commands/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
+          "Discord.Net.Core": "1.0.2",
           "Microsoft.Extensions.DependencyInjection": "1.1.1",
           "NETStandard.Library": "1.6.1"
         },
@@ -851,7 +870,7 @@
           "lib/netstandard1.1/Discord.Net.Commands.dll": {}
         }
       },
-      "Discord.Net.Core/1.0.1": {
+      "Discord.Net.Core/1.0.2": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "10.0.2",
@@ -865,10 +884,10 @@
           "lib/net45/Discord.Net.Core.dll": {}
         }
       },
-      "Discord.Net.Providers.WS4Net/1.0.1": {
+      "Discord.Net.Providers.WS4Net/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
+          "Discord.Net.Core": "1.0.2",
           "WebSocket4Net": "0.14.1"
         },
         "compile": {
@@ -878,11 +897,14 @@
           "lib/net45/Discord.Net.Providers.WS4Net.dll": {}
         }
       },
-      "Discord.Net.Rest/1.0.1": {
+      "Discord.Net.Rest/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1"
+          "Discord.Net.Core": "1.0.2"
         },
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
         "compile": {
           "lib/net45/Discord.Net.Rest.dll": {}
         },
@@ -890,11 +912,11 @@
           "lib/net45/Discord.Net.Rest.dll": {}
         }
       },
-      "Discord.Net.Rpc/1.0.1": {
+      "Discord.Net.Rpc/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
-          "Discord.Net.Rest": "1.0.1"
+          "Discord.Net.Core": "1.0.2",
+          "Discord.Net.Rest": "1.0.2"
         },
         "compile": {
           "lib/net45/Discord.Net.Rpc.dll": {}
@@ -903,11 +925,11 @@
           "lib/net45/Discord.Net.Rpc.dll": {}
         }
       },
-      "Discord.Net.Webhook/1.0.1": {
+      "Discord.Net.Webhook/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
-          "Discord.Net.Rest": "1.0.1",
+          "Discord.Net.Core": "1.0.2",
+          "Discord.Net.Rest": "1.0.2",
           "NETStandard.Library": "1.6.1"
         },
         "compile": {
@@ -917,11 +939,11 @@
           "lib/netstandard1.1/Discord.Net.Webhook.dll": {}
         }
       },
-      "Discord.Net.WebSocket/1.0.1": {
+      "Discord.Net.WebSocket/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
-          "Discord.Net.Rest": "1.0.1"
+          "Discord.Net.Core": "1.0.2",
+          "Discord.Net.Rest": "1.0.2"
         },
         "compile": {
           "lib/net45/Discord.Net.WebSocket.dll": {}
@@ -1602,21 +1624,21 @@
       }
     },
     ".NETFramework,Version=v4.6.2/win-x64": {
-      "Discord.Net/1.0.1": {
+      "Discord.Net/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Commands": "1.0.1",
-          "Discord.Net.Core": "1.0.1",
-          "Discord.Net.Rest": "1.0.1",
-          "Discord.Net.Rpc": "1.0.1",
-          "Discord.Net.WebSocket": "1.0.1",
-          "Discord.Net.Webhook": "1.0.1"
+          "Discord.Net.Commands": "1.0.2",
+          "Discord.Net.Core": "1.0.2",
+          "Discord.Net.Rest": "1.0.2",
+          "Discord.Net.Rpc": "1.0.2",
+          "Discord.Net.WebSocket": "1.0.2",
+          "Discord.Net.Webhook": "1.0.2"
         }
       },
-      "Discord.Net.Commands/1.0.1": {
+      "Discord.Net.Commands/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
+          "Discord.Net.Core": "1.0.2",
           "Microsoft.Extensions.DependencyInjection": "1.1.1",
           "NETStandard.Library": "1.6.1"
         },
@@ -1627,7 +1649,7 @@
           "lib/netstandard1.1/Discord.Net.Commands.dll": {}
         }
       },
-      "Discord.Net.Core/1.0.1": {
+      "Discord.Net.Core/1.0.2": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "10.0.2",
@@ -1641,10 +1663,10 @@
           "lib/net45/Discord.Net.Core.dll": {}
         }
       },
-      "Discord.Net.Providers.WS4Net/1.0.1": {
+      "Discord.Net.Providers.WS4Net/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
+          "Discord.Net.Core": "1.0.2",
           "WebSocket4Net": "0.14.1"
         },
         "compile": {
@@ -1654,11 +1676,14 @@
           "lib/net45/Discord.Net.Providers.WS4Net.dll": {}
         }
       },
-      "Discord.Net.Rest/1.0.1": {
+      "Discord.Net.Rest/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1"
+          "Discord.Net.Core": "1.0.2"
         },
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
         "compile": {
           "lib/net45/Discord.Net.Rest.dll": {}
         },
@@ -1666,11 +1691,11 @@
           "lib/net45/Discord.Net.Rest.dll": {}
         }
       },
-      "Discord.Net.Rpc/1.0.1": {
+      "Discord.Net.Rpc/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
-          "Discord.Net.Rest": "1.0.1"
+          "Discord.Net.Core": "1.0.2",
+          "Discord.Net.Rest": "1.0.2"
         },
         "compile": {
           "lib/net45/Discord.Net.Rpc.dll": {}
@@ -1679,11 +1704,11 @@
           "lib/net45/Discord.Net.Rpc.dll": {}
         }
       },
-      "Discord.Net.Webhook/1.0.1": {
+      "Discord.Net.Webhook/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
-          "Discord.Net.Rest": "1.0.1",
+          "Discord.Net.Core": "1.0.2",
+          "Discord.Net.Rest": "1.0.2",
           "NETStandard.Library": "1.6.1"
         },
         "compile": {
@@ -1693,11 +1718,11 @@
           "lib/netstandard1.1/Discord.Net.Webhook.dll": {}
         }
       },
-      "Discord.Net.WebSocket/1.0.1": {
+      "Discord.Net.WebSocket/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
-          "Discord.Net.Rest": "1.0.1"
+          "Discord.Net.Core": "1.0.2",
+          "Discord.Net.Rest": "1.0.2"
         },
         "compile": {
           "lib/net45/Discord.Net.WebSocket.dll": {}
@@ -2378,21 +2403,21 @@
       }
     },
     ".NETFramework,Version=v4.6.2/win-x86": {
-      "Discord.Net/1.0.1": {
+      "Discord.Net/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Commands": "1.0.1",
-          "Discord.Net.Core": "1.0.1",
-          "Discord.Net.Rest": "1.0.1",
-          "Discord.Net.Rpc": "1.0.1",
-          "Discord.Net.WebSocket": "1.0.1",
-          "Discord.Net.Webhook": "1.0.1"
+          "Discord.Net.Commands": "1.0.2",
+          "Discord.Net.Core": "1.0.2",
+          "Discord.Net.Rest": "1.0.2",
+          "Discord.Net.Rpc": "1.0.2",
+          "Discord.Net.WebSocket": "1.0.2",
+          "Discord.Net.Webhook": "1.0.2"
         }
       },
-      "Discord.Net.Commands/1.0.1": {
+      "Discord.Net.Commands/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
+          "Discord.Net.Core": "1.0.2",
           "Microsoft.Extensions.DependencyInjection": "1.1.1",
           "NETStandard.Library": "1.6.1"
         },
@@ -2403,7 +2428,7 @@
           "lib/netstandard1.1/Discord.Net.Commands.dll": {}
         }
       },
-      "Discord.Net.Core/1.0.1": {
+      "Discord.Net.Core/1.0.2": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "10.0.2",
@@ -2417,10 +2442,10 @@
           "lib/net45/Discord.Net.Core.dll": {}
         }
       },
-      "Discord.Net.Providers.WS4Net/1.0.1": {
+      "Discord.Net.Providers.WS4Net/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
+          "Discord.Net.Core": "1.0.2",
           "WebSocket4Net": "0.14.1"
         },
         "compile": {
@@ -2430,11 +2455,14 @@
           "lib/net45/Discord.Net.Providers.WS4Net.dll": {}
         }
       },
-      "Discord.Net.Rest/1.0.1": {
+      "Discord.Net.Rest/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1"
+          "Discord.Net.Core": "1.0.2"
         },
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
         "compile": {
           "lib/net45/Discord.Net.Rest.dll": {}
         },
@@ -2442,11 +2470,11 @@
           "lib/net45/Discord.Net.Rest.dll": {}
         }
       },
-      "Discord.Net.Rpc/1.0.1": {
+      "Discord.Net.Rpc/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
-          "Discord.Net.Rest": "1.0.1"
+          "Discord.Net.Core": "1.0.2",
+          "Discord.Net.Rest": "1.0.2"
         },
         "compile": {
           "lib/net45/Discord.Net.Rpc.dll": {}
@@ -2455,11 +2483,11 @@
           "lib/net45/Discord.Net.Rpc.dll": {}
         }
       },
-      "Discord.Net.Webhook/1.0.1": {
+      "Discord.Net.Webhook/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
-          "Discord.Net.Rest": "1.0.1",
+          "Discord.Net.Core": "1.0.2",
+          "Discord.Net.Rest": "1.0.2",
           "NETStandard.Library": "1.6.1"
         },
         "compile": {
@@ -2469,11 +2497,11 @@
           "lib/netstandard1.1/Discord.Net.Webhook.dll": {}
         }
       },
-      "Discord.Net.WebSocket/1.0.1": {
+      "Discord.Net.WebSocket/1.0.2": {
         "type": "package",
         "dependencies": {
-          "Discord.Net.Core": "1.0.1",
-          "Discord.Net.Rest": "1.0.1"
+          "Discord.Net.Core": "1.0.2",
+          "Discord.Net.Rest": "1.0.2"
         },
         "compile": {
           "lib/net45/Discord.Net.WebSocket.dll": {}
@@ -3155,32 +3183,32 @@
     }
   },
   "libraries": {
-    "Discord.Net/1.0.1": {
-      "sha512": "XtHV1DvqzBlwN1fPwurmxKNpUgCQ193wucXU7K+3yuF84bRVmRq68Hm+d8q1UE5Mqi4QJcoNGF8K08KL2hQZYQ==",
+    "Discord.Net/1.0.2": {
+      "sha512": "ZGazwrLmI6xdKaDK2XTdCwrx2BxUf+Z5FDL8uY8FVkto+/qkUD/6a3G1JzkSKA4N9Hf4sKgn806WX9xtPC1mvw==",
       "type": "package",
-      "path": "discord.net/1.0.1",
+      "path": "discord.net/1.0.2",
       "files": [
-        "discord.net.1.0.1.nupkg.sha512",
+        "discord.net.1.0.2.nupkg.sha512",
         "discord.net.nuspec"
       ]
     },
-    "Discord.Net.Commands/1.0.1": {
-      "sha512": "ElRbYXsR3WCLGN1Ln5nXc6twHyWOk3Prb1fANatjMk9Xi1dvY+uqjVgcVGmRKI85UOjlt9D5R7teXXPUokLp1g==",
+    "Discord.Net.Commands/1.0.2": {
+      "sha512": "LzUgcF25OOj2FdXzlIlzXue5Vv6+IE7N455wRlnL1umw7CzjhP8UyTKyMTq0zOBaohQi8ffIgI0ldgcLLOwERg==",
       "type": "package",
-      "path": "discord.net.commands/1.0.1",
+      "path": "discord.net.commands/1.0.2",
       "files": [
-        "discord.net.commands.1.0.1.nupkg.sha512",
+        "discord.net.commands.1.0.2.nupkg.sha512",
         "discord.net.commands.nuspec",
         "lib/netstandard1.1/Discord.Net.Commands.dll",
         "lib/netstandard1.1/Discord.Net.Commands.xml"
       ]
     },
-    "Discord.Net.Core/1.0.1": {
-      "sha512": "WiNDLJMMdYOwy2xaJdUAoCvXloFL4EO1rB/JNA09Unca2m9kIbFg3c1LajgGL6mXaSlidu4Ypu4dSaD0fHoEig==",
+    "Discord.Net.Core/1.0.2": {
+      "sha512": "JbvcB5ce2PsFwUwqDg9EcdQNl8Wl8og7+nX6L+taG60CrOoivT2xYX3Wofx60kdF9OTvTyo6/BvZkVltUT2FSQ==",
       "type": "package",
-      "path": "discord.net.core/1.0.1",
+      "path": "discord.net.core/1.0.2",
       "files": [
-        "discord.net.core.1.0.1.nupkg.sha512",
+        "discord.net.core.1.0.2.nupkg.sha512",
         "discord.net.core.nuspec",
         "lib/net45/Discord.Net.Core.dll",
         "lib/net45/Discord.Net.Core.xml",
@@ -3190,23 +3218,23 @@
         "lib/netstandard1.3/Discord.Net.Core.xml"
       ]
     },
-    "Discord.Net.Providers.WS4Net/1.0.1": {
-      "sha512": "9WIWCXCzGxm6vILb87E77TUk8W3QokmDyj6gZP6PVygYTDjQ4HcojUL0F8PZ5y66wlZLwE0C2ehlU5mQCA9hwQ==",
+    "Discord.Net.Providers.WS4Net/1.0.2": {
+      "sha512": "tx1rh2SPGWXIQBcteeOxG8uZPu+BiJFWrYRYONxCrRxmBjoAHCIy2XbCHep9fKDNQHr8xPZrjaOdHO+fPBBXcg==",
       "type": "package",
-      "path": "discord.net.providers.ws4net/1.0.1",
+      "path": "discord.net.providers.ws4net/1.0.2",
       "files": [
-        "discord.net.providers.ws4net.1.0.1.nupkg.sha512",
+        "discord.net.providers.ws4net.1.0.2.nupkg.sha512",
         "discord.net.providers.ws4net.nuspec",
         "lib/net45/Discord.Net.Providers.WS4Net.dll",
         "lib/net45/Discord.Net.Providers.WS4Net.xml"
       ]
     },
-    "Discord.Net.Rest/1.0.1": {
-      "sha512": "jRn65pvJHpDTp2wb8RRstg1YkQ/hEGHe40g2pA7Cjk5s15BOT/EDgPRCadkdxU7g+7jmq4EQQ0OfAjXl+6SC0Q==",
+    "Discord.Net.Rest/1.0.2": {
+      "sha512": "246NbaD1Pqochze2bIOUTLQg9/DWlw6O6JvCkJbVHBCKYyn6lCMkoxUECCPuluw9ZiT29F3UPgTZf/qyMiXHiQ==",
       "type": "package",
-      "path": "discord.net.rest/1.0.1",
+      "path": "discord.net.rest/1.0.2",
       "files": [
-        "discord.net.rest.1.0.1.nupkg.sha512",
+        "discord.net.rest.1.0.2.nupkg.sha512",
         "discord.net.rest.nuspec",
         "lib/net45/Discord.Net.Rest.dll",
         "lib/net45/Discord.Net.Rest.xml",
@@ -3216,12 +3244,12 @@
         "lib/netstandard1.3/Discord.Net.Rest.xml"
       ]
     },
-    "Discord.Net.Rpc/1.0.1": {
-      "sha512": "PF1+x3pGPkg0SVBW9vWgDHvgoPzyySwOmsng/NFhPu38IFCuH8f0X9beoUyPPqqbBgYJJrjgJyzN52wwy5ZCgg==",
+    "Discord.Net.Rpc/1.0.2": {
+      "sha512": "Fz/ArOKrGyh+ec5t4VAu9+yF/ctNzXkmcYXOnXb+4lQVIdfCeg9i7Gamv6H9r77aFzsYK2BhVcH3Q05xqtfPnQ==",
       "type": "package",
-      "path": "discord.net.rpc/1.0.1",
+      "path": "discord.net.rpc/1.0.2",
       "files": [
-        "discord.net.rpc.1.0.1.nupkg.sha512",
+        "discord.net.rpc.1.0.2.nupkg.sha512",
         "discord.net.rpc.nuspec",
         "lib/net45/Discord.Net.Rpc.dll",
         "lib/net45/Discord.Net.Rpc.xml",
@@ -3231,23 +3259,23 @@
         "lib/netstandard1.3/Discord.Net.Rpc.xml"
       ]
     },
-    "Discord.Net.Webhook/1.0.1": {
-      "sha512": "jzWWh6rCfEs0fYmuE263+lPD/78PTwd+6LISsdJa/0EzMWMHZyi/d/BDGogHvfTsziR2UbgcfeaqnfpVKOmxBA==",
+    "Discord.Net.Webhook/1.0.2": {
+      "sha512": "VXMLbMP5mFivzBCJQd18pZ7cxpxRzgrA9/z7ofXOV50J46NvWtv1kt9nha0ipWMl9o6P4BxuHb24e07eqS4ERQ==",
       "type": "package",
-      "path": "discord.net.webhook/1.0.1",
+      "path": "discord.net.webhook/1.0.2",
       "files": [
-        "discord.net.webhook.1.0.1.nupkg.sha512",
+        "discord.net.webhook.1.0.2.nupkg.sha512",
         "discord.net.webhook.nuspec",
         "lib/netstandard1.1/Discord.Net.Webhook.dll",
         "lib/netstandard1.1/Discord.Net.Webhook.xml"
       ]
     },
-    "Discord.Net.WebSocket/1.0.1": {
-      "sha512": "cbaD8OuSL53WiuV4SA92X8ZfI8kiY3FsPPWES/W0cGBy370LEzhsOtPr0bJgWFPqBefx+a99nzT7EBGerNoCjg==",
+    "Discord.Net.WebSocket/1.0.2": {
+      "sha512": "18TAK7E8iOYv6GRkaJwkI0SCfp6iB/YZ3c6ToW70RwoFV0nlBLfphzH1r4BL76YvYg5yt1NHAoglGNjn5URamQ==",
       "type": "package",
-      "path": "discord.net.websocket/1.0.1",
+      "path": "discord.net.websocket/1.0.2",
       "files": [
-        "discord.net.websocket.1.0.1.nupkg.sha512",
+        "discord.net.websocket.1.0.2.nupkg.sha512",
         "discord.net.websocket.nuspec",
         "lib/net45/Discord.Net.WebSocket.dll",
         "lib/net45/Discord.Net.WebSocket.xml",
@@ -6026,8 +6054,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.2": [
-      "Discord.Net >= 1.0.1",
-      "Discord.Net.Providers.WS4Net >= 1.0.1",
+      "Discord.Net >= 1.0.2",
+      "Discord.Net.Providers.WS4Net >= 1.0.2",
       "Newtonsoft.Json >= 10.0.3",
       "System.Diagnostics.DiagnosticSource >= 4.0.0"
     ]
@@ -6041,33 +6069,26 @@
       "projectUniqueName": "C:\\Users\\owner\\Desktop\\GitHub\\csharp-projects\\DiscordBot2\\DiscordBot2.csproj",
       "projectName": "DiscordBot2",
       "projectPath": "C:\\Users\\owner\\Desktop\\GitHub\\csharp-projects\\DiscordBot2\\DiscordBot2.csproj",
+      "packagesPath": "C:\\Users\\owner\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\owner\\Desktop\\GitHub\\csharp-projects\\DiscordBot2\\obj\\",
       "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "net462"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/discord-net/api/v3/index.json": {}
+      },
       "frameworks": {
         "net462": {
           "projectReferences": {}
         }
-      }
-    },
-    "dependencies": {
-      "Discord.Net": {
-        "target": "Package",
-        "version": "1.0.1"
-      },
-      "Discord.Net.Providers.WS4Net": {
-        "target": "Package",
-        "version": "1.0.1"
-      },
-      "Newtonsoft.Json": {
-        "target": "Package",
-        "version": "[10.0.3, )"
-      },
-      "System.Diagnostics.DiagnosticSource": {
-        "target": "Package",
-        "version": "4.0.0"
       }
     },
     "frameworks": {
@@ -6075,15 +6096,15 @@
         "dependencies": {
           "Discord.Net": {
             "target": "Package",
-            "version": "1.0.1"
+            "version": "1.0.2"
           },
           "Discord.Net.Providers.WS4Net": {
             "target": "Package",
-            "version": "1.0.1"
+            "version": "1.0.2"
           },
           "Newtonsoft.Json": {
             "target": "Package",
-            "version": "[10.0.3, )"
+            "version": "10.0.3"
           },
           "System.Diagnostics.DiagnosticSource": {
             "target": "Package",
@@ -6103,5 +6124,33 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: System.Diagnostics.DiagnosticSource from 4.3.0 to 4.0.0. Reference the package directly from the project to select a different version. \r\n DiscordBot2 -> Discord.Net 1.0.2 -> Discord.Net.Commands 1.0.2 -> NETStandard.Library 1.6.1 -> System.Net.Http 4.3.0 -> System.Diagnostics.DiagnosticSource (>= 4.3.0) \r\n DiscordBot2 -> System.Diagnostics.DiagnosticSource (>= 4.0.0)",
+      "libraryId": "System.Diagnostics.DiagnosticSource",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.2",
+        ".NETFramework,Version=v4.6.2/win",
+        ".NETFramework,Version=v4.6.2/win-x64",
+        ".NETFramework,Version=v4.6.2/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: System.Diagnostics.DiagnosticSource from 4.3.0 to 4.0.0. Reference the package directly from the project to select a different version. \r\n DiscordBot2 -> Discord.Net 1.0.2 -> Discord.Net.Webhook 1.0.2 -> NETStandard.Library 1.6.1 -> System.Net.Http 4.3.0 -> System.Diagnostics.DiagnosticSource (>= 4.3.0) \r\n DiscordBot2 -> System.Diagnostics.DiagnosticSource (>= 4.0.0)",
+      "libraryId": "System.Diagnostics.DiagnosticSource",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.2",
+        ".NETFramework,Version=v4.6.2/win",
+        ".NETFramework,Version=v4.6.2/win-x64",
+        ".NETFramework,Version=v4.6.2/win-x86"
+      ]
+    }
+  ]
 }

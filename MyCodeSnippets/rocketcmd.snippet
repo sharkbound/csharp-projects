@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>rocketcmd</Title>
+            <Shortcut>rocketcmd</Shortcut>
+            <Description>Code snippet for a rocket command class</Description>
+            <Author>Sharkbound</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>clsName</ID>
+                    <Default>PlaceHolder</Default>
+                </Literal>
+				<Literal>
+                    <ID>Name</ID>
+                    <Default>CmdName</Default>
+                </Literal>
+				<Literal>
+                    <ID>Caller</ID>
+                    <Default>Both</Default>
+                </Literal>
+				<Literal>
+                    <ID>Help</ID>
+					<Default>Help</Default>
+                </Literal>
+				<Literal>
+                    <ID>Aliases</ID>
+                </Literal>
+				<Literal>
+                    <ID>Permissions</ID>
+                </Literal>
+				<Literal>
+                    <ID>Syntax</ID>
+					<Default>Syntax</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp"><![CDATA[class Command$clsName$ : IRocketCommand
+    {
+        public AllowedCaller AllowedCaller => AllowedCaller.$Caller$;
+
+        public string Name => "$Name$";
+
+        public string Help => "$Help$";
+
+        public string Syntax => "$Syntax$";
+
+        public List<string> Aliases => new List<string>()$Aliases$;
+
+        public List<string> Permissions => new List<string>()$Permissions$;
+
+        public void Execute(IRocketPlayer caller, string[] command)
+        {
+            $end$
+        }
+	}]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

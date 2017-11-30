@@ -41,3 +41,4 @@ C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\Discord.Net.
 C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\owner\Desktop\GitHub\csharp-projects\DiscordBot2\obj\Debug\DiscordBot2.csproj.CoreCompileInputs.cache
