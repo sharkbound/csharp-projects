@@ -54,6 +54,7 @@
     <Compile Include="Commands\CommandLit.cs" />
     <Compile Include="Commands\CommandCmd.cs" />
     <Compile Include="Commands\CommandQuote.cs" />
+    <Compile Include="Commands\WYR.cs" />
     <Compile Include="Commands\CommandSandwich.cs" />
     <Compile Include="Core\Database\Database.cs" />
     <Compile Include="Data\Config.cs" />

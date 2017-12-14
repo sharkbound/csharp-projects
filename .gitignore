@@ -55,3 +55,5 @@ csvcsharp/csvparser/bin/Release/output.txt
 CLOC_OUTPUT.TXT
 .vs/
 obj/
+TwitchLibBot/bin/Release/BotConfig.json
+TwitchLibBot/bin/Release/questions.txt

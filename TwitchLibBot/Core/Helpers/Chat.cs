@@ -19,8 +19,7 @@ namespace TwitchLibBot.Core.Helpers
         {
             return s
                 .Replace("%user%", m.DisplayName)
-                .Replace("%mention%", $"@{m.DisplayName}")
-                ;
+                .Replace("%mention%", $"@{m.DisplayName}");
         }
     }
 }
