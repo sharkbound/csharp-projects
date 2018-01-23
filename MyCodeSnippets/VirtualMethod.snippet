@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>vmethod</Title>
+      <Shortcut>vmethod</Shortcut>
+      <Description>Code snippet for virual method</Description>
+      <Author>Sharkbound</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>methodname</ID>
+          <ToolTip>Method name</ToolTip>
+          <Function>MethodName()</Function>
+          <Default>MethodNamePlaceholder</Default>
+        </Literal>
+        <Literal>
+          <ID>returntype</ID>
+          <ToolTip>Method return type</ToolTip>
+          <Function>returntype</Function>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>accessmodifier</ID>
+          <ToolTip>Method Accessmodifier</ToolTip>
+          <Function>accessmodifier</Function>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>args</ID>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$accessmodifier$ virtual $returntype$ $methodname$($args$)
+    {
+        $end$
+    }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

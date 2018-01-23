@@ -16,7 +16,7 @@ namespace EasyRepCommand
 
         public string Help => "sets a users reputation";
 
-        public string Syntax => "<new rep value>";
+        public string Syntax => "<new reputation>";
 
         public List<string> Aliases => new List<string> { "reputation", "rep" };
 

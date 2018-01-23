@@ -1,0 +1,48 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:UCC.Styles">
+
+    <!--<Style TargetType="ContextMenu">
+        <Setter Property="BorderThickness" Value="20"/>
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        
+        <Setter Property="Background" Value="{StaticResource cmBG1}"/>
+        <Setter Property="Foreground" Value="{StaticResource cmFG1}"/>
+        --><!--<Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContextMenu">
+                    <Border BorderBrush="{StaticResource ContextMenuBrush1}" BorderThickness="{TemplateBinding BorderThickness}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>--><!--
+    </Style>-->
+    <!---->
+
+    <Color x:Key="s1" A="255" R="255" B="0" G="0"/>
+
+    <SolidColorBrush x:Key="cmBG1" Color="#FF556823"/>
+    <SolidColorBrush x:Key="cmFG1" Color="#ff0000"/>
+    
+    <Style x:Key="{x:Type ContextMenu}" TargetType="{x:Type ContextMenu}">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ContextMenu}">
+                    <Border Background="#CD222120" CornerRadius="7, 7, 8, 8" BorderBrush="DarkGray" BorderThickness="2" Opacity="0.96">
+                        <StackPanel ClipToBounds="True" Orientation="Vertical" IsItemsHost="True" Margin="5,4,5,4"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <ControlTemplate x:Key="{x:Static MenuItem.TopLevelItemTemplateKey}" TargetType="{x:Type MenuItem}">
+        <Border Name="Border">
+            <Grid>
+                <ContentPresenter Margin="6,3,6,3" ContentSource="Header" RecognizesAccessKey="True" />
+            </Grid>
+        </Border>
+    </ControlTemplate>
+
+</ResourceDictionary>
